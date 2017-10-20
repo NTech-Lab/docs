@@ -5,26 +5,9 @@ Configuration Parameters
 
 You can configure fkvideo_detector by using command line arguments or a configuration file. 
 
-.. warning::
-     The default fkvideo_detector configuration file is ``/etc/fkvideo.ini``. Avoid editing ``/etc/fkvideo.ini``, especially if fkvideo_detector and :ref:`FindFace Web UI <ffui>` are running on the same host, as FindFace Web UI also uses this configuration file. Instead, make a copy of this file, edit the copy and specify it in the option ``-c`` when starting fkvideo_detector.
-
-     .. code::
-
-        ## Make a copy of fkvideo.ini
-        $ sudo cp /etc/fkvideo.ini /etc/fkvideo_example.ini
-        
-        ## Use this copy when starting fkvideo_detector
-        $ fkvideo_detector -c /etc/fkvideo_example.ini
+.. include:: /_inclusions/fkvideo_config_warning.rst
 
 .. contents:: In this section:
-
-Camera Management Functionality
-----------------------------------------
-
-If there is a specified camera ``GUID`` and its ``source`` in the arguments, fkvideo_detector processes only this camera video stream. If none of these arguments are specified, fkvideo_detector requests the :ref:`list of cameras <video-methods>` from FindFace Server and processes each camera video stream individually.
-
-The fkvideo_detector component will periodically request the list of cameras with a polling interval defined by the ``reload-timeout`` parameter (see below). If non-tracked cameras are found in the list, fkvideo_detector starts processing their video streams. If some earlier
-operated cameras are not found (dropped from the list since the last poll), fkvideo_detector stops processing them and releases system resources.
 
 Command Line Arguments
 ---------------------------

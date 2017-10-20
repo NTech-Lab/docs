@@ -1,92 +1,85 @@
 About Video Face Detection
 =============================
 
-The video face detection component :program:`fkvideo_detector` extracts faces on-the-fly from a RTSP camera stream or a video file and sends them to FindFace Server via REST API for further processing.
+To add video face detection to your FindFace Server Enterprise SDK instance, you need the :program:`fkvideo_detector` component. This component extracts faces from video and posts them to FindFace Server over API for further processing. It can work with both live streams and files.
 
-.. contents:: In this section:
+.. contents: In this section:
 
-Summary
-----------------
+Installation
+------------------
 
-.. rubric:: Compatibility
+Install fkvideo_detector on one of the FindFace Server hosts or on a separate host. Click :ref:`here <install-fkvideo>` for step-by-step instructions.
 
-FindFace Enterprise Server SDK 1.2 or later.
 
-.. rubric:: Installation
+Video Processing
+--------------------------
 
-On one of the FindFace Enterprise Server SDK hosts or on a separate host.
+Motion Detection and Face Tracking
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. rubric:: Functionality
+When processing video, fkvideo_detector consequently uses the following algorithms:
 
-* Motion detector
-* Face tracker
+* :program:`Motion detection`. 
 
-These 2 functions enable effective processing of a video stream and capturing faces from it.
+  This algorithm is aimed to reduce system resources consumption. Only when the motion detector recognizes motion of certain intensity in video that the face tracker can be triggered.
 
-.. rubric:: Operation modes
+* :program:`Face tracking`.
+  
+  The face tracker tracks, detects and captures faces from video, and posts them to FindFace Server. It can simultaneously process several faces.
+  
+   .. tip::
+     Configure the maximum number of processed faces in the fkvideo_detector :ref:`configuration file <fkvideo-config>`.
 
-Depending on your integration scenario, fkvideo_detector can operate in the following modes: 
+  Each captured face is posted as a snapshot and a bbox in a request ``/face`` or ``/identify``, depending on the :ref:`configuration settings <fkvideo-config>`. If there are several active trackers, the face tracker sends the same number of requests with a unique snapshot and bbox in each.
+
+Best Face Search
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When tracking a face, the face tracker searches for its best snapshot before posting it to FindFace Server.
+
+The best face can be found in one of the following modes: 
 
 * Real-time
 * Offline
 
-.. rubric:: Connection with FindFace Server 
-
-For each face tracked, fkvideo_detector sends a bbox via a POST request ``/face`` or ``/identify``, depending on the fkvideo_detector :ref:`configuration settings <fkvideo-config>`.
-
-
-.. contents: In this section:
-
-
-Motion Detector
---------------------
-
-The motion detector as part of fkvideo_detector reduces system resources consumption as the face tracker starts only if motion is detected.
-
-Face Tracker and Bbox Functionality
------------------------------------------
-
-The face tracker of fkvideo_detector is able to track several people simultaneously. You can configure the maximum number of tracked people
-in the fkvideo_detector :ref:`configuration file <fkvideo-config>`.
-
-For each face tracked, fkvideo_detector sends a bbox to FindFace Server via a POST request (``/face`` or ``/identify``, depending
-on the :ref:`configuration settings <fkvideo-config>`). If there are several active trackers, FindFace Server receives the
-same number of requests with a unique bbox in each.
-
 Real-Time Mode
-----------------------
+""""""""""""""""""""""""
 
-In the real-time mode, face tracking starts as soon as a human face is detected in your camera field of view. Then the best image dynamic
-search comes into play:
+The real-time mode allows posting a face immediately after it appears in a camera field of view. In this mode, the face tracker searches for the best face snapshot dynamically:
 
-#. The face tracker calculates the quality of the face image. If it exceeds a pre-defined threshold value, the face image is sent to FindFace Server. 
-#. The threshold value increases. If the face tracker gets a higher quality image of the same face, this image will be sent to FindFace Server. 
+#. First, the face tracker estimates whether the quality of a face snapshot exceeds a pre-defined threshold value. If this is the case, the snapshot is posted to FindFace Server. 
+#. The threshold value increases after each post. Each time the face tracker gets a higher quality snapshot of the same face, it is posted. 
 #. When the face disappears from the camera field of view, the threshold value resets to default.
 
 Offline Mode
--------------------
+"""""""""""""""""""""""
 
-In the offline mode, the face tracker buffers a video stream with a face in it until the face disappears from the camera field of view. Then
-fkvideo_detector gets the best image from the buffered video and sends it to FindFace Server. The offline mode is more resource
-intensive than the real-time one.
+The offline mode is less storage intensive than the real-time one as it allows posting only one snapshot per face, but of the highest quality. In this mode, the face tracker buffers a video stream with a face in it until the face disappears from the camera field of view. Then
+the face tracker picks up the best face snapshot from the buffered video and posts it to FindFace Server. 
 
-How to Render API Responses to Detector Requests
-------------------------------------------------
+Configuration and Usage
+----------------------------
 
-The fkvideo_detector component does not process FindFace Server responses to face identification and camera operation API requests. You should write your own proxy script that will manage communication between fkvideo_detector and FindFace Server and redirect API responses to an application that can process and render them. A typical rendering topology is shown on the diagram below:
+To configure fkvideo_detector, you can specify its options in any of the following ways: 
 
-.. image:: https://gcc-elb-public-prod.gliffy.net/embed/image/e1e6f14528d931131fd3d25fea862232.png
+* As command line arguments upon starting fkvideo_detector.
 
-When writing the proxy script, hold to the following logic:
+  .. code::
 
-#. A request from fkvideo_detector transparently goes to FindFace Server in the following format:
+     $ fkvideo_detector [options]
 
-   .. code::
+* As parameters in the fkvideo_detector configuration file. 
 
-      curl -X POST -H 'Authorization: Token ntech' -F "gender=true" -F "emotions=true" -F "age=true" -F "cam_id=1b19a189-26b9-42e5-8cd8-6cabde79dc7e" -F "timestamp=2017-08-25T13:09:54" -F "bbox=[[620,380,1383,1143]]" -F "photo=@15036665986531599.jpeg" -F "face0=@15036665986766284_norm.png" -F 'detectorParams={"score": -0.000911839, "direction_score": -0.568228}' http://192.168.104.184:8000/v1/face
+  .. include:: /_inclusions/fkvideo_config_warning.rst
 
-#. As FindFace Server replies to fkvideo_detector, your proxy script should redirect the response to your application for further processing.
-   
-   .. note::
-       FindFace Server responses to requests sent directly or by fkvideo_detector are same. They may contain a link to a face thumbnail and other data which can be parsed in your application.
+See :ref:`fkvideo-config` for the full option list.
+
+Video Stream Management
+-----------------------------
+
+You can specify video streams to be processed by fkvideo_detector as follows:
+ 
+* A single stream can be specified directly by using the ``--camid`` or ``--source`` options when configuring fkvideo_detector. 
+* A list of streams has first to be posted to FindFace Server by applying the :ref:`/camera POST <camera-post>` method to each stream. When posting, all streams in the list have to be assigned a common user-defined string, so called ``detector``. This string should then be specified as the ``--detector-name`` option when configuring fkvideo_detector. In this case, fkvideo_detector will retrieve the list of streams from FindFace Server, based on their ``detector-name``, and begin to process each stream individually. It will also be periodically updating the list of cameras from FindFace Server with a polling interval defined by the ``reload-timeout`` parameter.
+
 

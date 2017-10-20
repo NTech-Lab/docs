@@ -9,6 +9,8 @@ These methods extend :ref:`general API methods <methods>` of FindFace Enterprise
 
 .. _camera-post:
 
+.. _camera-first:
+
 Method /camera POST
 -----------------------------
 

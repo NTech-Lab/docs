@@ -11,3 +11,4 @@ Video Face Detection
    fkvideo_about
    fkvideo_configuration
    fkvideo_deploy
+   fkvideo_render

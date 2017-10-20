@@ -8,7 +8,9 @@ A typical FindFace Enterprise Server SDK-based biometric system is shown on the 
 
 .. image:: https://gcc-elb-public-prod.gliffy.net/embed/image/4090da7b962be0327d893afdcd000b54.png
 
-FindFace Enterprise Server SDK consists of the Biometric Data Analysis and Recognition Server (FindFace Server or Server hereinafter) and, optionally, the video face detector. Besides the latter, you can also install the other :ref:`additional components <extra-functionality>`. The FindFace Server functioning is provided by interaction of the following components: 
+FindFace Enterprise Server SDK consists of the :program:`Biometric Data Analysis and Recognition Server` (:program:`FindFace Server` or :program:`Server` hereinafter) and, optionally, the video face detector and other :ref:`additional components <extra-functionality>`. 
+
+The FindFace Server functioning is provided by interaction of the following components: 
 
 
 +------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -24,7 +26,7 @@ FindFace Enterprise Server SDK consists of the Biometric Data Analysis and Recog
 +------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | findface-upload                          | Nginx web server used to receive images using WebDAV.                                                                                                                                                     |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| NTLS                                     | Local license server which interfaces with the Global NTechLab License Server (for the network licensing) or a USB dongle (for the on-premise licensing) and passes a license to licensable components.   |
+| NTLS                                     | Local license server which interfaces with the NTechLab Global License Server (for the network licensing) or a USB dongle (for the on-premise licensing) and passes a license to licensable components.   |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Follow the **9 steps** below to start delivering face recognition services to your customers:

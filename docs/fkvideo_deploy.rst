@@ -1,11 +1,14 @@
 Deploy Video Face Detection
 ===============================
 
-This section will guide you through the installation process. Follow the steps below minding the sequence.
+This section will guide you through the :program:`fkvideo_detector` installation process. Follow the steps below minding the sequence.
 
-Before you install :program:`fkvideo_detector`, you need to install :ref:`FindFace Server <install-server>`.
+.. note::
+    Before installing :program:`fkvideo_detector`, you need to install :ref:`FindFace Server <install-server>`.
 
 .. contents:: In this section:
+
+.. _install-fkvideo:
 
 Install Component
 ------------------------
