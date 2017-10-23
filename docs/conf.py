@@ -89,7 +89,7 @@ todo_include_todos = False
 #
 import sphinx_rtd_theme
 
-html_theme = 'default'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -102,11 +102,9 @@ html_theme = 'default'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_context = {
-    'css_files': [
-        '_static/theme_overrides.css',  # override wide tables in RTD theme
-        ],
-     }
+def setup(app):
+   #app.add_javascript("custom.js")
+   app.add_stylesheet("theme_overrides.css")
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
