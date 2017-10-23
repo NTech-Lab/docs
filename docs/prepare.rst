@@ -1,3 +1,5 @@
+.. _prepare:
+
 Prepare Packages for Installation
 -----------------------------------------
 

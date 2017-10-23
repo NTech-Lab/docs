@@ -13,21 +13,12 @@ FindFace Enterprise Server SDK consists of the :program:`Biometric Data Analysis
 The FindFace Server functioning is provided by interaction of the following components: 
 
 
-+------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Service                                  | Description                                                                                                                                                                                               |
-+==========================================+===========================================================================================================================================================================================================+
-| findface-facenapi                        | Python daemon which runs HTTP API. This daemon executes face detection functions, interfaces with MongoDB and findface-nnapi and tarantool@FindFace daemons.                                              |
-+------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| tntapi (tarantool@FindFace as a shard)   | Daemon which enables interaction with the face descriptors index.                                                                                                                                         |
-+------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| findface-nnapi                           | Daemon extracts a feature vector (based on neural network). Requires the package with models <findface-data>.deb.                                                                                         |
-+------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| MongoDB                                  | Database which stores faces metadata, galleries details, settings, etc.                                                                                                                                   |
-+------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| findface-upload                          | Nginx web server used to receive images using WebDAV.                                                                                                                                                     |
-+------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| NTLS                                     | Local license server which interfaces with the NTechLab Global License Server (for the network licensing) or a USB dongle (for the on-premise licensing) and passes a license to licensable components.   |
-+------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+.. csv-table::
+   :header: "Service", "Description"
+   :file: /home/sashacarlos/DOCS/source/_tables/components.csv
+   :encoding: UTF-8
+   :delim: ;
+
 
 Follow the **9 steps** below to start delivering face recognition services to your customers:
 

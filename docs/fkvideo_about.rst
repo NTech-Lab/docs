@@ -1,17 +1,29 @@
+.. _fkvideo-about:
+
 About Video Face Detection
 =============================
 
 To add video face detection to your FindFace Server Enterprise SDK instance, you need the :program:`fkvideo_detector` component. This component extracts faces from video and posts them to FindFace Server over API for further processing. It can work with both live streams and files.
 
-.. contents: In this section:
+.. contents:: In this section:
+
+.. _fkvideo-install:
 
 Installation
 ------------------
 
-Install fkvideo_detector on one of the FindFace Server hosts or on a separate host. Click :ref:`here <install-fkvideo>` for step-by-step instructions.
+Install fkvideo_detector from the :program:`<findface-repo>.deb` package on one of the FindFace Server hosts or on a separate host:
+
+.. tip::
+   Click :ref:`here <prepare>` for the package preparation instruction. 
+
+.. code::
+
+      $ sudo apt-get update
+      $ sudo apt-get install fkvideo-detector
 
 
-Video Processing
+How It Works
 --------------------------
 
 Motion Detection and Face Tracking
@@ -47,7 +59,7 @@ Real-Time Mode
 
 The real-time mode allows posting a face immediately after it appears in a camera field of view. In this mode, the face tracker searches for the best face snapshot dynamically:
 
-#. First, the face tracker estimates whether the quality of a face snapshot exceeds a pre-defined threshold value. If this is the case, the snapshot is posted to FindFace Server. 
+#. First, the face tracker estimates whether the quality of a face snapshot exceeds a pre-defined threshold value. If so, the snapshot is posted to FindFace Server. 
 #. The threshold value increases after each post. Each time the face tracker gets a higher quality snapshot of the same face, it is posted. 
 #. When the face disappears from the camera field of view, the threshold value resets to default.
 

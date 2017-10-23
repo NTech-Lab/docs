@@ -20,11 +20,8 @@ Prior to installing FindFace Enterprise Server SDK, ensure that the host(s) meet
 | Requirement        | Description                                                                 |
 +====================+=============================================================================+
 | CPU                | x86-64 CPU (Intel), >2.0 Ghz, >2 cores.                                     |
-|                    |                                                                             |
-|                    | .. warning::                                                                |
-|                    |      The CPU AVX support is required for operation                          |
-|                    |      of all the components, except findface-upload.                         |
-|                    |                                                                             |
+|                    | The CPU AVX support is required for operation of all the components,        |
+|                    | except findface-upload.                                                     |
 +--------------------+-----------------------------------------------------------------------------+
 | RAM                | 2GB plus extra 1.5GB for each 1M faces in datasets.                         |
 |                    | Additional 2 GB for :ref:`gender, age and emotions recognition <gae>`.      |
@@ -56,13 +53,7 @@ A host for the :ref:`video face detection <video>` component must meet the follo
 +------------------------+-------------------------------------------------------------------------+
 | Requirement            | Description                                                             |
 +========================+=========================================================================+
-| CPU                    | ≥ INTEL Core i5 6400 (2 physical core CPU).                             |
-|                        |                                                                         |
-|                        |                                                                         |
-|                        |  .. warning::                                                           |
-|                        |       AVX support required.                                             |
-|                        |                                                                         |
-|                        |                                                                         |
+| CPU                    | ≥ INTEL Core i5 6400 (2 physical core CPU). AVX support required.       |
 +------------------------+-------------------------------------------------------------------------+
 | RAM                    | 4 GB in the real-time mode.                                             |
 +------------------------+-------------------------------------------------------------------------+

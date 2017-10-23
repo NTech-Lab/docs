@@ -9,6 +9,6 @@ Video Face Detection
    :caption: In this chapter:
 
    fkvideo_about
-   fkvideo_configuration
    fkvideo_deploy
+   fkvideo_configuration
    fkvideo_render

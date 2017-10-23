@@ -1,28 +1,21 @@
-Deploy Video Face Detection
-===============================
+Configure and Start Video Face Detection
+============================================
 
-This section will guide you through the :program:`fkvideo_detector` installation process. Follow the steps below minding the sequence.
+This section will guide you through the :program:`fkvideo_detector` deployment process. Follow the steps below minding the sequence.
 
 .. note::
-    Before installing :program:`fkvideo_detector`, you need to install :ref:`FindFace Server <install-server>`.
+   The fkvideo_detector component has to be :ref:`installed <fkvideo-install>`.
 
 .. contents:: In this section:
 
-.. _install-fkvideo:
+.. _camera-fkvideo:
 
-Install Component
+Specify Video Streams
 ------------------------
 
-To install the video face detection component, do the following:
+To specify video streams for face detection, do the following:
 
-#. Get a package.
-
-   .. code::
-
-      $ sudo apt-get update
-      $ sudo apt-get install fkvideo-detector
-
-#. Make a copy of the configuration file /etc/fkvideo.ini. Open the new file for editing.
+#. Make a copy of the configuration file ``/etc/fkvideo.ini``. Open the new file for editing.
 
    .. code::
 
