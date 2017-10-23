@@ -103,8 +103,8 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 def setup(app):
-   #app.add_javascript("custom.js")
-   app.add_stylesheet("theme_overrides.css")
+    #app.add_javascript("custom.js")
+    app.add_stylesheet("theme_overrides.css")
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
