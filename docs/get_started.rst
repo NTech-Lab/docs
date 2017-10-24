@@ -12,12 +12,6 @@ FindFace Enterprise Server SDK consists of the :program:`Biometric Data Analysis
 
 The FindFace Server functioning is provided by interaction of the following components: 
 
-.. csv-table::
-   :header: "Service", "Description"
-   :file: _tables/components.csv
-   :encoding: UTF-8
-   :delim: ;
-
 
 Follow the **9 steps** below to start delivering face recognition services to your customers:
 
