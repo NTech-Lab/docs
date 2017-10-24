@@ -15,7 +15,7 @@ The FindFace Server functioning is provided by interaction of the following comp
 
 .. csv-table::
    :header: "Service", "Description"
-   :file: /home/sashacarlos/DOCS/source/_tables/components.csv
+   :file: _tables/components.csv
    :encoding: UTF-8
    :delim: ;
 

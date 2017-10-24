@@ -25,7 +25,7 @@ Usage:
 
 .. csv-table::
    :header: "Option", "Description", "Argument", "Example"
-   :file: /home/sashacarlos/DOCS/source/_tables/fkvideo.csv
+   :file: _tables/fkvideo.csv
    :encoding: UTF-8
    :delim: ;
 
