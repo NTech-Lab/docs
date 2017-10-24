@@ -24,12 +24,6 @@ Usage:
     The following parameters are mandatory: ``api-host``, ``api-port``, ``api-token``, ``--license-ntls-server``.
 
 
-.. csv-table::
-   :header: "Option", "Description", "Argument", "Example"
-   :file: _tables/fkvideo.csv
-   :encoding: UTF-8
-   :delim: ;
-
 
 Configuration File Format
 --------------------------------
