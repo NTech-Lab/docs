@@ -81,7 +81,7 @@ A host for the :ref:`video face detection <video>` component must meet the follo
 Supported Video File Formats and Codecs
 -------------------------------------------------
 
-The fkvideo_detector component supports all video file formats and codecs supported by the `FFmpeg framework <https://www.ffmpeg.org/general.html#Supported-File-Formats_002c-Codecs-or-Features>`__. 
+The fkvideo_detector component supports all video file formats and codecs that can be decoded by `FFmpeg <https://www.ffmpeg.org/general.html#Supported-File-Formats_002c-Codecs-or-Features>`__. 
 
 
 FindFace Web User Interface
