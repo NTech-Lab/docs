@@ -11,6 +11,9 @@ System Requirements
 General Requirements
 =============================
 
+Hosts
+--------------------
+
 Prior to installing FindFace Enterprise Server SDK, ensure that the host(s) meet the following minimum requirements:
 
 .. note::
@@ -38,11 +41,25 @@ Prior to installing FindFace Enterprise Server SDK, ensure that the host(s) meet
 +--------------------+-----------------------------------------------------------------------------+
 
 
+Supported Images
+-----------------------------
+
+FindFace Enterprise Server SDK supports the following image formats:
+
+* JPEG,
+* PNG,
+* WebP.
+
+The maximum image size is 10 MB. The minimum distance between pupils is 40 px.
+
+
 .. _video-requirements:
 
 Video Face Detection
 =================================
 
+Video Face Detector Host
+----------------------------------
 
 A host for the :ref:`video face detection <video>` component must meet the following requirements (given that a video stream is 1 x 720p (1280×720) at 25FPS playback speed):
 
@@ -61,27 +78,15 @@ A host for the :ref:`video face detection <video>` component must meet the follo
 +------------------------+-------------------------------------------------------------------------+
 
 
+Supported Video File Formats and Codecs
+-------------------------------------------------
+
+The fkvideo_detector component supports all video file formats and codecs supported by the `FFmpeg framework <https://www.ffmpeg.org/general.html#Supported-File-Formats_002c-Codecs-or-Features>`__. 
+
+
 FindFace Web User Interface
 =================================
 
 To process video in the FindFace Enterprise Server SDK :ref:`web user interface <ffui>`, its host should meet the same requirements as for the :ref:`video face detector <video-requirements>`.
 
-Supported Images
-===============================
-
-FindFace Enterprise Server SDK supports the following image formats:
-
-* JPEG,
-* PNG,
-* WebP.
-
-The maximum image size is 10 MB. The minimum distance between pupils is 40 px.
-
-
-.. tip::
-    To read the release changelog, execute:
-
-    .. code::
-
-       $ dpkg-parsechangelog -l /usr/share/doc/findface-repo/changelog.Debian.gz --all
 

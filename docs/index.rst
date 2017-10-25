@@ -17,6 +17,15 @@ FindFace Enterprise Server SDK provides professional face recognition services b
 * Highly intuitive web user interface.
 * Network or on-premise licensing.
 
+
+.. tip::
+    To read a release changelog, execute:
+
+    .. code::
+
+       $ dpkg-parsechangelog -l /usr/share/doc/findface-repo/changelog.Debian.gz --all
+
+
 FindFace Enterprise Server SDK will be of interest to independent software vendors (ISVs), system integrators, enterprise IT customers, and original equipment manufacturers (OEMs). It can be harnessed in numerous areas, such as retail, banking, social networking, entertainment, sports, event management, dating services, video surveillance, public safety, homeland security, etc.
 
 Being integrated into specific solutions or Android applications, FindFace Enterprise Server SDK empowers businesses to accomplish such

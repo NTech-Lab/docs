@@ -3,7 +3,7 @@
 About Video Face Detection
 =============================
 
-To add video face detection to your FindFace Server Enterprise SDK instance, you need the :program:`fkvideo_detector` component. This component extracts faces from video and posts them to FindFace Server over API for further processing. It can work with both live streams and files.
+To add video face detection to your FindFace Server Enterprise SDK instance, you need the :program:`fkvideo_detector` component. This component extracts faces from video and posts them to FindFace Server over API for further processing. It can work with both live streams and files, and supports all video file formats and codecs supported by the `FFmpeg framework <https://www.ffmpeg.org/general.html#Supported-File-Formats_002c-Codecs-or-Features>`__. 
 
 .. contents:: In this section:
 
