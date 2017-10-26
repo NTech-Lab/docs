@@ -1,6 +1,6 @@
 .. _tntapi-add:
 
-Appendix B. Additional Tntapi Functionality
+Additional Tntapi Functionality
 ===================================================
 
 .. contents:: In this section:

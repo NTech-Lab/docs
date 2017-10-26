@@ -1,6 +1,6 @@
 .. _logs:
 
-Appendix C. Analyze Log Files
+Analyze Log Files
 =====================================
 
 Log files provide a complete record of each FindFace Enterprise Server SDK component activity.

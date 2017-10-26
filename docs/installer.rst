@@ -1,6 +1,6 @@
 .. _installer:
 
-Appendix A. FindFace Enterprise Server SDK Standalone Installer
+FindFace Enterprise Server SDK Standalone Installer
 ======================================================================
 
 To install FindFace Enterprise Server SDK in a standalone configuration, you can use the :program:`<findface-server-xxx>.run` file. Do the following:

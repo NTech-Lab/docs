@@ -3,8 +3,6 @@
 Configuration Parameters
 =============================
 
-You can configure fkvideo_detector by using command line arguments or a configuration file. 
-
 .. include:: /_inclusions/fkvideo_config_warning.rst
 
 .. contents:: In this section:

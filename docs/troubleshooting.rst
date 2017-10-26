@@ -7,7 +7,9 @@ Troubleshooting
    :caption: In this chapter:
 
    remove_sdk
-   regenerate_facens
+   update
+ 
+
  
 
    

@@ -9,6 +9,10 @@ Appendix
    installer
    tntapi_additional
    logs
+   regenerate_facens
+   models
+
+
 
 
    

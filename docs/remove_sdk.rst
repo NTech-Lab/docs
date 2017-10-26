@@ -5,7 +5,7 @@ Remove FindFace Enterprise Server SDK
 
 You can automatically remove FindFace Enterprise Server SDK, and, optionally, MongoDB and Tarantool by using the :program:`ffserver_uninstall.sh` script. Do the following:
 
-#. Download the :download:`ffserver_uninstall.sh </ffserver_uninstall.sh>` script from our GitHub to some directory on a designated host (for example, to ``/home/username/``):
+#. Download the :download:`ffserver_uninstall.sh <_scripts/ffserver_uninstall.sh>` script from our GitHub to some directory on a designated host (for example, to ``/home/username/``):
 
    .. code::
 

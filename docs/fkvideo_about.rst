@@ -72,17 +72,7 @@ the face tracker picks up the best face snapshot from the buffered video and pos
 Configuration and Usage
 ----------------------------
 
-To configure fkvideo_detector, you can specify its options in any of the following ways: 
-
-* As command line arguments upon starting fkvideo_detector.
-
-  .. code::
-
-     $ fkvideo_detector [options]
-
-* As parameters in the fkvideo_detector configuration file. 
-
-  .. include:: /_inclusions/fkvideo_config_warning.rst
+.. include:: /_inclusions/fkvideo_config_warning.rst
 
 See :ref:`fkvideo-config` for the full option list.
 
