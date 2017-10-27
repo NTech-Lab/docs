@@ -14,7 +14,7 @@ To store all uploaded original images and thumbnails of faces, install and confi
    $ sudo apt-get update
    $ sudo apt-get install findface-upload
 
-#. By default the uploaded images and thumbnails of faces are stored in the folder ``http://127.0.0.1:3333/uploads/``. Make sure that the folder is available. You will have to specify this folder when :ref:`configuring network <configure-network>`:
+#. By default the uploaded images and thumbnails of faces are stored at ``/var/lib/ffupload/uploads/``. Its content can be viewed at ``http://127.0.0.1:3333/uploads/`` in your browser. Make sure that the folder is available. You will have to specify this folder when :ref:`configuring network <configure-network>`:
 
    .. code::
 

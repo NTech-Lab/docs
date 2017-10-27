@@ -40,7 +40,7 @@ Both tools are automatically installed with :ref:`findface-facenapi <install-fac
 Requirements
 ------------------------
 
-The ``Uploads`` folder (``http://<findface_upload_host:3333/uploads/``) has to be populated with at least the original images.
+The ``/var/lib/ffupload/uploads/`` folder (``Uploads``) has to be populated with at least the original images. Its content can be viewed at ``http://<findface_upload_IP:3333/uploads/`` in your browser.
 
 Overall, the ``findface-regenerate`` tool works with the ``Uploads`` folder in the following way:
 
@@ -204,11 +204,11 @@ Apply ``findface-regenerate`` as follows:
 
    .. code::
 
-       ## To regenerate facens:
-       $ sudo findface-regenerate --regenerate=facens --config=/etc/findface-facenapi.ini
+       ## When switching a face detector, or applying gender, age and emotions recognition to old faces:
+       $ sudo findface-regenerate --regenerate=normalized,thumbs,facens --config=/etc/findface-facenapi.ini
 
-       ## To regenerate normalized images, thumbnails and facens:
-       $ sudo findface-regenerate --regenerate=normalized, thumbs, facens --config=/etc/findface-facenapi.ini
+       ## When switching a model:
+       $ sudo findface-regenerate --regenerate=facens --config=/etc/findface-facenapi.ini
 
 
 Transfer Facens from MongoDB to Tarantool
