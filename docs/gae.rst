@@ -34,7 +34,7 @@ To configure gender, age and emotions recognition, do the following:
        $ sudo vi /etc/findface-nnapi.ini
 
        ## Uncomment the following lines: 
-             → model_emotions = model_39c_em
+             → model_emotions = emotion_1
              → model_age = fr_1_age0
              → model_gender = fr_1_gender0
 

@@ -1,18 +1,21 @@
 .. _regenerate-facens:
 
-Migrate to Another Detector or Neural Network Model
+Migrate to Different Detector or Model
 ==========================================================
 
 .. tip::
    Do not hesitate to contact our experts on migration by info@ntechlab.com.
 
 
-Sometimes you have to migrate your FindFace Enterprise Server SDK instance to another face detector or neural network model. This usually happens when you decide to update to the latest version of the product, or just want to implement new detector or model features to your face recognition system.
+Sometimes you have to migrate your FindFace Enterprise Server SDK instance to another face detector or neural network model. This usually happens when you decide to update to the latest version of the product, or just want to add previously unused features, such as gender, age and emotions analysis, to your face recognition system.
 
 .. tip::
-   See :ref:`models` for the models comparison. 
+   You can find the models summary :ref:`here <models>`. 
 
 If you need to re-detect faces, you should regenerate both normalized face images, thumbnails and facens. If you just want to apply a different model, it usually suffices to regenerate only facens. FindFace Enterprise Server SDK provides tools that can handle all possible migration use cases. 
+
+.. warning::
+   Different detectors have diverse sensitivity to certain facial features. Be aware that, after re-detecting your database, you may miss out on some previously found faces.
 
 .. contents:: In this section
 
@@ -27,8 +30,8 @@ To migrate your instance, you will need the following tools:
 
    * - Tool
      - Description
-   * - ``facen-regenerate``
-     - Script which regenerates and overrides face data in MongoDB by applying different detector settings or another model to the images in the ``Uploads`` folder.
+   * - ``findface-regenerate``
+     - Script that regenerates and overrides face data in MongoDB by applying different detector settings or another model to the images in the ``Uploads`` folder.
    * - ``mongo2searchapi``
      - Script that transfers newly generated facens from MongoDB to Tarantool.
 
@@ -37,7 +40,9 @@ Both tools are automatically installed with :ref:`findface-facenapi <install-fac
 Requirements
 ------------------------
 
-The ``Uploads`` folder (``http://<findface_upload_host:3333/uploads/``) has to be populated with at least the original images. Overall, the ``facen-regenerate`` tool works with the ``Uploads`` folder in the following way:
+The ``Uploads`` folder (``http://<findface_upload_host:3333/uploads/``) has to be populated with at least the original images.
+
+Overall, the ``findface-regenerate`` tool works with the ``Uploads`` folder in the following way:
 
 .. list-table::
    :header-rows: 1
@@ -46,11 +51,11 @@ The ``Uploads`` folder (``http://<findface_upload_host:3333/uploads/``) has to
    * - Use case
      - How it works
    * - Different detector settings
-     - The ``facen-regenerate`` tool runs the original images through the ``facenapi``-``nnapi`` pipeline with different detector [and model] settings and returns regenerated normalized images, thumbnails and facens.
+     - The ``findface-regenerate`` tool runs original images through the ``facenapi``-``nnapi`` pipeline with different detector [and model] settings, and returns regenerated normalized images, thumbnails and facens.
    * - Different model
-     - The ``facen-regenerate`` tool runs the normalized face images through ``nnapi`` and returns regenerated facens.
-   * - Gender, age and emotions recognition
-     - The ``facen-regenerate`` tool runs the original images through the ``facenapi``-``nnapi`` pipeline with enabled and configured gender, age and emotions recognition and returns regenerated normalized images, thumbnails and facens.
+     - The ``findface-regenerate`` tool runs normalized face images through ``nnapi`` with different model settings, and returns regenerated facens.
+   * - Enabling gender, age and emotions recognition
+     - The ``findface-regenerate`` tool runs original images through the ``facenapi``-``nnapi`` pipeline with enabled and configured gender, age and emotions recognition, and returns regenerated normalized images, thumbnails and facens.
 
 
 Regenerate Face Data
@@ -59,7 +64,7 @@ Regenerate Face Data
 .. important::
    Before conducting any operations on your MongoDB database, be sure to create its backup. 
  
-Apply ``facen-regenerate`` as follows:
+Apply ``findface-regenerate`` as follows:
 
 #. Navigate into ``/usr/bin/``. Display and thoroughly examine the ``findface-regenerate`` help message: 
 
@@ -183,9 +188,10 @@ Apply ``facen-regenerate`` as follows:
 
       sudo vi /etc/findface-facenapi.ini
 
-      detector                       = 'nnd'     
+      detector                       = 'nnd' 
+      ...    
   
-#. To change a facen :ref:`model <models>`, edit the ``model_facen`` parameter in the ``findface-nnapi`` configuration file:
+#. To change a face biometrics :ref:`model <models>`, edit the ``model_facen`` parameter in the ``findface-nnapi`` configuration file:
  
    .. code::
       
@@ -193,12 +199,10 @@ Apply ``facen-regenerate`` as follows:
        
       model_facen = apricot_320
 
-#. If necessary, enable :ref:`gender, age and emotions recognition <gae>`.
-#. Configure `findface-regenerate` by using command line arguments as described in the help message. To run ``facen-regenerate``, execute from ``/usr/bin``: 
+#. If necessary, configure :ref:`gender, age and emotions recognition <gae>` in the ``findface-facenapi`` and ``findface-nnapi`` configuration files.
+#. Configure ``findface-regenerate`` by using command line arguments as described in the help message. To run the script, execute from ``/usr/bin``: 
 
    .. code::
-
-       $ cd /usr/bin    
 
        ## To regenerate facens:
        $ sudo findface-regenerate --regenerate=facens --config=/etc/findface-facenapi.ini
@@ -236,7 +240,7 @@ Apply ``mongo2searchapi`` as follows:
         * :samp:`/opt/ntech/var/lib/tarantool/shard_{N}/xlogs`
         * :samp:`/opt/ntech/var/lib/tarantool/shard_{N}/index`          
 
-#. If facens of the old and new models differ in size, update the facen size in the ``FindFace.start`` section of the Tarantool configuration file :samp:`/etc/tarantool/instances.enabled/FindFace_{shard_N}.lua` for each shard.
+#. If facens :ref:`differ in size <models>` for the old and new models, update the facen size in the ``FindFace.start`` section of the Tarantool configuration file :samp:`/etc/tarantool/instances.enabled/FindFace_{shard_N}.lua`. Do so for each shard.
 
    .. code::
          
@@ -244,7 +248,7 @@ Apply ``mongo2searchapi`` as follows:
 
       FindFace.start("127.0.0.1", 8001, {license_ntls_server="127.0.0.1:3133", facen_size = 320})      
  
-#. Run ``mongo2searchapi`` on the findface-facenapi host:
+#. Run ``mongo2searchapi`` on the ``findface-facenapi`` host:
 
    .. code::
    
