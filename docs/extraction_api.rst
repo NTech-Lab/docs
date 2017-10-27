@@ -3,12 +3,9 @@
 Format API Response Data
 ================================
 
-With the **Extraction API** component, you can flexibly configure the
-format of API responses to extract various face data, including the
-bounding box coordinates, normalized face, gender, age, and emotions, as
-well as the face feature vector (facen). Implementing this feature to
-your system can remarkably broaden the scope of analytic tasks it is
-capable of fulfilling. 
+With the ``Extraction API`` component, you can flexibly configure the format of API responses to extract various face data, including the
+bounding box coordinates, normalized face, gender, age, and emotions, as well as the face feature vector (facen). Implementing this feature to
+your system can remarkably broaden the scope of analytic tasks it is capable of fulfilling. 
 
 .. note::
      Being a findface-facenapi counterpart when it comes to data extraction via API, the Extraction API component is more resource-demanding. The component cannot fully substitute findface-facenapi as it doesn't allow adding faces and working with the database.
@@ -21,8 +18,7 @@ capable of fulfilling. 
 Install Extraction API
 -----------------------------
 
-To install and configure the **Extraction API** component, do the
-following:
+To install and configure the ``Extraction API`` component, do the following:
 
 #. Install the component.
 
@@ -30,7 +26,7 @@ following:
 
        $ sudo apt-get install findface-extraction-api-net
 
-#. Open the **findface-extraction-api.ini** configuration file.
+#. Open the ``findface-extraction-api.ini`` configuration file.
 
    .. code::
 
@@ -42,22 +38,29 @@ following:
 
        license_ntls_server: 192.168.113.2:3133
 
-#. Enable or disable fetching Internet images.
+#. Configure other parameters if needed. For example, enable or disable fetching Internet images.
 
    .. code::
 
        fetch:
-             enabled: true
-             size_limit: 10485760
+         enabled: true
+         size_limit: 10485760
+   
+#. The ``min_face_size`` and ``max_face_size`` parameters do not work as filters. They rather indicate the guaranteed detection interval. Pick up their values carefully as these parameters affect performance.
 
-#. The ``model_instances`` parameter indicates how many instances of each enabled face detector (``nnd``, ``legacy`` or ``prenormalized``) and each enabled model (``facen``, ``gender``, ``age``, ``emotions``) run concurrently. The default value (0) means that this number is equal to the number of CPU cores. If it severely affects RAM consumption (extraction-api fails), adjust the parameter value. 
+   .. code::
+    
+      nnd:
+        min_face_size: 30
+        max_face_size: .inf
+
+#. The ``model_instances`` parameter indicates how many instances of each enabled face detector (``nnd``, ``legacy`` or ``prenormalized``) and each enabled model (``facen``, ``gender``, ``age``, ``emotions``) run concurrently. The default value (0) means that this number is equal to the number of CPU cores. If it severely affects RAM consumption (for example, extraction-api fails), adjust the parameter value. 
 
    .. code::
 
        model_instances: 2
 
-#. Enable the **Extraction API** service autostart and lauch the
-   service.
+#. Enable the ``Extraction API`` service autostart and lauch the service.
 
    .. code::
 
