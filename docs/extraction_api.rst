@@ -24,7 +24,7 @@ To install and configure the ``Extraction API`` component, do the following:
 
    .. code::
 
-       $ sudo apt-get install findface-extraction-api-net
+       $ sudo apt-get install findface-extraction-api
 
 #. Open the ``findface-extraction-api.ini`` configuration file.
 
