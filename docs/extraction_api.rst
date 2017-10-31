@@ -63,7 +63,7 @@ To install and configure the ``Extraction API`` component, do the following:
 #. To estimate how close a face orientation is to the straight frontal (ideal) position, set the ``quality_estimator`` parameter to ``true``. In this case, the orientation score will be returned in the :ref:`detection_score <detection_score>` parameter.
 
    .. tip::
-      Interpret it further in analytics. High quality faces, close to the ideal position, result in mostly negative values around ``0`` (for example, ``-0.00067401276`` and such). Unusable faces are estimated with negative values ``-5`` and less.
+      Interpret it further in analytics. High quality faces, close to the ideal position, result in mostly negative values around ``0`` (for example, ``-0.00067401276`` and such). Unusable faces are estimated with negative values some ``-5`` and less.
 
    .. code::
 
@@ -99,7 +99,7 @@ image and accepts the following parameters:
 
 * ``"image"``: an uploaded image (use ``multipart:part`` to refer to a relevant request body ``part``), or a publicly accessible image URL   (``http:``, ``https:``).
 * ``"roi"``: a region of interest in the image. If the region is not specified, the entire image is processed.
-* ``"detector"``: a face detector to apply to the image (``legacy``, ``nnd`` or ``prenormalized``). The "prenormalized" mode accepts normalized face images and omits detecting faces. To estimate a face proximity to the ideal position (``"quality_estimator": true``), apply only ``nnd". 
+* ``"detector"``: a face detector to apply to the image (``legacy``, ``nnd`` or ``prenormalized``). The ``prenormalized`` mode accepts normalized face images and omits detecting faces. Use ``nnd`` to estimate a face proximity to the ideal position (``"quality_estimator": true``). 
 * ``"need_facen"``: if true, the request returns a facen in the response.
 * ``"need_gender"``: returns gender.
 * ``"need_emotions"``: returns emotions.
@@ -153,7 +153,7 @@ Each face in the set is provided with the following data:
 .. _detection_score:
 
 * ``"bbox"``: coordinates of a bounding box with the face.
-* ``"detection_score"``: either a face detection accuracy, or a face orientation score (depending on whether ``quality_estimator`` is ``false`` or ``true`` at ``/etc/findface-extraction-api.ini``). The orientation score of high quality faces, close to the ideal position, are mostly negative values around ``0``. Unusable faces are estimated with negative values ``-5`` and less.
+* ``"detection_score"``: either a face detection accuracy, or a face orientation score (depending on whether ``quality_estimator`` is ``false`` or ``true`` at ``/etc/findface-extraction-api.ini``). The orientation score of high quality faces, close to the ideal position, are mostly negative values around ``0``. Unusable faces are estimated with negative values some ``-5`` and less.
 * ``"facen"``: the face feature vector.
 * ``"gender"``: gender information (MALE or FEMALE) with recognition accuracy if requested.
 * ``"age"``: age estimate if requested.
