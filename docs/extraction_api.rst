@@ -60,6 +60,12 @@ To install and configure the ``Extraction API`` component, do the following:
 
        model_instances: 2
 
+#. If you want ``extraction-api`` to estimate a face quality and return its detection score, set the ``quality_estimator`` parameter to ``True``. 
+
+   .. code::
+
+       quality_estimator: true
+
 #. Enable the ``Extraction API`` service autostart and lauch the service.
 
    .. code::

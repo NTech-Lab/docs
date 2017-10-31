@@ -1,3 +1,5 @@
+.. _tntapi:
+
 Install tntapi
 ^^^^^^^^^^^^^^^^^^^^^^
 

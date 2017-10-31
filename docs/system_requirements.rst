@@ -30,6 +30,7 @@ Prior to installing FindFace Enterprise Server SDK, ensure that the host(s) meet
 | RAM                | RAM consumption depends on the number of faces in your dataset.             |
 |                    | Use the benchmark results :ref:`below <RAM-benchmark>` to calculate         |
 |                    | the memory size you need.                                                   |
+|                    |                                                                             |
 |                    | Note that if there are 2 or more galleries with facens, you have to         |
 |                    | multiply the given MongoDB and Tarantool RAM consumption by the relevant    | 
 |                    | number of galleries.                                                        |
@@ -51,6 +52,9 @@ Here you can see the FindFace Enterprise Server SDK memory usage benchmark resul
 
 .. note::
    Memory usage may slightly vary from test to test.
+
+.. note::
+   Depending on your needs, :ref:`adjust <tntapi>` the Tarantool maximum memory usage at ``/etc/tarantool/instances.enabled/FindFace.lua``. 
 
 The testing setup is the following:
 

@@ -48,7 +48,7 @@ uninstallServer() {
     # rm -rf /var/lib/ffupload
 
     # rm -rf /usr/bin/mongo*
-    # rm -rf /var/lib/mongodb
+    # rm -rf /var/lib/mongodb/*
 
     # rm /etc/apt/sources.list.d/ntechlab.list
     # rm /etc/apt/sources.list.d/mongodb-org-*
@@ -86,7 +86,7 @@ uninstallAll() {
     rm -rf /var/lib/ffupload
 
     rm -rf /usr/bin/mongo*
-    rm -rf /var/lib/mongodb
+    rm -rf /var/lib/mongodb/*
 
     rm /etc/apt/sources.list.d/ntechlab.list
     rm /etc/apt/sources.list.d/mongodb-org-*

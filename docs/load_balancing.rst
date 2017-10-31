@@ -42,12 +42,12 @@ Do the following:
 
        $ sudo cp /lib/systemd/system/findface-nnapi.service /etc/systemd/system/findface-nnapi@.service
 
-#. Stop all the findface-nnapi services. Edit the new file ``findface-nnapi@.service`` by appending ``--listen 127.0.0.1:%i`` to the ``ExecStart`` line.
+#. Stop all the findface-nnapi services and disable their autostart. Edit the new file ``findface-nnapi@.service`` by appending ``--listen 127.0.0.1:%i`` to the ``ExecStart`` line.
 
    .. code::
 
-       ## Stop the findface-nnapi services
-       $ sudo service findface-nnapi stop
+       ## Stop the findface-nnapi services and disable their autostart
+       $ sudo service findface-nnapi stop && sudo systemctl disable findface-nnapi
 
        ## Open the file
        $ sudo vi /etc/systemd/system/findface-nnapi@.service
