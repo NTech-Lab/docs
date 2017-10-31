@@ -30,7 +30,7 @@ Install and configure the **tntapi** component as follows:
 
        $ sudo systemctl disable tarantool@FindFace
 
-#. Write a bash script that will automatically create configuration files for all shards on a particular host. Do so for the 4 hosts. Use the following script as a base for your own code. The exemplary script creates 4 shards listening to the ports: tntapi ``33001..33004`` and http ``8001..8004``.
+#. Write a bash script ``shard.sh`` that will automatically create configuration files for all shards on a particular host. Do so for the 4 hosts. Use the following script as a base for your own code. The exemplary script creates 4 shards listening to the ports: tntapi ``33001..33004`` and http ``8001..8004``.
 
    .. important::
          The script below creates configuration files based on the default configuration settings stored in the file ``/etc/tarantool/instances.enabled/FindFace.lua``. We strongly recommend you not to add or edit anything in the default file, except the maximum memory usage (``memtx_memory``) and the NTLS IP address required for the tntapi licensing.
@@ -49,39 +49,29 @@ Install and configure the **tntapi** component as follows:
 
    .. code::
 
-       #!/bin/sh
-       set -e
+      #!/bin/sh
+      set -e
 
-       for I in `seq 1 4`; do
-               TNT_PORT=$((33000+$I)) &&
-               HTTP_PORT=$((8000+$I)) &&
-               sed "
-                       s#/opt/ntech/var/lib/tarantool/default#/opt/ntech/var/lib/tarantool/shard_$I#g;
-                       s/listen = .*$/listen = $TNT_PORT,/;
-                       s/\"127.0.0.1\", 8001,/\"0.0.0.0\", $HTTP_PORT,/;
-               " /etc/tarantool/instances.enabled/FindFace.lua > /etc/tarantool/instances.enabled/FindFace_shard_$I.lua;
+      for I in `seq 1 4`; do
+             TNT_PORT=$((33000+$I)) &&
+             HTTP_PORT=$((8000+$I)) &&
+             sed "
+                     s#/opt/ntech/var/lib/tarantool/default#/opt/ntech/var/lib/tarantool/shard_$I#g;
+                     s/listen = .*$/listen = '127.0.0.1:$TNT_PORT',/;
+                     s/\"127.0.0.1\", 8001,/\"0.0.0.0\", $HTTP_PORT,/;
+             " /etc/tarantool/instances.enabled/FindFace.lua > /etc/tarantool/instances.enabled/FindFace_shard_$I.lua;
 
-               mkdir -p /opt/ntech/var/lib/tarantool/shard_$I/snapshots
-               mkdir -p /opt/ntech/var/lib/tarantool/shard_$I/xlogs
-               mkdir -p /opt/ntech/var/lib/tarantool/shard_$I/index
-               chown -R tarantool:tarantool /opt/ntech/var/lib/tarantool/shard_$I
-               echo "Shard #$I inited"
-       done;
+             mkdir -p /opt/ntech/var/lib/tarantool/shard_$I/snapshots
+             mkdir -p /opt/ntech/var/lib/tarantool/shard_$I/xlogs
+             mkdir -p /opt/ntech/var/lib/tarantool/shard_$I/index
+             chown -R tarantool:tarantool /opt/ntech/var/lib/tarantool/shard_$I
+             echo "Shard #$I inited"
+      done;
 
    .. tip::
-       You can also download the script to the home directory by executing:
+      Download the :download:`exemplary script <_scripts/shard.sh>`.
 
-       .. code::
-
-           $ wget -P ~ https://raw.githubusercontent.com/NTech-Lab/FFSER-file-examples/master/shard.sh
-
-#. Move the written script file (shard.sh) to the home directory.
-
-   .. code::
-
-       $ sudo mv shard.sh ~
-
-#. Run the script.
+#. Run the script from the home directory.
 
    .. code::
 
