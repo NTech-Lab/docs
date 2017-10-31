@@ -60,7 +60,7 @@ To install and configure the ``Extraction API`` component, do the following:
 
        model_instances: 2
 
-#. To estimate how close a face orientation is to the straight frontal (ideal) position, set the ``quality_estimator`` parameter to ``true``. In this case, the orientation score will be returned in the :ref:`detection_score <detection_score>` parameter.
+#. To estimate how close a face orientation is to the straight frontal (ideal) position, set ``quality_estimator: true``. In this case, the orientation score will be returned in the :ref:`detection_score <detection_score>` parameter.
 
    .. tip::
       Interpret it further in analytics. High quality faces, close to the ideal position, result in mostly negative values around ``0`` (for example, ``-0.00067401276`` and such). Unusable faces are estimated with negative values some ``-5`` and less.
@@ -164,7 +164,7 @@ Each face in the set is provided with the following data:
 
     {
         "bbox": { "left": 1, "right": 2, "top": 3, "bottom": 4},
-        "detection_score": 0.99,
+        "detection_score": -0.0004299,
         "facen": "...",
         "gender": {
             "gender": "MALE",
@@ -279,5 +279,46 @@ Examples
         }
       ]
     }
+
+
+.. rubric:: Request #3. Auto-rotation
+
+.. code::
+  
+   $ curl -s -F 'sample=@/path/to/your/photo.png' -F 'request={"requests":[{"image":"multipart:sample","detector":"nnd", "auto_rotate": true, "need_normalized": true }]}' http://192.168.113.79:18666/
+
+.. rubric:: Response
+
+.. code::
+
+   {
+    "responses": [
+      {
+        "faces": [
+          {
+            "bbox": {
+              "left": 96,
+              "top": 99,
+              "right": 196,
+              "bottom": 198
+            },
+            "detection_score": -0.00019264,
+            "normalized": "iVBORw0KGgoAAAANSUhE....quWKAAC"
+           },
+          {
+            "bbox": {
+              "left": 205,
+              "top": 91,
+              "right": 336,
+              "bottom": 223
+            },
+            "detection_score": -0.00041600747,
+            "normalized": "iVBORw0KGgoAAAANSUhEUgAA....AByquWKAACAAElEQVR4nKy96XYbybIdnF"
+          }
+        ]
+      }
+    ]
+   }
+
 
 
