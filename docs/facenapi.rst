@@ -3,7 +3,7 @@
 Install facenapi
 ^^^^^^^^^^^^^^^^^^^^
 
-Install and configure the **findface-facenapi** component as follows:
+Install and configure the ``findface-facenapi`` component as follows:
 
 
 #. Install the component.
@@ -23,7 +23,7 @@ Install and configure the **findface-facenapi** component as follows:
       ## Specify the MongoDB host IP address.
       mongo_host = '192.168.113.1'
 
-#. Check if the component is runnable. To do so, invoke the **findface-facenapi** application by executing the command below. As the application is invoked, hold 1 minute, and if no errors display, hit Ctrl+C.
+#. Check if the component is runnable. To do so, invoke the ``findface-facenapi`` application by executing the command below. As the application is invoked, hold 1 minute, and if no errors display, hit Ctrl+C.
      
    .. code::
        
@@ -33,7 +33,7 @@ Install and configure the **findface-facenapi** component as follows:
       ## If MongoDB is installed on a remote host
       $ sudo findface-facenapi --config=/etc/findface-facenapi.ini
 
-#. Check if the **findface-facenapi** service autostart at system startup is enabled.
+#. Check if the ``findface-facenapi`` service autostart at system startup is enabled.
       
    .. code::
        

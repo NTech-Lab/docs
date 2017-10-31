@@ -1,3 +1,5 @@
+.. _deploy:
+
 ******************************
 Deploy FindFace Server
 ******************************
@@ -8,6 +10,7 @@ Deploy FindFace Server
 
    prerequisites
    install
+   installer
    token
    test_requests
    

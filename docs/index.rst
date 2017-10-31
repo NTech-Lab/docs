@@ -50,7 +50,6 @@ Let's get started!
    findface_ui
    advanced_features
    rest_api
-   appendix
    troubleshooting
-   
+   appendix
 

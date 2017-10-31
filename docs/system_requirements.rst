@@ -47,11 +47,13 @@ Prior to installing FindFace Enterprise Server SDK, ensure that the host(s) meet
 
 .. _RAM-benchmark:
 
-Here you can see the FindFace Enterprise Server SDK memory usage benchmark results. Use these data to calculate the RAM size you need. 
+Here you can see the FindFace Enterprise Server SDK memory usage benchmark results. Use these data to calculate the RAM size you need.
+
+.. note::
+   Memory usage may slightly vary from test to test.
 
 The testing setup is the following:
 
-* Benchmarking tool: `ps_mem.py <https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py>`__
 * Neural network facen :ref:`model <models>`: ``apricot_320``
 * Models for :ref:`gender, age and emotions recognition <gae>` (GAE in the table): ``fr_1_gender0``, ``fr_1_age0``, ``emotion_1``
 * Models used in :ref:`extraction-api <extraction-api>`: ``apricot_320``, ``fr_1_gender0``, ``fr_1_age0``, ``emotion_1``
@@ -63,15 +65,15 @@ The testing setup is the following:
 |                 +-------------+--------------+----------+--------------------+----------------------------+   
 |                 | MongoDB     | Tarantool    | nnapi    | nnapi + GAE        | extraction-api             |
 +=================+=============+==============+==========+====================+============================+  
-| 0 (own needs)   | 70          | 77           | 265      | 1000               | 1GB (1 Core)/7GB (8 Cores) |
-+-----------------+-------------+--------------+----------+--------------------+ (up to 10,5 under load)    |           
-| 50,000          | 181         | 189          | 400      | 1400               |                            |
+| 0 (own needs)   | ~70         | ~77          | ~265     | ~1000              | ~1GB (1 Core)/~7GB         |
++-----------------+-------------+--------------+----------+--------------------+ (8 Cores)                  |           
+| 50,000          | ~181        | ~189         | ~400     | ~1400              | (up to 10,5 under load)    |
 +-----------------+-------------+--------------+----------+--------------------+                            |
-| 100,000         | 294         | 263          | 400      | 1400               |                            |
+| 100,000         | ~294        | ~263         | ~400     | ~1400              |                            |
 +-----------------+-------------+--------------+----------+--------------------+                            |
-| 500,000         | 1190        | 1013         | 400      | 1400               |                            |
+| 500,000         | ~1190       | ~1013        | ~400     | ~1400              |                            |
 +-----------------+-------------+--------------+----------+--------------------+                            | 
-| 1,000,000       | 2310        | 1943         | 400      | 1400               |                            |
+| 1,000,000       | ~2310       | ~1943        | ~400     | ~1400              |                            |
 +-----------------+-------------+--------------+----------+--------------------+----------------------------+  
 
 

@@ -1,13 +1,16 @@
-***********************
-Troubleshooting
-***********************
+*************************************
+Maintenance and Troubleshooting
+*************************************
 
 .. toctree::
    :maxdepth: 1
    :caption: In this chapter:
 
-   remove_sdk
+   logs
+   regenerate_facens
    update
+   remove_sdk
+   
  
 
  

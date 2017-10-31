@@ -1,6 +1,6 @@
 .. _tntapi-add:
 
-Additional Tntapi Functionality
+Hacks for ``tntapi`` 
 ===================================================
 
 .. contents:: In this section:

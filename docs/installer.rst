@@ -1,6 +1,6 @@
 .. _installer:
 
-FindFace Enterprise Server SDK Standalone Installer
+Standalone Installer
 ======================================================================
 
 To install FindFace Enterprise Server SDK in a standalone configuration, you can use the :program:`<findface-server-xxx>.run` file. Do the following:
@@ -30,8 +30,8 @@ To install FindFace Enterprise Server SDK in a standalone configuration, you can
    | findface-facenapi        | Installed and started with enabled and configured dynamic person creation and “friend or foe”        |
    |                          | identification.                                                                                      |
    +--------------------------+------------------------------------------------------------------------------------------------------+
-   | findface-nnapi           | Installed and started (1 instance) with enabled and configured gender, age and emotions recognition. |
-   |                          | Use nginx to set up findface-nnapi :ref:`load balancing <load-balancing>`.                           |
+   | findface-nnapi           | Installed and started with the number of instances N = min(cores, RAM/2Gb)/2 and                     |
+   |                          | enabled and configured gender, age and emotions recognition.                                         |
    +--------------------------+------------------------------------------------------------------------------------------------------+
    | findface-server-tarantool| Installed and started with the number of tntapi shards: N = min(cores, RAM/2Gb)/2                    |
    | (tntapi)                 |                                                                                                      |
@@ -86,5 +86,5 @@ To install FindFace Enterprise Server SDK in a standalone configuration, you can
 #. Upload a license file via the NTLS web interface ``http://<Host_IP_address>:3185/#/``. To access the NTLS web interface, use the credentials provided in the console. 
 
    .. note::
-       Depending on whether the host belongs to a network, the host IP address in the links to FindFace web services is provided as ``127.0.0.1`` or as ``IP address in the network``.
+       Depending on whether the host belongs to a network, the host IP address in the links to FindFace web services is provided either as ``127.0.0.1``, or ``IP address in the network``.
 
