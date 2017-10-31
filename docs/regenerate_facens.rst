@@ -7,12 +7,12 @@ Migrate to Different Detector or Model
    Do not hesitate to contact our experts on migration by info@ntechlab.com.
 
 
-Sometimes you have to migrate your FindFace Enterprise Server SDK instance to another face detector or neural network model. This usually happens when you decide to update to the latest version of the product, or just want to add previously unused features, such as gender, age and emotions analysis, to your face recognition system.
+Sometimes you have to migrate your FindFace Enterprise Server SDK instance to another face detector or neural network model. This usually happens when you decide to update to the latest version of the product.
 
 .. tip::
    You can find the models summary :ref:`here <models>`. 
 
-If you need to re-detect faces, you should regenerate both normalized face images, thumbnails and facens. If you just want to apply a different model, it usually suffices to regenerate only facens. FindFace Enterprise Server SDK provides tools that can handle all possible migration use cases. 
+If you need to re-detect faces, you should regenerate both normalized face images, thumbnails and facens. If you just want to apply a different model, it usually suffices to regenerate only facens. FindFace Enterprise Server SDK provides tools that can handle most migration use cases. 
 
 .. warning::
    Different detectors have diverse sensitivity to certain facial features. Be aware that, after re-detecting your database, you may miss out on some previously found faces.
@@ -54,8 +54,6 @@ Overall, the ``findface-regenerate`` tool works with the ``Uploads`` folder in t
      - The ``findface-regenerate`` tool runs original images through the ``facenapi``-``nnapi`` pipeline with different detector [and model] settings, and returns regenerated normalized images, thumbnails and facens.
    * - Different model
      - The ``findface-regenerate`` tool runs normalized face images through ``nnapi`` with different model settings, and returns regenerated facens.
-   * - Enabling gender, age and emotions recognition
-     - The ``findface-regenerate`` tool runs original images through the ``facenapi``-``nnapi`` pipeline with enabled and configured gender, age and emotions recognition, and returns regenerated normalized images, thumbnails and facens.
 
 
 Regenerate Face Data
@@ -191,7 +189,7 @@ Apply ``findface-regenerate`` as follows:
       detector                       = 'nnd' 
       ...    
   
-#. To change a face biometrics :ref:`model <models>`, edit the ``model_facen`` parameter in the ``findface-nnapi`` configuration file:
+#. To change a face biometric :ref:`model <models>`, edit the ``model_facen`` parameter in the ``findface-nnapi`` configuration file:
  
    .. code::
       
@@ -199,12 +197,11 @@ Apply ``findface-regenerate`` as follows:
        
       model_facen = apricot_320
 
-#. If necessary, configure :ref:`gender, age and emotions recognition <gae>` in the ``findface-facenapi`` and ``findface-nnapi`` configuration files.
 #. Configure ``findface-regenerate`` by using command line arguments as described in the help message. To run the script, execute from ``/usr/bin``: 
 
    .. code::
 
-       ## When switching a face detector, or applying gender, age and emotions recognition to old faces:
+       ## When switching a face detector:
        $ sudo findface-regenerate --regenerate=normalized,thumbs,facens --config=/etc/findface-facenapi.ini
 
        ## When switching a model:

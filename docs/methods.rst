@@ -62,16 +62,18 @@ will use to fetch the image.
 Method /verify POST
 ---------------------------
 
-This method is used to verify that two faces belong to the same person,
-or, alternatively, measures the similarity between the two faces. You
-can choose between these two modes by setting the threshold parameter.
-In the case, when a binary decision is required, the user should pass a
-value for the threshold parameter. We provide 3 preset values for the
-threshold: strict, medium and low, with the former aimed at minimizing
-the false accept rates and the latter being somewhat more permissive.
-The client can also override these preset values by a fixed threshold.
-Please feel free to contact us if you need to tune the threshold value
-for your specific use-case and/or dataset.
+This method is used to verify that two faces belong to the same person, or, alternatively, measures the similarity between the two faces. You
+can choose between these two modes by setting the ``threshold`` parameter. 
+
+In the case, when a binary decision is required, the user should pass a value for the ``threshold`` parameter. You can use one of the 3 :ref:`preset values <thresholds>`: ``strict``, ``medium`` and ``low`` with the former aimed at minimizing the false accept rates and the latter being somewhat more permissive. You can also set a user-defined value.
+
+In the case, when you need to calculate similarity of different persons or find similar people rather than verify identity, pass ``none`` to the ``threshold`` parameter. 
+
+.. note::
+   If no threshold level is specified, it is set to the default value ``0.75``.
+
+.. tip::
+   Please feel free to contact us if you need to tune the threshold value for your specific use-case and/or dataset.
 
 .. rubric:: Parameters:
 
@@ -79,7 +81,7 @@ for your specific use-case and/or dataset.
 * ``photo2``: the second uploaded image or an external URL
 * ``bbox1`` [optional]: array of bounding boxes for the faces on the first photo
 * ``bbox2`` [optional]: array of bounding boxes for the faces on the second photo
-* ``threshold`` [optional]: one of "strict", "medium", "low" [default], "none", or a value between 0 and 1
+* ``threshold`` [optional]: one of "strict", "medium", "low" or "none", or a value between 0 and 1. Default is 0.75.
 * ``mf_selector`` [optional]: specifies behavior in a case of multiple faces on a photo; one of:
    * ``"reject"``: return an error if more than one face was detected on any of image
    * ``"biggest"`` [default]: add the biggest face on the image
@@ -90,7 +92,7 @@ for your specific use-case and/or dataset.
 
 .. rubric:: Returns:
 
-* binary verification result, only returned if threshold was not set to none. Each pair of faces contains it's own verification result as does the whole response. Top-level result will be true if any of the faces on the first photo match any face on the second.
+* binary verification result, only returned if threshold was not set to none. Each pair of faces is given it's own result. The given pair of photos is also provided with the verification result. It will be true if each face on the first photo has a match on the second.
 * the coordinates of the bounding boxes with the faces on the images
 * the algorithm's confidence in the decision, measured from 0 to 1
 
@@ -147,17 +149,13 @@ for your specific use-case and/or dataset.
 Method /identify POST
 ---------------------------
 
-This method is used to search through the face database. The method
-returns at most n faces (one by default), which are the most similar to
-the specified face, and the similarity is above the specified threshold.
-You can optionally specify gallery id to check photo only against photos
-in this gallery.
+This method is used to search through the face database. The method returns at most n faces (one by default), which are the most similar to the specified face, and the similarity is above the specified :ref:`threshold <thresholds>`. You can optionally specify a gallery id to check a photo only against photos in this gallery.
 
 .. rubric:: Parameters:
 
 * ``photo``: the uploaded image, or an external URL
 * ``x1, y1, x2, y2`` [optional]: coordinates of a bounding box of the face on the photo
-* ``threshold`` [optional]: one of "strict", "medium", "low" [default], "none" or a value between 0 and 1
+* ``threshold`` [optional]: one of "strict", "medium", "low" or "none", or a value between 0 and 1. Default is 0.75.
 * ``n`` [optional]: maximum number of closest faces to return, 1 by default
 * ``strict`` [optional]: specifies behavior in case if one or several tntapi shards are out of service. This parameter takes priority over the ``tntapi_ignore_search_errors`` parameter from the findface-facenapi :ref:`configuration file <configure-network>`.
    * ``True``: return an error if some tntapi shards are out of service

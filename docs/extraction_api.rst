@@ -60,7 +60,10 @@ To install and configure the ``Extraction API`` component, do the following:
 
        model_instances: 2
 
-#. If you want ``extraction-api`` to estimate a face quality and return its detection score, set the ``quality_estimator`` parameter to ``True``. 
+#. To estimate how close a face orientation is to the straight frontal (ideal) position, set the ``quality_estimator`` parameter to ``true``. In this case, the orientation score will be returned in the :ref:`detection_score <detection_score>` parameter.
+
+   .. tip::
+      Interpret it further in analytics. High quality faces, close to the ideal position, result in mostly negative values around ``0`` (for example, ``-0.00067401276`` and such). Unusable faces are estimated with negative values ``-5`` and less.
 
    .. code::
 
@@ -94,14 +97,15 @@ The JSON part of the request body contains a set of requests:
 Each request in the set applies to a specific image or region in the
 image and accepts the following parameters:
 
-* ``"image"``: an uploaded image (use **multipart:part** to refer to a relevant request body **part**), or a publicly accessible image URL   (**http:**, **https:**).
+* ``"image"``: an uploaded image (use ``multipart:part`` to refer to a relevant request body ``part``), or a publicly accessible image URL   (``http:``, ``https:``).
 * ``"roi"``: a region of interest in the image. If the region is not specified, the entire image is processed.
-* ``"detector"``: a face detector to apply to the image (legacy, nnd or prenormalized). The "prenormalized" mode accepts normalized face images and omits detecting faces.
+* ``"detector"``: a face detector to apply to the image (``legacy``, ``nnd`` or ``prenormalized``). The "prenormalized" mode accepts normalized face images and omits detecting faces. To estimate a face proximity to the ideal position (``"quality_estimator": true``), apply only ``nnd". 
 * ``"need_facen"``: if true, the request returns a facen in the response.
 * ``"need_gender"``: returns gender.
 * ``"need_emotions"``: returns emotions.
 * ``"need_age"``: returns age.
-* ``"need_normalized"``: returns a normalized face image encoded in base64. The normalized image can then be posted again to the **Extraction API** component as "prenormalized". 
+* ``"need_normalized"``: returns a normalized face image encoded in base64. The normalized image can then be posted again to the ``Extraction API`` component as "prenormalized". 
+* ``"auto_rotate"``: if true, auto-rotates an original image to 4 different orientations and returns faces detected in each orientation. Works only if ``"detector": "nnd"`` and ``"quality_estimator": true``.
 
 .. code::
 
@@ -113,7 +117,8 @@ image and accepts the following parameters:
         "need_gender": true,
         "need_emotions": true,
         "need_age": true,  
-        "need_normalized": true
+        "need_normalized": true,
+        "auto_rotate": true
     }
 
 API Response Format
@@ -145,8 +150,10 @@ Each response in the set contains the following JSON data:
 
 Each face in the set is provided with the following data:
 
+.. _detection_score:
+
 * ``"bbox"``: coordinates of a bounding box with the face.
-* ``"detection_score"``: detection accuracy.
+* ``"detection_score"``: either a face detection accuracy, or a face orientation score (depending on whether ``quality_estimator`` is ``false`` or ``true`` at ``/etc/findface-extraction-api.ini``). The orientation score of high quality faces, close to the ideal position, are mostly negative values around ``0``. Unusable faces are estimated with negative values ``-5`` and less.
 * ``"facen"``: the face feature vector.
 * ``"gender"``: gender information (MALE or FEMALE) with recognition accuracy if requested.
 * ``"age"``: age estimate if requested.
@@ -196,7 +203,7 @@ Examples
                 "right": 812,
                 "bottom": 344
               },
-              "detection_score": 0.9999999,
+              "detection_score": -0.0012599,
               "facen": "qErDPTE...vd4oMr0=",
               "gender": {
                 "gender": "FEMALE",

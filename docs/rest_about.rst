@@ -108,22 +108,26 @@ bar of your browser:
 * ``http://<facenapi_ip>:8000/v0/docs/v0/overview.html`` for the API version /v0.
 * ``http://<facenapi_ip>:8000/v1/docs/v1/overview.html`` for the API version /v1.
 
+.. _thresholds:
+
 Confidence Thresholds
 ------------------------------
 
-For some methods you need to specify a threshold for verification or
-identification confidence. The higher is the threshold, the less are
-chances that a wrong person will be positively verified or identified,
-however, some valid photos may fail verification.
+For some methods you need to specify a threshold for verification or identification confidence. The higher is the threshold, the less are
+chances that a wrong person will be positively verified or identified, however, some valid photos may also fail verification.
 
-There are four pre-defined threshold levels:
+There are 4 pre-defined threshold levels:
 
 * ``Strict (0.7834)``: used for applications where a chance of misidentification should be minimized. This level corresponds to False Accept Rate (FAR) of 1e-5 on our test dataset.
 * ``Medium (0.6616)``: balances low probability of misidentification and inability to identify a valid person. Corresponds to 1e-3 FAR on our test dataset.
 *  ``Low (0.5690)``: used when it's important to maximize the verification or identification rate, and misidentification does not cause severe consequences. Corresponds to 1e-1 FAR on our test dataset.
 *  ``None (0)``: use when you need to calculate similarity of different persons or find similar people rather than verify identity.
 
-You can also specify your own threshold level from 0 to 1, depending on your environment and needs.
+You can also specify your own threshold level from 0 to 1, depending on your environment and needs. 
+
+.. note::
+   If no threshold level is specified, it is set to the default value ``0.75``.
+
 
 Pagination
 -------------------
