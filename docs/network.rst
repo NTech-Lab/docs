@@ -27,10 +27,19 @@ After you install the FindFace Server components, configure their interaction wi
       
      tntapi_ignore_search_errors = True
 
-#. Restart all the FindFace Enterprise Server SDK services and nginx (for findface-upload) on the relevant host(s)::
+#. Restart all the FindFace Enterprise Server SDK services and nginx (for findface-upload) on the relevant host(s).
 
-     $ sudo service 'findface*' restart $ sudo service nginx restart
+   .. code::
+
+      $ sudo service 'findface*' restart
+      $ sudo service nginx restart
 
 #. Check the services status. The command will return the services description, status (should be Active), path and running time::
 
-     $ sudo service 'findface*' status $ sudo service nginx status
+   .. code:: 
+
+      $ sudo service 'findface*' status
+      $ sudo service nginx status
+
+
+
