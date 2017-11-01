@@ -30,12 +30,14 @@ Prior to installing FindFace Enterprise Server SDK, ensure that the host(s) meet
 | RAM                | RAM consumption depends on the number of faces in your dataset.             |
 |                    | Use the benchmark results :ref:`below <RAM-benchmark>` to calculate         |
 |                    | the memory size you need.                                                   |
-|                    |                                                                             |
 |                    | Note that if there are 2 or more galleries with facens, you have to         |
 |                    | multiply the given MongoDB and Tarantool RAM consumption by the relevant    | 
 |                    | number of galleries.                                                        |
+|                    | As a rule, ``10,000,000`` faces require 20Gb RAM for Tarantool. MongoDB     |
+|                    | does not need much RAM as it uses HDD as RAM when needed.                   |
 +--------------------+-----------------------------------------------------------------------------+
-| Storage            | ~1280 byte per face in dataset. 10M faces = ~12Gb.                          |
+| HDD                | ``10,000,000`` faces require ~20x[number of snapshots for each shard] GB    |
+|                    | for Tarantool (by default 20x3=60 GB) and 24 GB for MongoDB.                |
 |                    | To store all uploaded images via findface-upload:                           |
 |                    | size of all uploaded images + 10%                                           |
 +--------------------+-----------------------------------------------------------------------------+

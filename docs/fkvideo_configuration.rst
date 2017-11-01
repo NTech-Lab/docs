@@ -69,6 +69,10 @@ Usage:
      - Defines a video stream to be processed by fkvideo_detector, as the relevant camera address (see also ``‑‑camid``). If a video stream is not specified, fkvideo_detector requests the :ref:`list of cameras <video-methods>` from FindFace Server with a polling interval defined by the ``reload-timeout`` parameter.
      - Camera address: ``rtsp://...`` - network stream, ``/dev/video0`` – webcam, ``file@FPS:PATH`` - file with configurable FPS.
      - ‑‑source rtsp://192.168.120.55:500
+   * - ‑‑source-params arg
+     - Defines ffmpeg options for a video stream.
+     - List of ffmpeg options with their values.
+     - ‑‑source-params rtsp_transport=tcp, rtsp_flags=prefer, timeout=-1
    * - ‑‑md-threshold arg
      - Defines the minimum motion intensity to be detected by the motion detector. The threshold value is to be fitted empirically.
      - Motion intensity in empirical units (zero and positive rational numbers). Milestones: 0 = detector disabled, 0.002 = default value, 0.05 = minimum intensity is too high to detect motion.
@@ -208,6 +212,11 @@ Configuration File Format
     [General]
     | long-arg=option ; long-arg from command line arguments
     | ...
+
+    | ‑‑license-ntls-server=192.168.10.1:3133
+    | ‑‑source-params=rtsp_transport=tcp,rtsp_flags=prefer,timeout=-1
+    | ‑‑body=galleries=testgal,gender=true,age=true,emotions=true,meta=video.mp4
+
 
 
 

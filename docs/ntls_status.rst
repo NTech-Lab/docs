@@ -9,7 +9,7 @@ You can use API to retrieve :ref:`licensing <licensing>` information in JSON.
 
 .. code::
 
-   curl http://localhost:3185/license.json -s | jq '.'
+   curl http://localhost:3185/license.json -s | jq
 
 
 .. rubric:: Exemplary response
