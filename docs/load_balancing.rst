@@ -21,8 +21,8 @@ Load balancing can be set up for the following components:
 +---------------------+--------------------------------------------------------------------------------------------------------+
 | findface-nnapi      | Number of CPU cores minus 1. Gives a significant performance gain.                                     |
 +---------------------+--------------------------------------------------------------------------------------------------------+
-| extraction-api      | 1. By analogy with findface-facenapi, load balancing applies only to extraction-api instances on       |
-|                     | different physical hosts.                                                                              |
+| extraction-api      | 1, automatically load-balanced. Set up load balancing only across extraction-api                       |
+|                     | instances located on different physical hosts.                                                         |
 +---------------------+--------------------------------------------------------------------------------------------------------+
 
 The following step-by-step instructions demonstrate how to set up nginx load balancing for 2 findface-nnapi instances on a host. The other

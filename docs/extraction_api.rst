@@ -1,6 +1,6 @@
 .. _extraction-api:
 
-Format API Response Data
+Extraction API
 ================================
 
 With the ``Extraction API`` component, you can flexibly configure the format of API responses to extract various face data, including the
@@ -8,10 +8,13 @@ bounding box coordinates, normalized face, gender, age, and emotions, as well as
 your system can remarkably broaden the scope of analytic tasks it is capable of fulfilling. 
 
 .. note::
-     Being a findface-facenapi counterpart when it comes to data extraction via API, the Extraction API component is more resource-demanding. The component cannot fully substitute findface-facenapi as it doesn't allow adding faces and working with the database.
+   Being a ``findface-facenapi`` counterpart when it comes to data extraction via API, ``Extraction API`` is more resource-demanding. The component cannot fully substitute ``findface-facenapi`` as it doesn't allow adding faces and working with the database.
+
+.. note::
+   You can also :ref:`use <extract-facens>` ``Extraction API`` as a facen extractor, i. e. as a substitute for ``findface-nnapi``.
 
 .. tip::
-     Encoded in base64 normalized images received from the Extraction API component are qualified for posting to findface-facenapi.
+   Encoded in base64 normalized images received from the Extraction API component are qualified for posting to findface-facenapi.
 
 .. contents:: In this section:
 
@@ -19,6 +22,9 @@ Install Extraction API
 -----------------------------
 
 To install and configure the ``Extraction API`` component, do the following:
+
+.. note::
+   ``Extraction API`` requires the package with models :program:`<findface-data>.deb`. Make sure it's installed.
 
 #. Install the component.
 
@@ -75,7 +81,7 @@ To install and configure the ``Extraction API`` component, do the following:
 
        $ sudo systemctl enable findface-extraction-api && sudo systemctl start findface-extraction-api
 
-Post API Requests
+API Requests
 --------------------------
 
 The Extraction API component accepts POST requests
@@ -320,5 +326,56 @@ Examples
     ]
    }
 
+
+.. _extract-facens:
+
+Extract Facens
+---------------------------------------------------
+
+By default, ``findface-facenapi`` detects faces in images and sends them to ``findface-nnapi`` for a facen extraction. Then ``findface-facenapi`` saves the obtained facen to MongoDB and Tarantool databases. You can use ``Extraction API`` as a substitute of ``findface-nnapi`` in this pipeline. 
+
+The main advantage of ``Extraction API`` in contrast with ``findface-nnapi`` is its built-in ability to clone into multiple instances and automatically balance the traffic across them, while for ``findface-nnapi``, load balancing has to be manually :ref:`set up <load-balancing>` via NginX. 
+
+To extract facens via ``Extraction API``, do the following:
+
+#. Open the ``findface-facenapi.ini`` configuration file:: 
+
+      $ sudo vi /etc/findface-facenapi.ini
+   
+#. Uncomment and edit the ``extractor`` parameter in the following way::
+
+     extractor = 'extraction-api'
+
+   .. warning::
+       The ``findface-facenapi.ini`` content must be correct Python code.
+
+#. Uncomment and/or edit ``extraction_api_url`` to align with your network specification::
+  
+     extraction_api_url = 'http://localhost:18666'     
+    
+
+#. Start ``Extraction API`` and enable its autostart.
+
+   .. code::
+
+      $ sudo service findface-extraction-api start && sudo systemctl enable findface-extraction-api
+
+#. Restart ``findface-facenapi``.
+
+   .. code::
+
+      $ sudo service findface-facenapi restart
+
+#. Stop ``findface-nnapi`` and disable its autostart. 
+
+   .. code::
+
+      $ sudo service findface-nnapi stop && sudo systemctl disable findface-nnapi
+
+#. Check the services status. The command will return the services description, status (should be Active), path and running time.
+
+   .. code:: 
+
+      $ sudo service 'findface*' status
 
 

@@ -5,7 +5,7 @@ Configure Network
 
 After you install the FindFace Server components, configure their interaction with each other. Do the following:
 
-#. Open the findface-facenapi.ini configuration file:: 
+#. Open the ``findface-facenapi.ini`` configuration file:: 
 
       $ sudo vi /etc/findface-facenapi.ini
 

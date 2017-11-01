@@ -10,6 +10,7 @@ Maintenance and Troubleshooting
    regenerate_facens
    update
    remove_sdk
+   ntls_status
    
  
 
