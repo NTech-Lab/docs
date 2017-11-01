@@ -34,7 +34,7 @@ After you install the FindFace Server components, configure their interaction wi
       $ sudo service 'findface*' restart
       $ sudo service nginx restart
 
-#. Check the services status. The command will return the services description, status (should be Active), path and running time::
+#. Check the services status. The command will return the services description, status (should be Active), path and running time.
 
    .. code:: 
 
