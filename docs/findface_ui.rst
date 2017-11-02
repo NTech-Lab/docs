@@ -58,7 +58,7 @@ The web interface has a highly intuitive and handy design and provides the follo
      You may also want to use its :ref:`console alternative <bulk-face>`.
   
 
-  Select multiple files or a directory, and then configure the automatic meta description for the enrolled faces. Use :guilabel:`&MF selector` to specify behavior in case if multiple faces are detected in an image: enroll all faces, only the biggest one, or reject enrolment.
+  Select multiple files or a directory, and then configure the automatic meta description for the enrolled faces. Use :guilabel:`&MF selector` to specify behavior in case if multiple faces are detected in an image: enroll all faces, only the biggest one, or reject enrollment.
 
      .. image:: /_static/meta.png
         :scale: 60%
@@ -79,7 +79,7 @@ The web interface has a highly intuitive and handy design and provides the follo
     .. image:: /_static/compare.png
 
  
-* :guilabel:`Video processing`. Here you can work with video streams from rtsp and web cameras, and video files. Detect, enroll (add to a gallery) and identify faces in video with gender, age and emotions recognition. Generate enrolment and face identification reports in HTML by clicking on the :guilabel:`Save demo report` button.   
+* :guilabel:`Video processing`. Here you can work with video streams from rtsp and web cameras, and video files. Detect, enroll (add to a gallery) and identify faces in video with gender, age and emotions recognition. Generate enrollment and face identification reports in HTML by clicking on the :guilabel:`Save demo report` button.   
   
     .. image:: /_static/video.png
 
