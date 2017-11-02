@@ -31,13 +31,8 @@ Motion Detection and Face Tracking
 
 When processing video, fkvideo_detector consequently uses the following algorithms:
 
-* :program:`Motion detection`. 
-
-  This algorithm is aimed to reduce system resources consumption. Only when the motion detector recognizes motion of certain intensity in video that the face tracker can be triggered.
-
-* :program:`Face tracking`.
-  
-  The face tracker tracks, detects and captures faces from video, and posts them to FindFace Server. It can simultaneously process several faces.
+* :program:`Motion detection`. This algorithm is aimed to reduce system resources consumption. Only when the motion detector recognizes motion of certain intensity in video that the face tracker can be triggered.
+* :program:`Face tracking`. The face tracker tracks, detects and captures faces from video, and posts them to FindFace Server. It can simultaneously process several faces.
   
    .. tip::
      Configure the maximum number of processed faces in the fkvideo_detector :ref:`configuration file <fkvideo-config>`.
@@ -81,7 +76,7 @@ Video Stream Management
 
 You can specify video streams to be processed by fkvideo_detector as follows:
  
-* A single stream can be specified directly by using the ``--camid`` or ``--source`` options when configuring fkvideo_detector. 
+* A single stream can be specified directly by using the ``--camid`` and ``--source`` options when configuring fkvideo_detector. 
 * A list of streams has first to be posted to FindFace Server by applying the :ref:`/camera POST <camera-post>` method to each stream. When posting, all streams in the list have to be assigned a common user-defined string, so called ``detector``. This string should then be specified as the ``--detector-name`` option when configuring fkvideo_detector. In this case, fkvideo_detector will retrieve the list of streams from FindFace Server, based on their ``detector-name``, and begin to process each stream individually. It will also be periodically updating the list of cameras from FindFace Server with a polling interval defined by the ``reload-timeout`` parameter.
 
 

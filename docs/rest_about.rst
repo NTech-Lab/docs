@@ -62,6 +62,8 @@ different faces.
 *  ``"meta" (string)``: metadata string that you can use to store any information associated with the face.
 *  ``"galleries" (string[])``: array of galleries names that have this face.
 
+.. _bbox:
+
 Bounding Box (bbox)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 

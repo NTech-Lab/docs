@@ -68,7 +68,7 @@ This request creates a new gallery ``testgal``. Relevant REST API method: :ref:`
 Detect Face in Image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This request detects faces in a sample image on the Internet and returns coordinates of the rectangle around a detected face (bbox). Relevant REST API method: :ref:`/detect POST <detect-post>`.
+This request detects faces in a sample image on the Internet and returns coordinates of the rectangle around a detected face (:ref:`bbox <bbox>`). Relevant REST API method: :ref:`/detect POST <detect-post>`.
 
 .. rubric:: Request
 

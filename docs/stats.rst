@@ -1,9 +1,9 @@
 .. _stats:
 
-Galleries Statistics
-================================
+Shard Galleries Statistics
+=============================================
 
-You can get galleries statistics and other data right in your browser. This functionality can be harnessed in monitoring systems.
+You can get each shard galleries statistics and other data right in your browser. This functionality can be harnessed in monitoring systems.
 
 .. note::
     In the case of standalone deployment, you can access Tarantool by default only locally (127.0.0.1). If you want to access Tarantool remotely, :ref:`change <tntapi-standalone>` the Tarantool configuration file.
@@ -13,11 +13,11 @@ You can get galleries statistics and other data right in your browser. This func
 List Galleries
 ----------------------------
 
-To list all galleries, type in the address bar of your browser:
+To list all galleries on a shard, type in the address bar of your browser:
 
 .. code::
 
-    http://<tarantool_host_ip:port>/stat/list/:start/:limit
+    http://<tarantool_host_ip:shard_port>/stat/list/:start/:limit
 
 ``:start`` is the number of a gallery the list starts with.
 ``:limit`` is the maximum number of galleries in the list.
@@ -75,7 +75,7 @@ To get a gallery information, type in the address bar of your browser:
 
 .. code::
 
-    http://<tarantool_host_ip:port>/stat/info/:name
+    http://<tarantool_host_ip:shard_port>/stat/info/:name
 
 ``:name`` is the gallery name.
 

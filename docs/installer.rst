@@ -14,7 +14,7 @@ To install FindFace Enterprise Server SDK in a standalone configuration, you can
 
    .. code::
 
-       $ sudo chmod +x <findface-server-xxx>.run
+       $ chmod +x <findface-server-xxx>.run
 
 #. Execute the .run file.
 

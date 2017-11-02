@@ -91,6 +91,9 @@ Get Facen
 Remove Face
 --------------------
 
+.. warning::
+   Removing a face from Tarantool will not remove it from MongoDB.
+
 .. rubric:: Request
 
 .. code::
