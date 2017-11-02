@@ -3,7 +3,7 @@
 Licensing
 ------------------
 
-You receive a license file from your NTechLab manager along with the FindFace Enterprise Server SDK distributable packages. If you opt for on-premise licensing, you will be also sent a Guardant USB dongle. The licensing scheme for FindFace Enterprise Server SDK is shown on the diagram below.
+You receive a license file from your NTechLab manager along with the FindFace Enterprise Server SDK distributable packages. If you opt for on-premise licensing, we will also send you a Guardant USB dongle. The licensing scheme for FindFace Enterprise Server SDK is shown on the diagram below.
 
 .. image:: https://gcc-elb-public-prod.gliffy.net/embed/image/8a534e69c2f181422ef0c298f11b1fcb.png
 
