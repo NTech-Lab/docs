@@ -209,7 +209,7 @@ Configuration File Format
    
 .. code::
 
-    | [General]
+    [General]
     | long-arg=option ; long-arg from command line arguments
     | ...
 

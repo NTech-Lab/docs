@@ -50,11 +50,21 @@ The web interface has a highly intuitive and handy design and provides the follo
 
      .. image:: /_static/add_photo.png
 
-  Use the :guilabel:`Batch upload` option to upload image files in bulk. Select multiple files or a directory, and then configure the automatic meta description for the enrolled faces. To specify behavior in case if multiple faces are detected in an image, use :guilabel:`&MF selector`: enroll all faces, only the biggest one, or reject enrolment.
-
+  Use the :guilabel:`Batch upload` option to upload image files in bulk. 
    
      .. image:: /_static/batch_upload.png
 
+  .. tip::
+     You may also want to use its :ref:`console alternative <bulk-face>`.
+  
+
+  Select multiple files or a directory, and then configure the automatic meta description for the enrolled faces. Use :guilabel:`&MF selector` to specify behavior in case if multiple faces are detected in an image: enroll all faces, only the biggest one, or reject enrolment.
+
+     .. image:: /_static/meta.png
+        :scale: 60%
+
+  .. tip::
+     You can configure the automatic face meta by appending a custom prefix and/or postfix to the image file name. To avoid merging the 3 words into one, use underscore or another symbol in the prefix and postfix.
 
   .. tip::
      To select photos in the :guilabel:`icons` mode, click on them as you hold down the :kbd:`CTRL` key.
@@ -69,9 +79,11 @@ The web interface has a highly intuitive and handy design and provides the follo
     .. image:: /_static/compare.png
 
  
-* :guilabel:`Video processing`. This mode supports video streams from rtsp and web cameras, and video files. Here you can detect, enroll (add to a gallery) and identify faces in video with gender, age and emotions recognition.   
+* :guilabel:`Video processing`. Here you can work with video streams from rtsp and web cameras, and video files. Detect, enroll (add to a gallery) and identify faces in video with gender, age and emotions recognition. Generate enrolment and face identification reports in HTML by clicking on the :guilabel:`Save demo report` button.   
   
     .. image:: /_static/video.png
+
+    .. image:: /_static/report.png
 
   .. note::
       The video processing functionality in the web interface is great for tests. In production mode, use :ref:`fkvideo_detector <video>`.
