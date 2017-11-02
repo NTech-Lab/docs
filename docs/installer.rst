@@ -18,6 +18,8 @@ To install FindFace Enterprise Server SDK in a standalone configuration, you can
 
 #. Execute the .run file.
 
+   .. include:: _inclusions/ntech_user_warning.rst
+
    .. code::
 
        $ sudo ./<findface-server-xxx>.run

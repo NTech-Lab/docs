@@ -209,13 +209,13 @@ Configuration File Format
    
 .. code::
 
-    [General]
+    | [General]
     | long-arg=option ; long-arg from command line arguments
     | ...
 
-    | ‑‑license-ntls-server=192.168.10.1:3133
-    | ‑‑source-params=rtsp_transport=tcp,rtsp_flags=prefer,timeout=-1
-    | ‑‑body=galleries=testgal,gender=true,age=true,emotions=true,meta=video.mp4
+    | license-ntls-server = 192.168.10.1:3133
+    | source-params =rtsp_transport=tcp,rtsp_flags=prefer,timeout=-1
+    | body =galleries=testgal,gender=true,age=true,emotions=true,meta=video.mp4
 
 
 
