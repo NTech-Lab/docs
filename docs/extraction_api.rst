@@ -11,7 +11,7 @@ your system can remarkably broaden the scope of analytic tasks it is capable of 
    Being a ``findface-facenapi`` counterpart when it comes to data extraction via API, ``Extraction API`` is more resource-demanding. The component cannot fully substitute ``findface-facenapi`` as it doesn't allow adding faces and working with the database.
 
 .. note::
-   You can also :ref:`use <extract-facens>` ``Extraction API`` as a facen extractor, i. e. as a substitute for ``findface-nnapi``.
+   You can also :ref:`use <extract-facens>` ``Extraction API`` as a facen extractor, i. e. as an alternative to ``findface-nnapi``.
 
 .. tip::
    Encoded in base64 normalized images received from the Extraction API component are qualified for posting to findface-facenapi.
@@ -332,7 +332,7 @@ Examples
 Extract Facens
 ---------------------------------------------------
 
-By default, ``findface-facenapi`` detects faces in images and sends them to ``findface-nnapi`` for a facen extraction. Then ``findface-facenapi`` saves the obtained facen to MongoDB and Tarantool databases. You can use ``Extraction API`` as a substitute of ``findface-nnapi`` in this pipeline. 
+By default, ``findface-facenapi`` detects faces in images and sends them to ``findface-nnapi`` for a facen extraction. Then ``findface-facenapi`` saves the obtained facen to MongoDB and Tarantool databases. You can use ``Extraction API`` as a better alternative to ``findface-nnapi`` in this pipeline. 
 
 The main advantage of ``Extraction API`` in contrast with ``findface-nnapi`` is its built-in ability to clone into multiple instances and automatically balance the traffic across them, while for ``findface-nnapi``, load balancing has to be manually :ref:`set up <load-balancing>` via NginX. 
 

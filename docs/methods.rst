@@ -83,9 +83,10 @@ In the case, when you need to calculate similarity of different persons or find 
 * ``bbox2`` [optional]: array of bounding boxes for the faces on the second photo
 * ``threshold`` [optional]: one of "strict", "medium", "low" or "none", or a value between 0 and 1. Default is 0.75.
 * ``mf_selector`` [optional]: specifies behavior in a case of multiple faces on a photo; one of:
-   * ``"reject"``: return an error if more than one face was detected on any of image
-   * ``"biggest"`` [default]: add the biggest face on the image
-   * ``"all"``: verify all faces, found on both images.
+
+    * ``"reject"``: return an error if more than one face was detected on any of image
+    * ``"biggest"`` [default]: add the biggest face on the image
+    * ``"all"``: verify all faces, found on both images.
 
   .. note::
        Note that providing ``bbox1`` or ``bbox2`` argument overrides the value of this parameter.
@@ -158,13 +159,16 @@ This method is used to search through the face database. The method returns at m
 * ``threshold`` [optional]: one of "strict", "medium", "low" or "none", or a value between 0 and 1. Default is 0.75.
 * ``n`` [optional]: maximum number of closest faces to return, 1 by default
 * ``strict`` [optional]: specifies behavior in case if one or several tntapi shards are out of service. This parameter takes priority over the ``tntapi_ignore_search_errors`` parameter from the findface-facenapi :ref:`configuration file <configure-network>`.
-   * ``True``: return an error if some tntapi shards are out of service
-   * ``False`` [default]: use available tntapi shards to obtain face identification results, indicating the number of available servers vs the total number of servers in the ``X-Live-Servers`` header
 
-* ``mf_selector`` [optional]: specifies behavior in case if multiple faces are detected on the photo or inside the provided bounding box
-   * ``"reject"``: return an error if more than one face was detected on any of image
-   * ``"biggest"`` [default]: identify the biggest face on the image
-   *  ``"all"``: identify all faces, found on the image.
+    * ``True``: return an error if some tntapi shards are out of service
+    * ``False`` [default]: use available tntapi shards to obtain face identification results, indicating the number of available servers vs the total number of servers in the ``X-Live-Servers`` header.
+
+* ``mf_selector`` [optional]: specifies behavior in case if multiple faces are detected on the photo or inside the provided bounding box:
+
+    * ``"reject"``: return an error if more than one face was detected on any of image
+    * ``"biggest"`` [default]: identify the biggest face on the image
+    *  ``"all"``: identify all faces, found on the image.
+
 
 .. rubric:: Returns:
 
@@ -254,9 +258,11 @@ gallery.
 * ``meta`` [optional]: some user-defined string identifier
 * ``bbox`` [optional]: array of bounding boxes specifying face locations on the image
 * ``mf_selector`` [optional]: specifies behavior in case if there are multiple faces found on the image or inside the specified rectangle; one of:
-   * ``"reject"``: return an error if more than one face was detected
-   * ``"biggest"`` [default]: add the biggest face on the image
-   * ``"all"``: add all faces, found on the image. Please note that the meta will be the same for all faces added
+
+    * ``"reject"``: return an error if more than one face was detected
+    * ``"biggest"`` [default]: add the biggest face on the image
+    * ``"all"``: add all faces, found on the image. Please note that the meta will be the same for all faces added
+
 * ``galleries`` [optional]: list of gallery names
 * ``cam_id`` [optional]: UUID of the camera
 
@@ -645,9 +651,7 @@ Returns the list of all faces stored in a specified gallery.
 Method /meta GET
 -------------------
 
-This method retrieves all the meta string stored in the database along
-with one of the associated faces. To get more faces call GET
-/v0/face/meta/[Meta].
+This method retrieves all the meta string stored in the database along with one of the associated faces. To get more faces call ``GET /v0/face/meta/[Meta]``.
 
 .. rubric:: Parameters:
 
