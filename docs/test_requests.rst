@@ -19,7 +19,7 @@ How to Pretty-Print Responses
 Use :program:`jq` to parse JSON data in responses. To install :program:`jq`, execute:
 ::
 
- $ sudo apt-get install jq
+ sudo apt-get install jq
 
 
 List Galleries

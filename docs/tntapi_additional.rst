@@ -12,7 +12,7 @@ To configure interaction between findface-facenapi and Tarantool, specify additi
 
 .. code::
 
-    $ sudo vi /etc/tarantool/instances.enabled/FindFace.lua
+    sudo vi /etc/tarantool/instances.enabled/FindFace.lua
 
     FindFace.start("127.0.0.1", 8001, {license_ntls_server="127.0.0.1:3133", additional parameter 1, ..., additional parameter N})
 
@@ -41,7 +41,7 @@ Soft Deletion Mode
 
 Tarantool supports the soft deletion mode, when the faces are not removed from the fast index, but hidden in search results. We recommend you to enable this mode due to the following benefits:
 
-* Tarantool starting time linearly depends on the number of faces removed from the ``Indexed`` space (fast index). If the soft deletion mode is on, the faces are not physically removed from the fast index, so face deletion doesn't affect the starting time. 
+* Tarantool starting time linearly depends on the number of faces removed from the ``Indexed`` space (fast index). If the soft deletion mode is on, the faces are not physically removed from the fast index, so face deletion doesn't affect the starting time.
 * Fast index search quality also depends on the number of physically removed faces. It doesn't sink in the soft deletion mode. 
 
 To enable the soft deletion mode, edit the FindFace.start section as follows:

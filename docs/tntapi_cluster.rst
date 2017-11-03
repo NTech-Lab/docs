@@ -1,16 +1,16 @@
 Install tntapi cluster
 """"""""""""""""""""""""""""
 
-Install and configure the **tntapi** component as follows:
+Install and configure the ``tntapi`` component as follows:
 
-#. Install **tntapi** on designated hosts. Tarantool will be installed automatically along with tntapi. 
+#. Install ``tntapi`` on designated hosts. Tarantool will be installed automatically along with tntapi. 
 
    .. code::
 
-       $ sudo apt-get update
-       $ sudo apt-get install findface-tarantool-server
+       sudo apt-get update
+       sudo apt-get install findface-tarantool-server
 
-#. Create **tntapi** shards on each tntapi host. To learn how to shard, let's consider the example where a cluster environment contains 4 database hosts with 4 shards on each to be created.
+#. Create ``tntapi`` shards on each tntapi host. To learn how to shard, let's consider the example where a cluster environment contains 4 database hosts with 4 shards on each to be created.
 
    .. important::
        When creating shards in large installations, observe the following rules:
@@ -22,13 +22,13 @@ Install and configure the **tntapi** component as follows:
 
    .. code::
 
-       $ sudo systemctl disable tarantool@example && sudo systemctl stop tarantool@example
+       sudo systemctl disable tarantool@example && sudo systemctl stop tarantool@example
 
 #. Disable the shard created by default. Do so for all the 4 hosts.
 
    .. code::
 
-       $ sudo systemctl disable tarantool@FindFace
+       sudo systemctl disable tarantool@FindFace
 
 #. Write a bash script ``shard.sh`` that will automatically create configuration files for all shards on a particular host. Do so for the 4 hosts. Use the following script as a base for your own code. The exemplary script creates 4 shards listening to the ports: tntapi ``33001..33004`` and http ``8001..8004``.
 
@@ -39,7 +39,7 @@ Install and configure the **tntapi** component as follows:
          .. code::
 
             ## Open the configuration file
-            $ sudo vi /etc/tarantool/instances.enabled/FindFace.lua
+            sudo vi /etc/tarantool/instances.enabled/FindFace.lua
 
             ## Edit the value due the number of faces a shard handles. The value ``1.2*1024*1024*1024`` corresponds to 1,000,000 faces.
             memtx_memory = 1.2*1024*1024*1024,
@@ -75,13 +75,13 @@ Install and configure the **tntapi** component as follows:
 
    .. code::
 
-       $ sudo sh ~/shard.sh
+      sudo sh ~/shard.sh
 
 #. Check the configuration files created.
 
    .. code::
 
-       $ ls /etc/tarantool/instances.enabled/
+       ls /etc/tarantool/instances.enabled/
 
        ## You should get the following output
        example.lua FindFace.lua FindFace_shard_1.lua FindFace_shard_2.lua FindFace_shard_3.lua FindFace_shard_4.lua 
@@ -90,14 +90,14 @@ Install and configure the **tntapi** component as follows:
 
    .. code::
 
-       $ for I in `seq 1 4`; do sudo systemctl enable tarantool@FindFace_shard_$I; done;
-       $ for I in `seq 1 4`; do sudo systemctl start tarantool@FindFace_shard_$I; done;
+       for I in `seq 1 4`; do sudo systemctl enable tarantool@FindFace_shard_$I; done;
+       for I in `seq 1 4`; do sudo systemctl start tarantool@FindFace_shard_$I; done;
 
 #. Retrieve the shards status.
 
    .. code::
 
-       $ sudo systemctl status tarantool@FindFace*
+       sudo systemctl status tarantool@FindFace*
 
        ## You should get the following output:
        tarantool@FindFace_shard_3.service - Tarantool Database Server
@@ -122,9 +122,9 @@ Install and configure the **tntapi** component as follows:
 
        .. code::
 
-           $ sudo tail -f /var/log/tarantool/FindFace_shard_{1,2,3,4}.log
+          sudo tail -f /var/log/tarantool/FindFace_shard_{1,2,3,4}.log
 
-#. On the **findface-facenapi** host, create a file ``tntapi_cluster.json`` containing the addresses and ports of all the shards. Distribute available shards evenly over ~1024 cells in one line. Click `here <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-examples/master/tntapi_cluster.json>`__ to see the file for 4 hosts with 4 shards on each. 
+#. On the ``findface-facenapi`` host, create a file ``tntapi_cluster.json`` containing the addresses and ports of all the shards. Distribute available shards evenly over ~1024 cells in one line. Click `here <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-examples/master/tntapi_cluster.json>`__ to see the file for 4 hosts with 4 shards on each. 
 
    .. tip:: 
        You can create ``tntapi_cluster.json`` as follows:
@@ -133,7 +133,7 @@ Install and configure the **tntapi** component as follows:
 
             .. code::
 
-               $ sudo vi s.txt
+               sudo vi s.txt
 
          #. Run the script below (click `here <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-examples/master/creating_tntapi_cluster.json_script.md>`__ to view the script). As a result, a new file ``tntapi_cluster.json`` will be created and contain a list of all shards distributed evenly over 1024 cells. 
 

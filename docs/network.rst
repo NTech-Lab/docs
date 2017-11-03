@@ -7,7 +7,7 @@ After you install the FindFace Server components, configure their interaction wi
 
 #. Open the ``findface-facenapi.ini`` configuration file:: 
 
-      $ sudo vi /etc/findface-facenapi.ini
+     sudo vi /etc/findface-facenapi.ini
 
 #. Uncomment and/or edit the settings to align with your network specifications, substituting the suggested values with actual location::
   
@@ -31,15 +31,15 @@ After you install the FindFace Server components, configure their interaction wi
 
    .. code::
 
-      $ sudo service 'findface*' restart
-      $ sudo service nginx restart
+      sudo service 'findface*' restart
+      sudo service nginx restart
 
 #. Check the services status. The command will return the services description, status (should be Active), path and running time.
 
    .. code:: 
 
-      $ sudo service 'findface*' status
-      $ sudo service nginx status
+      sudo service 'findface*' status
+      sudo service nginx status
 
 
 

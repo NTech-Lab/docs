@@ -8,7 +8,7 @@ Once the FindFace Server сomponents installed, create a token in the long or sh
 To create a long token, execute:
 ::
 
- $ findface-facenapi.token
+ findface-facenapi.token
 
  ## Long token format:
  0123456789_abcdefghijklmnopqrstuvw
@@ -16,7 +16,7 @@ To create a long token, execute:
 To create a short token, execute:
 ::
 
- $ findface-facenapi.token --short
+ findface-facenapi.token --short
 
  ## Short token format:
  A0B1-C2D3
@@ -24,4 +24,4 @@ To create a short token, execute:
 If MongoDB is installed on a remote host, you have to indicate the path to the ``findface-facenapi.ini`` configuration file in the token generation command.
 ::
 
- $ sudo findface-facenapi.token --config=/etc/findface-facenapi.ini
+ sudo findface-facenapi.token --config=/etc/findface-facenapi.ini

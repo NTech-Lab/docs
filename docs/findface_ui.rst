@@ -11,10 +11,10 @@ To install the web interface, execute on the ``findface-facenapi`` host:
 .. code::
 
     ## If necessary, install nginx
-    $ sudo apt-get install nginx
+    sudo apt-get install nginx
 
     ## Install the web interface
-    $ sudo apt-get install findface-ui
+    sudo apt-get install findface-ui
 
 To open the web interface, do the following:
 

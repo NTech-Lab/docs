@@ -12,14 +12,14 @@ Do the following:
 
 #. Install the component::
 
-   $ sudo apt-get update
-   $ sudo apt-get install findface-upload
+     sudo apt-get update
+     sudo apt-get install findface-upload
 
 #. By default the original images, thumbnails and normalized images are stored at ``/var/lib/ffupload/uploads/``. You can view this folder content at ``http://127.0.0.1:3333/uploads/`` in your browser. Make sure that this address is available. You will have to specify it when :ref:`configuring network <configure-network>`.
 
    .. code::
 
-      $ curl -I http://127.0.0.1:3333/uploads/
+      curl -I http://127.0.0.1:3333/uploads/
       ## The command should return the following message.
       HTTP/1.1 200 OK
 
