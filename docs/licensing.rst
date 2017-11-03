@@ -10,23 +10,23 @@ You receive a license file from your NTechLab manager along with the FindFace En
 To provide the FindFace Enterprise Server SDK licensing, follow the steps below:
 
 #. Install and configure the local license server :program:`NTLS`.
-#. If the licensable components (:program:`findface-nnapi`, :program:`tntapi`, :program:`fkvideo_detector` and :program:`extraction-api`) are installed on remote hosts, specify the NTLS host IP address in their configuration files.
+#. If the licensable components (``findface-nnapi``, ``tntapi``, ``fkvideo_detector``, ``extraction-api``) are installed on remote hosts, specify the NTLS host IP address in their configuration files.
 
 To install and configure NTLS, do the following:
 
 #. Install the NTLS component::
 
-    $ sudo apt-get update
-    $ sudo apt-get install ntls
+    sudo apt-get update
+    sudo apt-get install ntls
 
    .. tip::
        In the NTLS configuration file, you can change the license folder and specify your proxy server IP address if necessary. You can also change the NTLS web interface remote access settings. To open the NTLS configuration file, execute::
 
-          $ sudo vi /etc/ntls.cfg
+          sudo vi /etc/ntls.cfg
 
        If necessary, change the license folder in the license-dir parameter. By default, license files are stored at ``/ntech/license``::
  
-          $ license-dir = /ntech/license
+          license-dir = /ntech/license
 
        If necessary, uncomment the ``proxy`` line and specify your proxy server IP address::
 
@@ -38,7 +38,7 @@ To install and configure NTLS, do the following:
 		
 #. Enable the NTLS service autostart and lauch the service::
 
-      $ sudo systemctl enable ntls && sudo systemctl start ntls
+      sudo systemctl enable ntls && sudo systemctl start ntls
 
 #. Upload the license file via the NTLS web interface ``http://<NTLS_IP_address>:3185/#/``. You can also use the NTLS web interface to consult your license information, and upgrade or extend the license.
 
@@ -47,4 +47,4 @@ To install and configure NTLS, do the following:
 #. For on-premise licensing, insert the Guardant dongle into a USB port.
 
 .. important::
-    If the licensable components (:program:`findface-nnapi`, :program:`tntapi`, :program:`fkvideo_detector` and :program:`extraction-api`) are to be installed on remote hosts, keep in mind that you have to specify the IP address of the NTLS host in their configuration files after installation.
+    If the licensable components (``findface-nnapi``, ``tntapi``, ``fkvideo_detector``, ``extraction-api``) are to be installed on remote hosts, keep in mind that you have to specify the IP address of the NTLS host in their configuration files after installation.

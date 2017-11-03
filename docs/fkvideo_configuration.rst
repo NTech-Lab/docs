@@ -14,7 +14,7 @@ Usage:
 
 .. code::
 
-   $ fkvideo_detector [options]
+   fkvideo_detector [options]
 
 .. rubric:: Allowed options:
 
@@ -50,7 +50,7 @@ Usage:
      - Interval in seconds between 2 consecutive camera list updates (15 s by default).
      - -t 20
    * - ‑‑camid arg
-     - Defines a video stream to be processed by fkvideo_detector, as the relevant camera id (see also ``‑‑source``). If a video stream is not specified, fkvideo_detector requests the :ref:`list of cameras <video-methods>` from FindFace Server with a polling interval defined by the ``reload-timeout`` parameter.
+     - Defines a video stream to be processed by fkvideo_detector, as the relevant camera id (see also ``--source``). If a video stream is not specified, fkvideo_detector requests the :ref:`list of cameras <video-methods>` from FindFace Server with a polling interval defined by the ``reload-timeout`` parameter.
      - Camera id.
      - ‑‑camid b28a898b-6334
    * - ‑‑api-host arg
@@ -66,7 +66,7 @@ Usage:
      - :ref:`Authentication token <token>`.
      - ‑‑api-token c9FsRNDAt
    * - -S [ ‑‑source ] arg
-     - Defines a video stream to be processed by fkvideo_detector, as the relevant camera address (see also ``‑‑camid``). If a video stream is not specified, fkvideo_detector requests the :ref:`list of cameras <video-methods>` from FindFace Server with a polling interval defined by the ``reload-timeout`` parameter.
+     - Defines a video stream to be processed by fkvideo_detector, as the relevant camera address (see also ``--camid``). If a video stream is not specified, fkvideo_detector requests the :ref:`list of cameras <video-methods>` from FindFace Server with a polling interval defined by the ``reload-timeout`` parameter.
      - Camera address: ``rtsp://...`` - network stream, ``/dev/video0`` – webcam, ``file@FPS:PATH`` - file with configurable FPS.
      - ‑‑source rtsp://192.168.120.55:500
    * - ‑‑source-params arg
@@ -213,9 +213,9 @@ Configuration File Format
     | long-arg=option ; long-arg from command line arguments
     | ...
 
-    | license-ntls-server = 192.168.10.1:3133
-    | source-params =rtsp_transport=tcp,rtsp_flags=prefer,timeout=-1
-    | body =galleries=testgal,gender=true,age=true,emotions=true,meta=video.mp4
+    | license-ntls-server=192.168.10.1:3133
+    | source-params=rtsp_transport=tcp,rtsp_flags=prefer,timeout=-1
+    | body=galleries=testgal,gender=true,age=true,emotions=true,meta=video.mp4
 
 
 

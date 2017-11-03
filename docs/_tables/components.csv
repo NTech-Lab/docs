@@ -1,6 +1,6 @@
 ``findface-facenapi``;Python daemon which runs HTTP API. This daemon executes face detection functions, interfaces with ``MongoDB`` and ``findface-nnapi`` and ``tarantool@FindFace`` daemons.
 ``tntapi`` (``tarantool@FindFace`` as a shard);Daemon which enables interaction with the face descriptors index. 
-``findface-nnapi``;Daemon extracts a feature vector (based on neural network). Requires the package with models :program:`<findface-data>.deb`.
+``findface-nnapi``;Daemon extracts a feature vector (based on neural network). Requires the packages with :ref:`models <models>` :program:`<findface-data>.deb`.
 ``MongoDB``;Database which stores faces metadata, galleries details, settings, etc.
 ``findface-upload``;Nginx web server used to receive images using WebDAV.
-``NTLS``;Local license server which interfaces with the NtechLab Global License Server (for the network licensing) or a USB dongle (for the on-premise licensing) and passes a license to licensable components.
+``NTLS``;Local license server which interfaces with NtechLab Global License Server (for network licensing) or a USB dongle (for on-premise licensing) and passes a license to licensable components.

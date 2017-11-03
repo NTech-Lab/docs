@@ -16,10 +16,9 @@ In addition to FindFace Server (installed on a :ref:`single <standalone>` or :re
 |                                 | configure the format of API responses to extract various face data, including the bounding  |
 |                                 | box coordinates, normalized face, gender, age, and emotions, as well as the face feature    |
 |                                 | vector (facen). Implementing this feature to your system can remarkably broaden the scope   |
-|                                 | of analytic tasks it is capable of fulfilling. Licensable.                                  |
-|                                 |                                                                                             | 
+|                                 | of analytic tasks it is capable of fulfilling.                                              |
 |                                 | You can also use the component as an extractor of the face feature vector, i. e. as         |
-|                                 | a substitute for :ref:`findface-nnapi <start>`.                                             |
+|                                 | a :ref:`findface-nnapi <start>` alternative. Licensable.                                    |
 +---------------------------------+---------------------------------------------------------------------------------------------+
 | findface-mass-enroll            | The :ref:`findface-mass-enroll <bulk-face>` component allows for enrolling faces to         |
 |                                 | findface-facenapi from images in bulk.                                                      |          

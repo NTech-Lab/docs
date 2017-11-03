@@ -4,7 +4,7 @@ To configure fkvideo_detector, you can specify its options in any of the followi
 
   .. code::
 
-     $ fkvideo_detector [options]
+     fkvideo_detector [options]
 
 * As parameters in the fkvideo_detector configuration file.
 
@@ -14,7 +14,7 @@ To configure fkvideo_detector, you can specify its options in any of the followi
      .. code::
 
         ## Make a copy of fkvideo.ini
-        $ sudo cp /etc/fkvideo.ini /etc/fkvideo_example.ini
+        sudo cp /etc/fkvideo.ini /etc/fkvideo_example.ini
         
         ## Use this copy when starting fkvideo_detector
-        $ fkvideo_detector -c /etc/fkvideo_example.ini
+        fkvideo_detector -c /etc/fkvideo_example.ini

@@ -14,31 +14,31 @@ To update FindFace Enterprise Server SDK to the latest version while maintaining
    
    .. code::
 
-      $ sudo service 'findface*' stop
-      $ sudo service 'fkvideo*' stop
-      $ sudo service 'ntls' stop
-      $ sudo service 'nginx*' stop
-      $ sudo service 'tarantool*' stop
-      $ sudo service 'mongod*' stop     
+      sudo service 'findface*' stop
+      sudo service 'fkvideo*' stop
+      sudo service 'ntls' stop
+      sudo service 'nginx*' stop
+      sudo service 'tarantool*' stop
+      sudo service 'mongod*' stop     
 
 #. :ref:`Prepare <prepare>` the new package on each designated host.
 #. Upgrade the services by executing:
 
    .. code::
       
-      $ sudo apt-get update
-      $ sudo apt-get upgrade
+      sudo apt-get update
+      sudo apt-get upgrade
 
 #. Start the FindFace Enterprise Server SDK services.
 
    .. code::
  
-      $ sudo service 'findface*' start
-      $ sudo service 'fkvideo*' start
-      $ sudo service 'ntls' start
-      $ sudo service 'nginx*' start
-      $ sudo service 'tarantool*' start
-      $ sudo service 'mongod*' start     
+      sudo service 'findface*' start
+      sudo service 'fkvideo*' start
+      sudo service 'ntls' start
+      sudo service 'nginx*' start
+      sudo service 'tarantool*' start
+      sudo service 'mongod*' start     
 
 #. :ref:`Migrate <regenerate-facens>` FindFace Enterprise Server SDK to a different detector or neural network model if necessary.
       

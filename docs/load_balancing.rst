@@ -34,23 +34,23 @@ Do the following:
 
    .. code::
 
-       $ sudo apt-get install nginx
+       sudo apt-get install nginx
 
 #. Copy the content of the ``/lib/systemd/system/findface-nnapi.service`` file into a new file ``/etc/systemd/system/findface-nnapi@.service``.
 
    .. code::
 
-       $ sudo cp /lib/systemd/system/findface-nnapi.service /etc/systemd/system/findface-nnapi@.service
+       sudo cp /lib/systemd/system/findface-nnapi.service /etc/systemd/system/findface-nnapi@.service
 
 #. Stop all the findface-nnapi services and disable their autostart. Edit the new file ``findface-nnapi@.service`` by appending ``--listen 127.0.0.1:%i`` to the ``ExecStart`` line.
 
    .. code::
 
        ## Stop the findface-nnapi services and disable their autostart
-       $ sudo service findface-nnapi stop && sudo systemctl disable findface-nnapi
+       sudo service findface-nnapi stop && sudo systemctl disable findface-nnapi
 
        ## Open the file
-       $ sudo vi /etc/systemd/system/findface-nnapi@.service
+       sudo vi /etc/systemd/system/findface-nnapi@.service
 
        ## Edit the ExecStart line by appending --listen 127.0.0.1:%i
        ExecStart=/usr/bin/findface-nnapi -c /etc/findface-nnapi.ini --listen 127.0.0.1:%i
@@ -59,7 +59,7 @@ Do the following:
 
    .. code::
 
-       $ sudo vi /etc/nginx/sites-available/nnapi
+       sudo vi /etc/nginx/sites-available/nnapi
 
 #. Insert the following `text <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-examples/master/nnapi>`__ into the configuration file. In the text, substitute provided ports for findface-nnapi instances ('upstream nnapibackends') and the findface-nnapi listening port ('listen') with their actual values. Port numbers should be unique for each component on the host.
 
@@ -86,34 +86,34 @@ Do the following:
 
    .. code::
 
-       $ sudo ln -s /etc/nginx/sites-available/nnapi /etc/nginx/sites-enabled/
+       sudo ln -s /etc/nginx/sites-available/nnapi /etc/nginx/sites-enabled/
 
 #. Restart nginx.
 
    .. code::
 
-       $ sudo service nginx restart
+       sudo service nginx restart
 
 #. For each findface-nnapi instance, enable autostart.
 
    .. code::
 
-       $ sudo systemctl enable findface-nnapi@18090
-       $ sudo systemctl enable findface-nnapi@18091
+       sudo systemctl enable findface-nnapi@18090
+       sudo systemctl enable findface-nnapi@18091
 
 #. Start the findface-nnapi instances.
 
    .. code::
 
-       $ sudo systemctl start findface-nnapi@18090
-       $ sudo systemctl start findface-nnapi@18091
+       sudo systemctl start findface-nnapi@18090
+       sudo systemctl start findface-nnapi@18091
 
 #. From now on, requests sent to findface-nnapi will be distributed over 2 findface-nnapi instances in the round-robin mode. You can view the
    process of requests distribution in the findface-nnapi log file /var/log/syslog (look for different process_id values).
 
    .. code::
 
-       $ sudo tail -f /var/log/syslog | grep nnapi
+       sudo tail -f /var/log/syslog | grep nnapi
        Jul  7 03:53:05 ubuntu findface-nnapi[49606]: (2017-07-07 10:53:05) [INFO    ] Request: 127.0.0.1:34494 0x7fb100000960 HTTP/1.0 POST /facen
        Jul  7 03:53:06 ubuntu findface-nnapi[49606]: (2017-07-07 10:53:06) [INFO    ] Response: 0x7fb100000960 /facen?x2=0&y1=0&x1=0&y2=0 200 0
        Jul  7 03:53:06 ubuntu findface-nnapi[49624]: (2017-07-07 10:53:06) [INFO    ] Request: 127.0.0.1:52960 0x7f9cf8000960 HTTP/1.0 POST /facen
@@ -123,5 +123,7 @@ Do the following:
        Jul  7 03:53:32 ubuntu findface-nnapi[49624]: (2017-07-07 10:53:32) [INFO    ] Request: 127.0.0.1:52968 0x7f9cf8001ec0 HTTP/1.0 POST /facen
        Jul  7 03:53:33 ubuntu findface-nnapi[49624]: (2017-07-07 10:53:33) [INFO    ] Response: 0x7f9cf8001ec0 /facen?x2=0&y1=0&x1=0&y2=0 200 0
 
-#. You can use this method to set up load balancing across instances on several physical hosts.
+
+.. tip::
+   You can use this method to set up load balancing across instances on several physical hosts.
 

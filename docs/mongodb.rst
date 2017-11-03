@@ -24,15 +24,15 @@ To install the latest stable version of MongoDB (3.4 at the moment) on the appli
  
 #. Reload the local package database::
 
-     $ sudo apt-get update
+     sudo apt-get update
 
 #. Install the latest stable version of MongoDB::
  
-    $ sudo apt-get install -y mongodb-org
+     sudo apt-get install -y mongodb-org
 
 #. Start the ``mongod`` service::
 
-    $ sudo service mongod start 
+     sudo service mongod start 
 
 
 Install MongoDB on Dedicated Host
@@ -43,7 +43,7 @@ To install MongoDB on a dedicated host, do the following:
 #. On the dedicated host, install MongoDB in the same manner as on the :ref:`application host <mongodb-app>`.
 #. Open the MongoDB configuration file::
 
-     $ sudo vi /etc/mongod.conf
+     sudo vi /etc/mongod.conf
 
 #. To allow for incoming connections, comment out the line bind_ip = 127.0.0.1. This will allow MongoDB to accept connections from any IP address. Ensure that the only access to the host is from the LAN::
     
@@ -51,7 +51,7 @@ To install MongoDB on a dedicated host, do the following:
 
 #. Restart the ``mongod`` service::
 
-     $ sudo service mongod restart
+     sudo service mongod restart
 
 Connect to Existing MongoDB
 _________________________________

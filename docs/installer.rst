@@ -14,7 +14,7 @@ To install FindFace Enterprise Server SDK in a standalone configuration, you can
 
    .. code::
 
-       $ chmod +x <findface-server-xxx>.run
+       chmod +x <findface-server-xxx>.run
 
 #. Execute the .run file.
 
@@ -22,7 +22,7 @@ To install FindFace Enterprise Server SDK in a standalone configuration, you can
 
    .. code::
 
-       $ sudo ./<findface-server-xxx>.run
+       sudo ./<findface-server-xxx>.run
 
    The installer will perform several automated checks to ensure that the host meets the system requirements. After that, FindFace Enterprise Server SDK components will be automatically installed, configured and/or started in the following configuration:
 
@@ -32,10 +32,10 @@ To install FindFace Enterprise Server SDK in a standalone configuration, you can
    | findface-facenapi        | Installed and started with enabled and configured dynamic person creation and “friend or foe”        |
    |                          | identification.                                                                                      |
    +--------------------------+------------------------------------------------------------------------------------------------------+
-   | findface-nnapi           | Installed and started with the number of instances N = min(cores, RAM/2Gb)/2 and                     |
+   | findface-nnapi           | Installed and started with the number of instances ``N = min(cores, RAM/2Gb)/2`` and                 |
    |                          | enabled and configured gender, age and emotions recognition.                                         |
    +--------------------------+------------------------------------------------------------------------------------------------------+
-   | findface-server-tarantool| Installed and started with the number of tntapi shards: N = min(cores, RAM/2Gb)/2                    |
+   | findface-server-tarantool| Installed and started with the number of tntapi shards: ``N = min(cores, RAM/2Gb)/2``                |
    | (tntapi)                 |                                                                                                      |
    +--------------------------+------------------------------------------------------------------------------------------------------+
    | findface-tarantool-      | Installed. Before use, consult the :ref:`component documentation <fast-index>`.                      |

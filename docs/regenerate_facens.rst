@@ -68,8 +68,8 @@ Apply ``findface-regenerate`` as follows:
 
    .. code::
 
-      $ cd /usr/bin/
-      $ findface-regenerate --help
+      cd /usr/bin/
+      findface-regenerate --help
 
    .. code::
 
@@ -202,10 +202,10 @@ Apply ``findface-regenerate`` as follows:
    .. code::
 
        ## When switching a face detector:
-       $ sudo findface-regenerate --regenerate=normalized,thumbs,facens --config=/etc/findface-facenapi.ini
+       sudo findface-regenerate --regenerate=normalized,thumbs,facens --config=/etc/findface-facenapi.ini
 
        ## When switching a model:
-       $ sudo findface-regenerate --regenerate=facens --config=/etc/findface-facenapi.ini
+       sudo findface-regenerate --regenerate=facens --config=/etc/findface-facenapi.ini
 
 
 Transfer Facens from MongoDB to Tarantool
@@ -218,7 +218,7 @@ Apply ``mongo2searchapi`` as follows:
 
    .. code::
 
-      $ sudo systemctl stop tarantool@FindFace*
+      sudo systemctl stop tarantool@FindFace*
  
 #. Delete snapshot ``.snap``, xlog ``.xlog`` and :ref:`fast index <fast-index>` ``.idx`` files for all tntapi shards.
 
@@ -241,7 +241,7 @@ Apply ``mongo2searchapi`` as follows:
 
    .. code::
          
-      $ sudo vi /etc/tarantool/instances.enabled/FindFace_shard_N.lua 
+      sudo vi /etc/tarantool/instances.enabled/FindFace_shard_N.lua 
 
       FindFace.start("127.0.0.1", 8001, {license_ntls_server="127.0.0.1:3133", facen_size = 320})      
  
@@ -249,12 +249,12 @@ Apply ``mongo2searchapi`` as follows:
 
    .. code::
    
-      $ sudo python3 -m facenapi.server.tools.mongo2searchapi --config=/etc/findface-facenapi.ini
+      sudo python3 -m facenapi.server.tools.mongo2searchapi --config=/etc/findface-facenapi.ini
 
 #. Start Tarantool
 
    .. code::
 
-      $ sudo systemctl start tarantool@FindFace*
+      sudo systemctl start tarantool@FindFace*
 
 

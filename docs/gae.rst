@@ -22,25 +22,25 @@ To configure gender, age and emotions recognition, do the following:
 
    .. code::
 
-       $ sudo vi /etc/findface-facenapi.ini
+       sudo vi /etc/findface-facenapi.ini
 
        ## Uncomment and edit the line 'gae = False': 
              → gae = True
 
-       $ sudo service findface-facenapi restart
+       sudo service findface-facenapi restart
 
 #. Edit the ``findface-nnapi`` file to enable relevant recognition models. Restart the service.
 
    .. code::
 
-       $ sudo vi /etc/findface-nnapi.ini
+       sudo vi /etc/findface-nnapi.ini
 
        ## Uncomment the following lines: 
              → model_emotions = emotion_1
              → model_age = fr_1_age0
              → model_gender = fr_1_gender0
 
-       $ sudo service findface-nnapi restart
+       sudo service findface-nnapi restart
 
 
 API Requests for Gender, Age and Emotions Recognition

@@ -24,19 +24,19 @@ Install Extraction API
 To install and configure the ``Extraction API`` component, do the following:
 
 .. note::
-   ``Extraction API`` requires the package with models :program:`<findface-data>.deb`. Make sure it's installed.
+   ``Extraction API`` requires the packages with :ref:`models <models>` :program:`<findface-data>.deb`. Make sure they have been installed.
 
 #. Install the component.
 
    .. code::
 
-       $ sudo apt-get install findface-extraction-api
+       sudo apt-get install findface-extraction-api
 
 #. Open the ``findface-extraction-api.ini`` configuration file.
 
    .. code::
 
-       $ sudo vi /etc/findface-extraction-api.ini
+       sudo vi /etc/findface-extraction-api.ini
 
 #. If :ref:`NTLS <licensing>` is remote, specify its IP address. 
 
@@ -79,7 +79,7 @@ To install and configure the ``Extraction API`` component, do the following:
 
    .. code::
 
-       $ sudo systemctl enable findface-extraction-api && sudo systemctl start findface-extraction-api
+      sudo systemctl enable findface-extraction-api && sudo systemctl start findface-extraction-api
 
 API Requests
 --------------------------
@@ -192,7 +192,7 @@ Examples
 
 .. code::
 
-    $ curl -X POST -F sample=@sample.jpg -F 'request={"requests":[{"image":"multipart:sample","detector":"nnd", "need_gender":true, "need_normalized": true, "need_facen": true}]}' http://127.0.0.1:18666/| jq
+   curl -X POST -F sample=@sample.jpg -F 'request={"requests":[{"image":"multipart:sample","detector":"nnd", "need_gender":true, "need_normalized": true, "need_facen": true}]}' http://127.0.0.1:18666/| jq
 
 .. rubric:: Response
 
@@ -227,7 +227,7 @@ Examples
 
 .. code::
 
-    $ curl -X POST  -F 'request={"requests": [{"need_age": true, "need_gender": true, "detector": "nnd", "roi": {"left": -2975, "top": -635, "right": 4060, "bottom": 1720}, "image": "https://static.findface.pro/sample.jpg", "need_emotions": true}]}' http://127.0.0.1:18666/ |jq
+   curl -X POST  -F 'request={"requests": [{"need_age": true, "need_gender": true, "detector": "nnd", "roi": {"left": -2975, "top": -635, "right": 4060, "bottom": 1720}, "image": "https://static.findface.pro/sample.jpg", "need_emotions": true}]}' http://127.0.0.1:18666/ |jq
 
 .. rubric:: Response
 
@@ -291,7 +291,7 @@ Examples
 
 .. code::
   
-   $ curl -s -F 'sample=@/path/to/your/photo.png' -F 'request={"requests":[{"image":"multipart:sample","detector":"nnd", "auto_rotate": true, "need_normalized": true }]}' http://192.168.113.79:18666/
+   curl -s -F 'sample=@/path/to/your/photo.png' -F 'request={"requests":[{"image":"multipart:sample","detector":"nnd", "auto_rotate": true, "need_normalized": true }]}' http://192.168.113.79:18666/
 
 .. rubric:: Response
 
@@ -340,7 +340,7 @@ To extract facens via ``Extraction API``, do the following:
 
 #. Open the ``findface-facenapi.ini`` configuration file:: 
 
-      $ sudo vi /etc/findface-facenapi.ini
+      sudo vi /etc/findface-facenapi.ini
    
 #. Uncomment and edit the ``extractor`` parameter in the following way::
 
@@ -358,24 +358,24 @@ To extract facens via ``Extraction API``, do the following:
 
    .. code::
 
-      $ sudo service findface-extraction-api start && sudo systemctl enable findface-extraction-api
+      sudo service findface-extraction-api start && sudo systemctl enable findface-extraction-api
 
 #. Restart ``findface-facenapi``.
 
    .. code::
 
-      $ sudo service findface-facenapi restart
+      sudo service findface-facenapi restart
 
 #. Stop ``findface-nnapi`` and disable its autostart. 
 
    .. code::
 
-      $ sudo service findface-nnapi stop && sudo systemctl disable findface-nnapi
+      sudo service findface-nnapi stop && sudo systemctl disable findface-nnapi
 
 #. Check the services status. The command will return the services description, status (should be Active), path and running time.
 
    .. code:: 
 
-      $ sudo service 'findface*' status
+      sudo service 'findface*' status
 
 

@@ -11,17 +11,17 @@ FindFace Enterprise Server SDK can be installed from a local repository. You ca
 
    .. code::
 
-      $ sudo dpkg -i <findface_repo>.deb 
+      sudo dpkg -i <findface-repo>.deb 
 
-#. Unpack the package with models. In the cluster environment, models are installed only on the **findface-nnapi** hosts.
+#. Unpack the packages with :ref:`models <models>` (face, gender, age, and emotions). In the cluster environment, models are installed only on the ``findface-nnapi`` hosts.
 
    .. code::
 
-      $ sudo dpkg -i <findface_data>.deb 
+      sudo dpkg -i findface-data-* 
 
 #. Add a signature key on each designated host.
 
    .. code::
 
-      $ sudo apt-key add /var/findface-repo/public.key
+      sudo apt-key add /var/findface-repo/public.key
 

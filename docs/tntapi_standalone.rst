@@ -9,21 +9,21 @@ Install and configure the **tntapi** component as follows:
 
    .. code::
 
-       $ sudo apt-get update
-       $ sudo apt-get install findface-tarantool-server
+       sudo apt-get update
+       sudo apt-get install findface-tarantool-server
 
 #. Disable the tarantool example service autostart and stop the service.
 
    .. code::
 
-       $ sudo systemctl disable tarantool@example && sudo systemctl stop tarantool@example
+       sudo systemctl disable tarantool@example && sudo systemctl stop tarantool@example
 
 #. For a small-scale project, the tntapi shard created by default (tarantool@FindFace) would suffice as 1 shard can handle up to 10,000,000 faces. Configuration settings of the default shard are defined in the file ``/etc/tarantool/instances.enabled/FindFace.lua``. We strongly recommend you not to add or edit anything in this file, except the maximum memory usage (``memtx_memory``), the NTLS IP address required for the tntapi licensing, and the remote access setting. The maximum memory usage should be set in bytes, depending on the number of faces the shard handles, at the rate roughly 1280 byte per face. 
 
    .. code::
 
        ## Open the configuration file
-       $ sudo vi /etc/tarantool/instances.enabled/FindFace.lua
+       sudo vi /etc/tarantool/instances.enabled/FindFace.lua
 
        ## Edit the value due to the number of faces the shard handles. The value ``1.2*1024*1024*1024`` corresponds to 1,000,000 faces.
        memtx_memory = 1.2 * 1024 * 1024 * 1024,
@@ -41,13 +41,13 @@ Install and configure the **tntapi** component as follows:
 
    .. code::
 
-      $ sudo systemctl enable tarantool@FindFace && sudo systemctl start tarantool@FindFace
+      sudo systemctl enable tarantool@FindFace && sudo systemctl start tarantool@FindFace
 
 #. Retrieve the shard status.
 
    .. code::
 
-       $ sudo systemctl status tarantool@FindFace
+       sudo systemctl status tarantool@FindFace
        ## The command will return a service description, a status (should be Active), path and running time.
 
    .. tip::
@@ -55,7 +55,7 @@ Install and configure the **tntapi** component as follows:
 
        .. code::
 
-          $ sudo tail -f /var/log/tarantool/FindFace.log
+          sudo tail -f /var/log/tarantool/FindFace.log
 
 #. The ``tntapi.json`` file containing the tntapi shard parameters is automatically installed along with tntapi into the ``/etc/`` folder. You will have to uncomment the path to ``tntapi.json`` when :ref:`configuring network <configure-network>`.
 

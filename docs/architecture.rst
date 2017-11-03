@@ -4,11 +4,12 @@
 Choose Deployment Architecture
 *************************************
 
-FindFace Enterprise Server SDK is delivered with the following distributable packages:
+FindFace Enterprise Server SDK is delivered in the following distributable packages:
 
- * :program:`<findface-repo>.deb` with components.
- * :program:`<findface-data>.deb` with neural network models. 
-
+ * A package with components :program:`<findface-repo>.deb`.
+ * Several packages with neural network models :program:`<findface-data>.deb`. Each model is delivered in a separate package.
+      
+     
 Depending on your system characteristics and performance requirements, there are 2 FindFace Enterprise Server SDK deployments:
 
 +----------------+-----------------------------------------------------------------------------------------------------+

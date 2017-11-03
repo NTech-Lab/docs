@@ -19,8 +19,8 @@ To specify video streams for face detection, do the following:
 
    .. code::
 
-      $ sudo cp /etc/fkvideo.ini /etc/fk_local_config.ini
-      $ sudo vi /etc/fk_local_config.ini
+      sudo cp /etc/fkvideo.ini /etc/fk_local_config.ini
+      sudo vi /etc/fk_local_config.ini
 
 #. If you have only one camera, you can add it in the new configuration file.
 
@@ -69,7 +69,7 @@ To specify video streams for face detection, do the following:
 
    .. code::
 
-       $ curl -H 'Authorization: Token 1234567890qwertyuiop' -F "detector=detec1" -F "url=rtsp://user:pass@192.168.1.1:554/Streaming/Channels/1" -F "meta=test" http://localhost:8000/v0/camera
+       curl -H 'Authorization: Token 1234567890qwertyuiop' -F "detector=detec1" -F "url=rtsp://user:pass@192.168.1.1:554/Streaming/Channels/1" -F "meta=test" http://localhost:8000/v0/camera
 
        ## As result
        {"detector": "detec1", "id": "0e663c00-b945-4676-bb0e-032c1dcf353a", "meta": "test", "url": "rtsp:// user:pass@192.168.1.1:554/Streaming/Channels/1"}
@@ -116,7 +116,7 @@ To specify video streams for face detection, do the following:
        license-ntls-server=127.0.0.1:3133
 
    .. tip::
-        You can find an example of the configuration file `here <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-examples/master/fk_server_config.ini>`__.
+       You can find an example of the configuration file `here <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-examples/master/fk_server_config.ini>`__.
 
 
 Start Component as Application
@@ -126,9 +126,10 @@ To start fkvideo_detector as an application, execute:
 
 .. code::
 
-    $ fkvideo_detector -c /etc/fk_local_config.ini
+    fkvideo_detector -c /etc/fk_local_config.ini
 
 Use this method for testing purposes.
+
 
 Start Component as Service
 --------------------------------
@@ -139,13 +140,15 @@ To run the face detection component as a service, do the following:
 
    .. code::
 
-       $ sudo service fkvideo_detector@fk_local_config start
+       sudo service fkvideo_detector@fk_local_config start
 
 #. Check service status. The command will return a service description, a status should be active (running).
 
    .. code::
 
-       $ sudo service fkvideo_detector@fk_local_config status
+       sudo service fkvideo_detector@fk_local_config status
+
+       ## Response
        fkvideo_detector@fk_local_config.service - FKVideo detector daemon (fk_local_config)
           Loaded: loaded (/lib/systemd/system/fkvideo_detector@.service; disabled; vendor preset: enabled)
           Active: active (running) since Fri 2017-02-03 12:41:35 MSK; 5min ago
@@ -155,5 +158,5 @@ To run the face detection component as a service, do the following:
 
        .. code::
 
-          $ curl -H 'Authorization: Token 1234567890qwertyuiop' http://localhost:8000/v0/camera | jq
+          curl -H 'Authorization: Token 1234567890qwertyuiop' http://localhost:8000/v0/camera | jq
 

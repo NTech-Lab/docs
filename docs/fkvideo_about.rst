@@ -19,8 +19,8 @@ Install fkvideo_detector from the :program:`<findface-repo>.deb` package on one 
 
 .. code::
 
-      $ sudo apt-get update
-      $ sudo apt-get install fkvideo-detector
+   sudo apt-get update
+   sudo apt-get install fkvideo-detector
 
 
 How It Works
@@ -39,6 +39,7 @@ When processing video, fkvideo_detector consequently uses the following algorith
 
   Each captured face is posted as a snapshot and a bbox in a request ``/face`` or ``/identify``, depending on the :ref:`configuration settings <fkvideo-config>`. If there are several active trackers, the face tracker sends the same number of requests with a unique snapshot and bbox in each.
 
+
 Best Face Search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -49,6 +50,7 @@ The best face can be found in one of the following modes:
 * Real-time
 * Offline
 
+
 Real-Time Mode
 """"""""""""""""""""""""
 
@@ -58,11 +60,13 @@ The real-time mode allows posting a face immediately after it appears in a camer
 #. The threshold value increases after each post. Each time the face tracker gets a higher quality snapshot of the same face, it is posted. 
 #. When the face disappears from the camera field of view, the threshold value resets to default.
 
+
 Offline Mode
 """""""""""""""""""""""
 
 The offline mode is less storage intensive than the real-time one as it allows posting only one snapshot per face, but of the highest quality. In this mode, the face tracker buffers a video stream with a face in it until the face disappears from the camera field of view. Then
 the face tracker picks up the best face snapshot from the buffered video and posts it to FindFace Server. 
+
 
 Configuration and Usage
 ----------------------------

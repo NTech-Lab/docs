@@ -3,7 +3,7 @@
 Shard Galleries Statistics
 =============================================
 
-You can get each shard galleries statistics and other data right in your browser. This functionality can be harnessed in monitoring systems.
+You can get a shard galleries statistics and other data right in your browser. This functionality can be harnessed in monitoring systems.
 
 .. note::
     In the case of standalone deployment, you can access Tarantool by default only locally (127.0.0.1). If you want to access Tarantool remotely, :ref:`change <tntapi-standalone>` the Tarantool configuration file.
@@ -30,7 +30,7 @@ To list all galleries on a shard, type in the address bar of your browser:
 
     http://127.0.0.1:8001/stat/list/1/99 
     or
-    $ curl http://127.0.0.1:8001/stat/list/1/99 \| jq
+    curl http://127.0.0.1:8001/stat/list/1/99 \| jq
 
 
 .. rubric:: Response 
@@ -85,7 +85,7 @@ To get a gallery information, type in the address bar of your browser:
 
 .. code::
 
-    $ curl http://127.0.0.1:8001/stat/info/5968bda4a2a4bb6018bee2b2_cam_cam1 | jq
+    curl http://127.0.0.1:8001/stat/info/5968bda4a2a4bb6018bee2b2_cam_cam1 | jq
 
 
 .. rubric:: Response 

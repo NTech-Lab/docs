@@ -60,7 +60,7 @@ Here you can see the FindFace Enterprise Server SDK memory usage benchmark resul
 
 The testing setup is the following:
 
-* Neural network facen :ref:`model <models>`: ``apricot_320``
+* Facen :ref:`model <models>`: ``apricot_320``
 * Models for :ref:`gender, age and emotions recognition <gae>` (GAE in the table): ``fr_1_gender0``, ``fr_1_age0``, ``emotion_1``
 * Models used in :ref:`extraction-api <extraction-api>`: ``apricot_320``, ``fr_1_gender0``, ``fr_1_age0``, ``emotion_1``
 * ``MongoDB``, ``Tarantool``: facens are stored in one gallery. If there are 2 or more galleries with facens, multiply the given RAM amount by the relevant number of galleries.

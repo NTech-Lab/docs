@@ -20,13 +20,13 @@ To install the Bulk Face Enrollment component, execute: 
 
 .. code::
 
-    $ sudo apt-get install findface-mass-enroll
+    sudo apt-get install findface-mass-enroll
 
 To display the component help message, execute:
 
 .. code::
 
-    $ findface-mass-enroll --help
+    findface-mass-enroll --help
 
 .. code::
 
@@ -134,7 +134,7 @@ To harness the feature, do the following:
 
         .. code::
 
-           $ find /home/user/sample | grep -E 'jpg|png' |awk '{print $0","$0}' > list.csv 
+           find /home/user/sample | grep -E 'jpg|png' |awk '{print $0","$0}' > list.csv 
 
 #. If necessary, display the job file content (``print``).
 
@@ -151,18 +151,19 @@ Enroll faces from all .jpg files in a /home/user/images/ directory with a share
 .. code::
 
     ## To display the list of images in a directory, execute:
-    $ ls /home/user/images/
+    ls /home/user/images/
       photo1.jpg photo2.jpg photo3.jpg ...
 
     ## Prepare a job file:
-    $ findface-mass-enroll prepare --meta-const='Phillip J. Fry' '/home/user/images/*'
+    findface-mass-enroll prepare --meta-const='Phillip J. Fry' '/home/user/images/*'
 
     Looking for images matching '*.jpg'
     2055 files prepared for upload
     2055 files in job file samplejob
 
     ## Run the job file:
-    $ findface-mass-enroll run --token 'RczGgVEMizR1njHHQegNH_g9mwGl6-A1' --api http://127.0.0.1:8000/ --gender --age --emotions --mf-selector=all
+    findface-mass-enroll run --token 'RczGgVEMizR1njHHQegNH_g9mwGl6-A1' --api http://127.0.0.1:8000/ --gender --age --emotions --mf-selector=all
+    
     [33/2055] faces processed (4 succeeded, 9 failed, 10 skipped). 2.14 rps. [00:00:17/00:16:04]
      
     ---------------------------------------- Summary -------------------------------------------
@@ -174,5 +175,5 @@ Enroll faces from all .jpg files in a /home/user/images/ directory with a share
 
 
     ## Should an error occur during the job file processing, correct the mistake and try again with the option --failed:
-    $ findface-mass-enroll run --token 'RczGgVEMizR1njHHQegNH_g9mwGl6-A1' --api http://127.0.0.1:8000/ --gender --age --emotions --mf-selector=all --failed
+    findface-mass-enroll run --token 'RczGgVEMizR1njHHQegNH_g9mwGl6-A1' --api http://127.0.0.1:8000/ --gender --age --emotions --mf-selector=all --failed
 

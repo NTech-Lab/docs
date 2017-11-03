@@ -28,16 +28,16 @@ By default, dynamic person creation is disabled. This means that all newly added
 
 To enable dynamic person creation, do the following:
 
-#. Open the **findface-facenapi.ini** configuration file for editing.
+#. Open the ``findface-facenapi.ini`` configuration file for editing.
 
    .. code::
 
-       $ sudo vi /etc/findface-facenapi.ini
+       sudo vi /etc/findface-facenapi.ini
 
 #. Edit the settings. 
 
    .. warning::
-        The **findface-facenapi.ini** content must be correct Python code.
+        The ``findface-facenapi.ini`` content must be correct Python code.
 
    .. code::
 
@@ -187,10 +187,10 @@ Other API Methods to Work with Persons
 Add and change ``person_id``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To add or change the person_id value for a particular face, use the method ``PUT /face/id/<face_id>``.
+To add or change the ``person_id`` value for a particular face, use the method ``PUT /face/id/<face_id>``.
 
 .. warning::
-    Since the person_id property is assigned only to newly added faces, old faces in the database are excluded from the person identification process. Use the method ``PUT /face/id/<face_id>`` to solve the problem.
+    Since the ``person_id`` property is assigned only to newly added faces, old faces in the database are excluded from the person identification process. Use the method ``PUT /face/id/<face_id>`` to solve the problem.
 
 .. rubric:: Request
 
@@ -228,10 +228,11 @@ To add or change the person_id value for a particular face, use the method ``PUT
       "y2": 428
     }
 
+
 Retrieve person history
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To retrieve all events from the history of cameras, related to the person with a given person_id, you can use the method ``GET /person/history/id/<person_id>`` (equally with ``/history/search POST``).
+To retrieve all events from the history of cameras, related to the person with a given ``person_id``, you can use the method ``GET /person/history/id/<person_id>`` (equally with ``/history/search POST``).
 
 .. rubric:: Request
 

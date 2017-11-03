@@ -24,17 +24,16 @@ To enable 'friend or foe' identification, do the following:
 #. Configure and tryout :ref:`dynamic person
    creation <persons>`.
 
-#. Open the **findface-facenapi.ini** configuration file for
-   editing.
+#. Open the ``findface-facenapi.ini`` configuration file for editing.
 
    .. code::
 
-       $ sudo vi /etc/findface-facenapi.ini
+       sudo vi /etc/findface-facenapi.ini
 
 #. Edit the settings.
 
    .. warning::
-        The **findface-facenapi.ini** content must be correct Python code.
+        The ``findface-facenapi.ini`` content must be correct Python code.
 
    .. code::
 
