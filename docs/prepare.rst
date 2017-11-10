@@ -17,7 +17,7 @@ FindFace Enterprise Server SDK can be installed from a local repository. You ca
 
    .. code::
 
-      sudo dpkg -i findface-data-* 
+      sudo dpkg -i findface-data* 
 
 #. Add a signature key on each designated host.
 
