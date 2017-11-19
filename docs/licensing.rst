@@ -5,7 +5,12 @@ Licensing
 
 You receive a license file from your NTechLab manager along with the FindFace Enterprise Server SDK distributable packages. If you opt for on-premise licensing, we will also send you a Guardant USB dongle. The licensing scheme for FindFace Enterprise Server SDK is shown on the diagram below.
 
-.. image:: https://gcc-elb-public-prod.gliffy.net/embed/image/8a534e69c2f181422ef0c298f11b1fcb.png
+|licensing_en|
+
+.. |licensing_en| image:: https://gcc-elb-public-prod.gliffy.net/embed/image/8a534e69c2f181422ef0c298f11b1fcb.png
+
+.. |licensing_ru| image:: https://gcc-elb-public-prod.gliffy.net/embed/image/2c3603daa6273196be48334e448dde5a.png
+
 
 To provide the FindFace Enterprise Server SDK licensing, follow the steps below:
 
@@ -24,7 +29,7 @@ To install and configure NTLS, do the following:
 
           sudo vi /etc/ntls.cfg
 
-       If necessary, change the license folder in the license-dir parameter. By default, license files are stored at ``/ntech/license``::
+       If necessary, change the license folder in the ``license-dir`` parameter. By default, license files are stored at ``/ntech/license``::
  
           license-dir = /ntech/license
 
@@ -36,7 +41,7 @@ To install and configure NTLS, do the following:
 
           ui = 127.0.0.1:3185
 		
-#. Enable the NTLS service autostart and lauch the service::
+#. Enable the NTLS service autostart and launch the service::
 
       sudo systemctl enable ntls && sudo systemctl start ntls
 

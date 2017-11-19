@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-15 15:48+0300\n"
+"PO-Revision-Date: 2017-11-13 17:33+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language: ru\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/models.rst:4
+msgid "Neural Network Models"
+msgstr "Модели нейронных сетей"
+
+#: ../source/models.rst:6
+msgid ""
+"Here you can see a summary for neural network models created by our Lab "
+"and used in FindFace Enterprise Server SDK:"
+msgstr ""
+"В этом разделе вы найдете сводную информацию по моделям нейронных сетей, "
+"созданным в нашей лаборатории и используемым в FindFace Enterprise Server"
+" SDK."
+
+#: ../source/models.rst:9
+msgid "Type"
+msgstr "Тип нейронной сети"
+
+#: ../source/models.rst:9
+msgid "Name"
+msgstr "Имя"
+
+#: ../source/models.rst:9
+msgid "In use"
+msgstr "В использовании"
+
+#: ../source/models.rst:9
+msgid "Facen size"
+msgstr "Размер вектора признаков"
+
+#: ../source/models.rst:11
+msgid "Face biometrics"
+msgstr "Биометрия лица"
+
+#: ../source/models.rst:11
+msgid "``model_36``"
+msgstr "``model_36``"
+
+#: ../source/models.rst:11 ../source/models.rst:13
+msgid "2016"
+msgstr "2016"
+
+#: ../source/models.rst:11 ../source/models.rst:13 ../source/models.rst:15
+#: ../source/models.rst:21
+msgid "160"
+msgstr "160"
+
+#: ../source/models.rst:13
+msgid "``model_39c``"
+msgstr "``model_39c``"
+
+#: ../source/models.rst:15
+msgid "``fr_1``"
+msgstr "``fr_1``"
+
+#: ../source/models.rst:15
+msgid "2016-04/05/2017"
+msgstr "2016-05/04/2017"
+
+#: ../source/models.rst:17
+msgid "``en_1``"
+msgstr "``en_1``"
+
+#: ../source/models.rst:17
+msgid "2016-03/03/2017"
+msgstr "2016-03/03/2017"
+
+#: ../source/models.rst:17 ../source/models.rst:19 ../source/models.rst:23
+msgid "320"
+msgstr "320"
+
+#: ../source/models.rst:19
+msgid "``en2_face0``"
+msgstr "``en2_face0``"
+
+#: ../source/models.rst:19
+msgid "since 03/14/2017"
+msgstr "с 14/03/2017"
+
+#: ../source/models.rst:21
+msgid "``apricot_160f``"
+msgstr "``apricot_160f``"
+
+#: ../source/models.rst:21 ../source/models.rst:23
+msgid "since 07/31/2017"
+msgstr "с 31/07/2017"
+
+#: ../source/models.rst:23
+msgid "``apricot_320``"
+msgstr "``apricot_320``"
+
+#: ../source/models.rst:25
+msgid "``banana_800f``"
+msgstr "``banana_800f``"
+
+#: ../source/models.rst:25
+#, fuzzy
+msgid "since 09/15/2017"
+msgstr "с 15/09/2017"
+
+#: ../source/models.rst:25
+msgid "800"
+msgstr "800"
+
+#: ../source/models.rst:27
+msgid "Gender recognition"
+msgstr "Распознавание пола"
+
+#: ../source/models.rst:27
+msgid "``fr_1_gender0``"
+msgstr "``fr_1_gender0``"
+
+#: ../source/models.rst:27 ../source/models.rst:29
+msgid "since 04/05/2017"
+msgstr "с 05/04/2017"
+
+#: ../source/models.rst:27 ../source/models.rst:29 ../source/models.rst:31
+#: ../source/models.rst:34
+msgid "N/A"
+msgstr "-"
+
+#: ../source/models.rst:29
+msgid "Age recognition"
+msgstr "Распознавание возраста"
+
+#: ../source/models.rst:29
+msgid "``fr_1_age0``"
+msgstr "``fr_1_age0``"
+
+#: ../source/models.rst:31
+msgid "Emotions recognition"
+msgstr "Распознавание эмоций"
+
+#: ../source/models.rst:31
+msgid "``model_39c_em``"
+msgstr "``model_39c_em``"
+
+#: ../source/models.rst:31
+msgid "04/05/2017- 08/11/2017"
+msgstr "05/04/2017- 11/08/2017"
+
+#: ../source/models.rst:34
+msgid "``emotion_1``"
+msgstr "``emotion_1``"
+
+#: ../source/models.rst:34
+msgid "since 08/11/2017"
+msgstr "since 11/08/2017"
+

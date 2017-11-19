@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"PO-Revision-Date: 2017-11-17 17:45+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/fkvideo_about.rst:4
+msgid "About Video Face Detection"
+msgstr "О видеодетекторе лиц"
+
+#: ../source/fkvideo_about.rst:6
+msgid ""
+"To add video face detection to your FindFace Server Enterprise SDK "
+"instance, you need the :program:`fkvideo_detector` component. This "
+"component extracts faces from video and posts them to FindFace Server "
+"over API for further processing. It can work with both live streams and "
+"files, and supports all video file formats and codecs that can be decoded"
+" by `FFmpeg <https://www.ffmpeg.org/general.html#Supported-File-"
+"Formats_002c-Codecs-or-Features>`__."
+msgstr ""
+"Для распознавания лиц на видео вам потребуется компонент ``fkvideo_detector``"
+". Этот компонент обнаруживает лица «на лету» в видеопотоке или видеофайле и "
+"отправляет их на Сервер FindFace по API. Компонент поддерживает все форматы "
+"видеофайлов и кодеков, которые могут быть декодированы `FFmpeg "
+"<https://www.ffmpeg.org/general.html#Supported-File-Formats_002c-Codecs-or-"
+"Features>`__. "
+
+#: ../source/fkvideo_about.rst:9
+msgid "In this section:"
+msgstr "В этом разделе:"
+
+#: ../source/fkvideo_about.rst:17
+msgid "Installation"
+msgstr "Установка"
+
+#: ../source/fkvideo_about.rst:19
+msgid ""
+"Install fkvideo_detector from the :program:`<findface-repo>.deb` package "
+"on one of the FindFace Server hosts or on a separate host:"
+msgstr ""
+"Установите ``fkvideo_detector`` из пакета с компонентами :program:`<findface-"
+"repo>.deb` на одном из серверов FindFace или на отдельном сервере:"
+
+#: ../source/fkvideo_about.rst:22
+msgid "Click :ref:`here <prepare>` for the package preparation instruction."
+msgstr ""
+"Нажмите :ref:`здесь <prepare>` для перехода к инструкции по подготовке "
+"deb-пакета."
+
+#: ../source/fkvideo_about.rst:31
+msgid "How It Works"
+msgstr "Принцип работы"
+
+#: ../source/fkvideo_about.rst:34
+msgid "Motion Detection and Face Tracking"
+msgstr "Детектор движения и трекер лиц"
+
+#: ../source/fkvideo_about.rst:36
+msgid ""
+"When processing video, fkvideo_detector consequently uses the following "
+"algorithms:"
+msgstr ""
+"При обработке видео ``fkvideo_detector`` последовательно использует "
+"следующие алгоритмы:"
+
+#: ../source/fkvideo_about.rst:38
+msgid ""
+":program:`Motion detection`. This algorithm is aimed to reduce system "
+"resources consumption. Only when the motion detector recognizes motion of"
+" certain intensity in video that the face tracker can be triggered."
+msgstr ""
+":program:`Детектор движения`. Данный алгоритм позволяет снизить потребление "
+"ресурсов, поскольку трекер лиц включается только по движению в кадре."
+
+#: ../source/fkvideo_about.rst:39
+msgid ""
+":program:`Face tracking`. The face tracker tracks, detects and captures "
+"faces from video, and posts them to FindFace Server. It can "
+"simultaneously process several faces."
+msgstr ""
+":program:`Трекер лиц`. Алгоритм детектирует, отслеживает и захватывает лица "
+"на видео и отправляет их на Сервер FindFace. Может работать одновременно с "
+"несколькими лицами в кадре."
+
+#: ../source/fkvideo_about.rst:42
+msgid ""
+"Configure the maximum number of processed faces in the fkvideo_detector "
+":ref:`configuration file <fkvideo-config>`."
+msgstr ""
+"Настройте максимальное количество активных лиц в :ref:`файле конфигурации "
+"<fkvideo-config>` ``fkvideo_detector``."
+
+#: ../source/fkvideo_about.rst:44
+msgid ""
+"Each captured face is posted as a snapshot and a bbox in a request "
+"``/face`` or ``/identify``, depending on the :ref:`configuration settings"
+" <fkvideo-config>`. If there are several active trackers, the face "
+"tracker sends the same number of requests with a unique snapshot and bbox"
+" in each."
+msgstr ""
+"Трекер лиц отправляет на Сервер область изображения с обнаруженным лицом ("
+"рамку с лицом) через запрос ``POST /face`` или ``POST /identify`` (зависит "
+"от :ref:`настроек видеодетектора <fkvideo-config>`). Если одновременно "
+"отслеживается несколько лиц, трекер отправит на Сервер такое же количество "
+"запросов с рамкой."
+
+#: ../source/fkvideo_about.rst:48
+msgid "Best Face Search"
+msgstr "Поиск лучшего изображения лица"
+
+#: ../source/fkvideo_about.rst:50
+msgid ""
+"When tracking a face, the face tracker searches for its best snapshot "
+"before posting it to FindFace Server."
+msgstr ""
+"Перед тем как отправить лицо на Сервер FindFace, трекер лиц подбирает его "
+"лучшее изображение."
+
+#: ../source/fkvideo_about.rst:52
+msgid "The best face can be found in one of the following modes:"
+msgstr ""
+"Подбор лучшего изображения лица может быть выполнен в одном из следующих "
+"режимов:"
+
+#: ../source/fkvideo_about.rst:54
+msgid "Real-time"
+msgstr "в реальном времени,"
+
+#: ../source/fkvideo_about.rst:55
+msgid "Offline"
+msgstr "в буфере."
+
+#: ../source/fkvideo_about.rst:59
+msgid "Real-Time Mode"
+msgstr "Режим реального времени"
+
+#: ../source/fkvideo_about.rst:61
+msgid ""
+"The real-time mode allows posting a face immediately after it appears in "
+"a camera field of view. In this mode, the face tracker searches for the "
+"best face snapshot dynamically:"
+msgstr ""
+"В режиме реального времени трекер лиц начинает отправлять на Сервер "
+"изображения лица сразу после его появления в поле зрения видеокамеры. В этом "
+"режиме трекер лиц подбирает лучшее изображение лица динамически:"
+
+#: ../source/fkvideo_about.rst:63
+msgid ""
+"First, the face tracker estimates whether the quality of a face snapshot "
+"exceeds a pre-defined threshold value. If so, the snapshot is posted to "
+"FindFace Server."
+msgstr ""
+"Сначала оценивается качество изображения лица. Если оно превышает некое "
+"предустановленное пороговое значение, то лицо отправляется на Сервер."
+
+#: ../source/fkvideo_about.rst:64
+msgid ""
+"The threshold value increases after each post. Each time the face tracker"
+" gets a higher quality snapshot of the same face, it is posted."
+msgstr ""
+"Порог повышается после каждой отправки изображения лица на Сервер. Каждый "
+"раз, когда трекер лиц получает изображение того же лица лучшего качества, "
+"оно отправляется."
+
+#: ../source/fkvideo_about.rst:65
+msgid ""
+"When the face disappears from the camera field of view, the threshold "
+"value resets to default."
+msgstr ""
+"При исчезновении лица из поля зрения видеокамеры снова устанавливается "
+"пороговое значение по умолчанию."
+
+#: ../source/fkvideo_about.rst:69
+msgid "Offline Mode"
+msgstr "Буферный режим"
+
+#: ../source/fkvideo_about.rst:71
+msgid ""
+"The offline mode is less storage intensive than the real-time one as it "
+"allows posting only one snapshot per face, but of the highest quality. In"
+" this mode, the face tracker buffers a video stream with a face in it "
+"until the face disappears from the camera field of view. Then the face "
+"tracker picks up the best face snapshot from the buffered video and posts"
+" it to FindFace Server."
+msgstr ""
+"В буферном режиме трекер лиц использует меньший объем дискового пространства "
+"по сравнению с режимом реального времени, поскольку для каждого лица "
+"отправляет на Сервер только одно изображение, но наивысшего качества. При "
+"работе в буферном режиме трекер лиц сохраняет в буфере фрагмент видео с "
+"лицом, после чего выбирает из этого фрагмента лучшее изображение лица и "
+"отправляет его."
+
+#: ../source/fkvideo_about.rst:76
+msgid "Configuration and Usage"
+msgstr "Настройка и использование"
+
+#: ../source/_inclusions/fkvideo_config_warning.rst:1
+msgid ""
+"To configure fkvideo_detector, you can specify its options in any of the "
+"following ways:"
+msgstr ""
+"Параметры конфигурации видеодетектора задаются одним из следующих способов:"
+
+#: ../source/_inclusions/fkvideo_config_warning.rst:3
+msgid "As command line arguments upon starting fkvideo_detector."
+msgstr ""
+"непосредственно в интерфейсе командной строки как опции команды запуска "
+"видеодетектора;"
+
+#: ../source/_inclusions/fkvideo_config_warning.rst:9
+msgid "As parameters in the fkvideo_detector configuration file."
+msgstr "в файле конфигурации."
+
+#: ../source/_inclusions/fkvideo_config_warning.rst:12
+msgid ""
+"The default fkvideo_detector configuration file is ``/etc/fkvideo.ini``. "
+"Avoid editing ``/etc/fkvideo.ini``, especially if fkvideo_detector "
+"and :ref:`FindFace Web UI <ffui>` are running on the same host, as "
+"FindFace Web UI also uses this configuration file. Instead, make a copy "
+"of this file, edit the copy and specify it in the option ``-c`` when "
+"starting fkvideo_detector."
+msgstr ""
+"По умолчанию в качестве файла конфигурации fkvideo_detector используется "
+"файл ``/etc/fkvideo.ini``. Не редактируйте файл ``/etc/fkvideo.ini``, "
+"особенно если fkvideo_detector и :ref:`веб-интерфейс FindFace <ffui>` "
+"установлены на одном физическом сервере, т. к. веб-интерфейс тоже использует "
+"данный файл. Вместо этого скопируйте файл, отредактируйте копию и укажите ее "
+"в опции ``-c`` при запуске fkvideo_detector."
+
+#: ../source/fkvideo_about.rst:80
+msgid "See :ref:`fkvideo-config` for the full option list."
+msgstr "См. полный список параметров конфигурации в :ref:`fkvideo-config`."
+
+#: ../source/fkvideo_about.rst:83
+msgid "Video Stream Management"
+msgstr "Управление видеопотоками"
+
+#: ../source/fkvideo_about.rst:85
+msgid ""
+"You can specify video streams to be processed by fkvideo_detector as "
+"follows:"
+msgstr "Вы можете задать видеопотоки для обработки одним из следующих способов:"
+
+#: ../source/fkvideo_about.rst:87
+msgid ""
+"A single stream can be specified directly by using the ``--camid`` and "
+"``--source`` options when configuring fkvideo_detector."
+msgstr ""
+"Единственный поток может быть задан непосредственно с помощью параметров "
+"``--camid`` и ``--source`` при настройке ``fkvideo_detector``."
+
+#: ../source/fkvideo_about.rst:88
+msgid ""
+"A list of streams has first to be posted to FindFace Server by applying "
+"the :ref:`/camera POST <camera-post>` method to each stream. When "
+"posting, all streams in the list have to be assigned a common user-"
+"defined string, so called ``detector``. This string should then be "
+"specified as the ``--detector-name`` option when configuring "
+"fkvideo_detector. In this case, fkvideo_detector will retrieve the list "
+"of streams from FindFace Server, based on their ``detector-name``, and "
+"begin to process each stream individually. It will also be periodically "
+"updating the list of cameras from FindFace Server with a polling interval"
+" defined by the ``reload-timeout`` parameter."
+msgstr ""
+"Список видеопотоков должен быть сначала зарегистрирован на Сервере FindFace. "
+"Для этого для каждого потока из списка сформируйте и отправьте на Сервер "
+"запрос :ref:`/camera POST <camera-post>` с одинаковым пользовательским "
+"идентификатором ``detector``. Данный идентификатор должен быть затем указан "
+"в параметре ``--detector-name`` при настройке ``fkvideo_detector``. В этом "
+"случае ``fkvideo_detector`` запросит список потоков от Сервера FindFace на "
+"основании их ``detector-name`` и начнет по отдельности обрабатывать каждый "
+"из них. Он также будет периодически проверять список на наличие обновлений с "
+"интервалом, определяемым параметром ``reload-timeout``."

@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"PO-Revision-Date: 2017-11-16 18:38+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/bulk_face.rst:4
+msgid "Bulk Face Enrollment"
+msgstr "Пакетная загрузка лиц"
+
+#: ../source/bulk_face.rst:6
+msgid ""
+"The Bulk Face Enrollment feature allows for enrolling faces to findface-"
+"facenapi from images in bulk."
+msgstr ""
+"Функция пакетного добавления лиц позволяет отправлять лица в компонент "
+"``findface-facenapi`` одновременно из множества изображений."
+
+#: ../source/bulk_face.rst:9
+msgid "In this section:"
+msgstr "В этом разделе:"
+
+#: ../source/bulk_face.rst:15
+msgid "General Information"
+msgstr "Общие сведения"
+
+#: ../source/bulk_face.rst:17
+msgid "You can bulk-enroll faces in one of the following ways:"
+msgstr "Вы можете пакетно добавлять лица одним из следующих способов:"
+
+#: ../source/bulk_face.rst:19
+msgid "from images in a current directory,"
+msgstr "из изображений в текущей папке,"
+
+#: ../source/bulk_face.rst:20
+msgid "from images in a given subdirectory,"
+msgstr "из изображений в заданной дочерней папке,"
+
+#: ../source/bulk_face.rst:21
+msgid "from images from all subdirectories."
+msgstr "из изображений во всех дочерних папках."
+
+#: ../source/bulk_face.rst:23
+msgid "To install the Bulk Face Enrollment component, execute:"
+msgstr ""
+"Для того чтобы установить компонент для пакетного добавления лиц, "
+"выполните команду:"
+
+#: ../source/bulk_face.rst:29
+msgid "To display the component help message, execute:"
+msgstr "Для того чтобы отобразить справку по компоненту, выполните команду:"
+
+#: ../source/bulk_face.rst:129
+msgid "To harness the feature, do the following:"
+msgstr "Для пакетного добавления лиц выполните следующие действия:"
+
+#: ../source/bulk_face.rst:131
+msgid ""
+"Prepare a job file containing the list of images with "
+"metadata (``prepare``). If all images share the same metastring, you can "
+"specify it right in the command line when preparing the job file "
+"(``--meta-const``). If each image has a unique metastring, map "
+"metastrings to images in a CSV file (``--meta-csv``)."
+msgstr ""
+"Подготовьте файл задания (job-файл), содержащий список изображений с "
+"метаданными (метод ``prepare``). Если все изображения имеют одинаковую "
+"строку с метаданными, вы можете указать ее прямо в командной строке при "
+"подготовке job-файла (опция ``--meta-const``). Если каждому изображению "
+"должна соответствовать уникальная строка с метаданными, задайте соответствие "
+"метаданных изображениям в CSV-файле (опция ``--meta-csv``)."
+
+#: ../source/bulk_face.rst:134
+msgid ""
+"The CSV file used as a metadata source should have the following format: "
+"``metastring | image``. If some images are not listed in the CSV file, "
+"their metastrings will be empty."
+msgstr ""
+"В качестве источника метаданных CSV-файл должен иметь следующий формат: ``"
+"метаданные | изображение``. Если некоторые изображения не были перечислены в "
+"CSV-файле, они будут добавлены с пустыми метаданными."
+
+#: ../source/bulk_face.rst:137
+msgid ""
+"To write the list of images to a CSV file, you can use the command below."
+" Each image in the list will be associated with a metastring coinciding "
+"with the image full path (in the format ``metastring | image``)."
+msgstr ""
+"Для того чтобы записать список изображений в CSV-файл, можно использовать "
+"приведенную ниже команду. В этом случае для каждого изображения в списке в "
+"качестве строки с метаданными будет создана строка с указанием полного пути "
+"к изображению (в формате ``метаданные | изображение``)."
+
+#: ../source/bulk_face.rst:143
+msgid "If necessary, display the job file content (``print``)."
+msgstr "При необходимости отобразите содержимое job-файла (метод ``print``)."
+
+#: ../source/bulk_face.rst:145
+msgid "Enroll faces to findface-facenapi for further processing (``run``)."
+msgstr ""
+"Отправьте лица в компонент findface-facenapi для дальнейшей обработки (метод "
+"``run``)."
+
+#: ../source/bulk_face.rst:148
+msgid ""
+"Should an error occur during the job file processing, correct the mistake"
+" and try again with the option --failed (see examples below)."
+msgstr ""
+"В случае неудачи при обработке job-файла исправьте ошибку и повторите "
+"попытку с опцией ``--failed`` (см. пример ниже)."
+
+#: ../source/bulk_face.rst:151
+msgid "Example"
+msgstr "Пример"
+
+#: ../source/bulk_face.rst:153
+msgid ""
+"Enroll faces from all ``.jpg`` files in a ``/home/user/images/`` "
+"directory with a shared metastring ``Phillip J. Fry``:"
+msgstr ""
+"Добавьте лица из всех файлов ``.jpg`` в папке ``/home/user/images/`` с "
+"общими метаданными ``Phillip J. Fry``:"
+
+#: ../source/bulk_face.rst:155
+msgid "To display the list of images in a directory, execute:"
+msgstr "Для отображения списка всех файлов в папке выполните команду:"
+
+#: ../source/bulk_face.rst:163
+msgid "Prepare a job file:"
+msgstr "Подготовьте job-файл:"
+
+#: ../source/bulk_face.rst:173
+msgid "Run the job file:"
+msgstr "Выполните job-файл:"
+
+#: ../source/bulk_face.rst:189
+msgid ""
+"Should an error occur during the job file processing, correct the mistake"
+" and try again with the option ``--failed``:"
+msgstr ""
+"В случае неудачи при обработке job-файла исправьте ошибку и повторите "
+"попытку с опцией ``--failed``."

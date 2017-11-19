@@ -6,7 +6,12 @@ This section will guide you through the :program:`fkvideo_detector` deployment p
 .. note::
    The fkvideo_detector component has to be :ref:`installed <fkvideo-install>`.
 
-.. contents:: In this section:
+
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 .. _camera-fkvideo:
 
@@ -53,7 +58,7 @@ To specify video streams for face detection, do the following:
        realtime=1
 
        ; URL that will receive frames
-       request-url=/v0/face/
+       request-url=/v1/face/
        ; You can add custom head and body params to HTML POST request
        head=
        body=mf_selector=all,meta=User Meta
@@ -65,13 +70,19 @@ To specify video streams for face detection, do the following:
    .. tip::
        You can find an example of the configuration file `here <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-examples/master/fk_local_config.ini>`__.
 
-#. If you have more than one camera, use the Server to store all your cameras. Add your camera to server by POST request v0/camera. For    example, add camera to detector=detec1:
+#. If you have more than one camera, use the Server to store all your cameras. Add your camera to server by POST request v1/camera. For    example, add camera to detector=detec1:
+
+   .. rubric:: Request
 
    .. code::
 
-       curl -H 'Authorization: Token 1234567890qwertyuiop' -F "detector=detec1" -F "url=rtsp://user:pass@192.168.1.1:554/Streaming/Channels/1" -F "meta=test" http://localhost:8000/v0/camera
+       curl -H 'Authorization: Token 1234567890qwertyuiop' -F "detector=detec1" -F "url=rtsp://user:pass@192.168.1.1:554/Streaming/Channels/1" -F "meta=test" http://localhost:8000/v1/camera
 
-       ## As result
+
+   .. rubric:: Response
+
+   .. code::
+
        {"detector": "detec1", "id": "0e663c00-b945-4676-bb0e-032c1dcf353a", "meta": "test", "url": "rtsp:// user:pass@192.168.1.1:554/Streaming/Channels/1"}
 
 
@@ -106,7 +117,7 @@ To specify video streams for face detection, do the following:
        realtime=1
 
        ; URL that will receive frames
-       request-url=/v0/face/
+       request-url=/v1/face/
        ; You can add custom head and body params to HTML POST request
        head=
        body=mf_selector=all,,meta=UserMeta
@@ -148,15 +159,10 @@ To run the face detection component as a service, do the following:
 
        sudo service fkvideo_detector@fk_local_config status
 
-       ## Response
-       fkvideo_detector@fk_local_config.service - FKVideo detector daemon (fk_local_config)
-          Loaded: loaded (/lib/systemd/system/fkvideo_detector@.service; disabled; vendor preset: enabled)
-          Active: active (running) since Fri 2017-02-03 12:41:35 MSK; 5min ago
-
    .. note::
        You can get the list of your cameras by the following request:
 
        .. code::
 
-          curl -H 'Authorization: Token 1234567890qwertyuiop' http://localhost:8000/v0/camera | jq
+          curl -H 'Authorization: Token 1234567890qwertyuiop' http://localhost:8000/v1/camera | jq
 

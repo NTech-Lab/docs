@@ -5,7 +5,11 @@ Configuration Parameters
 
 .. include:: /_inclusions/fkvideo_config_warning.rst
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 Command Line Arguments
 ---------------------------

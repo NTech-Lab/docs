@@ -8,7 +8,10 @@ This section will guide you through the FindFace Server step-by-step installatio
 .. tip::
     Standalone installation can also be done from a developer-friendly :ref:`installer <installer>`.
 	
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
 
 .. include:: prepare.rst
 

@@ -21,13 +21,13 @@ After you install the FindFace Server components, configure their interaction wi
        The ``findface-facenapi.ini`` content must be correct Python code.
    
    .. note::
-       Do not specify ``ffupload_url`` if the findface-upload component is not installed. 
+       Do not specify ``ffupload_url`` if the ``findface-upload`` component is not installed. 
 
 #. By default, if one or several tntapi shards are out of service during face identification, :program:`findface-facenapi` returns an error. If necessary, uncomment the ``tntapi_ignore_search_error`` parameter and assign it ``True``. In this case findface-facenapi will use available tntapi shards to obtain face identification results, indicating the number of available servers vs the total number of servers in the response::
       
      tntapi_ignore_search_errors = True
 
-#. Restart all the FindFace Enterprise Server SDK services and nginx (for findface-upload) on the relevant host(s).
+#. Restart all the FindFace Enterprise Server SDK services and nginx (for ``findface-upload``) on the relevant host(s).
 
    .. code::
 

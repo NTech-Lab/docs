@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-17 13:12+0300\n"
+"PO-Revision-Date: 2017-11-17 13:34+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/fkvideo_render.rst:2
+msgid "Render Detection Results"
+msgstr "Визуализация ответов Сервера"
+
+#: ../source/fkvideo_render.rst:4
+msgid ""
+"The fkvideo_detector component does not process FindFace Server responses"
+" to face identification and camera operation API requests. You should "
+"write your own proxy script that will manage communication between "
+"fkvideo_detector and FindFace Server and redirect API responses to an "
+"application that can process and render them. A typical rendering "
+"topology is shown on the diagram below:"
+msgstr ""
+"Видеодетектор лиц не обрабатывает ответы Сервера на свои API запросы, "
+"связанные с идентификацией лиц и управлением видеокамерами. При "
+"необходимости вам потребуется написать собственный прокси-скрипт, "
+"управляющий взаимодействием видеодетектора лиц и Сервера и перенаправляющий "
+"API-ответы в приложение, которое может их обработать и визуализировать. "
+"Пример использования прокси-скрипта между Сервером и видеодетектором показан "
+"на схеме ниже:"
+
+#: ../source/fkvideo_render.rst:6
+msgid "|render_en|"
+msgstr "|render_ru|"
+
+#: ../source/fkvideo_render.rst:12
+msgid "When writing the proxy script, hold to the following logic:"
+msgstr "При написании прокси-скрипта придерживайтесь следующей логики:"
+
+#: ../source/fkvideo_render.rst:14
+msgid ""
+"A request from fkvideo_detector transparently goes to FindFace Server in "
+"the following format:"
+msgstr ""
+"Запрос от видеодетектора передается на Сервер FindFace без изменений в "
+"следующем формате:"
+
+#: ../source/fkvideo_render.rst:20
+msgid ""
+"As FindFace Server replies to fkvideo_detector, your proxy script should "
+"redirect the response to your application for further processing."
+msgstr ""
+"Ответ от Сервера, отправленный видеодетектору лиц, перенаправляется в "
+"пользовательское приложение для обработки."
+
+#: ../source/fkvideo_render.rst:23
+msgid ""
+"FindFace Server responses to requests sent directly or by "
+"fkvideo_detector are same. They may contain a link to a face thumbnail "
+"and other data which can be parsed in your application."
+msgstr ""
+"Сервер отвечает на запросы одинаково, независимо от того, были ли они "
+"отправлены напрямую или пришли от видеодетектора лиц. В связи с этим ответы "
+"Сервера на запросы видеодетектора лиц могут содержать ссылку на миниатюру "
+"лица и другие данные, которые можно проанализировать в пользовательском "
+"приложении."

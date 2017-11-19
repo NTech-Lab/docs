@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-08 12:33+0300\n"
+"PO-Revision-Date: 2017-11-19 18:06+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/remove_sdk.rst:4
+msgid "Remove Instance"
+msgstr "Удаление экземпляра продукта"
+
+#: ../source/remove_sdk.rst:6
+msgid ""
+"You can automatically remove FindFace Enterprise Server SDK, and, "
+"optionally, MongoDB and Tarantool by using the "
+":program:`ffserver_uninstall.sh` script. Do the following:"
+msgstr ""
+"Вы можете автоматически удалить FindFace Enterprise Server SDK и при "
+"необходимости базы данных MongoDB и Tarantool с помощью скрипта "
+":program:`ffserver_uninstall.sh`. Выполните следующие действия:"
+
+#: ../source/remove_sdk.rst:8
+msgid ""
+"Download the :download:`ffserver_uninstall.sh "
+"<_scripts/ffserver_uninstall.sh>` script to some directory on a "
+"designated host (for example, to ``/home/username/``)."
+msgstr ""
+"Загрузите скрипт :download:`ffserver_uninstall.sh "
+"<_scripts/ffserver_uninstall.sh>` в любую папку на сервере установки ("
+"например, в ``/home/username/``)."
+
+#: ../source/remove_sdk.rst:9
+msgid ""
+"From this directory, make the :program:`ffserver_uninstall.sh` script "
+"executable."
+msgstr ""
+"Из данной папки сделайте скрипт :program:`ffserver_uninstall.sh` исполняемым."
+
+#: ../source/remove_sdk.rst:15
+msgid "Launch the :program:`ffserver_uninstall.sh` script."
+msgstr "Запустите скрипт :program:`ffserver_uninstall.sh`."
+
+#: ../source/remove_sdk.rst:21
+msgid ""
+"Answer the questions provided by the script interactive wizard to choose "
+"whether to remove FindFace Enterprise Server SDK completely (along with "
+"all the enrolled faces), or while maintaining face data."
+msgstr ""
+"Отвечая на вопросы интерактивного мастера удаления, выберите между полным "
+"удалением FindFace Enterprise Server SDK со всеми добавленными лицами и "
+"удалением с сохранением данных."

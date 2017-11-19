@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-17 13:17+0300\n"
+"PO-Revision-Date: 2017-11-17 15:42+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/standalone_architecture.rst:4
+msgid "Standalone Architecture"
+msgstr "Развертывание на одиночном сервере"
+
+#: ../source/standalone_architecture.rst:6
+msgid ""
+"FindFace Enterprise Server SDK components and neural network models can "
+"be deployed on a single host (standalone) making it easier to start "
+"deployment and cater to basic requirements of your applications. A "
+"typical standalone installation of FindFace Server is shown on the "
+"diagram below."
+msgstr ""
+"Компоненты и модели нейронных сетей FindFace Enterprise Server SDK могут "
+"быть установлены на одиночном физическом сервере. Данная установка "
+"рекомендуется для использования в небольших проектах уровня предприятия с "
+"числом лиц в базе данных до ``1 000 000``. Вы также можете использовать "
+"данный вариант установки в более крупных проектах на подготовительном этапе "
+"для формирования требований к проектируемой системе. Взаимодействие "
+"компонентов Сервера FindFace при таком варианте установки показано на схеме "
+"ниже:"
+
+#: ../source/standalone_architecture.rst:9
+msgid ""
+"In addition to FindFace Server, you can also harness the :ref:`advanced "
+"features <extra-functionality>`."
+msgstr ""
+"В дополнение к Серверу FindFace вы также можете установить :ref:`расширенный "
+"функционал <extra-functionality>`."
+
+#: ../source/standalone_architecture.rst:12
+msgid ""
+"Standalone installation can be done :ref:`step-by-step <install-server>` "
+"or from a :ref:`developer-friendly installer <installer>`."
+msgstr ""
+"Установка на одиночном физическом сервере может быть выполнена как :ref:`"
+"пошагово <install-server>`, так и из :ref:`консольного инсталлятора "
+"<installer>`."
+
+#: ../source/standalone_architecture.rst:14
+msgid "|standalone_en|"
+msgstr "|standalone_ru|"
+
+#: ../source/standalone_architecture.rst:1
+msgid "Component"
+msgstr "Компонент"
+
+#: ../source/standalone_architecture.rst:1
+msgid "Description"
+msgstr "Описание"
+
+#: ../source/_tables/components.csv:1
+msgid "``findface-facenapi``"
+msgstr "``findface-facenapi``"
+
+#: ../source/_tables/components.csv:1
+msgid ""
+"Python daemon which runs HTTP API. This daemon executes face detection "
+"functions, interfaces with ``MongoDB`` and ``findface-nnapi`` and "
+"``tarantool@FindFace`` daemons."
+msgstr ""
+"Реализованный на Python сервис, обеспечивающий функционирование HTTP API. "
+"Данный сервис выполняет функцию обнаружения лиц на фотографиях, "
+"взаимодействует с базой данных MongoDB и сервисами ``findface-nnapi`` и "
+"``tarantool@FindFace``."
+
+#: ../source/_tables/components.csv:1
+msgid "``tntapi`` (``tarantool@FindFace`` as a shard)"
+msgstr "``tntapi`` (``tarantool@FindFace`` как шард)"
+
+#: ../source/_tables/components.csv:1
+msgid "Daemon which enables interaction with the face descriptors index."
+msgstr ""
+"Сервис, обеспечивающий взаимодействие между сервисом ``findface-facenapi`` и "
+"базой биометрических данных на основе Tarantool. Для увеличения скорости "
+"поиска на каждом сервере с базой данных Tarantool могут быть созданы "
+"многочисленные сегменты («шарды») ``tntapi``. Их параллельное "
+"функционирование приводит к значительному увеличению производительности (в "
+"70-100 раз)."
+
+#: ../source/_tables/components.csv:1
+msgid "``findface-nnapi``"
+msgstr "``findface-nnapi``"
+
+#: ../source/_tables/components.csv:1
+msgid ""
+"Daemon extracts a feature vector (based on neural network). Requires the "
+"packages with :ref:`models <models>` :program:`<findface-data>.deb`."
+msgstr ""
+"Сервис, выполняющий посредством нейронных сетей извлечение вектора признаков "
+"(биометрического образца) из обнаруженных лиц, а также распознавание пола, "
+"возраста и эмоций. Требует установки пакетов с :ref:`моделями нейронных "
+"сетей <models>` :program:`<findface-data>.deb`."
+
+#: ../source/_tables/components.csv:1
+msgid "MongoDB"
+msgstr "MongoDB"
+
+#: ../source/_tables/components.csv:1
+msgid "Database which stores faces metadata, galleries details, settings, etc."
+msgstr ""
+"База данных, в которой хранятся метаданные лиц, подробная информация о "
+"галереях, настройки, векторы признаков и т. д."
+
+#: ../source/_tables/components.csv:1
+msgid "``findface-upload``"
+msgstr "``findface-upload``"
+
+#: ../source/_tables/components.csv:1
+msgid "Nginx web server used to receive images using WebDAV."
+msgstr ""
+"Веб-сервер на базе nginx, который принимает изображения через WebDAV. "
+"Устанавливается, если требуется хранить исходные загруженные изображения, "
+"миниатюры и нормализованные изображения лиц на Сервере."
+
+#: ../source/_tables/components.csv:1
+msgid "``NTLS``"
+msgstr "``NTLS``"
+
+#: ../source/_tables/components.csv:1
+msgid ""
+"Local license server which interfaces with NtechLab Global License Server"
+" (for network licensing) or a USB dongle (for on-premise licensing) and "
+"passes a license to licensable components."
+msgstr ""
+"Локальный сервер лицензий с управлением через веб-интерфейс, "
+"взаимодействующий для верификации лицензий с глобальным центром лицензий "
+"NtechLab. Для закрытых систем поддерживается работа с аппаратными "
+"лицензионными ключами."
+
+#~ msgid "``MongoDB``"
+#~ msgstr "``MongoDB``"
+
+#~ msgid "Service"
+#~ msgstr "Сервис"

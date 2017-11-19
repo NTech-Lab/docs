@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-17 13:12+0300\n"
+"PO-Revision-Date: 2017-11-17 13:37+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/licensing.rst:4
+msgid "Licensing"
+msgstr "Лицензирование"
+
+#: ../source/licensing.rst:6
+msgid ""
+"You receive a license file from your NTechLab manager along with the "
+"FindFace Enterprise Server SDK distributable packages. If you opt for on-"
+"premise licensing, we will also send you a Guardant USB dongle. The "
+"licensing scheme for FindFace Enterprise Server SDK is shown on the "
+"diagram below."
+msgstr ""
+"Вы получаете файл лицензии вместе с установочными пакетами FindFace "
+"Enterprise Server SDK от менеджера «Нтех лаб». Если вы выберите "
+"лицензирование в закрытой сети, вам также будет отправлен ключ аппаратной "
+"защиты Guardant. Принцип лицензирования FindFace Enterprise Server SDK "
+"показан на схеме ниже:"
+
+#: ../source/licensing.rst:8
+msgid "|licensing_en|"
+msgstr "|licensing_ru|"
+
+#: ../source/licensing.rst:15
+msgid ""
+"To provide the FindFace Enterprise Server SDK licensing, follow the steps"
+" below:"
+msgstr "Этапы лицензирования:"
+
+#: ../source/licensing.rst:17
+msgid "Install and configure the local license server :program:`NTLS`."
+msgstr "Установите и настройте локальный сервер лицензий :program:`NTLS`."
+
+#: ../source/licensing.rst:18
+msgid ""
+"If the licensable components (``findface-nnapi``, ``tntapi``, "
+"``fkvideo_detector``, ``extraction-api``) are installed on remote hosts, "
+"specify the NTLS host IP address in their configuration files."
+msgstr ""
+"Если лицензируемые компоненты (``findface-nnapi``, ``tntapi``, "
+"``fkvideo_detector`` и ``extraction-api``) установлены на удаленных "
+"серверах, укажите IP-адрес сервера NTLS в их файлах конфигурации."
+
+#: ../source/licensing.rst:20
+msgid "To install and configure NTLS, do the following:"
+msgstr ""
+"Для того чтобы установить и настроить NTLS, выполните следующие действия:"
+
+#: ../source/licensing.rst:22
+msgid "Install the NTLS component::"
+msgstr "Установите компонент NTLS::"
+
+#: ../source/licensing.rst:28
+msgid ""
+"In the NTLS configuration file, you can change the license folder and "
+"specify your proxy server IP address if necessary. You can also change "
+"the NTLS web interface remote access settings. To open the NTLS "
+"configuration file, execute::"
+msgstr ""
+"В файле конфигурации NTLS вы можете изменить папку для хранения файла "
+"лицензии и при необходимости указать IP-адрес прокси-сервера для доступа в "
+"Интернет. Вы также можете настроить удаленный доступ к веб-интерфейсу NTLS, "
+"используемому для управления лицензией. Для того чтобы открыть файл "
+"конфигурации NTLS, выполните команду::"
+
+#: ../source/licensing.rst:32
+msgid ""
+"If necessary, change the license folder in the ``license-dir`` parameter."
+" By default, license files are stored at ``/ntech/license``::"
+msgstr ""
+"При необходимости укажите в параметре ``license-dir`` другую папку для "
+"хранения файла лицензии. По умолчанию файл лицензии хранится в папке "
+"``/ntech/license``::"
+
+#: ../source/licensing.rst:36
+msgid ""
+"If necessary, uncomment the ``proxy`` line and specify your proxy server "
+"IP address::"
+msgstr ""
+"При необходимости раскомментируйте строку ``proxy`` и укажите IP-адрес "
+"прокси-сервера::"
+
+#: ../source/licensing.rst:40
+msgid ""
+"By default, you can access the NTLS web interface from any remote host "
+"(``ui = 0.0.0.0:3185``). To indicate that accessing the NTLS web "
+"interface must originate from a specific IP address, edit the ``ui`` "
+"parameter::"
+msgstr ""
+"По умолчанию доступ в веб-интерфейс NTLS возможен с любого удаленного "
+"сервера (``ui = 0.0.0.0:3185``). Для того чтобы обеспечить доступ к веб-"
+"интерфейсу NTLS только с определенного IP-адреса, отредактируйте параметр "
+"``ui``::"
+
+#: ../source/licensing.rst:44
+msgid "Enable the NTLS service autostart and launch the service::"
+msgstr "Добавьте сервис NTLS в автозагрузку и запустите сервис::"
+
+#: ../source/licensing.rst:48
+msgid ""
+"Upload the license file via the NTLS web interface "
+"``http://<NTLS_IP_address>:3185/#/``. You can also use the NTLS web "
+"interface to consult your license information, and upgrade or extend the "
+"license."
+msgstr ""
+"Загрузите файл лицензии в веб-интерфейсе NTLS по адресу ``http://<IP-адрес "
+"NTLS>:3185/#/``. Вы также можете использовать веб-интерфейс NTLS для "
+"продления и апгрейда лицензии."
+
+#: ../source/licensing.rst:52
+msgid "For on-premise licensing, insert the Guardant dongle into a USB port."
+msgstr "Для лицензирования в закрытой сети вставьте ключ Guardant в USB-порт."
+
+#: ../source/licensing.rst:55
+msgid ""
+"If the licensable components (``findface-nnapi``, ``tntapi``, "
+"``fkvideo_detector``, ``extraction-api``) are to be installed on remote "
+"hosts, keep in mind that you have to specify the IP address of the NTLS "
+"host in their configuration files after installation."
+msgstr ""
+"Если лицензируемые компоненты (``findface-nnapi``, ``tntapi``, "
+"``fkvideo_detector`` и ``extraction-api``) будут установлены на удаленных "
+"серверах, обязательно укажите IP-адрес сервера NTLS в их файлах конфигурации "
+"после установки."

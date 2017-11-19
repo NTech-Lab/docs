@@ -10,16 +10,13 @@ To create a long token, execute:
 
  findface-facenapi.token
 
- ## Long token format:
- 0123456789_abcdefghijklmnopqrstuvw
+ ##0123456789_abcdefghijklmnopqrstuvw
 
 To create a short token, execute:
 ::
 
  findface-facenapi.token --short
-
- ## Short token format:
- A0B1-C2D3
+ ##A0B1-C2D3
  
 If MongoDB is installed on a remote host, you have to indicate the path to the ``findface-facenapi.ini`` configuration file in the token generation command.
 ::

@@ -1,0 +1,492 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-19 18:26+0300\n"
+"PO-Revision-Date: 2017-11-19 18:35+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/extraction_api.rst:4
+msgid "Extraction API"
+msgstr "Компонент ``Extraction API``"
+
+#: ../source/extraction_api.rst:6
+msgid ""
+"With the ``Extraction API`` component, you can flexibly configure the "
+"format of API responses to extract various face data, including the "
+"bounding box coordinates, normalized face, gender, age, and emotions, as "
+"well as the face feature vector (facen). Implementing this feature to "
+"your system can remarkably broaden the scope of analytic tasks it is "
+"capable of fulfilling."
+msgstr ""
+"С компонентом ``Extraction API`` вы можете гибко настраивать формат "
+"API-ответов для извлечения таких данных, как координаты рамки с лицом, "
+"нормализованное лицо, пол, возраст, эмоции, вектор признаков. "
+"Использование данной функции в вашей системе может значительно расширить "
+"спектр аналитических задач, которые она в состоянии выполнить. "
+
+#: ../source/extraction_api.rst:11
+msgid ""
+"Being a ``findface-facenapi`` counterpart when it comes to data "
+"extraction via API, ``Extraction API`` is more resource-demanding. The "
+"component cannot fully substitute ``findface-facenapi`` as it doesn't "
+"allow adding faces and working with the database."
+msgstr ""
+"Будучи аналогом компонента ``findface-facenapi`` в том, что касается "
+"извлечения данных через API, компонент ``Extraction API`` является более "
+"ресурсоемким. Данный компонент не может служить полноценной заменой "
+"``findface-facenapi``, поскольку не позволяет добавлять лица и работать с"
+" базой данных."
+
+#: ../source/extraction_api.rst:14
+msgid ""
+"You can also :ref:`use <extract-facens>` ``Extraction API`` as a facen "
+"extractor, i. e. as an alternative to ``findface-nnapi``."
+msgstr ""
+"Вы также можете :ref:`использовать <extract-facens>` ``Extraction API`` "
+"для непосредственного извлечения биометрических образцов, т. е. как "
+"альтернативу ``findface-nnapi``."
+
+#: ../source/extraction_api.rst:17
+msgid ""
+"Encoded in base64 normalized images received from the Extraction API "
+"component are qualified for posting to findface-facenapi."
+msgstr ""
+"Нормализованные изображения в формате ``base64``, полученные с помощью "
+"компонента ``Extraction API``, подходят для обработки в компоненте "
+"``findface-facenapi``."
+
+#: ../source/extraction_api.rst:20
+msgid "In this section:"
+msgstr "В этом разделе:"
+
+#: ../source/extraction_api.rst:26
+msgid "Install Extraction API"
+msgstr "Развертывание Extraction API"
+
+#: ../source/extraction_api.rst:28
+msgid ""
+"To install and configure the ``Extraction API`` component, do the "
+"following:"
+msgstr ""
+"Для развертывания компонента ``Extraction API`` выполните следующие "
+"действия:"
+
+#: ../source/extraction_api.rst:31
+msgid ""
+"``Extraction API`` requires the packages with :ref:`models <models>` "
+":program:`<findface-data>.deb`. Make sure they have been installed."
+msgstr ""
+"Для работы ``Extraction API`` необходимы пакеты с :ref:`моделями "
+"нейронных сетей <models>` :program:`<findface-data>.deb`. Убедитесь, что "
+"они установлены."
+
+#: ../source/extraction_api.rst:33
+msgid "Install the component."
+msgstr "Установите компонент."
+
+#: ../source/extraction_api.rst:39
+msgid "Open the ``findface-extraction-api.ini`` configuration file."
+msgstr ""
+"Откройте для редактирования файл конфигурации ``findface-extraction-"
+"api.ini``."
+
+#: ../source/extraction_api.rst:45
+msgid "If :ref:`NTLS <licensing>` is remote, specify its IP address."
+msgstr ""
+"В случае если локальный сервер лицензий :ref:`NTLS <licensing>` является "
+"удаленным, укажите его IP-адрес."
+
+#: ../source/extraction_api.rst:51
+msgid ""
+"Configure other parameters if needed. For example, enable or disable "
+"fetching Internet images."
+msgstr ""
+"При необходимости настройте другие параметры. Например, "
+"включите/отключите обработку интернет-изображений."
+
+#: ../source/extraction_api.rst:59
+msgid ""
+"The ``min_face_size`` and ``max_face_size`` parameters do not work as "
+"filters. They rather indicate the guaranteed detection interval. Pick up "
+"their values carefully as these parameters affect performance."
+msgstr ""
+"Параметры ``min_face_size`` и ``max_face_size`` не являются фильтрами. "
+"Скорее они обозначают интервал гарантированного обнаружения лица. Данные "
+"параметры влияют на производительность, поэтому значения для них нужно "
+"подбирать с осторожностью."
+
+#: ../source/extraction_api.rst:67
+msgid ""
+"The ``model_instances`` parameter indicates how many instances of each "
+"enabled face detector (``nnd``, ``legacy`` or ``prenormalized``) and each"
+" enabled model (``facen``, ``gender``, ``age``, ``emotions``) run "
+"concurrently. The default value (0) means that this number is equal to "
+"the number of CPU cores. If it severely affects RAM consumption (for "
+"example, extraction-api fails), adjust the parameter value."
+msgstr ""
+"Параметр ``model_instances`` задает количество экземпляров каждого "
+"активированного детектора лиц (``nnd``, ``legacy`` или ``prenormalized``)"
+" и каждой активированной модели нейронной сети (вектор признаков, пол, "
+"возраст, эмоции), которое может выполняться параллельно. Значение по "
+"умолчанию (0) означает, что данное количество равно числу ядер "
+"процессора. Если количество запущенных экземпляров потребляет чересчур "
+"много памяти (что проявляется в том, что компонент Extraction API не "
+"запускается или самопроизвольно останавливается), отредактируйте значение"
+" данного параметра."
+
+#: ../source/extraction_api.rst:73
+msgid ""
+"To estimate the face quality, enable the ``quality_estimator``. In this "
+"case, ``extraction-api`` will return the quality score in the "
+":ref:`detection_score <detection_score>` parameter."
+msgstr ""
+"Для оценки качества лица включите опцию ``quality_estimator``. В этом "
+"случае компонент ``extraction-api`` будет возвращать показатель качества "
+"в лица в параметре :ref:`detection_score <detection_score>`."
+
+#: ../source/extraction_api.rst:76
+msgid ""
+"Interpret the quality score further in analytics. Upright faces in "
+"frontal position are considered the best quality. They result in values "
+"around ``0``, mostly negative (such as ``-0.00067401276``, for example). "
+"Inverted faces and large face angles are estimated with negative values "
+"some ``-5`` and less."
+msgstr ""
+"Показатель качества можно затем анализировать. Прямые изображения лиц "
+"анфас считаются наиболее качественными. Для них возвращаются значения "
+"вблизи ``0``, как правило, отрицательные (такие как ``-0.00067401276``, "
+"например). Перевернутые лица и лица, повернутые под большими углами, "
+"оцениваются отрицательными значениями от ``-5`` и меньше."
+
+#: ../source/extraction_api.rst:82
+msgid "Enable the ``Extraction API`` service autostart and launch the service."
+msgstr ""
+"Добавьте сервис ``Extraction API`` в автозагрузку Ubuntu и запустите его."
+
+#: ../source/extraction_api.rst:89
+msgid "API Requests"
+msgstr "API-запросы"
+
+#: ../source/extraction_api.rst:91
+msgid ""
+"The Extraction API component accepts POST requests to \\ "
+"http://127.0.0.1:18666/."
+msgstr ""
+"Компонент ``Extraction API`` принимает POST-запросы по адресу "
+"``http://127.0.0.1:18666/``."
+
+#: ../source/extraction_api.rst:94
+msgid "There are 2 ways to format the request body:"
+msgstr "Существует 2 способа настроить формат тела запроса:"
+
+#: ../source/extraction_api.rst:96
+msgid "``application/json``: the request body contains only JSON."
+msgstr ""
+"``application/json``: тело запроса целиком состоит из данных в формате "
+"JSON."
+
+#: ../source/extraction_api.rst:97
+msgid ""
+"``multipart/form-data``: the request body contains a JSON part with the "
+"request itself, other body parts are used for image transfer."
+msgstr ""
+"``multipart/form-data``: тело запроса включает в себя часть в формате "
+"JSON, содержащую собственно запрос, остальные части тела используются для"
+" передачи изображения."
+
+#: ../source/extraction_api.rst:99
+msgid "The JSON part of the request body contains a set of requests:"
+msgstr "Часть в формате JSON тела запроса представляет собой набор запросов:"
+
+#: ../source/extraction_api.rst:107
+msgid ""
+"Each request in the set applies to a specific image or region in the "
+"image and accepts the following parameters:"
+msgstr ""
+"Каждый запрос в наборе имеет отношение к определенному изображению или "
+"области на изображении и принимает следующие параметры:"
+
+#: ../source/extraction_api.rst:110
+msgid ""
+"``\"image\"``: an uploaded image (use ``multipart:part`` to refer to a "
+"relevant request body ``part``), or a publicly accessible image URL   "
+"(``http:``, ``https:``)."
+msgstr ""
+"``\"image\"``: загруженное изображение (используйте формат "
+"``multipart:часть`` для указания соответствующей ``части`` тела запроса) "
+"или публичный URL с изображением (``http:``, ``https:``)."
+
+#: ../source/extraction_api.rst:111
+msgid ""
+"``\"roi\"``: a region of interest in the image. If the region is not "
+"specified, the entire image is processed."
+msgstr ""
+"``\"roi\"``: интересующая область на изображении. Если данная область не "
+"задана, обрабатывается все изображение."
+
+#: ../source/extraction_api.rst:112
+msgid ""
+"``\"detector\"``: a face detector to apply to the image (``legacy``, "
+"``nnd`` or ``prenormalized``). The ``prenormalized`` mode accepts "
+"normalized face images and omits detecting faces. Use ``nnd`` if you need"
+" to estimate the face quality (``\"quality_estimator\": true``)."
+msgstr ""
+"``\"detector\"``: детектор лиц, который будет применен к изображению "
+"(``legacy``, ``nnd`` или ``prenormalized``). Детектор ``prenormalized`` "
+"принимает нормализованные изображения лиц, при этом стадия обнаружения "
+"лица пропускается. Используйте ``nnd``, если вам нужна оценка качества "
+"лиц (``\"quality_estimator\": true``)."
+
+#: ../source/extraction_api.rst:113
+msgid "``\"need_facen\"``: if true, the request returns a facen in the response."
+msgstr ""
+"``\"need_facen\"``: если ``true``, запрос возвращает в ответе вектор "
+"признаков."
+
+#: ../source/extraction_api.rst:114
+msgid "``\"need_gender\"``: returns gender."
+msgstr "``\"need_gender\"``: возвращает пол."
+
+#: ../source/extraction_api.rst:115
+msgid "``\"need_emotions\"``: returns emotions."
+msgstr "``\"need_emotions\"``: возвращает эмоции."
+
+#: ../source/extraction_api.rst:116
+msgid "``\"need_age\"``: returns age."
+msgstr "``\"need_age\"``: возвращает возраст."
+
+#: ../source/extraction_api.rst:117
+msgid ""
+"``\"need_normalized\"``: returns a normalized face image encoded in "
+"base64. The normalized image can then be posted again to the ``Extraction"
+" API`` component as \"prenormalized\"."
+msgstr ""
+"``\"need_normalized\"``: возвращает нормализованное изображение лица в "
+"формате ``base64``. Нормализованное изображение может быть снова "
+"отправлено в ``Extraction API`` в режиме детектора ``prenormalized``. "
+
+#: ../source/extraction_api.rst:118
+msgid ""
+"``\"auto_rotate\"``: if true, auto-rotates an original image to 4 "
+"different orientations and returns faces detected in each orientation. "
+"Works only if ``\"detector\": \"nnd\"`` and ``\"quality_estimator\": "
+"true``."
+msgstr ""
+"``\"auto_rotate\"``: если ``true``, автоматически поворачивает исходное "
+"изображение в 4-х различных ориентациях и возвращает лица, найденные в "
+"каждой из них. Работает, если ``\"detector\": \"nnd\"`` и "
+"``\"quality_estimator\": true``."
+
+#: ../source/extraction_api.rst:135
+msgid "API Response Format"
+msgstr "Формат API-ответа"
+
+#: ../source/extraction_api.rst:137
+msgid ""
+"A typical response from the Extraction API component contains a set of "
+"responses to the requests wrapped into the main API request:"
+msgstr ""
+"Типичный ответ компонента Extraction API представляет собой набор ответов"
+" на соответствующие запросы, вложенные в основной API-запрос:"
+
+#: ../source/extraction_api.rst:146
+msgid "Each response in the set contains the following JSON data:"
+msgstr "Каждый ответ в наборе содержит следующие данные в формате JSON:"
+
+#: ../source/extraction_api.rst:148
+msgid ""
+"``\"faces\"``: a set of faces detected in the provided image or region of"
+" interest."
+msgstr ""
+"``\"faces\"``: набор лиц, обнаруженных на предоставленном изображении или"
+" в интересующей области изображения."
+
+#: ../source/extraction_api.rst:149
+msgid ""
+"``\"error\"``: an error occurred during processing (if any). The error "
+"body includes the error code which can be interpreted automatically "
+"(``\"code\"``) and a human-readable description (``\"desc\"``)."
+msgstr ""
+"``\"error\"``: ошибка обработки запроса (если имела место). Тело ошибки "
+"содержит код ошибки, который может быть интерпретирован автоматически "
+"(``\"code\"``) и описание ошибки, удобное для восприятия человеком "
+"(``\"desc\"``)."
+
+#: ../source/extraction_api.rst:161
+msgid "Each face in the set is provided with the following data:"
+msgstr "Для каждого лица в наборе указываются следующие данные:"
+
+#: ../source/extraction_api.rst:165
+msgid "``\"bbox\"``: coordinates of a bounding box with the face."
+msgstr "``\"bbox\"``: координаты рамки с лицом."
+
+#: ../source/extraction_api.rst:166
+msgid ""
+"``\"detection_score\"``: either the face detection accuracy, or the face "
+"quality score (depending on whether ``quality_estimator`` is ``false`` or"
+" ``true`` at ``/etc/findface-extraction-api.ini``). Upright faces in "
+"frontal position are considered the best quality. They result in values "
+"around ``0``, mostly negative (such as ``-0.00067401276``, for example). "
+"Inverted faces and large face angles are estimated with negative values "
+"some ``-5`` and less."
+msgstr ""
+"``\"detection_score\"``: показатель качества лица или точность "
+"обнаружения лица (в зависимости от того, включена ли опция "
+"``quality_estimator`` в файле ``/etc/findface-extraction-api.ini``). "
+"Прямые изображения лиц анфас считаются наиболее качественными. Для них "
+"возвращаются значения вблизи ``0``, как правило, отрицательные (такие как"
+" ``-0.00067401276``, например). Перевернутые лица и лица, повернутые под "
+"большими углами, оцениваются отрицательными значениями от ``-5`` и "
+"меньше."
+
+#: ../source/extraction_api.rst:167
+msgid "``\"facen\"``: the face feature vector."
+msgstr "``\"facen\"``: вектор признаков, если запрашивался."
+
+#: ../source/extraction_api.rst:168
+msgid ""
+"``\"gender\"``: gender information (MALE or FEMALE) with recognition "
+"accuracy if requested."
+msgstr ""
+"``\"gender\"``: информация о поле (MALE или FEMALE) с указанием точности "
+"оценки, если запрашивалась."
+
+#: ../source/extraction_api.rst:169
+msgid "``\"age\"``: age estimate if requested."
+msgstr "``\"age\"``: оценка возраста, если запрашивалась."
+
+#: ../source/extraction_api.rst:170
+msgid ""
+"``\"emotions\"``: all available emotions in descending order of "
+"probability if requested."
+msgstr ""
+"``\"emotions\"``: все доступные эмоции в порядке убывания вероятности, "
+"если запрашивались."
+
+#: ../source/extraction_api.rst:171
+msgid ""
+"``\"normalized\"``: a normalized face image encoded in base64 if "
+"requested."
+msgstr ""
+"``\"normalized\"``: нормализованное изображение лица в формате base64, "
+"если запрашивалось."
+
+#: ../source/extraction_api.rst:193
+msgid "Examples"
+msgstr "Примеры"
+
+#: ../source/extraction_api.rst:196
+msgid "Request #1"
+msgstr "Запрос №1"
+
+#: ../source/extraction_api.rst:202 ../source/extraction_api.rst:237
+#: ../source/extraction_api.rst:301
+msgid "Response"
+msgstr "Ответ"
+
+#: ../source/extraction_api.rst:231
+msgid "Request #2"
+msgstr "Запрос №2"
+
+#: ../source/extraction_api.rst:295
+msgid "Request #3. Auto-rotation"
+msgstr "Запрос №3. Автоповорот"
+
+#: ../source/extraction_api.rst:337
+msgid "Extract Facens"
+msgstr "Извлечение биометрических образцов"
+
+#: ../source/extraction_api.rst:339
+msgid ""
+"By default, ``findface-facenapi`` detects faces in images and sends them "
+"to ``findface-nnapi`` for a facen extraction. Then ``findface-facenapi`` "
+"saves the obtained facen to MongoDB and Tarantool databases. You can use "
+"``Extraction API`` as a better alternative to ``findface-nnapi`` in this "
+"pipeline."
+msgstr ""
+"По умолчанию, компонент ``findface-facenapi`` обнаруживает лица на фото и"
+" отправляет их в компонент ``findface-nnapi`` для извлечения "
+"биометрического образца (вектора признаков). Затем ``findface-facenapi`` "
+"сохраняет полученные образцы в базах данных MongoDB и Tarantool. В "
+"качестве лучшей альтернативы ``findface-nnapi`` в этой последовательности"
+" можно использовать ``Extraction API``."
+
+#: ../source/extraction_api.rst:341
+msgid ""
+"The main advantage of ``Extraction API`` in contrast with ``findface-"
+"nnapi`` is its built-in ability to clone into multiple instances and "
+"automatically balance the traffic across them, while for ``findface-"
+"nnapi``, load balancing has to be manually :ref:`set up <load-balancing>`"
+" via NginX."
+msgstr ""
+"Основным преимуществом ``Extraction API`` по сравнению с ``findface-"
+"nnapi`` является его способность к распараллеливанию и автоматическому "
+"распределению нагрузки между параллельными экземплярами, в то время как "
+"для ``findface-nnapi`` балансировку нагрузки нужно :ref:`настраивать "
+"<load-balancing>` с помощью NginX вручную."
+
+#: ../source/extraction_api.rst:343
+msgid "To extract facens via ``Extraction API``, do the following:"
+msgstr ""
+"Для того чтобы извлекать биометрические образцы с помощью ``Extraction "
+"API``, выполните следующие действия:"
+
+#: ../source/extraction_api.rst:345
+msgid "Open the ``findface-facenapi.ini`` configuration file::"
+msgstr "Откройте для редактирования файл конфигурации ``findface-facenapi.ini``::"
+
+#: ../source/extraction_api.rst:349
+msgid "Uncomment and edit the ``extractor`` parameter in the following way::"
+msgstr ""
+"Раскомментируйте и отредактируйте следующим образом параметр "
+"``extractor``::"
+
+#: ../source/extraction_api.rst:354
+msgid "The ``findface-facenapi.ini`` content must be correct Python code."
+msgstr ""
+"Содержимое файла ``findface-facenapi.ini`` должно представлять собой "
+"синтаксически верный код Python."
+
+#: ../source/extraction_api.rst:356
+msgid ""
+"Uncomment and/or edit ``extraction_api_url`` to align with your network "
+"specification::"
+msgstr ""
+"Раскомментируйте и/или отредактируйте ``extraction_api_url`` в "
+"соответствии с фактическим расположением сервера ``Extraction API``::"
+
+#: ../source/extraction_api.rst:361
+msgid "Start ``Extraction API`` and enable its autostart."
+msgstr "Запустите сервис ``Extraction API`` и добавьте его в автозагрузку Ubuntu."
+
+#: ../source/extraction_api.rst:367
+msgid "Restart ``findface-facenapi``."
+msgstr "Перезапустите сервис ``findface-facenapi``."
+
+#: ../source/extraction_api.rst:373
+msgid "Stop ``findface-nnapi`` and disable its autostart."
+msgstr "Остановите сервис ``findface-nnapi`` и удалите его из автозагрузки."
+
+#: ../source/extraction_api.rst:379
+msgid ""
+"Check the services status. The command will return the services "
+"description, status (should be Active), path and running time."
+msgstr ""
+"Проверьте статус сервисов. Команда вернет описание сервисов, их статус "
+"(должен быть Активен), путь и длительность текущей сессии."

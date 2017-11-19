@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-08 12:33+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/mongodb.rst:2
+msgid "MongoDB"
+msgstr ""
+
+#: ../source/mongodb.rst:4
+msgid ""
+"Prior to installing FindFace Server, set up a database for it. You may "
+"install MongoDB either on the application host where the findface-"
+"facenapi component resides, or on a dedicated host. For the standalone "
+"architecture, we recommend you the first option. FindFace Enterprise "
+"Server SDK is compatible with `MongoDB 3.2 "
+"<https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-ubuntu/>`_ or "
+"later."
+msgstr ""
+
+#: ../source/mongodb.rst:10
+msgid "Install MongoDB on Application Host"
+msgstr ""
+
+#: ../source/mongodb.rst:12
+msgid ""
+"To install the latest stable version of MongoDB (3.4 at the moment) on "
+"the application host, do the following:"
+msgstr ""
+
+#: ../source/mongodb.rst:15
+msgid ""
+"To install a different version of MongoDB, please refer to that version’s"
+" documentation. For example, see version `3.2 "
+"<https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-ubuntu/>`_."
+msgstr ""
+
+#: ../source/mongodb.rst:17
+msgid "Import the public key used by the package management system::"
+msgstr ""
+
+#: ../source/mongodb.rst:21
+msgid ""
+"Create a list file (/etc/apt/sources.list.d/mongodb-org-3.4.list ) for "
+"MongoDB::"
+msgstr ""
+
+#: ../source/mongodb.rst:25
+msgid "Reload the local package database::"
+msgstr ""
+
+#: ../source/mongodb.rst:29
+msgid "Install the latest stable version of MongoDB::"
+msgstr ""
+
+#: ../source/mongodb.rst:33
+msgid "Start the ``mongod`` service::"
+msgstr ""
+
+#: ../source/mongodb.rst:39
+msgid "Install MongoDB on Dedicated Host"
+msgstr ""
+
+#: ../source/mongodb.rst:41
+msgid "To install MongoDB on a dedicated host, do the following:"
+msgstr ""
+
+#: ../source/mongodb.rst:43
+msgid ""
+"On the dedicated host, install MongoDB in the same manner as on the "
+":ref:`application host <mongodb-app>`."
+msgstr ""
+
+#: ../source/mongodb.rst:44
+msgid "Open the MongoDB configuration file::"
+msgstr ""
+
+#: ../source/mongodb.rst:48
+msgid ""
+"To allow for incoming connections, comment out the line bind_ip = "
+"127.0.0.1. This will allow MongoDB to accept connections from any IP "
+"address. Ensure that the only access to the host is from the LAN::"
+msgstr ""
+
+#: ../source/mongodb.rst:52
+msgid "Restart the ``mongod`` service::"
+msgstr ""
+
+#: ../source/mongodb.rst:57
+msgid "Connect to Existing MongoDB"
+msgstr ""
+
+#: ../source/mongodb.rst:59
+msgid ""
+"If you wish to establish connection to an existing MongoDB instance, "
+"specify its IP address in the :ref:`network settings <configure-"
+"network>`."
+msgstr ""
+

@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/nnapi.rst:2
+msgid "Install nnapi"
+msgstr ""
+
+#: ../source/nnapi.rst:4
+msgid "Install and configure the ``findface-nnapi`` component as follows:"
+msgstr ""
+
+#: ../source/nnapi.rst:7
+msgid ""
+"You may also want to learn about :ref:`gender, age and emotions "
+"recognition <gae>`."
+msgstr ""
+
+#: ../source/nnapi.rst:9
+msgid "Install the component."
+msgstr ""
+
+#: ../source/nnapi.rst:16
+msgid ""
+"If :ref:`NTLS <licensing>` is installed on a remote host, specify its IP "
+"address in the ``findface-nnapi`` configuration file."
+msgstr ""
+
+#: ../source/nnapi.rst:24
+msgid ""
+"Check if the component is runnable. To do so, invoke the ``findface-"
+"nnapi`` application by executing the command below. As the application is"
+" invoked, hold 1 minute, and if no errors display, hit :kbd:`Ctrl+C`."
+msgstr ""
+
+#: ../source/nnapi.rst:30
+msgid ""
+"Check if the ``findface-nnapi`` service autostart at system startup is "
+"disabled."
+msgstr ""
+
+#: ../source/nnapi.rst:36
+msgid "Enable the service autostart and launch the service."
+msgstr ""
+
+#: ../source/nnapi.rst:42
+msgid ""
+"Make sure that the service is up and running. The command will return a "
+"service description, a status (should be Active), path and running time."
+msgstr ""
+
+#: ../source/nnapi.rst:50
+msgid "You can view the ``findface-nnapi`` :ref:`logs <logs>` by executing:"
+msgstr ""
+
+#~ msgid ""
+#~ "If :ref:`NTLS <licensing>` is installed "
+#~ "on a remote host, specify its IP"
+#~ " address in the findface-nnapi "
+#~ "configuration file."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Check if the ``findface-nnapi`` service "
+#~ "autostart at system startup is enabled."
+#~ msgstr ""
+
+#~ msgid "Make sure that the service is up and running."
+#~ msgstr ""
+
+#~ msgid "You can view the findface-nnapi :ref:`logs <logs>` by executing:"
+#~ msgstr ""
+

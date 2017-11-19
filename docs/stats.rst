@@ -8,7 +8,11 @@ You can get a shard galleries statistics and other data right in your browser. T
 .. note::
     In the case of standalone deployment, you can access Tarantool by default only locally (127.0.0.1). If you want to access Tarantool remotely, :ref:`change <tntapi-standalone>` the Tarantool configuration file.
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 List Galleries
 ----------------------------
@@ -19,8 +23,9 @@ To list all galleries on a shard, type in the address bar of your browser:
 
     http://<tarantool_host_ip:shard_port>/stat/list/:start/:limit
 
-``:start`` is the number of a gallery the list starts with.
-``:limit`` is the maximum number of galleries in the list.
+| ``:start`` is the number of a gallery the list starts with.
+| ``:limit`` is the maximum number of galleries in the list.
+|
 
 .. rubric:: Example
 

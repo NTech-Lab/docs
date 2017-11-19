@@ -3,7 +3,11 @@
 Update to The Latest Version
 =================================================
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 Update with Data Preservation
 ---------------------------------------

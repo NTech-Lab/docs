@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-08 12:33+0300\n"
+"PO-Revision-Date: 2017-11-17 14:17+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/index.rst:3
+msgid "Welcome to FindFace Enterprise Server SDK's documentation!"
+msgstr "Руководство по интеграции FindFace Enterprise Server SDK"
+
+#: ../source/index.rst:5
+msgid ""
+"FindFace Enterprise Server SDK provides professional face recognition "
+"services based on neural networks. Implement these services to your "
+"ecosystem to take full advantage of them."
+msgstr ""
+"FindFace Enterprise Server SDK – это промышленная высокопроизводительная "
+"программно-технологическая платформа нового поколения, которая позволяет "
+"создавать интегрированные биометрические системы фото- и видеоидентификации "
+"любого масштаба – от небольших решений уровня предприятия до городских, "
+"федеральных и международных проектов."
+
+#: ../source/index.rst:8
+msgid "Features:"
+msgstr "Возможности:"
+
+#: ../source/index.rst:9
+msgid ""
+"Fast and robust face detection and database enrollment. Possibility of "
+"enrolling faces in bulk."
+msgstr ""
+"Быстрое и надежное обнаружение лиц на фото и видео, их биометрическая "
+"обработка и запись в базу данных. Возможность пакетной загрузки лиц."
+
+#: ../source/index.rst:10
+msgid "Intelligent video face detection and analytics."
+msgstr "Интеллектуальная видеоаналитика."
+
+#: ../source/index.rst:11
+msgid ""
+"Fast and accurate face identification and verification based on neural "
+"networks."
+msgstr ""
+"Быстрая и точная идентификация и верификация лиц алгоритмами на основе "
+"нейронных сетей."
+
+#: ../source/index.rst:12
+msgid "Gender, age and emotions recognition."
+msgstr "Распознавание пола, возраста и эмоций."
+
+#: ../source/index.rst:13
+msgid "Dynamic person creation and 'friend or foe' identification."
+msgstr ""
+"Группировка лиц одной персоны в базе данных и распознавание «свой-чужой»."
+
+#: ../source/index.rst:14
+msgid "Almost infinite scalability due to integration with Tarantool."
+msgstr "Неограниченная масштабируемость благодаря интеграции с Tarantool."
+
+#: ../source/index.rst:15
+msgid "Truly RESTful API available in an embedded user friendly framework."
+msgstr ""
+"Удобный многофункциональный интерфейс REST API со встроенным фреймворком для "
+"тестирования."
+
+#: ../source/index.rst:16
+msgid "Possibility of formatting API-responses."
+msgstr "Возможность гибкой настройки формата API-ответа."
+
+#: ../source/index.rst:17
+msgid "Highly intuitive web user interface."
+msgstr "Дружественный веб-интерфейс."
+
+#: ../source/index.rst:18
+msgid "Network or on-premise licensing."
+msgstr "Возможность лицензирования в открытых и закрытых системах."
+
+#: ../source/index.rst:22
+msgid "To read a release changelog, execute:"
+msgstr "Для ознакомления со списком изменений в версии, выполните команду:"
+
+#: ../source/index.rst:29
+msgid ""
+"FindFace Enterprise Server SDK will be of interest to independent software "
+"vendors (ISVs), system integrators, enterprise IT customers, and original "
+"equipment manufacturers (OEMs). It can be harnessed in numerous areas, such "
+"as retail, banking, social networking, entertainment, sports, event "
+"management, dating services, video surveillance, public safety, homeland "
+"security, etc."
+msgstr ""
+"FindFace Enterprise Server SDK предназначен для независимых производителей "
+"программного обеспечения, системных интеграторов, корпоративных заказчиков, "
+"а также производителей оборудования, программно-аппаратных решений и "
+"облачных сервисов. FindFace Enterprise Server SDK будет востребован в таких "
+"областях, как розничная торговля, банковское обслуживание, индустрия "
+"развлечений, спортивные мероприятия, организация мероприятий, сервисы "
+"знакомств, видеонаблюдение, государственное управление, общественная и "
+"корпоративная безопасность, транспорт, медицина и многие другие."
+
+#: ../source/index.rst:31
+msgid ""
+"Being integrated into specific solutions or Android applications, FindFace "
+"Enterprise Server SDK empowers businesses to accomplish such goals as "
+"biometric identification and access control, customer analytics, customer "
+"offer tailoring, offline retargeting, managing white and black lists, "
+"sorting and optimizing media libraries, borrower scoring, fraud prevention, "
+"employee productivity control, and many more."
+msgstr ""
+"FindFace Enterprise Server SDK может использоваться как платформа для "
+"построения интегрированных отраслевых решений, которые позволят заказчикам "
+"решать такие задачи, как биометрическая идентификация и аутентификация, "
+"контроль и управление доступом, работа со списками «свой-чужой», работа с "
+"большими объемами медиа-данных, оценка контрагентов, аттестация сотрудников, "
+"предотвращение правонарушений, контроль аффилированности, расследование "
+"инцидентов, мониторинг активности в социальных сетях."
+
+#: ../source/index.rst:35
+msgid ""
+"This guide is intended for developers and system integration engineers who "
+"are going to integrate face recognition services into their systems. Prior "
+"to deploying a development environment, explore the :ref:`9 steps to face "
+"recognition <start>`. This will give you a general idea of the deployment "
+"process."
+msgstr ""
+"Руководство предназначается для специалистов по интеграции, системных "
+"администраторов, специалистов по установке и настройке систем анализа и "
+"распознавания биометрических данных на базе FindFace Enterprise Server SDK, "
+"а также для разработчиков приложений на его основе. Для начала мы "
+"рекомендуем вам ознакомиться с :ref:`основными этапами <start>` интеграции. "
+"Это даст вам общее представление о процессе развертывания FindFace "
+"Enterprise Server SDK."
+
+#: ../source/index.rst:38
+msgid "Let's get started!"
+msgstr "Давайте приступим!"
+
+#: ../source/index.rst:40
+msgid "Contents:"
+msgstr "Содержание:"

@@ -13,8 +13,6 @@ To configure fkvideo_detector, you can specify its options in any of the followi
 
      .. code::
 
-        ## Make a copy of fkvideo.ini
         sudo cp /etc/fkvideo.ini /etc/fkvideo_example.ini
         
-        ## Use this copy when starting fkvideo_detector
         fkvideo_detector -c /etc/fkvideo_example.ini

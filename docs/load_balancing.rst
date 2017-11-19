@@ -12,25 +12,25 @@ scalability and reliability of your system.
 
 Load balancing can be set up for the following components:
 
-+---------------------+--------------------------------------------------------------------------------------------------------+
-| Component           | Recommended number of instances per host                                                               |
-+=====================+========================================================================================================+
-| findface-facenapi   | 1 is usually enough. When it comes to findface-facenapi, load balancing is usually set up only in a    |
-|                     | cluster environment with several findface-facenapi hosts, 1 findface-facenapi instance running on each |
-|                     | host. In this case, traffic is distributed across these hosts.                                         |
-+---------------------+--------------------------------------------------------------------------------------------------------+
-| findface-nnapi      | Number of CPU cores minus 1. Gives a significant performance gain.                                     |
-+---------------------+--------------------------------------------------------------------------------------------------------+
-| extraction-api      | 1, automatically load-balanced. Set up load balancing only across extraction-api                       |
-|                     | instances located on different physical hosts.                                                         |
-+---------------------+--------------------------------------------------------------------------------------------------------+
++-------------------------+--------------------------------------------------------------------------------------------------------+
+| Component               | Recommended number of instances per host                                                               |
++=========================+========================================================================================================+
+| ``findface-facenapi``   | 1 is usually enough. When it comes to findface-facenapi, load balancing is usually set up only in a    |
+|                         | cluster environment with several findface-facenapi hosts, 1 findface-facenapi instance running on each |
+|                         | host. In this case, traffic is distributed across these hosts.                                         |
++-------------------------+--------------------------------------------------------------------------------------------------------+
+| ``findface-nnapi``      | Number of CPU cores minus 1. Gives a significant performance gain.                                     |
++-------------------------+--------------------------------------------------------------------------------------------------------+
+| ``extraction-api``      | 1, automatically load-balanced. Set up load balancing only across extraction-api                       |
+|                         | instances located on different physical hosts.                                                         |
++-------------------------+--------------------------------------------------------------------------------------------------------+
 
-The following step-by-step instructions demonstrate how to set up nginx load balancing for 2 findface-nnapi instances on a host. The other
+The following step-by-step instructions demonstrate how to set up nginx load balancing for 2 ``findface-nnapi`` instances on a host. The other
 components can be load-balanced by analogy. 
 
 Do the following:
 
-#. If necessary, install nginx on the findface-nnapi host (nginx is installed automatically along with the findface-upload component).
+#. If necessary, install nginx on the findface-nnapi host (nginx is installed automatically along with the ``findface-upload`` component).
 
    .. code::
 
@@ -42,17 +42,14 @@ Do the following:
 
        sudo cp /lib/systemd/system/findface-nnapi.service /etc/systemd/system/findface-nnapi@.service
 
-#. Stop all the findface-nnapi services and disable their autostart. Edit the new file ``findface-nnapi@.service`` by appending ``--listen 127.0.0.1:%i`` to the ``ExecStart`` line.
+#. Stop all the ``findface-nnapi`` services and disable their autostart. Edit the new file ``findface-nnapi@.service`` by appending ``--listen 127.0.0.1:%i`` to the ``ExecStart`` line.
 
    .. code::
 
-       ## Stop the findface-nnapi services and disable their autostart
        sudo service findface-nnapi stop && sudo systemctl disable findface-nnapi
 
-       ## Open the file
        sudo vi /etc/systemd/system/findface-nnapi@.service
 
-       ## Edit the ExecStart line by appending --listen 127.0.0.1:%i
        ExecStart=/usr/bin/findface-nnapi -c /etc/findface-nnapi.ini --listen 127.0.0.1:%i
 
 #. Create a new nginx configuration file. 

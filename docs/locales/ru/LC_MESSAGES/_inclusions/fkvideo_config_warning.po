@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-15 15:48+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/_inclusions/fkvideo_config_warning.rst:1
+msgid ""
+"To configure fkvideo_detector, you can specify its options in any of the "
+"following ways:"
+msgstr ""
+
+#: ../source/_inclusions/fkvideo_config_warning.rst:3
+msgid "As command line arguments upon starting fkvideo_detector."
+msgstr ""
+
+#: ../source/_inclusions/fkvideo_config_warning.rst:9
+msgid "As parameters in the fkvideo_detector configuration file."
+msgstr ""
+
+#: ../source/_inclusions/fkvideo_config_warning.rst:12
+msgid ""
+"The default fkvideo_detector configuration file is ``/etc/fkvideo.ini``. "
+"Avoid editing ``/etc/fkvideo.ini``, especially if fkvideo_detector "
+"and :ref:`FindFace Web UI <ffui>` are running on the same host, as "
+"FindFace Web UI also uses this configuration file. Instead, make a copy "
+"of this file, edit the copy and specify it in the option ``-c`` when "
+"starting fkvideo_detector."
+msgstr ""
+

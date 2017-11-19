@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-08 12:33+0300\n"
+"PO-Revision-Date: 2017-11-19 17:02+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/galleries.rst:4
+msgid "Galleries"
+msgstr "Запросы к пользовательским галереям"
+
+#: ../source/galleries.rst:6
+msgid ""
+"There is always a gallery titled default. Faces are always added to the "
+"default gallery and cannot be removed from it. The default gallery cannot"
+" be stopped."
+msgstr ""
+"При установке FindFace Enterprise Server SDK в базе биометрических данных "
+"автоматически создается галерея с именем ``default``. Галерею ``default`` "
+"нельзя удалить. Распознаваемые лица автоматически добавляются в данную "
+"галерею и не могут быть оттуда удалены."
+
+#: ../source/galleries.rst:8
+msgid ""
+"In addition to the default gallery, you can create custom galleries and "
+"add faces into them. Custom galleries allows you to have several datasets"
+" in one environment. This might be useful if you need to search through "
+"different face lists, for example if you have several products or several"
+" customers with different face datasets."
+msgstr ""
+"В дополнение к галерее по умолчанию, вы можете создать неограниченное "
+"количество пользовательских галерей и добавлять лица также в них. "
+"Пользовательские галереи позволяют формировать списки лиц по нужным "
+"признакам и вести поиск только в них."
+
+#: ../source/galleries.rst:11
+msgid ""
+"To create a custom gallery, use the method :ref:`POST "
+"/galleries/gallery_name <gallery-post>`."
+msgstr ""
+"Для создания пользовательской галереи, используйте метод :ref:`POST "
+"/galleries/gallery_name <gallery-post>`."
+
+#: ../source/galleries.rst:13
+msgid ""
+"By default, all API methods apply to the default gallery. However, you "
+"can narrow down usage of most methods to a specific gallery (see the "
+"table below). To do so, provide the gallery name in your API request URI."
+" For example, to search a person in a gallery 'ppl', use ``POST "
+"/faces/gallery/ppl/identify/`` instead of ``POST /identify/``."
+msgstr ""
+"По умолчанию все методы API применяются к галерее по умолчанию. Однако для "
+"некоторых методов можно указать определенную пользовательскую галерею в URI "
+"запроса, к которой запрос и будет применен (см. таблицу ниже). Например, "
+"чтобы найти человека в галерее ``ppl``, используйте метод ``POST "
+"/faces/gallery/ppl/identify/`` вместо ``POST /identify/``."
+
+#: ../source/galleries.rst:17
+msgid "Default gallery method"
+msgstr "Метод для галереи по умолчанию"
+
+#: ../source/galleries.rst:17
+msgid "Custom gallery method"
+msgstr "Метод для пользовательской галереи"
+
+#: ../source/galleries.rst:19
+msgid "``POST /identify/``"
+msgstr "``POST /identify/``"
+
+#: ../source/galleries.rst:19
+msgid "``POST /faces/gallery/<Gallery>/identify/``"
+msgstr "``POST /faces/gallery/<Gallery>/identify/``"
+
+#: ../source/galleries.rst:21
+msgid "``GET /faces/``"
+msgstr "``GET /faces/``"
+
+#: ../source/galleries.rst:21
+msgid "``GET /faces/gallery/<Gallery>/``"
+msgstr "``GET /faces/gallery/<Gallery>/``"
+
+#: ../source/galleries.rst:23
+msgid "``GET /face/meta/<Meta>``"
+msgstr "``GET /face/meta/<Meta>``"
+
+#: ../source/galleries.rst:23
+msgid "``GET /face/gallery/<Gallery>/meta/<Meta>``"
+msgstr "``GET /face/gallery/<Gallery>/meta/<Meta>``"
+
+#: ../source/galleries.rst:25
+msgid "``GET /meta/``"
+msgstr "``GET /meta/``"
+
+#: ../source/galleries.rst:25
+msgid "``GET /meta/gallery/<Gallery>/``"
+msgstr "``GET /meta/gallery/<Gallery>/``"

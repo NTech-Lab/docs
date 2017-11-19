@@ -5,7 +5,11 @@
 
 As you configure :ref:`persons`, you can also enable 'friend or foe' identification in order to further enhance your video analytics.
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 About Friends and Foes
 --------------------------------
@@ -21,8 +25,7 @@ Enable 'Friend or Foe' Identification
 
 To enable 'friend or foe' identification, do the following:
 
-#. Configure and tryout :ref:`dynamic person
-   creation <persons>`.
+#. Configure and tryout :ref:`dynamic person creation <persons>`.
 
 #. Open the ``findface-facenapi.ini`` configuration file for editing.
 
@@ -35,13 +38,14 @@ To enable 'friend or foe' identification, do the following:
    .. warning::
         The ``findface-facenapi.ini`` content must be correct Python code.
 
+   A friend is a person that has been seen a certain number of days by the same camera during an interval ``[now() - $interval ; now()]``. Uncomment and edit the number of days a person has to be seen to befriend your system.
+   
    .. code::
 
-       ## A friend is a person that has been seen a certain number of days
-       ## by the same camera during an interval [now() - $interval ; now()]
-       ## Uncomment and edit the number of days a person has to be seen to become a friend. 
             → friend_count = 5
-       ## Interval in seconds during which a person has to be seen a certain number of days (1 week by default)
+   
+   Interval in seconds during which a person has to be seen a certain number of days (1 week by default)::
+
             → friend_interval = (3600*24*7)
 
 #. Restart the service.

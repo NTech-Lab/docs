@@ -5,7 +5,11 @@ Bulk Face Enrollment
 
 The Bulk Face Enrollment feature allows for enrolling faces to findface-facenapi from images in bulk.
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 General Information
 ----------------------------
@@ -127,7 +131,7 @@ To harness the feature, do the following:
 #. Prepare a job file containing the list of images with metadata (``prepare``). If all images share the same metastring, you can specify it right in the command line when preparing the job file (``--meta-const``). If each image has a unique metastring, map metastrings to images in a CSV file (``--meta-csv``).
 
    .. note::
-        The CSV file used as a metadata source should have the followin format: ``metastring | image``. If some images are not listed in the CSV file, their metastrings will be empty.
+        The CSV file used as a metadata source should have the following format: ``metastring | image``. If some images are not listed in the CSV file, their metastrings will be empty.
 
    .. tip::
         To write the list of images to a CSV file, you can use the command below. Each image in the list will be associated with a metastring coinciding with the image full path (in the format ``metastring | image``).
@@ -146,22 +150,30 @@ To harness the feature, do the following:
 Example
 -----------------
 
-Enroll faces from all .jpg files in a /home/user/images/ directory with a shared metastring 'Phillip J. Fry':
+Enroll faces from all ``.jpg`` files in a ``/home/user/images/`` directory with a shared metastring ``Phillip J. Fry``:
+
+To display the list of images in a directory, execute:
 
 .. code::
 
-    ## To display the list of images in a directory, execute:
     ls /home/user/images/
-      photo1.jpg photo2.jpg photo3.jpg ...
+    photo1.jpg photo2.jpg photo3.jpg ...
 
-    ## Prepare a job file:
+
+Prepare a job file:
+
+.. code::
+    
     findface-mass-enroll prepare --meta-const='Phillip J. Fry' '/home/user/images/*'
 
     Looking for images matching '*.jpg'
     2055 files prepared for upload
     2055 files in job file samplejob
 
-    ## Run the job file:
+Run the job file:
+
+.. code::
+
     findface-mass-enroll run --token 'RczGgVEMizR1njHHQegNH_g9mwGl6-A1' --api http://127.0.0.1:8000/ --gender --age --emotions --mf-selector=all
     
     [33/2055] faces processed (4 succeeded, 9 failed, 10 skipped). 2.14 rps. [00:00:17/00:16:04]
@@ -174,6 +186,9 @@ Enroll faces from all .jpg files in a /home/user/images/ directory with a share
     Failed to process 55 images
 
 
-    ## Should an error occur during the job file processing, correct the mistake and try again with the option --failed:
+Should an error occur during the job file processing, correct the mistake and try again with the option ``--failed``:
+
+.. code::
+
     findface-mass-enroll run --token 'RczGgVEMizR1njHHQegNH_g9mwGl6-A1' --api http://127.0.0.1:8000/ --gender --age --emotions --mf-selector=all --failed
 

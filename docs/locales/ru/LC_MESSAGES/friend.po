@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"PO-Revision-Date: 2017-11-19 15:14+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/friend.rst:4
+msgid "'Friend or Foe' Identification"
+msgstr "Распознавание «свой-чужой»"
+
+#: ../source/friend.rst:6
+msgid ""
+"As you configure :ref:`persons`, you can also enable 'friend or "
+"foe' identification in order to further enhance your video analytics."
+msgstr ""
+"Для расширения функционала видеоаналитики после настройки :ref:`группировки "
+"лиц персоны <persons>` можно активировать распознавание «свой-чужой»."
+
+#: ../source/friend.rst:9
+msgid "In this section:"
+msgstr "В этом разделе:"
+
+#: ../source/friend.rst:15
+msgid "About Friends and Foes"
+msgstr "О своих и чужих"
+
+#: ../source/friend.rst:17
+msgid ""
+"The 'friend or foe' identification system of FindFace Enterprise Server "
+"SDK can positively identify only friends, not foes. A friend is a person "
+"whose face has been captured a certain number of days by the same camera "
+"during a certain period of time. In all other cases, a person is just "
+"considered to be 'not a friend'."
+msgstr ""
+"Система распознавания «свой-чужой» Сервера FindFace может положительно "
+"определять только «своих», не «чужих». «Свой» — это человек, чье лицо "
+"появлялось в поле зрения одной и той же видеокамеры определенное количество "
+"дней в течение определенного промежутка времени. Во всех других случаях "
+"человек рассматривается как «не свой»."
+
+#: ../source/friend.rst:24
+msgid "Enable 'Friend or Foe' Identification"
+msgstr "Включение распознавания «свой-чужой»"
+
+#: ../source/friend.rst:26
+msgid "To enable 'friend or foe' identification, do the following:"
+msgstr "Для включения распознавания «Cвой-чужой» выполните следующие действия:"
+
+#: ../source/friend.rst:28
+msgid "Configure and tryout :ref:`dynamic person creation <persons>`."
+msgstr ""
+"Настройте и выполните отладку функции :ref:`группировки лиц персоны "
+"<persons>`."
+
+#: ../source/friend.rst:30
+msgid "Open the ``findface-facenapi.ini`` configuration file for editing."
+msgstr ""
+"Откройте для редактирования файл конфигурации ``findface-facenapi.ini``."
+
+#: ../source/friend.rst:36
+msgid "Edit the settings."
+msgstr "Отредактируйте настройки."
+
+#: ../source/friend.rst:39
+msgid "The ``findface-facenapi.ini`` content must be correct Python code."
+msgstr ""
+"Содержимое файла ``findface-facenapi.ini`` должно представлять собой "
+"синтаксически верный код Python."
+
+#: ../source/friend.rst:41
+msgid ""
+"A friend is a person that has been seen a certain number of days by the "
+"same camera during an interval ``[now() - $interval ; now()]``. Uncomment"
+" and edit the number of days a person has to be seen to befriend your "
+"system."
+msgstr ""
+"Своим человек считается, если появляется в поле зрения одной и той же "
+"видеокамеры определенное количество дней в течение интервала ``[now() - $"
+"interval ; now()]``. Раскомментируйте строку и отредактируйте количество "
+"дней появления человека в поле зрения видеокамеры."
+
+#: ../source/friend.rst:47
+msgid ""
+"Interval in seconds during which a person has to be seen a certain number"
+" of days (1 week by default)::"
+msgstr ""
+"Раскомментируйте и задайте интервал в секундах, в течение которого человек "
+"должен попадать в поле зрения видеокамеры определенное количество дней (по "
+"умолчанию 1 неделя)::"
+
+#: ../source/friend.rst:51
+msgid "Restart the service."
+msgstr "Перезапустите сервис ``findface-facenapi``."
+
+#: ../source/friend.rst:58
+msgid "'Friend or Foe' Identification in REST API"
+msgstr "Распознавание «свой-чужой» в REST API"
+
+#: ../source/friend.rst:60
+msgid ""
+"The example below demonstrates a ``POST /face`` request and the "
+"corresponding response containing the 'friend' parameter (``\"friend\": "
+"true`` or ``\"friend\": false``)."
+msgstr ""
+"Ниже приведен пример запроса ``POST /face`` и соответствующего ответа, "
+"содержащего параметр ``friend`` («свой») (``\"friend\": true`` или ``\""
+"friend\": false``)."
+
+#: ../source/friend.rst:65
+msgid "Request"
+msgstr "Запрос"
+
+#: ../source/friend.rst:79
+msgid "Response"
+msgstr "Ответ"

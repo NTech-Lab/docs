@@ -16,7 +16,11 @@ your system can remarkably broaden the scope of analytic tasks it is capable of 
 .. tip::
    Encoded in base64 normalized images received from the Extraction API component are qualified for posting to findface-facenapi.
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 Install Extraction API
 -----------------------------
@@ -75,7 +79,7 @@ To install and configure the ``Extraction API`` component, do the following:
 
        quality_estimator: true
 
-#. Enable the ``Extraction API`` service autostart and lauch the service.
+#. Enable the ``Extraction API`` service autostart and launch the service.
 
    .. code::
 

@@ -5,12 +5,20 @@ Dynamic Person Creation
 
 You can tailor FindFace Enterprise Server SDK to work in video surveillance and video analytics systems. To do so, harness the Dynamic Person Creation feature.
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 How it works
 -----------------------
 
-.. image:: https://gcc-elb-public-prod.gliffy.net/embed/image/cd111b8107e784960fe47261df2ea185.png
+|persons_en|
+
+.. |persons_en| image:: https://gcc-elb-public-prod.gliffy.net/embed/image/cd111b8107e784960fe47261df2ea185.png
+
+.. |persons_ru| image:: https://gcc-elb-public-prod.gliffy.net/embed/image/08485ff4781b8cf5ac479d7c30dda68e.png
 
 *  An image containing a face (for example, extracted from a RTSP video stream by the video face detector) is sent via a ``/face POST`` request to FindFace Server for identification.
 *  When identifying a person, the system uses a face property ``person_id``. For each person in the database, the value of this property should be unique. 
@@ -39,15 +47,23 @@ To enable dynamic person creation, do the following:
    .. warning::
         The ``findface-facenapi.ini`` content must be correct Python code.
 
+   Uncomment and edit the line ``person_identify = False``. This will enable dynamic person creation.
+   
    .. code::
 
-       ## Uncomment and edit the line 'person_identify = False'. This will enable dynamic person creation. 
              → person_identify = True
 
-       ## By default, dynamic person creation is performed independently for each camera. To merge person identification results across all cameras, uncomment and edit the line 'person_identify_global = False'. This option works well only in small-scale systems with less than 5 cameras. Otherwise, leave it deactivated.
+   By default, dynamic person creation is performed independently for each camera. To merge person identification results across all cameras, uncomment and edit the line ``person_identify_global = False``. This option works well only in small-scale systems with less than 5 cameras. Otherwise, leave it deactivated.
+
+   .. code::
+
              → person_identify_global = True
 
-       ## Uncomment and set the threshold for person identification between 0 and 1.
+   
+   Uncomment and set the threshold for person identification between 0 and 1.
+
+   .. code::
+
              → person_identify_threshold = 0.75
 
 #. Restart the service.

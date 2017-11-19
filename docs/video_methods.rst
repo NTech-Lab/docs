@@ -5,7 +5,11 @@ Methods for Video Face Detection
 
 These methods extend :ref:`general API methods <methods>` of FindFace Enterprise Server SDK. 
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 .. _camera-post:
 
