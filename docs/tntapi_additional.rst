@@ -3,7 +3,11 @@
 Hacks for ``tntapi`` 
 ===================================================
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 Additional Configuration Parameters
 -----------------------------------------------

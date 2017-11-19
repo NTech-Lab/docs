@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-08 12:33+0300\n"
+"PO-Revision-Date: 2017-11-19 18:13+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/ntls_status.rst:4
+msgid "Retrieve Licensing Information"
+msgstr "Получение информации о лицензии"
+
+#: ../source/ntls_status.rst:6
+msgid ""
+"You can use API to retrieve :ref:`licensing <licensing>` information in "
+"JSON."
+msgstr ""
+"Вы можете использовать API для получения информации о :ref:`лицензии "
+"<licensing>` в формате JSON."
+
+#: ../source/ntls_status.rst:9
+msgid "Request"
+msgstr "Запрос"
+
+#: ../source/ntls_status.rst:16
+msgid "Exemplary response"
+msgstr "Пример ответа"
+
+#: ../source/ntls_status.rst:18
+msgid ""
+"The ``last_updated`` parameter in the response indicates how long ago the"
+" local license has been checked for the last time. Interpret its value "
+"(in seconds) as follows:"
+msgstr ""
+"Параметр ``last_updated`` в ответе показывает, как давно в последний раз "
+"проверялась локальная лицензия. Интерпретируйте его значение (в секундах) "
+"следующим образом:"
+
+#: ../source/ntls_status.rst:21
+msgid "[0, 5] — everything is alright."
+msgstr "[0, 5] — все работает отлично."
+
+#: ../source/ntls_status.rst:22
+msgid ""
+"(5, 30] — there may be some problems with connection, or with a local "
+"drive where the license file is stored."
+msgstr ""
+"(5, 30] — возможно имеют место быть какие-то проблемы со связью, либо с "
+"локальным накопителем, где хранятся файлы лицензий."
+
+#: ../source/ntls_status.rst:23
+msgid "(30; 120] — almost certainly something bad happened."
+msgstr "(30; 120] — почти наверняка случилось что-то нехорошее."
+
+#: ../source/ntls_status.rst:24
+msgid "(120; ∞) — the licensing source response has been timed out. Take action."
+msgstr ""
+"(120; ∞) — не удается получить ответ от источника лицензирования в течение "
+"длительного времени. Необходимо вмешательство."
+
+#: ../source/ntls_status.rst:25
+msgid ""
+"``\"valid\": false``: connection with the licensing source has never been"
+" established."
+msgstr ""
+"``\"valid\": false``: связь с источником лицензирования так и не была "
+"установлена."

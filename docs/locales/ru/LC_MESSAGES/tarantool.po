@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/tarantool.rst:2
+msgid "Tarantool"
+msgstr ""
+
+#: ../source/tarantool.rst:4
+msgid ""
+"FindFace Enterprise Server SDK is compatible only with Tarantool "
+"``1.7.3.673.g23cc4dc-1``. This version is automatically installed along "
+"with the ``tntapi`` component."
+msgstr ""
+
+#~ msgid ""
+#~ "FindFace Enterprise Server SDK is "
+#~ "compatible only with Tarantool "
+#~ "1.7.3.673.g23cc4dc-1. This version is "
+#~ "automatically installed along with the "
+#~ "tntapi component."
+#~ msgstr ""
+

@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-19 18:26+0300\n"
+"PO-Revision-Date: 2017-11-19 18:30+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/tarantool_api.rst:2
+msgid "Direct API Requests to Tarantool"
+msgstr "Прямые API-запросы к базе данных Tarantool"
+
+#: ../source/tarantool_api.rst:4
+msgid "You can use HTTP API to extract data directly from the Tarantool Database."
+msgstr ""
+"Вы можете использовать HTTP API для извлечения напрямую данных из базы "
+"данных Tarantool."
+
+#: ../source/tarantool_api.rst:7
+msgid "In this section:"
+msgstr "В этом разделе:"
+
+#: ../source/tarantool_api.rst:13
+msgid "General Information"
+msgstr "Общие сведения"
+
+#: ../source/tarantool_api.rst:15
+msgid ""
+"API requests to Tarantool should be sent "
+"to ``http://<tarantool_host_ip:port>``."
+msgstr ""
+"API-запросы к базе данных Tarantool следует отправлять по адресу "
+"``http://<tarantool_host_ip:port>``."
+
+#: ../source/tarantool_api.rst:18
+msgid ""
+"The port for API requests can be found in the ``FindFace.start`` section "
+"of the Tarantool configuration file:"
+msgstr ""
+"Порт для API-запросов можно узнать в разделе ``FindFace.start`` файла "
+"конфигурации Tarantool:"
+
+#: ../source/tarantool_api.rst:28
+msgid ""
+"In the case of standalone deployment, you can access Tarantool by default"
+" only locally (127.0.0.1). If you want to access Tarantool remotely, "
+":ref:`change <tntapi-standalone>` the Tarantool configuration file."
+msgstr ""
+"В случае если FindFace Enterprise Server SDK развернут на одиночном "
+"физическом сервере, база данных Tarantool по умолчанию будет доступна "
+"только локально (``127.0.0.1``). Если необходимо открыть доступ к базе "
+"данных Tarantool с удаленного сервера, :ref:`внесите изменения <tntapi-"
+"standalone>` в файл конфигурации ``tntapi`` во время установки "
+"компонента."
+
+#: ../source/tarantool_api.rst:31
+msgid "Each API request to Tarantool contains the following parameters:"
+msgstr "Каждый API-запрос к Tarantool содержит следующие параметры:"
+
+#: ../source/tarantool_api.rst:34
+msgid "``:ver``: the API version (v1 at the moment)."
+msgstr "``:ver``: версия API (v1 на данный момент)."
+
+#: ../source/tarantool_api.rst:35
+msgid "``:name``: the gallery name."
+msgstr "``:name``: имя галереи."
+
+#: ../source/tarantool_api.rst:36
+msgid "``:id``: the face id."
+msgstr "``:id``: id лица."
+
+#: ../source/tarantool_api.rst:39
+msgid "Add Face"
+msgstr "Добавление лица"
+
+#: ../source/tarantool_api.rst:42 ../source/tarantool_api.rst:70
+#: ../source/tarantool_api.rst:101 ../source/tarantool_api.rst:127
+#: ../source/tarantool_api.rst:162
+msgid "Request"
+msgstr "Запрос"
+
+#: ../source/tarantool_api.rst:47
+msgid "``Body``: a raw feature vector (facen)"
+msgstr "``Body``: необработанный вектор признаков (facen)."
+
+#: ../source/tarantool_api.rst:50 ../source/tarantool_api.rst:76
+#: ../source/tarantool_api.rst:107 ../source/tarantool_api.rst:140
+#: ../source/tarantool_api.rst:172
+msgid "Returns:"
+msgstr "Возвращает:"
+
+#: ../source/tarantool_api.rst:51 ../source/tarantool_api.rst:108
+msgid "HTTP 200 and empty body if success."
+msgstr "HTTP 200 и пустое тело в случае успеха."
+
+#: ../source/tarantool_api.rst:52
+msgid "HTTP 409 if a face with the same id already exists in the gallery."
+msgstr "HTTP 409, если лицо с таким id уже есть в галерее."
+
+#: ../source/tarantool_api.rst:53 ../source/tarantool_api.rst:79
+#: ../source/tarantool_api.rst:110 ../source/tarantool_api.rst:142
+#: ../source/tarantool_api.rst:174
+msgid ""
+"HTTP with a status other than 200 and error description in the body if "
+"failure."
+msgstr "HTTP с отличным от 200 статусом и описание ошибки в случае неудачи."
+
+#: ../source/tarantool_api.rst:56 ../source/tarantool_api.rst:89
+#: ../source/tarantool_api.rst:113 ../source/tarantool_api.rst:145
+#: ../source/tarantool_api.rst:177
+msgid "Example"
+msgstr "Пример"
+
+#: ../source/tarantool_api.rst:67
+msgid "Get Facen"
+msgstr "Получение вектора признаков"
+
+#: ../source/tarantool_api.rst:77
+msgid ""
+"A JSON representation of the face with its id and base64 encoded facen if"
+" success."
+msgstr ""
+"Представление лица в формате JSON, содержащее его id и вектор признаков в"
+" формате base64 в случае успеха."
+
+#: ../source/tarantool_api.rst:78 ../source/tarantool_api.rst:109
+msgid "HTTP 404 if a face with the given id is not found in the gallery."
+msgstr "HTTP 404, если лицо с заданным id не найдено в галерее."
+
+#: ../source/tarantool_api.rst:82
+msgid "To convert a facen from base64 to a binary file, execute:"
+msgstr ""
+"Для преобразования вектора признаков из формата ``base64`` в бинарный "
+"файл используйте команду:"
+
+#: ../source/tarantool_api.rst:95
+msgid "Remove Face"
+msgstr "Удаление лица"
+
+#: ../source/tarantool_api.rst:98
+msgid "Removing a face from Tarantool will not remove it from MongoDB."
+msgstr "Удаление лица из Tarantool не удалит его из MongoDB."
+
+#: ../source/tarantool_api.rst:124
+msgid "Face Search"
+msgstr "Поиск лица"
+
+#: ../source/tarantool_api.rst:132
+msgid "``:limit``: the maximum number of faces in the response."
+msgstr "``:limit``: максимальное количество лиц в ответе."
+
+#: ../source/tarantool_api.rst:133
+msgid ""
+"``:threshold``: the minimum similarity for faces in the response (from 0 "
+"to 1)."
+msgstr "``:threshold``: минимальная степень схожести лиц в ответе (от 0 до 1)."
+
+#: ../source/tarantool_api.rst:134
+msgid ""
+"``linear_search`` (boolean, optional): set ``linear_search=1`` (true) to "
+"use only the linear space to search for faces. This setting has priority "
+"over the ``only_index`` setting "
+"(``/etc/tarantool/instances.enabled/FindFace.lua``)."
+msgstr ""
+"``linear_search`` (опционально): установите ``linear_search=1`` (true), "
+"чтобы при поиске лиц использовать только пространство ``linear``. Данная "
+"настройка имеет приоритет над настройкой ``only_index`` "
+"(``/etc/tarantool/instances.enabled/FindFace.lua``)."
+
+#: ../source/tarantool_api.rst:135
+msgid "``body``: a raw facen."
+msgstr "``body``: необработанный вектор признаков."
+
+#: ../source/tarantool_api.rst:141
+msgid ""
+"A JSON array with faces with the ``conf`` and ``id`` fields in the body "
+"if success. The value in the ``X-search-stat`` header indicates whether "
+"the fast index was used for the search: ``with_index`` or "
+"``without_index``."
+msgstr ""
+"Массив JSON с лицами, содержащий поля ``conf`` и ``id`` в теле в случае "
+"успеха. Значение в заголовке ``X-search-stat`` показывает, был ли "
+"использован быстрый индекс для поиска: ``with_index`` или ``without_index``."
+
+#: ../source/tarantool_api.rst:159
+msgid "List Faces"
+msgstr "Получение списка лиц"
+
+#: ../source/tarantool_api.rst:167
+msgid "``:start_id``: the minimum ``face_id`` in the response."
+msgstr "``:start_id``: минимальное значение id лица в ответе."
+
+#: ../source/tarantool_api.rst:168
+msgid "``:count``: the maximum number of faces in the response."
+msgstr "``:count``: максимальное количество лиц в ответе."
+
+#: ../source/tarantool_api.rst:173
+msgid ""
+"A JSON array with faces, and the next page URL if success. Each face is "
+"provided with its id, base64 encoded facen and the name of a Tarantool "
+"space where the face is located (linear, preindex, or indexed). The next "
+"page URL should be passed as ``:start_id`` in another API request to get "
+"the next page of results."
+msgstr ""
+"Массив JSON с лицами и URL следующей страницы результатов в случае успеха. "
+"Для каждого лица указывается его ``id``, вектор признаков в формате "
+"``base64`` и имя пространства Tarantool, в котором хранится лицо (``linear``"
+", ``preindex``, или ``indexed``). URL следующей страницы должен быть передан "
+"в другом запросе как параметр ``:start_id`` для получения следующей страницы "
+"результатов."
+
+#~ msgid ""
+#~ "The port for API requests can be"
+#~ " found in the Tarantool configuration "
+#~ "file:"
+#~ msgstr ""

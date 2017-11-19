@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"PO-Revision-Date: 2017-11-13 17:34+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language: ru\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/tntapi_standalone.rst:4
+msgid "Install tntapi standalone"
+msgstr "Установка tntapi на одном сервере"
+
+#: ../source/tntapi_standalone.rst:6
+#, fuzzy
+msgid "Install and configure the ``tntapi`` component as follows:"
+msgstr "Установите и настройте компонент ``tntapi`` следующим образом:"
+
+#: ../source/tntapi_standalone.rst:8
+#, fuzzy
+msgid ""
+"Install ``tntapi``. Tarantool will be installed automatically along with "
+"it."
+msgstr ""
+"Установите компонент ``tntapi``. База данных ``Tarantool`` будет "
+"установлена автоматически вместе с ним."
+
+#: ../source/tntapi_standalone.rst:15
+#, fuzzy
+msgid "Disable the Tarantool example service autostart and stop the service."
+msgstr ""
+"Удалите тестовый сервис ``Tarantool`` из автозагрузки Ubuntu и остановите"
+" его."
+
+#: ../source/tntapi_standalone.rst:21
+#, fuzzy
+msgid ""
+"For a small-scale project, the ``tntapi`` shard created by default "
+"(``tarantool@FindFace``) would suffice as 1 shard can handle up to "
+"10,000,000 faces. Configuration settings of the default shard are defined"
+" in the file ``/etc/tarantool/instances.enabled/FindFace.lua``. We "
+"strongly recommend you not to add or edit anything in this file, except "
+"the maximum memory usage (``memtx_memory``), the NTLS IP address required"
+" for the ``tntapi`` licensing, and the remote access setting. The maximum"
+" memory usage should be set in bytes, depending on the number of faces "
+"the shard handles, at the rate roughly 1280 byte per face."
+msgstr ""
+"Поскольку один шард может обрабатывать до ``10 000 000`` лиц, для "
+"обслуживания небольших проектов до ``1 000 000`` лиц будет достаточно "
+"задействовать шард ``tntapi``, созданный по умолчанию "
+"(``tarantool@FindFace``). Настройки конфигурации данного шарда задаются в"
+" файле ``/etc/tarantool/instances.enabled/FindFace.lua``. Настоятельно "
+"рекомендуется ничего не добавлять и не редактировать в данном файле, за "
+"исключением максимального использования оперативной памяти "
+"(``memtx_memory``), IP-адреса локального сервера лицензий NTLS, "
+"необходимого для лицензирования ``tntapi``, а также настроек удаленного "
+"доступа. Максимальное использование памяти задается в байтах в "
+"зависимости от количества лиц, обрабатываемых шардом, исходя из "
+"соотношения примерно 1280 байт на 1 лицо."
+
+#: ../source/tntapi_standalone.rst:23
+msgid "Open the configuration file::"
+msgstr ""
+
+#: ../source/tntapi_standalone.rst:27
+msgid ""
+"Edit the value due to the number of faces the shard handles. The value "
+"``1.2*1024*1024*1024`` corresponds to 1,000,000 faces::"
+msgstr ""
+
+#: ../source/tntapi_standalone.rst:31
+msgid "Specify the NTLS IP address if NTLS is remote::"
+msgstr ""
+
+#: ../source/tntapi_standalone.rst:35
+msgid ""
+"With standalone deployment, you can access Tarantool by default only "
+"locally (``127.0.0.1``). If you want to access Tarantool from a remote "
+"host, either specify the remote host IP address in the ``FindFace.start``"
+" section, or change ``127.0.0.1`` to ``0.0.0.0`` there to allow access to"
+" Tarantool from any IP address. In the case-study below, you allow access"
+" only from ``192.168.113.10``::"
+msgstr ""
+
+#: ../source/tntapi_standalone.rst:40
+msgid "Now you allow access from any IP address::"
+msgstr ""
+
+#: ../source/tntapi_standalone.rst:44
+#, fuzzy
+msgid "Configure the ``tntapi`` shard to autostart and start the shard."
+msgstr "Добавьте шард ``tntapi`` в автозагрузку Ubuntu и запустите шард."
+
+#: ../source/tntapi_standalone.rst:50
+msgid ""
+"Retrieve the shard status. The command will return a service description,"
+" a status (should be Active), path and running time."
+msgstr ""
+
+#: ../source/tntapi_standalone.rst:58
+#, fuzzy
+msgid "You can view the ``tntapi`` :ref:`logs <logs>` by executing:"
+msgstr ""
+"Для того чтобы отобразить :ref:`логи <logs>` ``tntapi``, выполните "
+"команду:"
+
+#: ../source/tntapi_standalone.rst:64
+#, fuzzy
+msgid ""
+"The ``tntapi.json`` file containing the tntapi shard parameters is "
+"automatically installed along with ``tntapi`` into the ``/etc/`` folder."
+msgstr ""
+"Файл ``tntapi.json`` с описанием параметров шарда автоматически "
+"устанавливается вместе с компонентом ``tntapi`` в папку ``/etc``. Вам "
+"потребуется раскомментировать путь к данному файлу в :ref:`настройках "
+"сети <configure-network>`."
+
+#: ../source/tntapi_standalone.rst:67
+#, fuzzy
+msgid ""
+"You will have to uncomment the path to ``tntapi.json`` when "
+":ref:`configuring network <configure-network>`."
+msgstr ""
+"Файл ``tntapi.json`` с описанием параметров шарда автоматически "
+"устанавливается вместе с компонентом ``tntapi`` в папку ``/etc``. Вам "
+"потребуется раскомментировать путь к данному файлу в :ref:`настройках "
+"сети <configure-network>`."
+
+#~ msgid "Retrieve the shard status."
+#~ msgstr "Проверьте статус шарда."
+

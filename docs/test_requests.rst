@@ -11,7 +11,11 @@ Before you can proceed with development and deliver face recognition services to
 .. tip::
      To proceed with development, find more code samples (in C#, PHP, Java and Python) on our `GitHub <https://github.com/NTech-Lab/ffserver-examples>`_.
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 How to Pretty-Print Responses
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

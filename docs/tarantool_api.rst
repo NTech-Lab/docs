@@ -3,7 +3,11 @@ Direct API Requests to Tarantool
 
 You can use HTTP API to extract data directly from the Tarantool Database. 
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 General Information
 ----------------------------
@@ -11,14 +15,13 @@ General Information
 API requests to Tarantool should be sent to ``http://<tarantool_host_ip:port>``.
 
 .. tip:: 
-    The port for API requests can be found in the Tarantool configuration file:
+    The port for API requests can be found in the ``FindFace.start`` section of the Tarantool configuration file:
 
     .. code::
 
-       ## Tarantool configuration file:
-       /etc/tarantool/instances.enabled/FindFace.lua
+       cat /etc/tarantool/instances.enabled/FindFace.lua
 
-       ## You can find the port in this section (8001 in the example):
+       ##8001:
        FindFace.start("127.0.0.1", 8001)
 
 .. note::
@@ -126,10 +129,12 @@ Face Search
 
     POST /:ver/:name/search/:limit/:threshold?linear_search 
 
-``:limit``: the maximum number of faces in the response
-``:threshold``: the minimum similarity for faces in the response (from 0 to 1).
-``linear_search`` (boolean, optional): set linear_search=1 (true) to use only the linear space to search for faces. This setting has priority over the only_index setting (/etc/tarantool/instances.enabled/FindFace.lua).
-``body``: a raw facen.
+| ``:limit``: the maximum number of faces in the response.
+| ``:threshold``: the minimum similarity for faces in the response (from 0 to 1).
+| ``linear_search`` (boolean, optional): set ``linear_search=1`` (true) to use only the linear space to search for faces. This setting has priority over the ``only_index`` setting (``/etc/tarantool/instances.enabled/FindFace.lua``).
+| ``body``: a raw facen.
+|
+
 
 .. rubric:: Returns:
 
@@ -159,9 +164,9 @@ List Faces
 
     GET /:ver/:name/list/:start_id/:count
 
-``:start_id``: the minimum ``face_id`` in the response
-
-``:count``: the maximum number of faces in the response
+| ``:start_id``: the minimum ``face_id`` in the response.
+| ``:count``: the maximum number of faces in the response.
+|
 
 .. rubric:: Returns:
 

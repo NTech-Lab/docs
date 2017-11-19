@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"PO-Revision-Date: 2017-11-17 18:08+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/test_requests.rst:4
+msgid "Test Requests"
+msgstr "Тестовые запросы"
+
+#: ../source/test_requests.rst:6
+msgid ""
+"Before you can proceed with development and deliver face recognition "
+"services to your customers, make sure that the FindFace Server components"
+" are working. To do so, run the test requests below, minding the "
+"sequence. To pretty-print responses, we recommend you to use "
+":program:`jq`."
+msgstr ""
+"Перед тем как приступить к программированию и использованию распознавания"
+" лиц в своем приложении, убедитесь, что компоненты Сервера FindFace "
+"работают надлежащим образом. Для этого выполните по порядку приведенные "
+"ниже тестовые запросы. Для того чтобы структурировать текст ответов на "
+"запросы, используйте обработчик JSON :program:`jq`."
+
+#: ../source/test_requests.rst:9
+msgid ""
+"The request messages here are provided only for reference. To create "
+"valid requests out of the examples below, replace the token in the "
+"messages with the :ref:`actual <token>` one."
+msgstr ""
+"Сообщения запросов приведены в качестве примера. Вам потребуется заменить"
+" токен авторизации в запросах на :ref:`актуальный <token>`."
+
+#: ../source/test_requests.rst:12
+msgid ""
+"To proceed with development, find more code samples (in C#, PHP, Java and"
+" Python) on our `GitHub <https://github.com/NTech-Lab/ffserver-"
+"examples>`_."
+msgstr ""
+"Вы можете найти примеры кода на C#, PHP, Java и Python на нашем ресурсе "
+"`GitHub <https://github.com/NTech-Lab/ffserver-examples>`_."
+
+#: ../source/test_requests.rst:15
+msgid "In this section:"
+msgstr "В этом разделе:"
+
+#: ../source/test_requests.rst:21
+msgid "How to Pretty-Print Responses"
+msgstr "Структурирование ответов на запросы"
+
+#: ../source/test_requests.rst:23
+msgid ""
+"Use :program:`jq` to parse JSON data in responses. To install "
+":program:`jq`, execute: ::"
+msgstr ""
+"Используйте обработчик :program:`jq`, чтобы структурировать данные в формате "
+"JSON в ответах на запросы. Для того чтобы установить :program:`jq`, "
+"выполните команду:"
+
+#: ../source/test_requests.rst:30
+msgid "List Galleries"
+msgstr "Получение списка галерей"
+
+#: ../source/test_requests.rst:32
+msgid ""
+"This request returns the name of the only gallery existing at the present"
+" moment. It is the ``default`` gallery. Relevant REST API method: "
+":ref:`/galleries GET <galleries-get>`."
+msgstr ""
+"Данный запрос возвращает имя единственной на данный момент галереи (создана "
+"по умолчанию). Соответствующий метод REST API: :ref:`/galleries GET "
+"<galleries-get>`."
+
+#: ../source/test_requests.rst:35 ../source/test_requests.rst:59
+#: ../source/test_requests.rst:78 ../source/test_requests.rst:106
+#: ../source/test_requests.rst:141 ../source/test_requests.rst:273
+#: ../source/test_requests.rst:451
+msgid "Request"
+msgstr "Запрос"
+
+#: ../source/test_requests.rst:42 ../source/test_requests.rst:65
+#: ../source/test_requests.rst:84 ../source/test_requests.rst:112
+#: ../source/test_requests.rst:147 ../source/test_requests.rst:186
+#: ../source/test_requests.rst:230 ../source/test_requests.rst:279
+#: ../source/test_requests.rst:316 ../source/test_requests.rst:396
+#: ../source/test_requests.rst:457
+msgid "Response"
+msgstr "Ответ"
+
+#: ../source/test_requests.rst:54
+msgid "Create New Gallery"
+msgstr "Создание галереи"
+
+#: ../source/test_requests.rst:56
+msgid ""
+"This request creates a new gallery ``testgal``. Relevant REST API method:"
+" :ref:`/galleries/new POST <gallery-post>`."
+msgstr ""
+"Данный запрос создает новую галерею ``testgal``. Соответствующий метод REST "
+"API: :ref:`/galleries/new POST <gallery-post>`."
+
+#: ../source/test_requests.rst:73
+msgid "Detect Face in Image"
+msgstr "Обнаружение лица на фотографии"
+
+#: ../source/test_requests.rst:75
+msgid ""
+"This request detects faces in a sample image on the Internet and returns "
+"coordinates of the rectangle around a detected face (:ref:`bbox <bbox>`)."
+" Relevant REST API method: :ref:`/detect POST <detect-post>`."
+msgstr ""
+"Данный запрос обнаруживает лицо на тестовом изображении, размещенном в сети "
+"Интернет, и возвращает координаты рамки вокруг лица (:ref:`bbox <bbox>`). "
+"Соответствующий метод REST API: :ref:`/detect POST <detect-post>`."
+
+#: ../source/test_requests.rst:101
+msgid "Add Face to Gallery"
+msgstr "Добавление лица в галерею"
+
+#: ../source/test_requests.rst:103
+msgid ""
+"This request processes the same sample image as in the previous request, "
+"detects a face and adds the detected face to the default gallery with a "
+"unique meta tag. Relevant REST API method: :ref:`/face POST <face-post>`."
+msgstr ""
+"Данный запрос обрабатывает тестовое изображение из предыдущего запроса, "
+"обнаруживает лицо и добавляет его с уникальной меткой в галерею по "
+"умолчанию. Соответствующий метод REST API: :ref:`/face POST <face-post>`."
+
+#: ../source/test_requests.rst:138
+msgid ""
+"The following request also adds a face to a gallery but this time the "
+"face is extracted from a local image, and the gallery is custom "
+"('testgal')."
+msgstr ""
+"Следующий запрос также добавляет лицо в галерею, но на этот раз лицо должно "
+"быть обнаружено на локальном изображении, а галерея является "
+"пользовательской (``testgal``)."
+
+#: ../source/test_requests.rst:175
+msgid "Compare Face with Those from Gallery"
+msgstr "Поиск лица в галерее"
+
+#: ../source/test_requests.rst:177
+msgid ""
+"The following 2 requests process an image on the Internet (#1) and a "
+"local image (#2), detect a face and compare it with those from the "
+"default gallery. Return data of most similar faces and their similarity "
+"index. Relevant REST API method: :ref:`/identify POST <identify-post>`."
+msgstr ""
+"Следующие 2 запроса обрабатывают изображение в сети Интернет (№1) и "
+"локальное изображение (№2), обнаруживают на них лицо и сравнивают его с "
+"лицами, хранящимися в галерее по умолчанию. Возвращают данные о наиболее "
+"схожих лицах и процент схожести. Соответствующий метод REST API: :ref:`/"
+"identify POST <identify-post>`."
+
+#: ../source/test_requests.rst:180 ../source/test_requests.rst:310
+msgid "Request #1"
+msgstr "Запрос №1"
+
+#: ../source/test_requests.rst:224 ../source/test_requests.rst:390
+msgid "Request #2"
+msgstr "Запрос №2"
+
+#: ../source/test_requests.rst:268
+msgid "Compare Two Faces"
+msgstr "Сравнение двух лиц"
+
+#: ../source/test_requests.rst:270
+msgid ""
+"This request compares a face in a local image and that on the Internet. "
+"Relevant REST API method: :ref:`/verify POST <verify-post>`."
+msgstr ""
+"Данный запрос сравнивает лицо из локального изображения и лицо из сети "
+"Интернет и возвращает результат проверки лиц на идентичность. "
+"Соответствующий метод REST API: :ref:`/verify POST <verify-post>`."
+
+#: ../source/test_requests.rst:305
+msgid "List Faces from Galleries"
+msgstr "Получение списка лиц в галереях"
+
+#: ../source/test_requests.rst:307
+msgid ""
+"The following requests return the list of all faces stored in galleries, "
+"both default and custom (#1), and only custom (#2). Relevant REST API "
+"method: :ref:`/faces GET <faces-get>`."
+msgstr ""
+"Следующие запросы возвращают список лиц, хранящихся в галереях: в обеих (№1) "
+"и только в пользовательской (№2). Соответствующий метод REST API: :ref:`/"
+"faces GET <faces-get>`."
+
+#: ../source/test_requests.rst:443
+msgid "Recognize Gender, Age and Emotions"
+msgstr "Распознавание пола, возраста и эмоций"
+
+#: ../source/test_requests.rst:445
+msgid ""
+"This request detects faces in a sample image on the internet and returns "
+"coordinates of the rectangle around a detected face (bbox) along with "
+"gender, age and emotions information. Relevant REST API method: "
+":ref:`/detect POST <detect-post>`. API version: v1."
+msgstr ""
+"Данный запрос обнаруживает лицо на тестовом изображении, размещенном в сети "
+"Интернет, и возвращает координаты рамки вокруг лица вместе с информацией о "
+"поле, возрасте и эмоциях. Соответствующий метод REST API: :ref:`/detect POST "
+"<detect-post>`."
+
+#: ../source/test_requests.rst:448
+msgid ""
+"First, you need to :ref:`configure <gae>` gender, age and emotions "
+"recognition."
+msgstr ""
+"Распознавание пола, возраста и эмоций должно быть :ref:`настроено <gae>`."

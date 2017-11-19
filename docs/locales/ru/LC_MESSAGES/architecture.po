@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-08 12:33+0300\n"
+"PO-Revision-Date: 2017-11-17 15:41+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/architecture.rst:5
+msgid "Choose Deployment Architecture"
+msgstr "Выбор архитектуры развертывания"
+
+#: ../source/architecture.rst:7
+msgid ""
+"FindFace Enterprise Server SDK is delivered in the following "
+"distributable packages:"
+msgstr ""
+"Для установки FindFace Enterprise Server SDK используются следующие "
+"установочные пакеты:"
+
+#: ../source/architecture.rst:9
+msgid "A package with components :program:`<findface-repo>.deb`."
+msgstr "Пакет с компонентами :program:`<findface-repo>.deb`."
+
+#: ../source/architecture.rst:10
+msgid ""
+"Several packages with neural network models :program:`<findface-data>."
+"deb`. Each model is delivered in a separate package."
+msgstr ""
+"Несколько пакетов с моделями нейронных сетей :program:`<findface-data>.deb`. "
+"Каждая модель поставляется в отдельном пакете."
+
+#: ../source/architecture.rst:13
+msgid ""
+"Depending on your system characteristics and performance requirements, "
+"there are 2 FindFace Enterprise Server SDK deployments:"
+msgstr ""
+"В зависимости от требований к характеристикам проектируемой системы анализа "
+"и распознавания биометрических данных, FindFace Enterprise Server SDK может "
+"быть развернут в соответствии со следующими архитектурными схемами:"
+
+#: ../source/architecture.rst:16
+msgid "Deployment"
+msgstr "Схема"
+
+#: ../source/architecture.rst:16
+msgid "Recommendation"
+msgstr "Рекомендация"
+
+#: ../source/architecture.rst:18
+msgid "Standalone"
+msgstr "Развертывание на одиночном сервере"
+
+#: ../source/architecture.rst:18
+msgid ""
+"You can deploy FindFace Enterprise Server SDK on a :ref:`single "
+"host (standalone) <standalone>` if the number of faces in the database "
+"does not exceed some 1,000,000."
+msgstr ""
+"FindFace Enterprise Server SDK может быть развернут на :ref:`одиночном "
+"сервере <standalone>`, если количество лиц в базе биометрических данных "
+"ориентировочно не превышает ``1 000 000``."
+
+#: ../source/architecture.rst:21
+msgid "Cluster"
+msgstr "Развертывание на кластере серверов"
+
+#: ../source/architecture.rst:21
+msgid ""
+"If the number of faces in the database does exceed 1 million, deploy "
+"FindFace Enterprise Server SDK in a :ref:`cluster environment <cluster>` "
+"and configure fast index search. This is a medium and large deployment "
+"which can be scaled almost infinitely. It will also suit professional "
+"high load projects with severe requirements to performance."
+msgstr ""
+"Если база данных будет содержать более ``1 000 000`` лиц, FindFace "
+"Enterprise Server SDK должен быть развернут в :ref:`кластерном окружении "
+"<cluster>` с настройкой быстрого поиска по индексу. Данная схема "
+"предназначена для использования в средних и крупных проектах и обладает "
+"возможностями практически неограниченного масштабирования. Подходит для "
+"профессиональных высоконагруженных проектов с жесткими требованиями к "
+"производительности."
+
+#: ../source/architecture.rst:27
+msgid "In this chapter:"
+msgstr "В этой главе:"

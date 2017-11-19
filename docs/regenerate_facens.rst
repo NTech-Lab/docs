@@ -17,7 +17,11 @@ If you need to re-detect faces, you should regenerate both normalized face image
 .. warning::
    Different detectors have diverse sensitivity to certain facial features. Be aware that, after re-detecting your database, you may miss out on some previously found faces.
 
-.. contents:: In this section
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 Tools
 --------------
@@ -189,7 +193,7 @@ Apply ``findface-regenerate`` as follows:
       detector                       = 'nnd' 
       ...    
   
-#. To change a face biometric :ref:`model <models>`, edit the ``model_facen`` parameter in the ``findface-nnapi`` configuration file:
+#. To switch the face biometric :ref:`model <models>`, edit the ``model_facen`` parameter in the ``findface-nnapi`` configuration file:
  
    .. code::
       
@@ -197,14 +201,14 @@ Apply ``findface-regenerate`` as follows:
        
       model_facen = apricot_320
 
-#. Configure ``findface-regenerate`` by using command line arguments as described in the help message. To run the script, execute from ``/usr/bin``: 
+#. Configure ``findface-regenerate`` by using command line arguments as described in the help message. For example, to switch the face detector, execute from ``/usr/bin``: 
 
    .. code::
 
-       ## When switching a face detector:
        sudo findface-regenerate --regenerate=normalized,thumbs,facens --config=/etc/findface-facenapi.ini
 
-       ## When switching a model:
+   To switch the model, execute::
+
        sudo findface-regenerate --regenerate=facens --config=/etc/findface-facenapi.ini
 
 

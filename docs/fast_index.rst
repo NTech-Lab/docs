@@ -3,8 +3,7 @@
 Fast Index
 ===================
 
-For galleries with the number of faces over 1,000,000, we recommend you to speed up search by using a fast index. To prepare the fast index, you
-will need the ``findface-tarantool-build-index`` utility from your distribution package. This utility is independent of the tntapi component and can be installed either on a localhost or on a remote host with access to Tarantool. 
+For galleries with the number of faces over ``1,000,000``, we recommend you to speed up search by using a fast index. To prepare the fast index, you will need the ``findface-tarantool-build-index`` utility from your distribution package. This utility is independent of the ``tntapi`` component and can be installed either on a localhost or on a remote host with access to Tarantool. 
 
 To prepare the fast index, do the following:
 
@@ -14,16 +13,16 @@ To prepare the fast index, do the following:
 
        sudo apt-get install findface-tarantool-build-index
 
-#. Create the fast index for your gallery (``testgal`` in the examples below). First, connect to the Tarantool console.
+#. Create the fast index for your gallery (``testgal`` in the case-study). First, connect to the Tarantool console.
 
    .. note::
-       You have to repeat the fast index creation on each tntapi shard. 
+       You have to repeat the fast index creation on each ``tntapi`` shard. 
 
    .. code::
 
        tarantoolctl connect 127.0.0.1:33001
 
-#. Run :program:`prepare_preindex`. Each element of the linear for this gallery will be moved to the preindex: 
+#. Run ``prepare_preindex``. Each element of the gallery will be moved from the ``linear`` space to ``preindex``: 
 
    .. code::
 
@@ -39,7 +38,7 @@ To prepare the fast index, do the following:
        ---
        ...
 
-#. Launch index generation with the ``findface-build-index`` utility (see --help for additional options). Depending on the number of elements, this process can take up to several hours and can be done on a separate, more powerful machine (for huge galleries we recommend c4.8xlarge amazon, for example spot-instance).
+#. Launch index generation with the ``findface-build-index`` utility (see ``--help`` for additional options). Depending on the number of elements, this process can take up to several hours and can be done on a separate, more powerful machine (for huge galleries we recommend c4.8xlarge amazon, for example spot-instance).
 
    .. code::
 
@@ -65,7 +64,7 @@ To prepare the fast index, do the following:
 #. Enable the fast index for the gallery.
 
    .. note::
-       If Tarantool works as a :ref:`replica set <tntapi-add>`, copy the index file (.idx) from the master instance to the same path on the replica before enabling the fast index for the master instance (:program:`:use_index`).
+       If Tarantool works as a :ref:`replica set <tntapi-add>`, copy the index file (``.idx``) from the master instance to the same path on the replica before enabling the fast index for the master instance (``:use_index``).
 
    .. tip::
        Do not forget to remove obsolete index files on the replica in order to avoid unnecessary index transitions, should the master instance and replica be heavily out of sync.

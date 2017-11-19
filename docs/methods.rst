@@ -3,7 +3,11 @@
 General Methods
 =======================
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
 
 .. _detect-post:
 

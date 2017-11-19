@@ -4,7 +4,11 @@
 System Requirements
 **************************
 
-.. contents:: In this chapter:
+.. rubric:: In this chapter:
+
+.. contents::
+   :local:
+
 
 .. _general-requirements:
 

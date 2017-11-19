@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"PO-Revision-Date: 2017-11-19 14:35+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/fast_index.rst:4
+msgid "Fast Index"
+msgstr "Индексирование для быстрого поиска по базе данных"
+
+#: ../source/fast_index.rst:6
+msgid ""
+"For galleries with the number of faces over ``1,000,000``, we recommend "
+"you to speed up search by using a fast index. To prepare the fast index, "
+"you will need the ``findface-tarantool-build-index`` utility from your "
+"distribution package. This utility is independent of the ``tntapi`` "
+"component and can be installed either on a localhost or on a remote host "
+"with access to Tarantool."
+msgstr ""
+"Для ускорения поиска галереи с количеством лиц более ``1 000 000`` должны "
+"быть проиндексированы. Для подготовки быстрого индекса вам понадобится "
+"утилита ``findface-tarantool-build-index`` из вашего дистрибутивного пакета. "
+"Для работы данной утилиты не требуется компонент ``tntapi``, поэтому она "
+"может быть установлена как на сервере базы данных :program:`Tarantool`, так "
+"и на удаленном сервере с доступом к базе данных."
+
+#: ../source/fast_index.rst:8
+msgid "To prepare the fast index, do the following:"
+msgstr "Для подготовки быстрого индекса выполните следующие действия:"
+
+#: ../source/fast_index.rst:10
+msgid "Install the ``findface-tarantool-build-index`` utility."
+msgstr "Установите утилиту ``findface-tarantool-build-index``."
+
+#: ../source/fast_index.rst:16
+msgid ""
+"Create the fast index for your gallery (``testgal`` in the case-study). "
+"First, connect to the Tarantool console."
+msgstr ""
+"Создайте быстрый индекс для вашей галереи (``testgal`` в примерах ниже). "
+"Сначала подключитесь к консоли базы данных :program:`Tarantool`."
+
+#: ../source/fast_index.rst:19
+msgid "You have to repeat the fast index creation on each ``tntapi`` shard."
+msgstr "Создание быстрого индекса производится на каждом шарде ``tntapi``."
+
+#: ../source/fast_index.rst:25
+msgid ""
+"Run ``prepare_preindex``. Each element of the gallery will be moved from "
+"the ``linear`` space to ``preindex``:"
+msgstr ""
+"Выполните метод ``prepare_preindex``. В результате все элементы из "
+"пространства ``linear`` в данной галерее будут перемещены в пространство "
+"``preindex``:"
+
+#: ../source/fast_index.rst:33
+msgid "Prepare a file for generating the index:"
+msgstr ""
+"Сохраните пространство ``preindex`` в файл, который будет использован для "
+"генерации индекса:"
+
+#: ../source/fast_index.rst:41
+msgid ""
+"Launch index generation with the ``findface-build-index`` utility (see "
+"``--help`` for additional options). Depending on the number of elements, "
+"this process can take up to several hours and can be done on a separate, "
+"more powerful machine (for huge galleries we recommend c4.8xlarge amazon,"
+" for example spot-instance)."
+msgstr ""
+"Запустите генерацию индекса на основе файла ``preindex.bin`` с помощью "
+"утилиты ``findface-build-index`` (вызовите ``--help`` для ознакомления с "
+"дополнительными опциями). В зависимости от количества элементов, данный "
+"процесс может занимать до нескольких часов. В этом случае индексирование "
+"лучше выполнять на отдельной, более мощной машине (для больших галерей "
+"рекомендуется использовать c4.8xlarge amazon, например, spot-instance)."
+
+#: ../source/fast_index.rst:58
+msgid "Delete the ``preindex.bin`` file."
+msgstr "Удалите файл ``preindex.bin``."
+
+#: ../source/fast_index.rst:64
+msgid "Enable the fast index for the gallery."
+msgstr "Включите быстрый индекс для галереи."
+
+#: ../source/fast_index.rst:67
+msgid ""
+"If Tarantool works as a :ref:`replica set <tntapi-add>`, copy the index "
+"file (``.idx``) from the master instance to the same path on the replica "
+"before enabling the fast index for the master instance (``:use_index``)."
+msgstr ""
+"Если Tarantool функционирует как :ref:`набор реплик <tntapi-add>`, "
+"скопируйте по такому же пути на сервер-реплику файл индекса (``.idx``) и "
+"только после этого включите быстрый индекс на мастере (``:use_index``)."
+
+#: ../source/fast_index.rst:70
+msgid ""
+"Do not forget to remove obsolete index files on the replica in order to "
+"avoid unnecessary index transitions, should the master instance and "
+"replica be heavily out of sync."
+msgstr ""
+"Рекомендуется удалять все файлы индекса на реплике, кроме последнего, во "
+"избежание промежуточных обновлений индекса в случае сильного отставания "
+"реплики от мастера."
+
+#: ../source/fast_index.rst:81
+msgid ""
+"Search through the gallery should now be significantly faster. "
+"Information about the index remains in the service space, so when you "
+"restart Tarantool, index will also be uploaded."
+msgstr ""
+"После включения быстрого индекса поиск по галерее должен стать значительно "
+"быстрее (в 70-100 раз). Информация об индексе остается в служебном "
+"пространстве Tarantool, поэтому когда вы перезапускаете Tarantool, индекс "
+"также подгружается."
+
+#: ../source/fast_index.rst:84
+msgid "Do not move the index file to another location!"
+msgstr "Не перемещайте файл индекса!"

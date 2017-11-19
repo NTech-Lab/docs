@@ -1,0 +1,329 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"PO-Revision-Date: 2017-11-19 17:51+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/regenerate_facens.rst:4
+msgid "Migrate to Different Detector or Model"
+msgstr "Миграция на другой детектор или модель"
+
+#: ../source/regenerate_facens.rst:7
+msgid "Do not hesitate to contact our experts on migration by info@ntechlab.com."
+msgstr ""
+"Не стесняйтесь обращаться к нашим специалистам по вопросам миграции по "
+"адресу info@ntechlab.com."
+
+#: ../source/regenerate_facens.rst:10
+msgid ""
+"Sometimes you have to migrate your FindFace Enterprise Server SDK "
+"instance to another face detector or neural network model. This usually "
+"happens when you decide to update to the latest version of the product."
+msgstr ""
+"Иногда вам может потребоваться миграция экземпляра FindFace Enterprise "
+"Server SDK на другой детектор лиц или модель нейронной сети. Как правило, "
+"данная процедура необходима при обновлении до последней версии продукта."
+
+#: ../source/regenerate_facens.rst:13
+msgid "You can find the models summary :ref:`here <models>`."
+msgstr "Сводные сведения по моделям см. :ref:`здесь <models>`."
+
+#: ../source/regenerate_facens.rst:15
+msgid ""
+"If you need to re-detect faces, you should regenerate both normalized "
+"face images, thumbnails and facens. If you just want to apply a different"
+" model, it usually suffices to regenerate only facens. FindFace "
+"Enterprise Server SDK provides tools that can handle most migration use "
+"cases."
+msgstr ""
+"При смене детектора лиц вам следует повторно сгенерировать нормализованные "
+"изображения и миниатюры лиц, а также векторы признаков."
+
+#: ../source/regenerate_facens.rst:18
+msgid ""
+"Different detectors have diverse sensitivity to certain facial features. "
+"Be aware that, after re-detecting your database, you may miss out on some"
+" previously found faces."
+msgstr ""
+"Различные детекторы лиц обладают разной чувствительностью к чертам лица. "
+"Имейте в виду, что новый детектор может пропустить ранее найденные лица."
+
+#: ../source/regenerate_facens.rst:21
+msgid "In this section:"
+msgstr "В этом разделе:"
+
+#: ../source/regenerate_facens.rst:27
+msgid "Tools"
+msgstr "Утилиты"
+
+#: ../source/regenerate_facens.rst:29
+msgid "To migrate your instance, you will need the following tools:"
+msgstr ""
+"Для миграции экземпляра FindFace Enterprise Server SDK вам потребуются "
+"следующие утилиты:"
+
+#: ../source/regenerate_facens.rst:35
+msgid "Tool"
+msgstr "Утилита"
+
+#: ../source/regenerate_facens.rst:36
+msgid "Description"
+msgstr "Описание"
+
+#: ../source/regenerate_facens.rst:37
+msgid "``findface-regenerate``"
+msgstr "``findface-regenerate``"
+
+#: ../source/regenerate_facens.rst:38
+msgid ""
+"Script that regenerates and overrides face data in MongoDB by applying "
+"different detector settings or another model to the images in the "
+"``Uploads`` folder."
+msgstr ""
+"Скрипт, который повторно генерирует и перезаписывает данные лиц в MongoDB, "
+"применяя новые настройки детектора или модель нейронной сети к изображениям "
+"в папке ``Uploads``."
+
+#: ../source/regenerate_facens.rst:39
+msgid "``mongo2searchapi``"
+msgstr "``mongo2searchapi``"
+
+#: ../source/regenerate_facens.rst:40
+msgid "Script that transfers newly generated facens from MongoDB to Tarantool."
+msgstr ""
+"Скрипт, который копирует перегенерированные векторы признаков из MongoDB в "
+"Tarantool."
+
+#: ../source/regenerate_facens.rst:42
+msgid ""
+"Both tools are automatically installed with :ref:`findface-facenapi "
+"<install-facenapi>`."
+msgstr ""
+"Обе утилиты автоматически устанавливаются вместе с компонентом :ref"
+":`findface-facenapi <install-facenapi>`."
+
+#: ../source/regenerate_facens.rst:45
+msgid "Requirements"
+msgstr "Требования"
+
+#: ../source/regenerate_facens.rst:47
+msgid ""
+"The ``/var/lib/ffupload/uploads/`` folder (``Uploads``) has to be "
+"populated with at least the original images. Its content can be viewed at"
+" ``http://<findface_upload_IP:3333/uploads/`` in your browser."
+msgstr ""
+"Папка ``/var/lib/ffupload/uploads/`` (``Uploads``) должна быть заполнена как "
+"минимум исходными изображениями. Ее содержимое можно просмотреть в браузере "
+"по адресу ``http://<findface_upload_IP:3333/uploads/``."
+
+#: ../source/regenerate_facens.rst:49
+msgid ""
+"Overall, the ``findface-regenerate`` tool works with the ``Uploads`` "
+"folder in the following way:"
+msgstr ""
+"В общем случае утилита ``findface-regenerate`` работает с папкой ``Uploads`` "
+"следующим образом:"
+
+#: ../source/regenerate_facens.rst:55
+msgid "Use case"
+msgstr "Случай использования"
+
+#: ../source/regenerate_facens.rst:56
+msgid "How it works"
+msgstr "Принцип работы"
+
+#: ../source/regenerate_facens.rst:57
+msgid "Different detector settings"
+msgstr "Смена настроек детектора"
+
+#: ../source/regenerate_facens.rst:58
+msgid ""
+"The ``findface-regenerate`` tool runs original images through the "
+"``facenapi``-``nnapi`` pipeline with different detector [and model] "
+"settings, and returns regenerated normalized images, thumbnails and "
+"facens."
+msgstr ""
+"Утилита ``findface-regenerate`` прогоняет исходные изображения через "
+"компоненты ``facenapi`` и ``nnapi`` с новыми настройками детектора [и модели]"
+" и возвращает перегенерированные нормализованные изображения лиц, миниатюры "
+"лиц и векторы признаков."
+
+#: ../source/regenerate_facens.rst:59
+msgid "Different model"
+msgstr "Смена модели"
+
+#: ../source/regenerate_facens.rst:60
+msgid ""
+"The ``findface-regenerate`` tool runs normalized face images through "
+"``nnapi`` with different model settings, and returns regenerated facens."
+msgstr ""
+"Утилита ``findface-regenerate`` прогоняет нормализованные изображения лиц "
+"через компонент ``nnapi`` с новыми настройками модели и возвращает "
+"перегенерированные векторы признаков."
+
+#: ../source/regenerate_facens.rst:64
+msgid "Regenerate Face Data"
+msgstr "Повторная генерация артефактов"
+
+#: ../source/regenerate_facens.rst:67
+msgid ""
+"Before conducting any operations on your MongoDB database, be sure to "
+"create its backup."
+msgstr ""
+"Перед проведением любых операций с базой данных MongoDB обязательно создайте "
+"резервную копию."
+
+#: ../source/regenerate_facens.rst:69
+msgid "Apply ``findface-regenerate`` as follows:"
+msgstr "Примените утилиту ``findface-regenerate`` следующим образом:"
+
+#: ../source/regenerate_facens.rst:71
+msgid ""
+"Navigate into ``/usr/bin/``. Display and thoroughly examine the "
+"``findface-regenerate`` help message:"
+msgstr ""
+"Перейдите в папку ``/usr/bin/``. Отобразите и внимательно изучите справку по "
+"утилите ``findface-regenerate``:"
+
+#: ../source/regenerate_facens.rst:187
+msgid ""
+"To change detector settings, uncomment and edit the detector-related "
+"parameters in the ``findface-facenapi`` configuration file."
+msgstr ""
+"Для смены настроек детектора раскомментируйте и отредактируйте относящиеся к "
+"детектору параметры в файле конфигурации ``findface-facenapi``."
+
+#: ../source/regenerate_facens.rst:196
+msgid ""
+"To switch the face biometric :ref:`model <models>`, edit the "
+"``model_facen`` parameter in the ``findface-nnapi`` configuration file:"
+msgstr ""
+"Для смены :ref:`биометрической модели <models>` лица, отредактируйте "
+"параметр ``model_facen`` в файле конфигурации ``findface-nnapi``:"
+
+#: ../source/regenerate_facens.rst:204
+msgid ""
+"Configure ``findface-regenerate`` by using command line arguments as "
+"described in the help message. For example, to switch the face detector, "
+"execute from ``/usr/bin``:"
+msgstr ""
+"Настройте ``findface-regenerate``, используя аргументы командной строки, как "
+"описано в справке по утилите. Например, для того чтобы сменить детектор лиц, "
+"выполните из папки ``/usr/bin`` следующую команду:"
+
+#: ../source/regenerate_facens.rst:210
+msgid "To switch the model, execute::"
+msgstr "Для смены модели выполните команду::"
+
+#: ../source/regenerate_facens.rst:216
+msgid "Transfer Facens from MongoDB to Tarantool"
+msgstr "Копирование векторов признаков из MongoDB в Tarantool"
+
+#: ../source/regenerate_facens.rst:218
+msgid "Apply ``mongo2searchapi`` as follows:"
+msgstr "Примените утилиту ``mongo2searchapi`` следующим образом:"
+
+#: ../source/regenerate_facens.rst:220
+msgid "Create a backup for Tarantool."
+msgstr "Создайте резервную копию БД Tarantool."
+
+#: ../source/regenerate_facens.rst:221
+msgid "Stop Tarantool."
+msgstr "Остановите Tarantool."
+
+#: ../source/regenerate_facens.rst:227
+msgid ""
+"Delete snapshot ``.snap``, xlog ``.xlog`` and :ref:`fast index <fast-"
+"index>` ``.idx`` files for all tntapi shards."
+msgstr ""
+"Удалите файлы снапшотов ``.snap``, логов ``.xlog`` и :ref:`быстрого индеса "
+"<fast-index>` ``.idx`` для всех шардов ``tntapi``."
+
+#: ../source/regenerate_facens.rst:230
+msgid "By default, these files are stored in the following folders:"
+msgstr "По умолчанию, данные файлы хранятся в следующих папках:"
+
+#: ../source/regenerate_facens.rst:232
+msgid "Standalone instance:"
+msgstr "Одиночная инсталляция:"
+
+#: ../source/regenerate_facens.rst:234
+msgid "``/opt/ntech/var/lib/tarantool/default/snapshots``"
+msgstr "``/opt/ntech/var/lib/tarantool/default/snapshots``"
+
+#: ../source/regenerate_facens.rst:235
+msgid "``/opt/ntech/var/lib/tarantool/default/xlogs``"
+msgstr "``/opt/ntech/var/lib/tarantool/default/xlogs``"
+
+#: ../source/regenerate_facens.rst:236
+msgid "``/opt/ntech/var/lib/tarantool/default/index``"
+msgstr "``/opt/ntech/var/lib/tarantool/default/index``"
+
+#: ../source/regenerate_facens.rst:238
+msgid "Cluster instance:"
+msgstr "Кластерная инсталляция "
+
+#: ../source/regenerate_facens.rst:240
+msgid ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/snapshots`"
+msgstr ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/snapshots`"
+
+#: ../source/regenerate_facens.rst:241
+msgid ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/xlogs`"
+msgstr ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/xlogs`"
+
+#: ../source/regenerate_facens.rst:242
+msgid ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/index`"
+msgstr ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/index`"
+
+#: ../source/regenerate_facens.rst:244
+msgid ""
+"If facens :ref:`differ in size <models>` for the old and new models, "
+"update the facen size in the ``FindFace.start`` section of the Tarantool "
+"configuration file "
+":samp:`/etc/tarantool/instances.enabled/FindFace_{shard_N}.lua`. Do so "
+"for each shard."
+msgstr ""
+"Если векторы признаков в прежней и новой модели :ref:`различаются по размеру "
+"<models>`, отредактируйте размер вектора признаков в разделе "
+"``FindFace.start`` файла конфигурации Tarantool "
+":samp:`/etc/tarantool/instances.enabled/FindFace_{shard_N}.lua`. Повторите "
+"для каждого шарда."
+
+#: ../source/regenerate_facens.rst:252
+msgid "Run ``mongo2searchapi`` on the ``findface-facenapi`` host:"
+msgstr "Запустите ``mongo2searchapi`` на сервере с ``findface-facenapi``:"
+
+#: ../source/regenerate_facens.rst:258
+msgid "Start Tarantool"
+msgstr "Запустите Tarantool."
+
+#~ msgid ""
+#~ "To change a face biometric :ref:`model"
+#~ " <models>`, edit the ``model_facen`` "
+#~ "parameter in the ``findface-nnapi`` "
+#~ "configuration file:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Configure ``findface-regenerate`` by using "
+#~ "command line arguments as described in"
+#~ " the help message. To run the "
+#~ "script, execute from ``/usr/bin``:"
+#~ msgstr ""

@@ -16,7 +16,11 @@ In order to run successfully, FindFace Server needs the following software:
 |               |                                                                                | the tntapi component.            |
 +---------------+--------------------------------------------------------------------------------+----------------------------------+
 
-.. contents:: In this section:
+.. rubric:: In this section:
+
+.. contents::
+   :local:
+
    
 .. include:: mongodb.rst
    

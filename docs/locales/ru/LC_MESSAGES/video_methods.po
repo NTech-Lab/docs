@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"PO-Revision-Date: 2017-11-19 17:03+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/video_methods.rst:4
+msgid "Methods for Video Face Detection"
+msgstr "Методы для работы с видеокамерами"
+
+#: ../source/video_methods.rst:6
+msgid ""
+"These methods extend :ref:`general API methods <methods>` of FindFace "
+"Enterprise Server SDK."
+msgstr ""
+"Методы, приведенные в данном разделе, являются расширением :ref:`общих "
+"методов API <methods>` FindFace Enterprise Server SDK и предназначены для "
+"работы с видеокамерами."
+
+#: ../source/video_methods.rst:9
+msgid "In this section:"
+msgstr "В этом разделе:"
+
+#: ../source/video_methods.rst:19
+msgid "Method /camera POST"
+msgstr "Метод /camera POST"
+
+#: ../source/video_methods.rst:22 ../source/video_methods.rst:75
+#: ../source/video_methods.rst:124 ../source/video_methods.rst:164
+#: ../source/video_methods.rst:262
+msgid "Description"
+msgstr "Описание"
+
+#: ../source/video_methods.rst:23
+msgid "Creates a new camera."
+msgstr "Данный метод создает новую видеокамеру на Сервере."
+
+#: ../source/video_methods.rst:26 ../source/video_methods.rst:79
+#: ../source/video_methods.rst:128 ../source/video_methods.rst:168
+#: ../source/video_methods.rst:266
+msgid "Parameters:"
+msgstr "Параметры:"
+
+#: ../source/video_methods.rst:27
+msgid "``meta`` [optional]: some user-defined string identifier"
+msgstr "``meta`` [опционально]: пользовательская строка с метаданными видеокамеры"
+
+#: ../source/video_methods.rst:28 ../source/video_methods.rst:170
+msgid "``url`` [optional]: url address of the camera's stream"
+msgstr "``url`` [опционально]: URL потока видеокамеры"
+
+#: ../source/video_methods.rst:29
+msgid "``detector`` [optional]: some user-defined string identifier"
+msgstr ""
+"``detector`` [опционально]: виртуальный детектор, соответствующий списку "
+"видеокамер."
+
+#: ../source/video_methods.rst:30
+msgid ""
+"``rot`` [W,H,X,Y] [optional]: enable detecting and tracking faces only "
+"inside a clipping rectangle (ROT, region of tracking)."
+msgstr ""
+"``rot`` [W,H,X,Y] [опционально]: включает обнаружение и отслеживание лиц "
+"только внутри заданного прямоугольника (ROT, region of tracking). "
+
+#: ../source/video_methods.rst:31
+msgid ""
+"``roi`` [W,H,X,Y] [optional]: enable posting faces detected only inside a"
+" region of interest (ROI)."
+msgstr ""
+"``roi`` [W,H,X,Y] [опционально]: включает отправку на Сервер FindFace "
+"лиц, обнаруженных только внутри интересующей области (ROI, region of "
+"interest). "
+
+#: ../source/video_methods.rst:34 ../source/video_methods.rst:83
+#: ../source/video_methods.rst:132 ../source/video_methods.rst:175
+#: ../source/video_methods.rst:270
+msgid "Returns:"
+msgstr "Возвращает:"
+
+#: ../source/video_methods.rst:35
+msgid "A JSON representation of the added camera or a failure reason."
+msgstr "Представление данных добавленной камеры в JSON или причину ошибки."
+
+#: ../source/video_methods.rst:38 ../source/video_methods.rst:87
+#: ../source/video_methods.rst:136 ../source/video_methods.rst:274
+msgid "Example"
+msgstr "Пример"
+
+#: ../source/video_methods.rst:40 ../source/video_methods.rst:89
+#: ../source/video_methods.rst:138 ../source/video_methods.rst:181
+#: ../source/video_methods.rst:210 ../source/video_methods.rst:276
+msgid "Request"
+msgstr "Запрос"
+
+#: ../source/video_methods.rst:56 ../source/video_methods.rst:97
+#: ../source/video_methods.rst:146 ../source/video_methods.rst:195
+#: ../source/video_methods.rst:234 ../source/video_methods.rst:285
+msgid "Response"
+msgstr "Ответ"
+
+#: ../source/video_methods.rst:72
+msgid "Method /camera GET"
+msgstr "Метод /camera GET"
+
+#: ../source/video_methods.rst:76
+msgid "Lists all cameras."
+msgstr "Данный метод возвращает список всех камер на Сервере."
+
+#: ../source/video_methods.rst:80 ../source/video_methods.rst:129
+#: ../source/video_methods.rst:267
+msgid "This method doesn't accept any additional parameters."
+msgstr "Отсутствуют."
+
+#: ../source/video_methods.rst:84
+msgid "The list of all cameras."
+msgstr "Список всех камер."
+
+#: ../source/video_methods.rst:121
+msgid "Method /camera/<camera\\_id> GET"
+msgstr "Метод /camera/<camera\\_id> GET"
+
+#: ../source/video_methods.rst:125
+msgid "Gets information about the camera with ``id = camera_id``."
+msgstr "Данный метод возвращает данные заданной видеокамеры с ``id = camera_id``."
+
+#: ../source/video_methods.rst:133
+msgid "Info about the camera or a failure reason."
+msgstr "Информацию о камере или причину ошибки."
+
+#: ../source/video_methods.rst:161
+msgid "Method /camera/<camera_id> PUT"
+msgstr "Метод /camera/<camera_id> PUT"
+
+#: ../source/video_methods.rst:165
+msgid ""
+"This method can be used to modify certain fields of the camera object "
+"with ``id = camera_id``."
+msgstr ""
+"Данный метод используется для изменения метаданных заданной камеры с ``id"
+" = camera_id``."
+
+#: ../source/video_methods.rst:169
+msgid "``meta`` [optional]: new meta string"
+msgstr "``meta`` [опционально]: новая строка с метаданными"
+
+#: ../source/video_methods.rst:171
+msgid ""
+"``rot`` [W,H,X,Y] [optional]: enable detecting and tracking faces only "
+"inside a clipping rectangle (ROT, region of tracking). If you use ROT, be"
+" sure to pass this parameter to the camera each time you send a PUT "
+"request because if this parameter is missing or empty in the request, ROT"
+" on the camera will be deleted."
+msgstr ""
+"``rot`` [W,H,X,Y] [опционально]: включает обнаружение и отслеживание лиц "
+"только внутри заданного прямоугольника (ROT, region of tracking). Если вы"
+" используете ROT, обязательно передавайте этот параметр на камеру каждый "
+"раз, когда вы отправляете запрос PUT, поскольку если данный параметр в "
+"запросе PUT отсутствует или его значение не задано, ROT на камере будет "
+"удален."
+
+#: ../source/video_methods.rst:172
+msgid ""
+"``roi`` [W,H,X,Y] [optional]: enable posting faces detected only inside a"
+" region of interest (ROI). If you use ROI, be sure to pass this parameter"
+" to the camera each time you send a PUT request because if this parameter"
+" is missing or empty in the request, ROI on the camera will be deleted."
+msgstr ""
+"``roi`` [W,H,X,Y] [опционально]: включает отправку на Сервер FindFace "
+"лиц, обнаруженных только внутри интересующей области (ROI, region of "
+"interest). Если вы используете ROI, обязательно передавайте этот параметр"
+" на камеру каждый раз, когда вы отправляете запрос PUT, поскольку если "
+"данный параметр в запросе PUT отсутствует или его значение не задано, ROI"
+" на камере будет удален. "
+
+#: ../source/video_methods.rst:176
+msgid "A JSON representation of the updated camera with id = <camera\\_id>."
+msgstr "Представление данных камеры в JSON."
+
+#: ../source/video_methods.rst:179
+msgid "Example #1"
+msgstr "Пример №1"
+
+#: ../source/video_methods.rst:208
+msgid "Example #2"
+msgstr "Пример №2"
+
+#: ../source/video_methods.rst:259
+msgid "Method /camera/<camera_id> DELETE"
+msgstr "Метод /camera/<camera_id> DELETE"
+
+#: ../source/video_methods.rst:263
+msgid "Deletes the camera with ``id = camera_id``."
+msgstr "Данный метод удаляет заданную камеру с ``id = camera_id``."
+
+#: ../source/video_methods.rst:271
+msgid "HTTP 204 No Content in the case of success, or the reason of failure."
+msgstr "HTTP 204 No Content в случае успеха или причину ошибки."

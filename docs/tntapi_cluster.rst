@@ -3,22 +3,22 @@ Install tntapi cluster
 
 Install and configure the ``tntapi`` component as follows:
 
-#. Install ``tntapi`` on designated hosts. Tarantool will be installed automatically along with tntapi. 
+#. Install ``tntapi`` on designated hosts. Tarantool will be installed automatically along it. 
 
    .. code::
 
        sudo apt-get update
        sudo apt-get install findface-tarantool-server
 
-#. Create ``tntapi`` shards on each tntapi host. To learn how to shard, let's consider the example where a cluster environment contains 4 database hosts with 4 shards on each to be created.
+#. Create ``tntapi`` shards on each ``tntapi`` host. To learn how to shard, let's consider a case-study of a cluster environment containing 4 database hosts. We'll create 4 shards on each.
 
    .. important::
        When creating shards in large installations, observe the following rules:
 
-        #. tntapi shard can handle approximately 10,000,000 faces.
+        #. 1 ``tntapi`` shard can handle approximately 10,000,000 faces.
         #. The number of shards on a single host should not exceed the number of its physical processor cores minus 1.
 
-#. Disable the tarantool example service autostart and stop the service. Do so for all the 4 hosts.
+#. Disable the Tarantool example service autostart and stop the service. Do so for all the 4 hosts.
 
    .. code::
 
@@ -33,18 +33,19 @@ Install and configure the ``tntapi`` component as follows:
 #. Write a bash script ``shard.sh`` that will automatically create configuration files for all shards on a particular host. Do so for the 4 hosts. Use the following script as a base for your own code. The exemplary script creates 4 shards listening to the ports: tntapi ``33001..33004`` and http ``8001..8004``.
 
    .. important::
-         The script below creates configuration files based on the default configuration settings stored in the file ``/etc/tarantool/instances.enabled/FindFace.lua``. We strongly recommend you not to add or edit anything in the default file, except the maximum memory usage (``memtx_memory``) and the NTLS IP address required for the tntapi licensing.
+         The script below creates configuration files based on the default configuration settings stored in the file ``/etc/tarantool/instances.enabled/FindFace.lua``. We strongly recommend you not to add or edit anything in the default file, except the maximum memory usage (``memtx_memory``) and the NTLS IP address required for the ``tntapi`` licensing.
          The maximum memory usage should be set in bytes for each shard, depending on the number of faces a shard handles, at the rate roughly 1280 byte per face.
 
-         .. code::
+         Open the configuration file::
 
-            ## Open the configuration file
             sudo vi /etc/tarantool/instances.enabled/FindFace.lua
 
-            ## Edit the value due the number of faces a shard handles. The value ``1.2*1024*1024*1024`` corresponds to 1,000,000 faces.
+         Edit the value due the number of faces a shard handles. The value ``1.2*1024*1024*1024`` corresponds to 1,000,000 faces::
+
             memtx_memory = 1.2*1024*1024*1024,
 
-            ## Specify the NTLS IP address if NTLS is remote.
+         Specify the NTLS IP address if NTLS is remote::
+
             FindFace.start(“127.0.0.1”, 8001, {license_ntls_server=“192.168.113.2:3133”})
 
    .. code::
@@ -83,8 +84,7 @@ Install and configure the ``tntapi`` component as follows:
 
        ls /etc/tarantool/instances.enabled/
 
-       ## You should get the following output
-       example.lua FindFace.lua FindFace_shard_1.lua FindFace_shard_2.lua FindFace_shard_3.lua FindFace_shard_4.lua 
+       ##example.lua FindFace.lua FindFace_shard_1.lua FindFace_shard_2.lua FindFace_shard_3.lua FindFace_shard_4.lua 
 
 #. Launch all the 4 shards. Do so on each host.
 
@@ -99,7 +99,8 @@ Install and configure the ``tntapi`` component as follows:
 
        sudo systemctl status tarantool@FindFace*
 
-       ## You should get the following output:
+   You should get the following output::
+
        tarantool@FindFace_shard_3.service - Tarantool Database Server
        Loaded: loaded (/lib/systemd/system/tarantool@.service; disabled; vendor preset: enabled)
        Active: active (running) since Tue 2017-01-10 16:22:07 MSK; 32s ago
@@ -118,7 +119,7 @@ Install and configure the ``tntapi`` component as follows:
        ... 
 
    .. tip::
-       You can view the tntapi :ref:`logs <logs>` by executing:
+       You can view the ``tntapi`` :ref:`logs <logs>` by executing:
 
        .. code::
 
@@ -141,5 +142,8 @@ Install and configure the ``tntapi`` component as follows:
 
               cat s.txt | perl -lane 'push(@s,$_); END{$m=1024; $t=scalar @s;for($i=0;$i<$m;$i++){$k=int($i*$t/$m); push(@r,"\"".$s[$k]."\"")} print "[[".join(", ",@r)."]]"; }' > tntapi_cluster.json
 
-#. Move ``tntapi_cluster.json`` to the directory ``/etc/``. You will have to uncomment and specify the path to ``tntapi_cluster.json`` when :ref:`configuring network <configure-network>`.
+#. Move ``tntapi_cluster.json`` to the directory ``/etc/``. 
+
+   .. important::
+      You will have to uncomment and specify the path to ``tntapi_cluster.json`` when :ref:`configuring network <configure-network>`.
 

@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"PO-Revision-Date: 2017-11-19 14:59+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../source/findface_ui.rst:5
+msgid "FindFace Web User Interface"
+msgstr "Веб-интерфейс FindFace"
+
+#: ../source/findface_ui.rst:7
+msgid ""
+"FindFace Enterprise Server SDK is equipped with a web user interface "
+"which generally duplicates the functionality available via REST API."
+msgstr ""
+"Веб-интерфейс FindFace Enterprise Server SDK обеспечивает удобный доступ к "
+"большинству функций REST API без необходимости написания кода."
+
+#: ../source/findface_ui.rst:9
+msgid "To install the web interface, execute on the ``findface-facenapi`` host:"
+msgstr ""
+"Для того чтобы установить веб-интерфейс, выполните на сервере ``findface-"
+"facenapi`` следующие команды:"
+
+#: ../source/findface_ui.rst:12
+msgid ""
+"First install nginx if you do not already have it. You can do this as "
+"such::"
+msgstr ""
+"Для работы веб-интерфейса вам понадобится nginx. Если он не установлен, это "
+"можно сделать следующим образом::"
+
+#: ../source/findface_ui.rst:20
+msgid "To open the web interface, do the following:"
+msgstr "Для того чтобы отобразить веб-интерфейс, выполните следующие действия:"
+
+#: ../source/findface_ui.rst:22
+msgid ""
+"In the address bar of your browser, "
+"enter ``http://<facenapi_ip>:8000/#/``."
+msgstr "В адресной строке браузера введите ``http://<facenapi_ip>:8000/#/``."
+
+#: ../source/findface_ui.rst:23
+msgid ""
+"To log in, specify the :ref:`authentication token <token>` for your "
+"FindFace Enterprise Server SDK instance. The web interface home page will"
+" appear."
+msgstr ""
+"Для того чтобы войти в веб-интерфейс, укажите :ref:`токен авторизации "
+"<token>` своего экземпляра FindFace Enterprise Server SDK. В результате "
+"отобразится домашняя страница веб-интерфейса."
+
+#: ../source/findface_ui.rst:29
+msgid ""
+"The web interface has a highly intuitive and handy design and provides "
+"the following functionality:"
+msgstr ""
+"Веб-интерфейс имеет удобный и интуитивный дизайн и обеспечивает доступ к "
+"следующим функциями:"
+
+#: ../source/findface_ui.rst:32
+msgid ""
+"To work with gender, age and emotions recognition (GAE) in the web "
+"interface, you need to :ref:`configure <gae>` it in the settings."
+msgstr ""
+"Для работы с распознаванием пола, возраста и эмоций (GAE) в веб-интерфейсе "
+"данную функцию нужно :ref:`настроить <gae>`."
+
+#: ../source/findface_ui.rst:35
+msgid ""
+"Working with photos requires configured :ref:`findface-upload <findface-"
+"upload>`."
+msgstr ""
+"Для работы с фотографиями необходим настроенный компонент :ref:`findface-"
+"upload <findface-upload>`."
+
+#: ../source/findface_ui.rst:38
+msgid ""
+"Working with persons requires configured :ref:`dynamic person creation "
+"<persons>`."
+msgstr ""
+"Для работы с персонами необходимо настроить :ref:`группировку лиц персоны "
+"<persons>`."
+
+#: ../source/findface_ui.rst:41
+msgid ""
+"To allow the web interface to run Flash in :program:`Chrome`, add its IP "
+"address to the relevant list: :menuselection:`Settings -->  Advanced --> "
+"Content settings --> Flash --> Allow --> Add a site` "
+"``http://<facenapi_ip>:8000/#/``. Restart :program:`Chrome`."
+msgstr ""
+"Для того чтобы разрешить веб-интерфейсу проигрывать Flash в браузере "
+":program:`Chrome`, добавьте IP-адрес веб-интерфейса в список разрешенных "
+"веб-сайтов: :menuselection:`Настройки --> Дополнительно --> Настройки "
+"контента --> Flash --> Разрешить --> Добавить сайт` "
+"``http://<facenapi_ip>:8000/#/``. Перезапустите :program:`Chrome`."
+
+#: ../source/findface_ui.rst:43
+msgid ":guilabel:`Galleries`.  Create and delete galleries here."
+msgstr ""
+":guilabel:`Galleries` (Галереи). В данном разделе можно добавлять и удалять "
+"галереи."
+
+#: ../source/findface_ui.rst:50
+msgid ""
+":guilabel:`Faces`. In this section, you can view, add and delete faces "
+"from the galleries."
+msgstr ""
+":guilabel:`Faces` (Лица). В данном разделе можно просматривать, добавлять и "
+"удалять лица из галерей."
+
+#: ../source/findface_ui.rst:54
+msgid "Use the :guilabel:`Batch upload` option to upload image files in bulk."
+msgstr ""
+"Используйте опцию :guilabel:`Batch upload`, чтобы добавить лица пакетно."
+
+#: ../source/findface_ui.rst:59
+msgid "You may also want to use its :ref:`console alternative <bulk-face>`."
+msgstr ""
+"Возможно, вы также захотите воспользоваться ее :ref:`консольной "
+"альтернативой <bulk-face>`."
+
+#: ../source/findface_ui.rst:62
+msgid ""
+"Select multiple files or a directory, and then configure the automatic "
+"meta description for the enrolled faces. Use :guilabel:`&MF selector` to "
+"specify behavior in case if multiple faces are detected in an image: "
+"enroll all faces, only the biggest one, or reject enrollment."
+msgstr ""
+"Выберите несколько изображений по отдельности или укажите папку с "
+"изображениями. Затем настройте правило формирования метаданных для "
+"загружаемых лиц. Используйте опцию :guilabel:`&MF selector`, чтобы задать "
+"поведение системы на случай обнаружения нескольких лиц на фото: добавить все "
+"лица, самое большое, вернуть ошибку."
+
+#: ../source/findface_ui.rst:68
+msgid ""
+"You can configure the automatic face meta by appending a custom prefix "
+"and/or postfix to the image file name. To avoid merging the 3 words into "
+"one, use underscore or another symbol in the prefix and postfix."
+msgstr ""
+"Вы можете настроить правило формирования метаданных, добавив "
+"пользовательский префикс и/или постфикс к имени файла изображения. Во "
+"избежание слияние 3-х слов в одно, используйте символ подчеркивания в "
+"префиксе и постфиксе."
+
+#: ../source/findface_ui.rst:71
+msgid ""
+"To select photos in the :guilabel:`icons` mode, click on them as you hold"
+" down the :kbd:`CTRL` key."
+msgstr ""
+"Для того чтобы выбрать фотографии в режиме :guilabel:`icons`, щелкайте по "
+"ним при нажатой клавише :kbd:`CTRL`."
+
+#: ../source/findface_ui.rst:73
+msgid ":guilabel:`Persons`. View and filter persons here."
+msgstr ""
+":guilabel:`Persons` (Персоны). Здесь можно просматривать и сортировать "
+"персоны."
+
+#: ../source/findface_ui.rst:77
+msgid ""
+":guilabel:`Photo processing`. Select this section to detect faces in "
+"static images, recognize gender, age and emotions, search a face in the "
+"database (identification), and compare two faces (verification)."
+msgstr ""
+":guilabel:`Photo processing` (Обработка фото). Выберите данный раздел для "
+"обнаружения лиц на статических изображениях, распознавания пола, возраста и "
+"эмоций, поиска лица в базе данных (идентификации) и сравнения двух лиц "
+"(верификации)."
+
+#: ../source/findface_ui.rst:83
+msgid ""
+":guilabel:`Video processing`. Here you can work with video streams from "
+"rtsp and web cameras, and video files. Detect, enroll (add to a gallery) "
+"and identify faces in video with gender, age and emotions recognition. "
+"Generate enrollment and face identification reports in HTML by clicking "
+"on the :guilabel:`Save demo report` button."
+msgstr ""
+":guilabel:`Video processing` (Обработка видео). В данном разделе вы можете "
+"обработать видеопотоки с rtsp- и web-камер, а также видеофайлы. Возможности: "
+"обнаружение лиц на видео и добавление их в базу данных, идентификация и "
+"распознавание пола, возраста и эмоций. Для генерации отчета о добавленных "
+"или идентифицированных лицах в формате HTML нажмите кнопку :guilabel:`Save "
+"demo report`."
+
+#: ../source/findface_ui.rst:90
+msgid ""
+"The video processing functionality in the web interface is great for "
+"tests. In production mode, use :ref:`fkvideo_detector <video>`."
+msgstr ""
+"Раздел обработки видео в веб-интерфейсе предназначен для тестирования "
+"Сервера. В рабочем режиме используйте компонент :ref:`fkvideo_detector "
+"<video>`."

@@ -3,7 +3,11 @@ Render Detection Results
 
 The fkvideo_detector component does not process FindFace Server responses to face identification and camera operation API requests. You should write your own proxy script that will manage communication between fkvideo_detector and FindFace Server and redirect API responses to an application that can process and render them. A typical rendering topology is shown on the diagram below:
 
-.. image:: https://gcc-elb-public-prod.gliffy.net/embed/image/e1e6f14528d931131fd3d25fea862232.png
+|render_en|
+
+.. |render_en| image:: https://gcc-elb-public-prod.gliffy.net/embed/image/e1e6f14528d931131fd3d25fea862232.png
+
+.. |render_ru| image:: https://gcc-elb-public-prod.gliffy.net/embed/image/334f93a3e0c8de9f648b346019b710ed.png
 
 When writing the proxy script, hold to the following logic:
 
