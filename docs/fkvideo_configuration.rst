@@ -135,12 +135,12 @@ Usage:
      - -r or -r 1, -r 0
    * - ‑‑min-score arg
      - Defines the minimum threshold value for a face image quality. A face is posted if it has better quality. The threshold value is to be fitted empirically.
-     - Minimum threshold value for the face quality in empirical units (negative rational numbers to zero). Milestones: 0 = poor quality, -10 = satisfactory quality, -15 = good quality etc. The default value is -7.
-     - ‑‑min-score -11.5
+     - Minimum threshold value for the face quality in empirical units (negative rational numbers to zero). Milestones: 0 = high quality faces, -1 = good quality, -2 = satisfactory quality, -5 = face recognition maybe inefficient. The default value is -7.
+     - ‑‑min-score -1.5
    * - ‑‑min-dir-score arg
      - Defines the maximum deviation of a face from its frontal position. A face is posted if its deviation is less than this value. The deviation is to be fitted empirically.
-     - Maximum deviation of a face from its frontal position in empirical units (negative rational numbers to zero). Milestones: -20 = satisfactory deviation, -10 = close to the frontal position, 0 = frontal face. The default value is -1000.
-     - ‑‑min-dir-score -12
+     - Maximum deviation of a face from its frontal position in empirical units (negative rational numbers to zero). Milestones: -3.5 = large face angles, face recognition may be inefficient, -2.5 = satisfactory deviation, -0.05 = close to the frontal position, 0 = frontal face. The default value is -1000.
+     - ‑‑min-dir-score -1
    * - ‑‑rt-refresh arg
      - Only for the real-time mode. Defines the time interval for the best face score auto-refresh during the better snapshot dynamic search.
      - Time period in milliseconds. The default value is 0 (disabled).

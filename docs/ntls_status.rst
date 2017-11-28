@@ -19,7 +19,7 @@ You can use API to retrieve :ref:`licensing <licensing>` information in JSON.
    Interpret its value (in seconds) as follows:
 
    * [0, 5] — everything is alright.
-   * (5, 30] — there may be some problems with connection, or with a local drive where the license file is stored.
+   * (5, 30] — there may be some problems with connection, or with the local drive where the license file is stored.
    * (30; 120] — almost certainly something bad happened.
    * (120; ∞) — the licensing source response has been timed out. Take action.
    * ``"valid": false``: connection with the licensing source has never been established.
