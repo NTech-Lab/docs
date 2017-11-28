@@ -37,7 +37,7 @@ To migrate your instance, you will need the following tools:
    * - ``findface-regenerate``
      - Script that regenerates and overrides face data in MongoDB by applying different detector settings or another model to the images in the ``Uploads`` folder.
    * - ``mongo2searchapi``
-     - Script that transfers newly generated facens from MongoDB to Tarantool.
+     - Script that copies newly generated facens from MongoDB to Tarantool.
 
 Both tools are automatically installed with :ref:`findface-facenapi <install-facenapi>`.
 
@@ -212,7 +212,7 @@ Apply ``findface-regenerate`` as follows:
        sudo findface-regenerate --regenerate=facens --config=/etc/findface-facenapi.ini
 
 
-Transfer Facens from MongoDB to Tarantool
+Copy Facens from MongoDB to Tarantool
 --------------------------------------------------
 
 Apply ``mongo2searchapi`` as follows:
