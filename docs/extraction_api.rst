@@ -16,11 +16,17 @@ your system can remarkably broaden the scope of analytic tasks it is capable of 
 .. tip::
    Encoded in base64 normalized images received from the Extraction API component are qualified for posting to findface-facenapi.
 
+.. important::
+    To use such ``Extraction API`` functions as :ref:`face quality estimation <qe>` and :ref:`auto-rotation <auto-rotate>` of original images, activate the :program:`Face Quality` module. Please contact support for details by info@ntechlab.com.
+
+
 .. rubric:: In this section:
 
 .. contents::
    :local:
 
+
+.. _qe:
 
 Install Extraction API
 -----------------------------
@@ -79,6 +85,9 @@ To install and configure the ``Extraction API`` component, do the following:
 
        quality_estimator: true
 
+   .. important::
+      This function is available only if you have activated the :program:`Face Quality` module. Please contact support for details by info@ntechlab.com.
+
 #. Enable the ``Extraction API`` service autostart and launch the service.
 
    .. code::
@@ -107,6 +116,8 @@ The JSON part of the request body contains a set of requests:
 Each request in the set applies to a specific image or region in the
 image and accepts the following parameters:
 
+.. _auto-rotate:
+
 * ``"image"``: an uploaded image (use ``multipart:part`` to refer to a relevant request body ``part``), or a publicly accessible image URL   (``http:``, ``https:``).
 * ``"roi"``: a region of interest in the image. If the region is not specified, the entire image is processed.
 * ``"detector"``: a face detector to apply to the image (``legacy``, ``nnd`` or ``prenormalized``). The ``prenormalized`` mode accepts normalized face images and omits detecting faces. Use ``nnd`` if you need to estimate the face quality (``"quality_estimator": true``). 
@@ -116,6 +127,10 @@ image and accepts the following parameters:
 * ``"need_age"``: returns age.
 * ``"need_normalized"``: returns a normalized face image encoded in base64. The normalized image can then be posted again to the ``Extraction API`` component as "prenormalized". 
 * ``"auto_rotate"``: if true, auto-rotates an original image to 4 different orientations and returns faces detected in each orientation. Works only if ``"detector": "nnd"`` and ``"quality_estimator": true``.
+
+  .. important::
+      This function is available only if you have activated the :program:`Face Quality` module. Please contact support for details by info@ntechlab.com.
+
 
 .. code::
 
