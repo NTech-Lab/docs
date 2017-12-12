@@ -72,16 +72,16 @@ To deploy FindFace Enterprise Server SDK as a virtual machine, do the following:
 
 #. Put the ``ffserver-*.ovf`` and ``disk-*.vmdk`` virtual machine files into the same directory.
 #. Start the virtualization environment. Click :guilabel:`Open a Virtual Machine` and select the ``ffserver-*.ovf`` file. If prompted, convert the file to a VMware format. This may take a while.
-#. After the virtual machine is imported, navigate to the hardware settings: :menuselection:`Edit virtual machine settings --> Hardware`.
+#. After the virtual machine is imported, navigate to the virtual machine hardware settings: :menuselection:`Edit virtual machine settings --> Hardware`.
 
    .. tip::
       Refer to the VMware `official documentation <https://docs.vmware.com/en/VMware-Workstation-Pro/14.0/com.vmware.ws.using.doc/GUID-E2668921-F40D-4CED-BA1B-FE4DC497D910.html>`__.
 
-   * The network connection type for the virtual machine is subject to the host networking. Make sure the connection type is chosen `correctly <https://docs.vmware.com/en/VMware-Workstation-Pro/14.0/com.vmware.ws.using.doc/GUID-0CE1AE01-7E79-41BB-9EA8-4F839BE40E1A.html>`__. 
+   * Choose the `network connection type <https://docs.vmware.com/en/VMware-Workstation-Pro/14.0/com.vmware.ws.using.doc/GUID-0CE1AE01-7E79-41BB-9EA8-4F839BE40E1A.html>`__ for the virtual machine, given the host networking.  
    * By default, the virtual machine hardware is already configured in the way that ensures optimal performance in most medium-load systems. Make sure it meets your project requirements as well. If you are going to simultaneously process several video streams, or maintain a large dataset, you may need to allocate additional resources to the virtual machine RAM and increase the number of CPU cores. Be sure to save the settings.
 
      .. important::
-        You may also need to set up ``tntapi`` :ref:`sharding <tntapi-sharding>` and ``findface-nnapi`` :ref:`load balancing <load-balancing>` later.
+        You may also need to set up ``tntapi`` :ref:`sharding <tntapi-sharding>` and ``findface-nnapi`` :ref:`load balancing <load-balancing>` later (on the virtual machine console).
 
 #. Power on the virtual machine. Wait until Ubuntu is finished starting.
 #. To log in, enter the following credentials: login ``user``, password ``ntechlab``.
