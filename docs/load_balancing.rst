@@ -58,7 +58,7 @@ Do the following:
 
        sudo vi /etc/nginx/sites-available/nnapi
 
-#. Insert the following `text <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-examples/master/nnapi>`__ into the configuration file. In the text, substitute provided ports for findface-nnapi instances ('upstream nnapibackends') and the findface-nnapi listening port ('listen') with their actual values. Port numbers should be unique for each component on the host.
+#. Insert the following `entry <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-examples/master/nnapi>`__ into the configuration file. In the entry, substitute the provided ports for the ``findface-nnapi`` instances (``upstream nnapibackends``) and the ``findface-nnapi`` listening port (``listen``) with their actual values. The port numbers should be unique for each component on the host.
 
    .. code::
 

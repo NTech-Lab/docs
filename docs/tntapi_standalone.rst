@@ -1,7 +1,7 @@
 .. _tntapi-standalone:
 
 Install tntapi standalone
-"""""""""""""""""""""""""""""""
+*********************************
 
 Install and configure the ``tntapi`` component as follows:
 

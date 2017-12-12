@@ -1,5 +1,7 @@
+.. _tntapi-sharding:
+
 Install tntapi cluster
-""""""""""""""""""""""""""""
+******************************
 
 Install and configure the ``tntapi`` component as follows:
 

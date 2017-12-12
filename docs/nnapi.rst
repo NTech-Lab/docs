@@ -1,5 +1,5 @@
 Install nnapi
-^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""
 
 Install and configure the ``findface-nnapi`` component as follows:
 

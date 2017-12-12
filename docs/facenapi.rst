@@ -1,7 +1,7 @@
 .. _install-facenapi:
 
 Install facenapi
-^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""
 
 Install and configure the ``findface-facenapi`` component as follows:
 

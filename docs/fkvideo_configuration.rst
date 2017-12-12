@@ -180,7 +180,7 @@ Usage:
    * - ‑‑single-pass [=arg(=1)]
      - Disables periodical updates of the list of cameras. Use this option if fkvideo_detector should process a video file. In this case, fkvideo_detector will request the list of cameras only once.
      - Boolean: 1 = updates are disabled, 0 = updates are enabled. ‑‑ single-pass and ‑‑single-pass 1 are equal.
-     - ‑‑ single-pass 0
+     - ‑‑single-pass 0
    * - ‑‑start-ts arg
      - Adds a frame timestamp into a face posting request.
      - Boolean: 1 = timestamps are added, 0 = timestamps are disabled.

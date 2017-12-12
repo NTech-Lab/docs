@@ -45,10 +45,9 @@ Prior to installing FindFace Enterprise Server SDK, ensure that the host(s) meet
 |                    | To store all uploaded images via findface-upload:                           |
 |                    | size of all uploaded images + 10%                                           |
 +--------------------+-----------------------------------------------------------------------------+
-| Operating system   | Ubuntu 16.04 LTS.                                                           |
-|                    | The 32-bit version is not supported.                                        |
+| Operating system   | Ubuntu 16.04 LTS (only x64)                                                 |
 +--------------------+-----------------------------------------------------------------------------+
-| Virtual machine    | VMware: vSphere 5.0 or later.                                               |
+| Virtual machine    | VMware                                                                      |
 | support            |                                                                             |
 +--------------------+-----------------------------------------------------------------------------+
 

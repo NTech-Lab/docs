@@ -1,7 +1,7 @@
 .. _configure-network:
 
 Configure Network
----------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After you install the FindFace Server components, configure their interaction with each other. Do the following:
 

@@ -1,7 +1,7 @@
 .. _findface-upload:
 
 Install findface-upload
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""
 
 To store all original images which have been processed by Server, as well as such Server artifacts as face thumbnails and normalized images, install and configure the ``findface-upload`` component.
 

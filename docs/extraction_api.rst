@@ -14,7 +14,7 @@ your system can remarkably broaden the scope of analytic tasks it is capable of 
    You can also :ref:`use <extract-facens>` ``Extraction API`` as a facen extractor, i. e. as an alternative to ``findface-nnapi``.
 
 .. tip::
-   Encoded in base64 normalized images received from the Extraction API component are qualified for posting to findface-facenapi.
+   Normalized images received from ``Extraction API`` in ``base64`` are qualified for posting to ``findface-facenapi``.
 
 .. important::
     To use such ``Extraction API`` functions as :ref:`face quality estimation <qe>` and :ref:`auto-rotation <auto-rotate>` of original images, activate the :program:`Face Quality` module. Please contact support for details by info@ntechlab.com.

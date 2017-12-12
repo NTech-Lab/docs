@@ -14,13 +14,14 @@ General Methods
 Method /detect POST
 --------------------------
 
-This method detects faces on the provided image. You can either upload
-the image file as multipart/form-data or provide an URL, which the API
-will use to fetch the image.
+This method detects faces in the provided image and recognize gender, age, and emotions, given the request parameters. You can either upload the image as multipart/form-data or provide the image URL.
 
 .. rubric:: Parameters:
 
 * ``photo``: an uploaded image, or a publicly accessible URL, containing the image
+* ``gender``: if true, return gender
+* ``age``: if true, return age
+* ``emotions``: if true, return emotions
 
 .. rubric:: Returns:
 
@@ -32,13 +33,18 @@ will use to fetch the image.
 
 .. code::
 
-    POST /v0/detect/ HTTP/1.1
-    Host: 127.0.0.1
-    Authorization: Token e93437ccdae66d57a45a5c6d9aa7602e
-    Content-Type: application/json
-    Content-Length: [length]
+    POST /v1/detect/ HTTP/1.1
+    Host: 192.168.113.76:8000
+    Connection:close
+    Authorization: Token BpdNA6eaUlN9bPhXVSK1r92_SFOODPOU
+    Content-Type:   application/json
+    Content-Length: 108
+
     {
-        "photo": "http://static.findface.pro/sample.jpg"
+        "photo": "https://static.findface.pro/sample.jpg",
+        "emotions": true,
+        "gender": true,
+        "age": true
     }
 
 .. rubric:: Response
@@ -46,20 +52,29 @@ will use to fetch the image.
 .. code::
 
     HTTP/1.1 200 OK
-    Date: Mon, 13 Jun 2016 06:04:02 GMT
+    Date: Thu, 06 Apr 2017 12:38:40 GMT
+    Server: TornadoServer/4.4.2
+    Content-Length: 120
     Content-Type: application/json; charset=UTF-8
-    Content-Length: [length]
+
+
     {
-        "faces":
-        [
-            {
-                "x1": 236,
-                "x2": 311,
-                "y1": 345,
-                "y2": 419
-            }
-        ]
+      "faces": [
+        {
+         "age": 26,
+         "emotions": [
+           "neutral",
+           "sad"
+         ],
+         "gender": "female",
+         "x1": 595,
+         "x2": 812,
+         "y1": 127,
+         "y2": 344
+        }
+      ]
     }
+
 
 .. _verify-post:
 

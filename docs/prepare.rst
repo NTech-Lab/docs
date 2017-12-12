@@ -1,7 +1,7 @@
 .. _prepare:
 
 Prepare Packages for Installation
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 FindFace Enterprise Server SDK can be installed from a local repository. You can receive the FindFace Enterprise Server SDK distributable packages from your NTechLab manager. To prepare the packages for installation, do the following:
 
