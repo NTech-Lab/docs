@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-16 13:09+0300\n"
-"PO-Revision-Date: 2017-11-16 13:58+0300\n"
+"POT-Creation-Date: 2017-12-11 17:48+0300\n"
+"PO-Revision-Date: 2017-12-11 18:04+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
 "Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
@@ -35,80 +35,92 @@ msgstr "Метод /detect POST"
 
 #: ../source/methods.rst:17
 msgid ""
-"This method detects faces on the provided image. You can either upload "
-"the image file as multipart/form-data or provide an URL, which the API "
-"will use to fetch the image."
+"This method detects faces in the provided image and recognize gender, "
+"age, and emotions, given the request parameters. You can either upload "
+"the image as multipart/form-data or provide the image URL."
 msgstr ""
-"Данный метод служит для обнаружения лица на изображении. Вы можете задать"
-" изображение в виде файла с составным содержимым (multipart/form-data) "
-"или предоставить ссылку на изображение в сети Интернет."
+"Данный метод служит для обнаружения лица на изображении. Вы можете задать "
+"изображение в виде файла с составным содержимым (multipart/form-data) или "
+"предоставить ссылку на изображение в сети Интернет."
 
-#: ../source/methods.rst:22 ../source/methods.rst:83 ../source/methods.rst:160
-#: ../source/methods.rst:260 ../source/methods.rst:393
-#: ../source/methods.rst:440 ../source/methods.rst:494
-#: ../source/methods.rst:530 ../source/methods.rst:661
-#: ../source/methods.rst:773 ../source/methods.rst:843
-#: ../source/methods.rst:909
+#: ../source/methods.rst:20 ../source/methods.rst:98 ../source/methods.rst:175
+#: ../source/methods.rst:275 ../source/methods.rst:408
+#: ../source/methods.rst:455 ../source/methods.rst:509
+#: ../source/methods.rst:545 ../source/methods.rst:676
+#: ../source/methods.rst:788 ../source/methods.rst:858
+#: ../source/methods.rst:924
 msgid "Parameters:"
 msgstr "Параметры:"
 
-#: ../source/methods.rst:23 ../source/methods.rst:261
+#: ../source/methods.rst:21 ../source/methods.rst:276
 msgid ""
 "``photo``: an uploaded image, or a publicly accessible URL, containing "
 "the image"
 msgstr "``photo``: загруженная фотография или публичный URL фотографии."
 
-#: ../source/methods.rst:26 ../source/methods.rst:99 ../source/methods.rst:178
-#: ../source/methods.rst:274 ../source/methods.rst:397
-#: ../source/methods.rst:446 ../source/methods.rst:498
-#: ../source/methods.rst:534 ../source/methods.rst:595
-#: ../source/methods.rst:665 ../source/methods.rst:732
-#: ../source/methods.rst:802 ../source/methods.rst:847
-#: ../source/methods.rst:918
+#: ../source/methods.rst:22
+msgid "``gender``: if true, return gender"
+msgstr "``gender``: если true, возвращает информацию о поле"
+
+#: ../source/methods.rst:23
+msgid "``age``: if true, return age"
+msgstr "``age``: если true, возвращает информацию о возрасте"
+
+#: ../source/methods.rst:24
+msgid "``emotions``: if true, return emotions"
+msgstr "``emotions``: если true, возвращает инфомацию об эмоциях"
+
+#: ../source/methods.rst:27 ../source/methods.rst:114 ../source/methods.rst:193
+#: ../source/methods.rst:289 ../source/methods.rst:412
+#: ../source/methods.rst:461 ../source/methods.rst:513
+#: ../source/methods.rst:549 ../source/methods.rst:610
+#: ../source/methods.rst:680 ../source/methods.rst:747
+#: ../source/methods.rst:817 ../source/methods.rst:862
+#: ../source/methods.rst:933
 msgid "Returns:"
 msgstr "Возвращает:"
 
-#: ../source/methods.rst:27
+#: ../source/methods.rst:28
 msgid "A list of rectangles, containing the detected faces"
 msgstr "Список координат рамок вокруг обнаруженных лиц."
 
-#: ../source/methods.rst:30 ../source/methods.rst:105 ../source/methods.rst:182
-#: ../source/methods.rst:401 ../source/methods.rst:450
-#: ../source/methods.rst:502 ../source/methods.rst:538
-#: ../source/methods.rst:599 ../source/methods.rst:669
-#: ../source/methods.rst:736 ../source/methods.rst:777
-#: ../source/methods.rst:806 ../source/methods.rst:851
-#: ../source/methods.rst:923
+#: ../source/methods.rst:31 ../source/methods.rst:120 ../source/methods.rst:197
+#: ../source/methods.rst:416 ../source/methods.rst:465
+#: ../source/methods.rst:517 ../source/methods.rst:553
+#: ../source/methods.rst:614 ../source/methods.rst:684
+#: ../source/methods.rst:751 ../source/methods.rst:792
+#: ../source/methods.rst:821 ../source/methods.rst:866
+#: ../source/methods.rst:938
 msgid "Example"
 msgstr "Пример"
 
-#: ../source/methods.rst:32 ../source/methods.rst:107 ../source/methods.rst:184
-#: ../source/methods.rst:281 ../source/methods.rst:325
-#: ../source/methods.rst:403 ../source/methods.rst:452
-#: ../source/methods.rst:504 ../source/methods.rst:540
-#: ../source/methods.rst:601 ../source/methods.rst:671
-#: ../source/methods.rst:738 ../source/methods.rst:779
-#: ../source/methods.rst:808 ../source/methods.rst:853
-#: ../source/methods.rst:925
+#: ../source/methods.rst:33 ../source/methods.rst:122 ../source/methods.rst:199
+#: ../source/methods.rst:296 ../source/methods.rst:340
+#: ../source/methods.rst:418 ../source/methods.rst:467
+#: ../source/methods.rst:519 ../source/methods.rst:555
+#: ../source/methods.rst:616 ../source/methods.rst:686
+#: ../source/methods.rst:753 ../source/methods.rst:794
+#: ../source/methods.rst:823 ../source/methods.rst:868
+#: ../source/methods.rst:940
 msgid "Request"
 msgstr "Запрос"
 
-#: ../source/methods.rst:45 ../source/methods.rst:122 ../source/methods.rst:199
-#: ../source/methods.rst:297 ../source/methods.rst:340
-#: ../source/methods.rst:411 ../source/methods.rst:466
-#: ../source/methods.rst:513 ../source/methods.rst:548
-#: ../source/methods.rst:609 ../source/methods.rst:679
-#: ../source/methods.rst:746 ../source/methods.rst:788
-#: ../source/methods.rst:817 ../source/methods.rst:868
-#: ../source/methods.rst:938
+#: ../source/methods.rst:51 ../source/methods.rst:137 ../source/methods.rst:214
+#: ../source/methods.rst:312 ../source/methods.rst:355
+#: ../source/methods.rst:426 ../source/methods.rst:481
+#: ../source/methods.rst:528 ../source/methods.rst:563
+#: ../source/methods.rst:624 ../source/methods.rst:694
+#: ../source/methods.rst:761 ../source/methods.rst:803
+#: ../source/methods.rst:832 ../source/methods.rst:883
+#: ../source/methods.rst:953
 msgid "Response"
 msgstr "Ответ"
 
-#: ../source/methods.rst:67
+#: ../source/methods.rst:82
 msgid "Method /verify POST"
 msgstr "Метод /verify POST"
 
-#: ../source/methods.rst:69
+#: ../source/methods.rst:84
 msgid ""
 "This method is used to verify that two faces belong to the same person, "
 "or, alternatively, measures the similarity between the two faces. You can"
@@ -120,7 +132,7 @@ msgstr ""
 "заданным пороговым значением для принятия однозначного решения о "
 "совпадении лиц."
 
-#: ../source/methods.rst:72
+#: ../source/methods.rst:87
 msgid ""
 "In the case, when a binary decision is required, the user should pass a "
 "value for the ``threshold`` parameter. You can use one of the 3 "
@@ -134,7 +146,7 @@ msgstr ""
 " ``strict``, ``medium`` или ``low``. Вы также можете задать собственное "
 "пороговое значение."
 
-#: ../source/methods.rst:74
+#: ../source/methods.rst:89
 msgid ""
 "In the case, when you need to calculate similarity of different persons "
 "or find similar people rather than verify identity, pass ``none`` to the "
@@ -144,7 +156,7 @@ msgstr ""
 "верифицировать идентичность, передайте параметр ``threshold`` со "
 "значением ``none``."
 
-#: ../source/methods.rst:77
+#: ../source/methods.rst:92
 msgid ""
 "If no threshold level is specified, it is set to the default value "
 "``0.75``."
@@ -152,7 +164,7 @@ msgstr ""
 "Если параметр ``threshold`` не передан, его значение по умолчанию "
 "устанавливается равным ``0.75``."
 
-#: ../source/methods.rst:80
+#: ../source/methods.rst:95
 msgid ""
 "Please feel free to contact us if you need to tune the threshold value "
 "for your specific use-case and/or dataset."
@@ -160,15 +172,15 @@ msgstr ""
 "При необходимости свяжитесь с нашими специалистами для подбора "
 "оптимального порогового значения для вашей системы."
 
-#: ../source/methods.rst:84
+#: ../source/methods.rst:99
 msgid "``photo1``: the first uploaded image or an external URL"
 msgstr "``photo1``: первая загруженная фотография или публичный URL фотографии."
 
-#: ../source/methods.rst:85
+#: ../source/methods.rst:100
 msgid "``photo2``: the second uploaded image or an external URL"
 msgstr "``photo2``: вторая загруженная фотография или публичный URL фотографии."
 
-#: ../source/methods.rst:86
+#: ../source/methods.rst:101
 msgid ""
 "``bbox1`` [optional]: array of bounding boxes for the faces on the first "
 "photo"
@@ -176,7 +188,7 @@ msgstr ""
 "``bbox1`` [опционально]: массив рамок с лицами на первом фото, которые "
 "нужно сравнить."
 
-#: ../source/methods.rst:87
+#: ../source/methods.rst:102
 msgid ""
 "``bbox2`` [optional]: array of bounding boxes for the faces on the second"
 " photo"
@@ -184,7 +196,7 @@ msgstr ""
 "``bbox2`` [опционально]: массив рамок с лицами на втором фото, которые "
 "нужно сравнить."
 
-#: ../source/methods.rst:88 ../source/methods.rst:163
+#: ../source/methods.rst:103 ../source/methods.rst:178
 msgid ""
 "``threshold`` [optional]: one of \"strict\", \"medium\", \"low\" or "
 "\"none\", or a value between 0 and 1. Default is 0.75."
@@ -195,7 +207,7 @@ msgstr ""
 "(средний), \"low\" (низкий, установлен по умолчанию), \"none\" (не "
 "задан). По умолчанию сравнение выполняется при 0.75."
 
-#: ../source/methods.rst:89
+#: ../source/methods.rst:104
 msgid ""
 "``mf_selector`` [optional]: specifies behavior in a case of multiple "
 "faces on a photo; one of:"
@@ -203,7 +215,7 @@ msgstr ""
 "``mf_selector`` [опционально]: задает поведение Сервера при наличии "
 "нескольких лиц на фотографии. Возможные значения ``mf_selector``:"
 
-#: ../source/methods.rst:91 ../source/methods.rst:172
+#: ../source/methods.rst:106 ../source/methods.rst:187
 msgid ""
 "``\"reject\"``: return an error if more than one face was detected on any"
 " of image"
@@ -211,25 +223,25 @@ msgstr ""
 "``\"reject\"``: возвращает ошибку, если хотя бы на одной из фотографий "
 "присутствует более одного лица."
 
-#: ../source/methods.rst:92 ../source/methods.rst:267
+#: ../source/methods.rst:107 ../source/methods.rst:282
 msgid "``\"biggest\"`` [default]: add the biggest face on the image"
 msgstr ""
 "``\"biggest\"`` [по умолчанию]: проверяет самое большое лицо на "
 "фотографии."
 
-#: ../source/methods.rst:93
+#: ../source/methods.rst:108
 msgid "``\"all\"``: verify all faces, found on both images."
 msgstr ""
 "``\"all\"``: проверяет схожесть всех лиц, обнаруженных на обеих "
 "фотографиях."
 
-#: ../source/methods.rst:96
+#: ../source/methods.rst:111
 msgid ""
 "Note that providing ``bbox1`` or ``bbox2`` argument overrides the value "
 "of this parameter."
 msgstr "Параметры ``bbox1`` и ``bbox2`` отменяют значение этого параметра."
 
-#: ../source/methods.rst:100
+#: ../source/methods.rst:115
 msgid ""
 "binary verification result, only returned if threshold was not set to "
 "none. Each pair of faces is given it's own result. The given pair of "
@@ -242,19 +254,19 @@ msgstr ""
 "лиц, так и на уровне фотографий. На уровне фотографий результат "
 "верификации будет положительным, если каждая пара лиц на них совпадает."
 
-#: ../source/methods.rst:101
+#: ../source/methods.rst:116
 msgid "the coordinates of the bounding boxes with the faces on the images"
 msgstr "Координаты рамок с лицами на фотографиях."
 
-#: ../source/methods.rst:102
+#: ../source/methods.rst:117
 msgid "the algorithm's confidence in the decision, measured from 0 to 1"
 msgstr "Вероятность совпадения (степень схожести) лиц от 0 до 1."
 
-#: ../source/methods.rst:155
+#: ../source/methods.rst:170
 msgid "Method /identify POST"
 msgstr "Метод /identify POST"
 
-#: ../source/methods.rst:157
+#: ../source/methods.rst:172
 msgid ""
 "This method is used to search through the face database. The method "
 "returns at most n faces (one by default), which are the most similar to "
@@ -266,11 +278,11 @@ msgstr ""
 "возвращает выборку лиц, если степень их схожести с искомым выше "
 "определенного :ref:`порогового значения <thresholds>`."
 
-#: ../source/methods.rst:161
+#: ../source/methods.rst:176
 msgid "``photo``: the uploaded image, or an external URL"
 msgstr "``photo``: загруженная фотография или публичный URL фотографии."
 
-#: ../source/methods.rst:162
+#: ../source/methods.rst:177
 msgid ""
 "``x1, y1, x2, y2`` [optional]: coordinates of a bounding box of the face "
 "on the photo"
@@ -278,11 +290,11 @@ msgstr ""
 "``x1, y1, x2, y2`` [опционально]: координаты прямоугольника на "
 "фотографии, внутри которого находится искомое лицо(а)."
 
-#: ../source/methods.rst:164
+#: ../source/methods.rst:179
 msgid "``n`` [optional]: maximum number of closest faces to return, 1 by default"
 msgstr "``n`` [опционально]: максимальное число лиц в выборке, одно по умолчанию."
 
-#: ../source/methods.rst:165
+#: ../source/methods.rst:180
 msgid ""
 "``strict`` [optional]: specifies behavior in case if one or several "
 "tntapi shards are out of service. This parameter takes priority over the "
@@ -294,11 +306,11 @@ msgstr ""
 "приоритет над параметром ``tntapi_ignore_search_errors`` в :ref:`файле "
 "конфигурации <configure-network>` ``findface-facenapi``."
 
-#: ../source/methods.rst:167
+#: ../source/methods.rst:182
 msgid "``True``: return an error if some tntapi shards are out of service"
 msgstr "``True``: возвращает ошибку, если некоторые шарды ``tntapi`` недоступны."
 
-#: ../source/methods.rst:168
+#: ../source/methods.rst:183
 msgid ""
 "``False`` [default]: use available tntapi shards to obtain face "
 "identification results, indicating the number of available servers vs the"
@@ -309,7 +321,7 @@ msgstr ""
 "отношение количества доступных шардов ``tntapi`` к их общему количеству в"
 " заголовке ``X-Live-Servers``."
 
-#: ../source/methods.rst:170
+#: ../source/methods.rst:185
 msgid ""
 "``mf_selector`` [optional]: specifies behavior in case if multiple faces "
 "are detected on the photo or inside the provided bounding box:"
@@ -318,17 +330,17 @@ msgstr ""
 "нескольких лиц на фотографии или внутри заданного прямоугольника. "
 "Возможные значения:"
 
-#: ../source/methods.rst:173
+#: ../source/methods.rst:188
 msgid "``\"biggest\"`` [default]: identify the biggest face on the image"
 msgstr ""
 "``\"biggest\"`` [по умолчанию]: поиск по базе данных выполняется для "
 "самого крупного лица на фотографии."
 
-#: ../source/methods.rst:174
+#: ../source/methods.rst:189
 msgid "``\"all\"``: identify all faces, found on the image."
 msgstr "``\"all\"``: поиск по базе данных выполняется по всем лицам на фотографии."
 
-#: ../source/methods.rst:179
+#: ../source/methods.rst:194
 msgid ""
 "A map where keys are array representations of bounding boxes of faces on "
 "provided photo and values are arrays face objects, along with match "
@@ -338,11 +350,11 @@ msgstr ""
 "координат возвращается массив схожих лиц из базы биометрических данных "
 "вместе с вероятностью совпадения от 0 до 1."
 
-#: ../source/methods.rst:247
+#: ../source/methods.rst:262
 msgid "Method /face POST"
 msgstr "Метод /face POST"
 
-#: ../source/methods.rst:249
+#: ../source/methods.rst:264
 msgid ""
 "Processes the uploaded image or provided URL, detects faces and adds the "
 "detected faces to the searchable database. If there are multiple faces on"
@@ -364,17 +376,17 @@ msgstr ""
 "необходимости вы можете указать имя галереи, в которую нужно добавить "
 "лицо помимо галереи по умолчанию."
 
-#: ../source/methods.rst:262
+#: ../source/methods.rst:277
 msgid "``meta`` [optional]: some user-defined string identifier"
 msgstr "``meta`` [опционально]: пользовательские метаданные."
 
-#: ../source/methods.rst:263
+#: ../source/methods.rst:278
 msgid ""
 "``bbox`` [optional]: array of bounding boxes specifying face locations on"
 " the image"
 msgstr "``bbox`` [опционально]: массив рамок, содержащих лица на изображении."
 
-#: ../source/methods.rst:264
+#: ../source/methods.rst:279
 msgid ""
 "``mf_selector`` [optional]: specifies behavior in case if there are "
 "multiple faces found on the image or inside the specified rectangle; one "
@@ -384,13 +396,13 @@ msgstr ""
 "нескольких лиц на фотографии или внутри заданного прямоугольника. "
 "Возможные значения:"
 
-#: ../source/methods.rst:266
+#: ../source/methods.rst:281
 msgid "``\"reject\"``: return an error if more than one face was detected"
 msgstr ""
 "``\"reject\"``: возвращает ошибку, если хотя бы на одной из фотографий "
 "присутствует более одного лица."
 
-#: ../source/methods.rst:268
+#: ../source/methods.rst:283
 msgid ""
 "``\"all\"``: add all faces, found on the image. Please note that the meta"
 " will be the same for all faces added"
@@ -398,23 +410,23 @@ msgstr ""
 "``\"all\"``: добавляет все лица, обнаруженные на фотографии. Имейте в "
 "виду, что в этом случае метаданные будут одинаковыми для всех лиц."
 
-#: ../source/methods.rst:270
+#: ../source/methods.rst:285
 msgid "``galleries`` [optional]: list of gallery names"
 msgstr ""
 "``galleries`` [опционально]: список имен галерей, в которые необходимо "
 "добавить лицо."
 
-#: ../source/methods.rst:271
+#: ../source/methods.rst:286
 msgid "``cam_id`` [optional]: UUID of the camera"
 msgstr ""
 "``cam_id`` [опционально]: UUID видеокамеры, от которой пришло изображение"
 " лица."
 
-#: ../source/methods.rst:275
+#: ../source/methods.rst:290
 msgid "A JSON representation of the added faces or a failure reason"
 msgstr "Представление данных добавленного лица в JSON или ошибку при добавлении."
 
-#: ../source/methods.rst:276
+#: ../source/methods.rst:291
 msgid ""
 "In the case multiple faces are detected and ``mf_selector`` is set to "
 "reject, this method returns ``400 Bad Request`` and a list of bounding "
@@ -425,36 +437,36 @@ msgstr ""
 "Request``), а также список координат рамок для каждого обнаруженного "
 "лица."
 
-#: ../source/methods.rst:279
+#: ../source/methods.rst:294
 msgid "Example #1"
 msgstr "Пример №1"
 
-#: ../source/methods.rst:323
+#: ../source/methods.rst:338
 msgid "Example #2"
 msgstr "Пример №2"
 
-#: ../source/methods.rst:388
+#: ../source/methods.rst:403
 msgid "Method /face/id/<id> GET"
 msgstr "Метод /face/id/<id> GET"
 
-#: ../source/methods.rst:390
+#: ../source/methods.rst:405
 msgid "Returns detailed information about the face with id = FaceID."
 msgstr "Данный метод возвращает подробную информацию о лице с заданным id."
 
-#: ../source/methods.rst:394 ../source/methods.rst:531
-#: ../source/methods.rst:592 ../source/methods.rst:774
+#: ../source/methods.rst:409 ../source/methods.rst:546
+#: ../source/methods.rst:607 ../source/methods.rst:789
 msgid "This method doesn't accept any additional parameters."
 msgstr "Отсутствуют."
 
-#: ../source/methods.rst:398
+#: ../source/methods.rst:413
 msgid "A JSON representation of the face with ``id = FaceID``."
 msgstr "Представление данных лица с определенным id в JSON."
 
-#: ../source/methods.rst:435
+#: ../source/methods.rst:450
 msgid "Method /face/id/<id> PUT"
 msgstr "Метод /face/id/<id> PUT"
 
-#: ../source/methods.rst:437
+#: ../source/methods.rst:452
 msgid ""
 "This method can be used to modify certain fields of the face object with "
 "``id = FaceID``. Currently only changes to the meta attribute are "
@@ -463,15 +475,15 @@ msgstr ""
 "Данный метод используется для изменения значений полей объекта ``лицо`` с"
 " заданным id."
 
-#: ../source/methods.rst:441
+#: ../source/methods.rst:456
 msgid "``meta``: new meta string"
 msgstr "``meta``: новые метаданные."
 
-#: ../source/methods.rst:442
+#: ../source/methods.rst:457
 msgid "``person_id``: unique identifier of the person"
 msgstr "``person_id``: уникальный идентификатор персоны в базе данных."
 
-#: ../source/methods.rst:443
+#: ../source/methods.rst:458
 msgid ""
 "``galleries``: JSON dictionary with one key and one value. Either \\ "
 "``{\"add\":[\"list\",\"of\",\"galleries\"]}``, \\ "
@@ -485,31 +497,31 @@ msgstr ""
 "{\"del\":[\"list\",\"of\",\"galleries\"]}, "
 "{\"set\":[\"list\",\"of\",\"galleries\"]}``. "
 
-#: ../source/methods.rst:447
+#: ../source/methods.rst:462
 msgid "A JSON representation of the updated face with id = FaceID"
 msgstr "Представление обновленных данных лица в JSON."
 
-#: ../source/methods.rst:489
+#: ../source/methods.rst:504
 msgid "Method /face/id/<id> DELETE"
 msgstr "Метод /face/id/<id> DELETE"
 
-#: ../source/methods.rst:491
+#: ../source/methods.rst:506
 msgid "Deletes a face with the id = FaceId."
 msgstr "Данный метод удаляет лицо с заданным id."
 
-#: ../source/methods.rst:495
+#: ../source/methods.rst:510
 msgid "This method does not accept any additional parameters."
 msgstr "Отсутствуют."
 
-#: ../source/methods.rst:499
+#: ../source/methods.rst:514
 msgid "HTTP 204 No Content in the case of success, or the reason of failure"
 msgstr "HTTP 204 No Content в случае успеха или причину ошибки."
 
-#: ../source/methods.rst:521
+#: ../source/methods.rst:536
 msgid "Method /face/meta/<meta> GET"
 msgstr "Метод /face/meta/<meta> GET"
 
-#: ../source/methods.rst:523
+#: ../source/methods.rst:538
 msgid ""
 "Returns the list of faces with a given meta string. Note that the method "
 "is case-sensitive, so the given meta has to fully match the one from the "
@@ -522,35 +534,35 @@ msgstr ""
 "кодировке URL. Пробелы между словами в метаданных должны быть "
 "закодированы как ``%20``."
 
-#: ../source/methods.rst:535
+#: ../source/methods.rst:550
 msgid "Returns the list of faces with a <meta>."
 msgstr "Возвращает список лиц с заданными метаданными."
 
-#: ../source/methods.rst:588
+#: ../source/methods.rst:603
 msgid "Method /faces GET"
 msgstr "Метод /faces GET"
 
-#: ../source/methods.rst:591
+#: ../source/methods.rst:606
 msgid "Parameters"
 msgstr "Параметры:"
 
-#: ../source/methods.rst:596
+#: ../source/methods.rst:611
 msgid "Returns the list of all faces stored in database."
 msgstr "Данный метод возвращает список всех лиц в базе биометрических данных."
 
-#: ../source/methods.rst:649
+#: ../source/methods.rst:664
 msgid "Method /faces/gallery/<gallery> GET"
 msgstr "Метод /faces/gallery/<gallery> GET"
 
-#: ../source/methods.rst:651
+#: ../source/methods.rst:666
 msgid "Returns the list of all faces stored in a specified gallery."
 msgstr "Возвращает список всех лиц в базе данных."
 
-#: ../source/methods.rst:656
+#: ../source/methods.rst:671
 msgid "Method /meta GET"
 msgstr "Метод /meta GET"
 
-#: ../source/methods.rst:658
+#: ../source/methods.rst:673
 msgid ""
 "This method retrieves all the meta string stored in the database along "
 "with one of the associated faces. To get more faces call ``GET "
@@ -561,11 +573,11 @@ msgstr ""
 "лиц.  Для того чтобы получить все лица, связанные с той или иной строкой,"
 " используйте метод ``GET /v0/face/meta/<meta>``."
 
-#: ../source/methods.rst:662 ../source/methods.rst:844
+#: ../source/methods.rst:677 ../source/methods.rst:859
 msgid "This method doesn't accept any additional parameters"
 msgstr "Отсутствуют."
 
-#: ../source/methods.rst:666
+#: ../source/methods.rst:681
 msgid ""
 "A list of objects containing meta string, number of faces marked with "
 "this meta string, and JSON representation of the first face object marked"
@@ -575,23 +587,23 @@ msgstr ""
 "лиц, связанных с той или иной строкой, JSON-представление данных первого "
 "лица, связанного со строкой."
 
-#: ../source/methods.rst:727
+#: ../source/methods.rst:742
 msgid "Method /galleries GET"
 msgstr "Метод /galleries GET"
 
-#: ../source/methods.rst:729
+#: ../source/methods.rst:744
 msgid "List all your galleries."
 msgstr "Данный метод возвращает список всех существующих галерей в базе данных."
 
-#: ../source/methods.rst:733
+#: ../source/methods.rst:748
 msgid "A JSON dictionary with list of gallery ids"
 msgstr "Словарь JSON со списком имен (id) галерей."
 
-#: ../source/methods.rst:766
+#: ../source/methods.rst:781
 msgid "Method /galleries/<gallery> POST"
 msgstr "Метод /galleries/<gallery> POST"
 
-#: ../source/methods.rst:768
+#: ../source/methods.rst:783
 msgid ""
 "Creates a new gallery under a given name. The gallery name can contain "
 "English letters, numbers, underscore and minus sign (``[a-zA-Z0-9_-]+``)."
@@ -601,33 +613,33 @@ msgstr ""
 "содержать латинские буквы, числа, знак подчеркивания и минус "
 "([a-zA-Z0-9_-]+) и не может быть длиннее 48 символов."
 
-#: ../source/methods.rst:797
+#: ../source/methods.rst:812
 msgid "Method /galleries/<gallery> DELETE"
 msgstr "Метод /galleries/<gallery> DELETE"
 
-#: ../source/methods.rst:799
+#: ../source/methods.rst:814
 msgid "Deletes the gallery and all faces in it."
 msgstr "Данный метод удаляет галерею и все лица в ней."
 
-#: ../source/methods.rst:803
+#: ../source/methods.rst:818
 msgid "HTTP 204 No content."
 msgstr "HTTP 204 No content."
 
-#: ../source/methods.rst:825
+#: ../source/methods.rst:840
 msgid "Method /docs GET"
 msgstr "Метод /docs GET"
 
-#: ../source/methods.rst:827
+#: ../source/methods.rst:842
 msgid "Lists documented API versions. Available without authorization."
 msgstr ""
 "Данный метод возвращает список всех задокументированных версий API. "
 "Доступен без авторизации."
 
-#: ../source/methods.rst:832
+#: ../source/methods.rst:847
 msgid "Method /docs/<version> GET"
 msgstr "Метод /docs/<version> GET"
 
-#: ../source/methods.rst:834
+#: ../source/methods.rst:849
 msgid ""
 "Get documentation for specified API version. Available without "
 "authorization."
@@ -635,19 +647,19 @@ msgstr ""
 "Данный метод возвращает документацию к заданной версии API. Доступен без "
 "авторизации."
 
-#: ../source/methods.rst:840
+#: ../source/methods.rst:855
 msgid "Method /person/id/<id> GET"
 msgstr "Метод /person/id/<id> GET"
 
-#: ../source/methods.rst:848
+#: ../source/methods.rst:863
 msgid "A JSON representation of the person with id = FaceID"
 msgstr "Представление данных человека с заданным ``person_id`` в JSON."
 
-#: ../source/methods.rst:903
+#: ../source/methods.rst:918
 msgid "Method /history/search POST"
 msgstr "Метод /history/search POST"
 
-#: ../source/methods.rst:905
+#: ../source/methods.rst:920
 msgid ""
 "This method retrieves all events from camera history of the given "
 "parameters."
@@ -655,41 +667,41 @@ msgstr ""
 "Данный метод возвращает все события по видеокамере(ам), удовлетворяющие "
 "заданным условиям."
 
-#: ../source/methods.rst:910
+#: ../source/methods.rst:925
 msgid "``\"person_id\"`` [optional]: unique person id"
 msgstr ""
 "``\"person_id\"`` [опционально]: значение параметра ``person_id`` "
 "интересующего человека."
 
-#: ../source/methods.rst:911
+#: ../source/methods.rst:926
 msgid "``\"cam_ids\"`` [optional]: array of camera ids."
 msgstr "``\"cam_id\"`` [опционально]: массив id видеокамер."
 
-#: ../source/methods.rst:912
+#: ../source/methods.rst:927
 msgid ""
 "``\"start\"`` [optional]: search history interval, start time as ISO8601 "
 "string"
 msgstr "``\"start\"`` [опционально]: время начала событий в формате ISO8601."
 
-#: ../source/methods.rst:913
+#: ../source/methods.rst:928
 msgid "``\"end\"`` [option]: search history interval, end time as ISO8601 string"
 msgstr "``\"end\"`` [опционально]: время конца событий в формате ISO8601."
 
-#: ../source/methods.rst:914
+#: ../source/methods.rst:929
 msgid "``\"friend\"`` [optional]: friend or foe identification"
 msgstr "``\"friend\"`` [опционально]: является ли человек «своим»."
 
-#: ../source/methods.rst:915
+#: ../source/methods.rst:930
 msgid "``\"limit\"`` [optional]: records per page, if 0 (default) - unlimited"
 msgstr ""
 "``\"limit\"`` [опционально]: количество записей на странице, по умолчанию"
 " 0 — не ограничено."
 
-#: ../source/methods.rst:919
+#: ../source/methods.rst:934
 msgid "A list of history events."
 msgstr "Список всех событий истории."
 
-#: ../source/methods.rst:920
+#: ../source/methods.rst:935
 msgid ""
 "``next_page``: URL to the next page (path and query portion only). If no "
 "such field in response - no more pages exist."

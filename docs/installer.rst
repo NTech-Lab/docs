@@ -1,22 +1,29 @@
 .. _installer:
 
-Standalone Installer
-======================================================================
+Install from Console Installer
+---------------------------------------------------------------------
 
-To install FindFace Enterprise Server SDK in a standalone configuration, you can use the :program:`<findface-server-xxx>.run` file. Do the following:
+To install FindFace Enterprise Server SDK in a standalone configuration, you can use a developer-friendly console installer.
 
 .. warning::
-     The .run file cannot be used for FindFace Enterprise Server SDK update from version 2.3 or earlier.
+     The installer cannot be used to update FindFace Enterprise Server SDK from version 2.3 or earlier.
 
-#. Put the .run file into some directory on the designated host (for example, `/home/username`).
+.. seealso::
+   
+   * :ref:`install-server`
+   * :ref:`vm`
 
-#. From this directory, make the .run file executable.
+Do the following:
+
+#. Download the installer file ``<findface-server-xxx>.run``.
+#. Put the ``.run`` file into some directory on the designated host (for example, `/home/username`).
+#. From this directory, make the ``.run`` file executable.
 
    .. code::
 
        chmod +x <findface-server-xxx>.run
 
-#. Execute the .run file.
+#. Execute the ``.run`` file.
 
    .. include:: _inclusions/ntech_user_warning.rst
 
@@ -24,16 +31,16 @@ To install FindFace Enterprise Server SDK in a standalone configuration, you can
 
        sudo ./<findface-server-xxx>.run
 
-   The installer will perform several automated checks to ensure that the host meets the system requirements. After that, FindFace Enterprise Server SDK components will be automatically installed, configured and/or started in the following configuration:
+   The installer will perform several automated checks to ensure that the host meets the system requirements. After that, the FindFace Enterprise Server SDK components will be automatically installed, configured and/or started in the following configuration:
 
    +--------------------------+------------------------------------------------------------------------------------------------------+
    | Component                | Details                                                                                              |
    +==========================+======================================================================================================+
-   | findface-facenapi        | Installed and started with enabled and configured dynamic person creation and “friend or foe”        |
-   |                          | identification.                                                                                      |
+   | findface-facenapi        | Installed and started with enabled and configured :ref:`dynamic person creation <persons>` and       |
+   |                          | :ref:`“friend or foe” identification <friend>`.                                                      |
    +--------------------------+------------------------------------------------------------------------------------------------------+
    | findface-nnapi           | Installed and started with the number of instances ``N = min(cores, RAM/2Gb)/2`` and                 |
-   |                          | enabled and configured gender, age and emotions recognition.                                         |
+   |                          | enabled and configured :ref:`gender, age and emotions recognition <gae>`.                            |
    +--------------------------+------------------------------------------------------------------------------------------------------+
    | findface-server-tarantool| Installed and started with the number of tntapi shards: ``N = min(cores, RAM/2Gb)/2``                |
    | (tntapi)                 |                                                                                                      |
@@ -43,7 +50,7 @@ To install FindFace Enterprise Server SDK in a standalone configuration, you can
    +--------------------------+------------------------------------------------------------------------------------------------------+
    | ffupload                 | Installed and started.                                                                               |
    +--------------------------+------------------------------------------------------------------------------------------------------+
-   | fkvideo_detector 	      | Only installed. Use the command line interface or FindFace Web UI to manually start it. Before use,  |
+   | fkvideo_detector 	      | Only installed. Use the command line or FindFace Web UI to manually start it. Before use,            |
    |                          | consult the :ref:`component documentation <video>`.                                                  |
    +--------------------------+------------------------------------------------------------------------------------------------------+
    | Extraction API 	      | Only installed. Exclusively for experienced users. Before use, be sure to consult                    |
@@ -53,7 +60,7 @@ To install FindFace Enterprise Server SDK in a standalone configuration, you can
    +--------------------------+------------------------------------------------------------------------------------------------------+
    | FindFace Web UI          | Installed and started.                                                                               |
    +--------------------------+------------------------------------------------------------------------------------------------------+  
-   | findface-mass-enroll     | Only installed. Use the command line interface to work with it. Before use,                          |
+   | findface-mass-enroll     | Only installed. Use the command line to work with it. Before use,                                    |
    |                          | consult the :ref:`component documentation <bulk-face>`.                                              |
    +--------------------------+------------------------------------------------------------------------------------------------------+
    | nginx                    | Installed and started.                                                                               |
@@ -85,8 +92,9 @@ To install FindFace Enterprise Server SDK in a standalone configuration, you can
          findface-facenapi.token
         user@ubuntu:~$
 
-#. Upload a license file via the NTLS web interface ``http://<Host_IP_address>:3185/#/``. To access the NTLS web interface, use the credentials provided in the console. 
+#. Upload the FindFace Enterprise Server SDK license file via the NTLS web interface ``http://<Host_IP_address>:3185/#/``. To access the NTLS web interface, use the credentials provided in the console. 
 
    .. note::
-       Depending on whether the host belongs to a network, the host IP address in the links to FindFace web services is provided either as ``127.0.0.1``, or ``IP address in the network``.
+      The host IP address is shown in the links to FindFace web services in the following way: as an external IP address if the host belongs to a network, or ``127.0.0.1`` otherwise.
+
 

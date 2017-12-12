@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-16 13:09+0300\n"
-"PO-Revision-Date: 2017-11-19 14:21+0300\n"
+"POT-Creation-Date: 2017-12-11 17:48+0300\n"
+"PO-Revision-Date: 2017-12-11 18:02+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
 "Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
@@ -42,8 +42,8 @@ msgid ""
 "Prior to installing FindFace Enterprise Server SDK, ensure that the "
 "host(s) meet the following minimum requirements:"
 msgstr ""
-"Перед развертыванием Сервера FindFace убедитесь, что физические серверы, на "
-"которых будут установлены его компоненты, удовлетворяют следующим "
+"Перед развертыванием Сервера FindFace убедитесь, что физические серверы, "
+"на которых будут установлены его компоненты, удовлетворяют следующим "
 "минимальным требованиям:"
 
 #: ../source/system_requirements.rst:24
@@ -56,19 +56,19 @@ msgid ""
 msgstr ""
 "FindFace Enterprise Server SDK может быть развернут на :ref:`одиночном "
 "физическом сервере <standalone>`, если количество лиц в базе данных "
-"ориентировочно не превышает ``1 000 000``. Иначе FindFace Enterprise Server "
-"SDK должен быть развернут в :ref:`кластерном окружении <cluster>` с "
-"настройкой :ref:`быстрого поиска <fast-index>` по индексу."
+"ориентировочно не превышает ``1 000 000``. Иначе FindFace Enterprise "
+"Server SDK должен быть развернут в :ref:`кластерном окружении <cluster>` "
+"с настройкой :ref:`быстрого поиска <fast-index>` по индексу."
 
-#: ../source/system_requirements.rst:28 ../source/system_requirements.rst:120
+#: ../source/system_requirements.rst:28 ../source/system_requirements.rst:119
 msgid "Requirement"
 msgstr "Требование"
 
-#: ../source/system_requirements.rst:28 ../source/system_requirements.rst:120
+#: ../source/system_requirements.rst:28 ../source/system_requirements.rst:119
 msgid "Description"
 msgstr "Описание"
 
-#: ../source/system_requirements.rst:30 ../source/system_requirements.rst:122
+#: ../source/system_requirements.rst:30 ../source/system_requirements.rst:121
 msgid "CPU"
 msgstr "Процессор"
 
@@ -77,11 +77,11 @@ msgid ""
 "x86-64 CPU (Intel), >2.0 Ghz, >2 cores. The CPU AVX support is required "
 "for operation of all the components, except findface-upload."
 msgstr ""
-"x86-64 CPU (Intel), >2.0 ГГц, >2 ядер. Для работы всех компонентов Сервера "
-"FindFace, кроме ``findface-upload``, необходимо, чтобы процессор поддерживал "
-"расширение набора инструкций AVX."
+"x86-64 CPU (Intel), >2.0 ГГц, >2 ядер. Для работы всех компонентов "
+"Сервера FindFace, кроме ``findface-upload``, необходимо, чтобы процессор "
+"поддерживал расширение набора инструкций AVX."
 
-#: ../source/system_requirements.rst:34 ../source/system_requirements.rst:124
+#: ../source/system_requirements.rst:34 ../source/system_requirements.rst:123
 msgid "RAM"
 msgstr "Оперативная память"
 
@@ -115,42 +115,41 @@ msgid ""
 "for Tarantool (by default 20x3=60 GB) and 24 GB for MongoDB. To store all"
 " uploaded images via findface-upload: size of all uploaded images + 10%"
 msgstr ""
-"Хранение ``10 000 000`` лиц в MongoDB требует 24 ГБ, в Tarantool ~20x[кол-во "
-"снапшотов для каждого шарда] ГБ (по умолчанию, 20x3=60 ГБ).Для хранения всех "
-"загруженных изображений с помощью компонента ``findface-upload``: суммарный "
-"размер всех загруженных изображений + 10%."
+"Хранение ``10 000 000`` лиц в MongoDB требует 24 ГБ, в Tarantool "
+"~20x[кол-во снапшотов для каждого шарда] ГБ (по умолчанию, 20x3=60 "
+"ГБ).Для хранения всех загруженных изображений с помощью компонента "
+"``findface-upload``: суммарный размер всех загруженных изображений + 10%."
 
-#: ../source/system_requirements.rst:48 ../source/system_requirements.rst:126
+#: ../source/system_requirements.rst:48 ../source/system_requirements.rst:125
 msgid "Operating system"
 msgstr "Операционная система"
 
 #: ../source/system_requirements.rst:48
-msgid "Ubuntu 16.04 LTS. The 32-bit version is not supported."
+msgid "Ubuntu 16.04 LTS (only x64)"
 msgstr "Ubuntu 16.04 LTS (только 64-битная версия)."
 
-#: ../source/system_requirements.rst:51
+#: ../source/system_requirements.rst:50
 msgid "Virtual machine support"
 msgstr "Поддержка виртуальных машин"
 
-#: ../source/system_requirements.rst:51
-msgid "VMware: vSphere 5.0 or later."
-msgstr "VMware vSphere 5.0 и более поздние версии."
+#: ../source/system_requirements.rst:50
+msgid "VMware"
+msgstr ""
 
-#: ../source/system_requirements.rst:57
+#: ../source/system_requirements.rst:56
 msgid ""
 "Here you can see the FindFace Enterprise Server SDK memory usage "
 "benchmark results. Use these data to calculate the RAM size you need."
 msgstr ""
-"Ниже приведены результаты эталонного теста использования памяти компонентами "
-"FindFace Enterprise Server SDK. Используйте эти данные для вычисления "
-"нужного вам объема RAM."
+"Ниже приведены результаты эталонного теста использования памяти "
+"компонентами FindFace Enterprise Server SDK. Используйте эти данные для "
+"вычисления нужного вам объема RAM."
 
-#: ../source/system_requirements.rst:60
+#: ../source/system_requirements.rst:59
 msgid "Memory usage may slightly vary from test to test."
-msgstr ""
-"Использование памяти может незначительно флуктуировать от теста к тесту."
+msgstr "Использование памяти может незначительно флуктуировать от теста к тесту."
 
-#: ../source/system_requirements.rst:63
+#: ../source/system_requirements.rst:62
 msgid ""
 "Depending on your needs, :ref:`adjust <tntapi>` the Tarantool maximum "
 "memory usage at ``/etc/tarantool/instances.enabled/FindFace.lua``."
@@ -159,15 +158,15 @@ msgstr ""
 "потребление памяти базой данных Tarantool в файле "
 "``/etc/tarantool/instances.enabled/FindFace.lua``."
 
-#: ../source/system_requirements.rst:65
+#: ../source/system_requirements.rst:64
 msgid "The testing setup is the following:"
 msgstr "Эталонный тест выполнен со следующими настройками:"
 
-#: ../source/system_requirements.rst:67
+#: ../source/system_requirements.rst:66
 msgid "Facen :ref:`model <models>`: ``apricot_320``"
 msgstr ":ref:`Модель <models>` биометрического образца: ``apricot_320``."
 
-#: ../source/system_requirements.rst:68
+#: ../source/system_requirements.rst:67
 msgid ""
 "Models for :ref:`gender, age and emotions recognition <gae>` (GAE in the "
 "table): ``fr_1_gender0``, ``fr_1_age0``, ``emotion_1``"
@@ -175,212 +174,212 @@ msgstr ""
 "Модели для :ref:`распознавания пола, возраста и эмоций <gae>` (GAE в "
 "таблице): ``fr_1_gender0``, ``fr_1_age0``, ``emotion_1``."
 
-#: ../source/system_requirements.rst:69
+#: ../source/system_requirements.rst:68
 msgid ""
 "Models used in :ref:`extraction-api <extraction-api>`: ``apricot_320``, "
 "``fr_1_gender0``, ``fr_1_age0``, ``emotion_1``"
 msgstr ""
-"Модели, использованные в компоненте :ref:`extraction-api <extraction-api>`: "
-"``apricot_320``, ``fr_1_gender0``, ``fr_1_age0``, ``emotion_1``."
+"Модели, использованные в компоненте :ref:`extraction-api <extraction-"
+"api>`: ``apricot_320``, ``fr_1_gender0``, ``fr_1_age0``, ``emotion_1``."
 
-#: ../source/system_requirements.rst:70
+#: ../source/system_requirements.rst:69
 msgid ""
 "``MongoDB``, ``Tarantool``: facens are stored in one gallery. If there "
 "are 2 or more galleries with facens, multiply the given RAM amount by the"
 " relevant number of galleries."
 msgstr ""
-"MongoDB, Tarantool: для хранения биометрических образцов используется только "
-"1 галерея. Если в вашем случае таких галерей несколько, умножьте приведенное "
-"потребление RAM на соответствующее количество галерей."
+"MongoDB, Tarantool: для хранения биометрических образцов используется "
+"только 1 галерея. Если в вашем случае таких галерей несколько, умножьте "
+"приведенное потребление RAM на соответствующее количество галерей."
 
-#: ../source/system_requirements.rst:74
+#: ../source/system_requirements.rst:73
 msgid "Number of faces"
 msgstr "Количество лиц"
 
-#: ../source/system_requirements.rst:74
+#: ../source/system_requirements.rst:73
 msgid "RAM consumption by components, MB"
 msgstr "Потребление RAM по компонентам, MБ"
 
-#: ../source/system_requirements.rst:76
+#: ../source/system_requirements.rst:75
 msgid "MongoDB"
 msgstr "MongoDB"
 
-#: ../source/system_requirements.rst:76
+#: ../source/system_requirements.rst:75
 msgid "Tarantool"
 msgstr "Tarantool"
 
-#: ../source/system_requirements.rst:76
+#: ../source/system_requirements.rst:75
 msgid "nnapi"
 msgstr "nnapi"
 
-#: ../source/system_requirements.rst:76
+#: ../source/system_requirements.rst:75
 msgid "nnapi + GAE"
 msgstr "nnapi + GAE"
 
-#: ../source/system_requirements.rst:76
+#: ../source/system_requirements.rst:75
 msgid "extraction-api"
 msgstr "extraction-api"
 
-#: ../source/system_requirements.rst:78
+#: ../source/system_requirements.rst:77
 msgid "0 (own needs)"
 msgstr "0 (собственные нужды)"
 
-#: ../source/system_requirements.rst:78
+#: ../source/system_requirements.rst:77
 msgid "~70"
 msgstr "~70"
 
-#: ../source/system_requirements.rst:78
+#: ../source/system_requirements.rst:77
 msgid "~77"
 msgstr "~77"
 
-#: ../source/system_requirements.rst:78
+#: ../source/system_requirements.rst:77
 msgid "~265"
 msgstr "~265"
 
-#: ../source/system_requirements.rst:78
+#: ../source/system_requirements.rst:77
 msgid "~1000"
 msgstr "~1000"
 
-#: ../source/system_requirements.rst:78
+#: ../source/system_requirements.rst:77
 msgid "~1GB (1 Core)/~7GB (8 Cores) (up to 10,5 under load)"
 msgstr "~1ГБ (1 ядро)/~7ГБ (8 ядер) (до 10,5 под нагрузкой)"
 
-#: ../source/system_requirements.rst:80
+#: ../source/system_requirements.rst:79
 msgid "50,000"
 msgstr "50000"
 
-#: ../source/system_requirements.rst:80
+#: ../source/system_requirements.rst:79
 msgid "~181"
 msgstr "~181"
 
-#: ../source/system_requirements.rst:80
+#: ../source/system_requirements.rst:79
 msgid "~189"
 msgstr "~189"
 
-#: ../source/system_requirements.rst:80 ../source/system_requirements.rst:82
-#: ../source/system_requirements.rst:84 ../source/system_requirements.rst:86
+#: ../source/system_requirements.rst:79 ../source/system_requirements.rst:81
+#: ../source/system_requirements.rst:83 ../source/system_requirements.rst:85
 msgid "~400"
 msgstr "~400"
 
-#: ../source/system_requirements.rst:80 ../source/system_requirements.rst:82
-#: ../source/system_requirements.rst:84 ../source/system_requirements.rst:86
+#: ../source/system_requirements.rst:79 ../source/system_requirements.rst:81
+#: ../source/system_requirements.rst:83 ../source/system_requirements.rst:85
 msgid "~1400"
 msgstr "~1400"
 
-#: ../source/system_requirements.rst:82
+#: ../source/system_requirements.rst:81
 msgid "100,000"
 msgstr "100000"
 
-#: ../source/system_requirements.rst:82
+#: ../source/system_requirements.rst:81
 msgid "~294"
 msgstr "~294"
 
-#: ../source/system_requirements.rst:82
+#: ../source/system_requirements.rst:81
 msgid "~263"
 msgstr "~263"
 
-#: ../source/system_requirements.rst:84
+#: ../source/system_requirements.rst:83
 msgid "500,000"
 msgstr "500000"
 
-#: ../source/system_requirements.rst:84
+#: ../source/system_requirements.rst:83
 msgid "~1190"
 msgstr "~1190"
 
-#: ../source/system_requirements.rst:84
+#: ../source/system_requirements.rst:83
 msgid "~1013"
 msgstr "~1013"
 
-#: ../source/system_requirements.rst:86
+#: ../source/system_requirements.rst:85
 msgid "1,000,000"
 msgstr "1000000"
 
-#: ../source/system_requirements.rst:86
+#: ../source/system_requirements.rst:85
 msgid "~2310"
 msgstr "~2310"
 
-#: ../source/system_requirements.rst:86
+#: ../source/system_requirements.rst:85
 msgid "~1943"
 msgstr "~1943"
 
-#: ../source/system_requirements.rst:94
+#: ../source/system_requirements.rst:93
 msgid "Supported Images"
 msgstr "Форматы изображений"
 
-#: ../source/system_requirements.rst:96
+#: ../source/system_requirements.rst:95
 msgid "FindFace Enterprise Server SDK supports the following image formats:"
-msgstr ""
-"FindFace Enterprise Server SDK поддерживает следующие форматы изображений:"
+msgstr "FindFace Enterprise Server SDK поддерживает следующие форматы изображений:"
 
-#: ../source/system_requirements.rst:98
+#: ../source/system_requirements.rst:97
 msgid "JPEG,"
 msgstr "JPEG,"
 
-#: ../source/system_requirements.rst:99
+#: ../source/system_requirements.rst:98
 msgid "PNG,"
 msgstr "PNG,"
 
-#: ../source/system_requirements.rst:100
+#: ../source/system_requirements.rst:99
 msgid "WebP."
 msgstr "WebP."
 
-#: ../source/system_requirements.rst:102
+#: ../source/system_requirements.rst:101
 msgid ""
 "The maximum image size is 10 MB. The minimum distance between pupils is "
 "40 px."
 msgstr ""
-"Максимальный размер изображения 10 МБ. Минимальное расстояние между зрачками "
-"40 пикселей."
+"Максимальный размер изображения 10 МБ. Минимальное расстояние между "
+"зрачками 40 пикселей."
 
-#: ../source/system_requirements.rst:108
+#: ../source/system_requirements.rst:107
 msgid "Video Face Detection"
 msgstr "Работа с видео"
 
-#: ../source/system_requirements.rst:111
+#: ../source/system_requirements.rst:110
 msgid "Video Face Detector Host"
 msgstr "Сервер под видеодетектор"
 
-#: ../source/system_requirements.rst:113
+#: ../source/system_requirements.rst:112
 msgid ""
 "A host for the :ref:`video face detection <video>` component must meet "
 "the following requirements (given that a video stream is 1 x 720p "
 "(1280×720) at 25FPS playback speed):"
 msgstr ""
-"Сервер, на котором установлен компонент :ref:`видеодетектор лиц <video>`, "
-"должен отвечать следующим требованиям (считая, что видеопоток 1 x 720p "
+"Сервер, на котором установлен компонент :ref:`видеодетектор лиц <video>`,"
+" должен отвечать следующим требованиям (считая, что видеопоток 1 x 720p "
 "(1280×720) 25 FPS):"
 
-#: ../source/system_requirements.rst:116
+#: ../source/system_requirements.rst:115
 msgid ""
 "Requirements depend on motion activity and the number of faces in video, "
 "the video face detector settings and FindFace Enterprise Server SDK "
 "overall load. To select an optimal configuration, contact our experts by "
 "info@ntechlab.com."
 msgstr ""
-"Требования в общем случае определяются интенсивностью движения и количеством "
-"лиц в кадре, настройками компонента, а также общей нагрузкой Сервера анализа "
-"и распознавания биометрических данных. Для выбора оптимальной конфигурации "
-"свяжитесь с нашими специалистами по адресу info@ntechlab.com."
+"Требования в общем случае определяются интенсивностью движения и "
+"количеством лиц в кадре, настройками компонента, а также общей нагрузкой "
+"Сервера анализа и распознавания биометрических данных. Для выбора "
+"оптимальной конфигурации свяжитесь с нашими специалистами по адресу "
+"info@ntechlab.com."
 
-#: ../source/system_requirements.rst:122
+#: ../source/system_requirements.rst:121
 msgid "≥ INTEL Core i5 6400 (2 physical core CPU). AVX support required."
 msgstr ""
-"≥ INTEL Core i5 6400 (CPU с 2-мя физическими ядрами). Необходима поддержка "
-"AVX."
+"≥ INTEL Core i5 6400 (CPU с 2-мя физическими ядрами). Необходима "
+"поддержка AVX."
 
-#: ../source/system_requirements.rst:124
+#: ../source/system_requirements.rst:123
 msgid "4 GB in the real-time mode."
 msgstr "4 ГБ в режиме реального времени."
 
-#: ../source/system_requirements.rst:126
+#: ../source/system_requirements.rst:125
 msgid "Ubuntu 16.04 LTS (only x64)."
 msgstr "Ubuntu 16.04 LTS (только 64-битная версия)."
 
-#: ../source/system_requirements.rst:131
+#: ../source/system_requirements.rst:130
 msgid "Supported Video File Formats and Codecs"
 msgstr "Форматы видеофайлов и кодеков"
 
-#: ../source/system_requirements.rst:133
+#: ../source/system_requirements.rst:132
 msgid ""
 "The fkvideo_detector component supports all video file formats and codecs"
 " that can be decoded by `FFmpeg <https://www.ffmpeg.org/general.html"
@@ -388,14 +387,14 @@ msgid ""
 msgstr ""
 "Компонент ``fkvideo_detector`` поддерживает все форматы видеофайлов и "
 "кодеков, которые могут быть декодированы `FFmpeg "
-"<https://www.ffmpeg.org/general.html#Supported-File-Formats_002c-Codecs-or-"
-"Features>`__."
+"<https://www.ffmpeg.org/general.html#Supported-File-Formats_002c-Codecs-"
+"or-Features>`__."
 
-#: ../source/system_requirements.rst:137
+#: ../source/system_requirements.rst:136
 msgid "FindFace Web User Interface"
 msgstr "Поддержка веб-интерфейса"
 
-#: ../source/system_requirements.rst:139
+#: ../source/system_requirements.rst:138
 msgid ""
 "To process video in the FindFace Enterprise Server SDK :ref:`web user "
 "interface <ffui>`, its host should meet the same requirements as for the "
@@ -404,3 +403,9 @@ msgstr ""
 "Для обработки видео в :ref:`веб-интерфейсе FindFace <ffui>` физический "
 "сервер должен отвечать :ref:`требованиям к видеодетектору лиц <video-"
 "requirements>`."
+
+#~ msgid "Ubuntu 16.04 LTS. The 32-bit version is not supported."
+#~ msgstr "Ubuntu 16.04 LTS (только 64-битная версия)."
+
+#~ msgid "VMware: vSphere 5.0 or later."
+#~ msgstr "VMware vSphere 5.0 и более поздние версии."

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-17 13:12+0300\n"
-"PO-Revision-Date: 2017-11-17 16:28+0300\n"
+"POT-Creation-Date: 2017-12-12 15:54+0300\n"
+"PO-Revision-Date: 2017-12-12 16:14+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
 "Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../source/install.rst:4
-msgid "Install FindFace Server"
-msgstr "Установка компонентов Сервера"
+msgid "Install Step-By-Step"
+msgstr "Пошаговая установка"
 
 #: ../source/install.rst:6
 msgid ""
@@ -37,10 +37,12 @@ msgstr ""
 #: ../source/install.rst:9
 msgid ""
 "Standalone installation can also be done from a developer-friendly "
-":ref:`installer <installer>`."
+":ref:`console installer <installer>` or as a fully pre-configured "
+":ref:`virtual machine image <vm>`."
 msgstr ""
 "Установка на одиночном физическом сервере также может быть выполнена с "
-"помощью :ref:`консольного инсталлятора <installer>`."
+"помощью :ref:`консольного инсталлятора <installer>` или в виде полностью "
+"настроенного готового к использованию :ref:`образа виртуальной машины <vm>`."
 
 #: ../source/install.rst:12
 msgid "In this section:"
@@ -57,9 +59,9 @@ msgid ""
 "distributable packages from your NTechLab manager. To prepare the "
 "packages for installation, do the following:"
 msgstr ""
-"Для получения установочных пакетов FindFace Enterprise Server SDK свяжитесь "
-"со своим менеджером компании NtechLab. Для того чтобы подготовить пакеты к "
-"установке, выполните следующие действия:"
+"Для получения установочных пакетов FindFace Enterprise Server SDK "
+"свяжитесь со своим менеджером компании NtechLab. Для того чтобы "
+"подготовить пакеты к установке, выполните следующие действия:"
 
 #: ../source/_inclusions/ntech_user_warning.rst:3
 msgid ""
@@ -68,8 +70,8 @@ msgid ""
 "system."
 msgstr ""
 "На данном этапе будет автоматически создан пользователь ``ntech``. Во "
-"избежание конфликта, убедитесь, что пользователь с таким именем отсутствует "
-"в системе."
+"избежание конфликта, убедитесь, что пользователь с таким именем "
+"отсутствует в системе."
 
 #: ../source/prepare.rst:10
 msgid "Unpack the package with components on each designated host."
@@ -105,9 +107,10 @@ msgid ""
 "diagram below."
 msgstr ""
 "Вы получаете файл лицензии вместе с установочными пакетами FindFace "
-"Enterprise Server SDK от менеджера NtechLab. Если вы выберите лицензирование "
-"в закрытой сети, вам также будет отправлен ключ аппаратной защиты Guardant. "
-"Принцип лицензирования FindFace Enterprise Server SDK показан на схеме ниже:"
+"Enterprise Server SDK от менеджера NtechLab. Если вы выберите "
+"лицензирование в закрытой сети, вам также будет отправлен ключ аппаратной"
+" защиты Guardant. Принцип лицензирования FindFace Enterprise Server SDK "
+"показан на схеме ниже:"
 
 #: ../source/licensing.rst:8
 msgid "|licensing_en|"
@@ -135,8 +138,7 @@ msgstr ""
 
 #: ../source/licensing.rst:20
 msgid "To install and configure NTLS, do the following:"
-msgstr ""
-"Для того чтобы установить и настроить NTLS, выполните следующие действия:"
+msgstr "Для того чтобы установить и настроить NTLS, выполните следующие действия:"
 
 #: ../source/licensing.rst:22
 msgid "Install the NTLS component::"
@@ -150,10 +152,10 @@ msgid ""
 "configuration file, execute::"
 msgstr ""
 "В файле конфигурации NTLS вы можете изменить папку для хранения файла "
-"лицензии и при необходимости указать IP-адрес прокси-сервера для доступа в "
-"Интернет. Вы также можете настроить удаленный доступ к веб-интерфейсу NTLS, "
-"используемому для управления лицензией. Для того чтобы открыть файл "
-"конфигурации NTLS, выполните команду::"
+"лицензии и при необходимости указать IP-адрес прокси-сервера для доступа "
+"в Интернет. Вы также можете настроить удаленный доступ к веб-интерфейсу "
+"NTLS, используемому для управления лицензией. Для того чтобы открыть файл"
+" конфигурации NTLS, выполните команду::"
 
 #: ../source/licensing.rst:32
 msgid ""
@@ -180,9 +182,9 @@ msgid ""
 "parameter::"
 msgstr ""
 "По умолчанию доступ в веб-интерфейс NTLS возможен с любого удаленного "
-"сервера (``ui = 0.0.0.0:3185``). Для того чтобы обеспечить доступ к веб-"
-"интерфейсу NTLS только с определенного IP-адреса, отредактируйте параметр "
-"``ui``::"
+"сервера (``ui = 0.0.0.0:3185``). Для того чтобы обеспечить доступ к "
+"веб-интерфейсу NTLS только с определенного IP-адреса, отредактируйте "
+"параметр ``ui``::"
 
 #: ../source/licensing.rst:44
 msgid "Enable the NTLS service autostart and launch the service::"
@@ -195,9 +197,9 @@ msgid ""
 "interface to consult your license information, and upgrade or extend the "
 "license."
 msgstr ""
-"Загрузите файл лицензии в веб-интерфейсе NTLS по адресу ``http://<IP-адрес "
-"NTLS>:3185/#/``. Вы также можете использовать веб-интерфейс NTLS для "
-"продления и апгрейда лицензии."
+"Загрузите файл лицензии в веб-интерфейсе NTLS по адресу "
+"``http://<IP-адрес NTLS>:3185/#/``. Вы также можете использовать "
+"веб-интерфейс NTLS для продления и апгрейда лицензии."
 
 #: ../source/licensing.rst:52
 msgid "For on-premise licensing, insert the Guardant dongle into a USB port."
@@ -211,9 +213,13 @@ msgid ""
 "host in their configuration files after installation."
 msgstr ""
 "Если лицензируемые компоненты (``findface-nnapi``, ``tntapi``, "
-"``fkvideo_detector`` и ``extraction-api``) будут установлены на удаленных "
-"серверах, обязательно укажите IP-адрес сервера NTLS в их файлах конфигурации "
-"после установки."
+"``fkvideo_detector`` и ``extraction-api``) будут установлены на удаленных"
+" серверах, обязательно укажите IP-адрес сервера NTLS в их файлах "
+"конфигурации после установки."
+
+#: ../source/licensing.rst:59
+msgid ":ref:`ntls`"
+msgstr ":ref:`ntls`"
 
 #: ../source/components.rst:2
 msgid "Install Components"
@@ -235,8 +241,7 @@ msgstr "Установка findface-facenapi"
 
 #: ../source/facenapi.rst:6
 msgid "Install and configure the ``findface-facenapi`` component as follows:"
-msgstr ""
-"Установите и настройте компонент ``findface-facenapi`` следующим образом:"
+msgstr "Установите и настройте компонент ``findface-facenapi`` следующим образом:"
 
 #: ../source/facenapi.rst:9 ../source/nnapi.rst:9
 msgid "Install the component."
@@ -247,8 +252,8 @@ msgid ""
 "If MongoDB is installed on a remote host, specify its IP address in the "
 "``findface-facenapi`` configuration file."
 msgstr ""
-"Если база данных MongoDB установлена на удаленном сервере, укажите его IP "
-"адрес в файле конфигурации ``findface-facenapi``."
+"Если база данных MongoDB установлена на удаленном сервере, укажите его IP"
+" адрес в файле конфигурации ``findface-facenapi``."
 
 #: ../source/facenapi.rst:24
 msgid ""
@@ -258,8 +263,8 @@ msgid ""
 msgstr ""
 "Проверьте работоспособность компонента. Для этого вызовите приложение "
 "``findface-facenapi``, выполнив приведенную ниже команду. После вызова "
-"подождите минуту. Если ошибок не обнаружено, верните контроль над командной "
-"строкой, нажав сочетание клавиш :kbd:`Ctrl+C`."
+"подождите минуту. Если ошибок не обнаружено, верните контроль над "
+"командной строкой, нажав сочетание клавиш :kbd:`Ctrl+C`."
 
 #: ../source/facenapi.rst:26
 msgid "If MongoDB is installed on the same host, execute:"
@@ -276,7 +281,8 @@ msgid ""
 "Check if the ``findface-facenapi`` service autostart at system startup is"
 " disabled."
 msgstr ""
-"Проверьте, не добавлен ли сервис ``findface-facenapi`` в автозагрузку Ubuntu."
+"Проверьте, не добавлен ли сервис ``findface-facenapi`` в автозагрузку "
+"Ubuntu."
 
 #: ../source/facenapi.rst:42 ../source/nnapi.rst:36
 msgid "Enable the service autostart and launch the service."
@@ -287,8 +293,8 @@ msgid ""
 "Make sure that the service is up and running. The command will return a "
 "service description, a status (should be Active), path and running time."
 msgstr ""
-"Убедитесь, что сервис активен. Команда вернет описание сервиса, его статус ("
-"должен быть Активен), путь и длительность текущей сессии."
+"Убедитесь, что сервис активен. Команда вернет описание сервиса, его "
+"статус (должен быть Активен), путь и длительность текущей сессии."
 
 #: ../source/facenapi.rst:56
 msgid "You can view the ``findface-facenapi`` :ref:`logs <logs>` by executing:"
@@ -317,8 +323,8 @@ msgid ""
 "If :ref:`NTLS <licensing>` is installed on a remote host, specify its IP "
 "address in the ``findface-nnapi`` configuration file."
 msgstr ""
-"Если :ref:`NTLS <licensing>` установлен на удаленном сервере, укажите его IP "
-"адрес в файле конфигурации ``findface-nnapi``."
+"Если :ref:`NTLS <licensing>` установлен на удаленном сервере, укажите его"
+" IP адрес в файле конфигурации ``findface-nnapi``."
 
 #: ../source/nnapi.rst:24
 msgid ""
@@ -328,21 +334,20 @@ msgid ""
 msgstr ""
 "Проверьте работоспособность компонента. Для этого вызовите приложение "
 "``findface-nnapi``, выполнив приведенную ниже команду. После вызова "
-"подождите минуту. Если ошибок не обнаружено, верните контроль над командной "
-"строкой, нажав сочетание клавиш :kbd:`Ctrl+C`."
+"подождите минуту. Если ошибок не обнаружено, верните контроль над "
+"командной строкой, нажав сочетание клавиш :kbd:`Ctrl+C`."
 
 #: ../source/nnapi.rst:30
 msgid ""
 "Check if the ``findface-nnapi`` service autostart at system startup is "
 "disabled."
-msgstr ""
-"Проверьте, не добавлен ли сервис ``findface-nnapi`` в автозагрузку Ubuntu."
+msgstr "Проверьте, не добавлен ли сервис ``findface-nnapi`` в автозагрузку Ubuntu."
 
 #: ../source/nnapi.rst:50
 msgid "You can view the ``findface-nnapi`` :ref:`logs <logs>` by executing:"
 msgstr ""
-"Для того чтобы отобразить :ref:`логи <logs>` ``findface-nnapi``, выполните "
-"команду:"
+"Для того чтобы отобразить :ref:`логи <logs>` ``findface-nnapi``, "
+"выполните команду:"
 
 #: ../source/ffupload.rst:4
 msgid "Install findface-upload"
@@ -354,9 +359,9 @@ msgid ""
 " as such Server artifacts as face thumbnails and normalized images, "
 "install and configure the ``findface-upload`` component."
 msgstr ""
-"Для хранения на Сервере FindFace всех обработанных исходных изображений, а "
-"также таких артефактов Сервера, как миниатюры и нормализованные изображения "
-"лиц, установите и настройте компонент ``findface-upload``."
+"Для хранения на Сервере FindFace всех обработанных исходных изображений, "
+"а также таких артефактов Сервера, как миниатюры и нормализованные "
+"изображения лиц, установите и настройте компонент ``findface-upload``."
 
 #: ../source/ffupload.rst:9
 msgid ""
@@ -383,17 +388,16 @@ msgid ""
 "content at ``http://127.0.0.1:3333/uploads/`` in your browser. Make sure "
 "that this address is available."
 msgstr ""
-"По умолчанию исходные изображения, миниатюры и нормализованные изображения "
-"лиц хранятся в папке ``/var/lib/ffupload/uploads/``. Вы можете просмотреть "
-"содержимое папки прямо в браузере по адресу "
+"По умолчанию исходные изображения, миниатюры и нормализованные "
+"изображения лиц хранятся в папке ``/var/lib/ffupload/uploads/``. Вы "
+"можете просмотреть содержимое папки прямо в браузере по адресу "
 "``http://127.0.0.1:3333/uploads/``. Убедитесь, что этот адрес доступен."
 
 #: ../source/ffupload.rst:26
 msgid ""
 "You will have to specify it when :ref:`configuring network <configure-"
 "network>`."
-msgstr ""
-"Вам потребуется указать его в :ref:`настройках сети <configure-network>`."
+msgstr "Вам потребуется указать его в :ref:`настройках сети <configure-network>`."
 
 #: ../source/tntapi.rst:4
 msgid "Install tntapi"
@@ -411,22 +415,23 @@ msgid ""
 " the number of shards has to be calculated depending on several "
 "parameters (see below)."
 msgstr ""
-"Компонент ``tntapi`` соединяет базу данных Tarantool и компонент ``findface-"
-"facenapi``, передавая результаты поиска от базы данных в ``findface-"
-"facenapi`` для дальнейшей обработки. Для увеличения скорости поиска на "
-"каждом сервере с базой данных ``Tarantool`` могут быть созданы "
-"многочисленные сегменты (шарды) ``tntapi``. Их параллельное функционирование "
-"приводит к значительному увеличению производительности. Каждый шард может "
-"обрабатывать приблизительно до ``10 000 000``  лиц. Если FindFace Enterprise "
-"Server SDK развертывается на одном сервере, одного шарда, созданного по "
-"умолчанию, будет достаточно. При развертывании в кластерной среде количество "
-"шардов рассчитывается в зависимости от нескольких параметров (см. ниже)."
+"Компонент ``tntapi`` соединяет базу данных Tarantool и компонент "
+"``findface-facenapi``, передавая результаты поиска от базы данных в "
+"``findface-facenapi`` для дальнейшей обработки. Для увеличения скорости "
+"поиска на каждом сервере с базой данных ``Tarantool`` могут быть созданы "
+"многочисленные сегменты (шарды) ``tntapi``. Их параллельное "
+"функционирование приводит к значительному увеличению производительности. "
+"Каждый шард может обрабатывать приблизительно до ``10 000 000``  лиц. "
+"Если FindFace Enterprise Server SDK развертывается на одном сервере, "
+"одного шарда, созданного по умолчанию, будет достаточно. При "
+"развертывании в кластерной среде количество шардов рассчитывается в "
+"зависимости от нескольких параметров (см. ниже)."
 
 #: ../source/tntapi_standalone.rst:4
 msgid "Install tntapi standalone"
 msgstr "Установка tntapi на одном сервере"
 
-#: ../source/tntapi_cluster.rst:4 ../source/tntapi_standalone.rst:6
+#: ../source/tntapi_cluster.rst:6 ../source/tntapi_standalone.rst:6
 msgid "Install and configure the ``tntapi`` component as follows:"
 msgstr "Установите и настройте компонент ``findface-nnapi`` следующим образом:"
 
@@ -441,7 +446,8 @@ msgstr ""
 #: ../source/tntapi_standalone.rst:15
 msgid "Disable the Tarantool example service autostart and stop the service."
 msgstr ""
-"Удалите тестовый сервис Tarantool из автозагрузки Ubuntu и остановите его. "
+"Удалите тестовый сервис Tarantool из автозагрузки Ubuntu и остановите "
+"его. "
 
 #: ../source/tntapi_standalone.rst:21
 msgid ""
@@ -458,16 +464,17 @@ msgstr ""
 "Поскольку один шард может обрабатывать до ``10 000 000`` лиц, для "
 "обслуживания небольших проектов до ``1 000 000`` лиц будет достаточно "
 "задействовать шард ``tntapi``, созданный по умолчанию "
-"(``tarantool@FindFace``). Настройки конфигурации данного шарда задаются в "
-"файле ``/etc/tarantool/instances.enabled/FindFace.lua``. Настоятельно "
+"(``tarantool@FindFace``). Настройки конфигурации данного шарда задаются в"
+" файле ``/etc/tarantool/instances.enabled/FindFace.lua``. Настоятельно "
 "рекомендуется ничего не добавлять и не редактировать в данном файле, за "
-"исключением максимального использования оперативной памяти (``memtx_memory``)"
-", IP-адреса локального сервера лицензий NTLS, необходимого для "
-"лицензирования ``tntapi``, а также настроек удаленного доступа. Максимальное "
-"использование памяти задается в байтах в зависимости от количества лиц, "
-"обрабатываемых шардом, исходя из соотношения примерно 1280 байт на 1 лицо."
+"исключением максимального использования оперативной памяти "
+"(``memtx_memory``), IP-адреса локального сервера лицензий NTLS, "
+"необходимого для лицензирования ``tntapi``, а также настроек удаленного "
+"доступа. Максимальное использование памяти задается в байтах в "
+"зависимости от количества лиц, обрабатываемых шардом, исходя из "
+"соотношения примерно 1280 байт на 1 лицо."
 
-#: ../source/tntapi_cluster.rst:39 ../source/tntapi_standalone.rst:23
+#: ../source/tntapi_cluster.rst:41 ../source/tntapi_standalone.rst:23
 msgid "Open the configuration file::"
 msgstr "Откройте файл конфигурации::"
 
@@ -479,7 +486,7 @@ msgstr ""
 "Отредактируйте значение в зависимости от количества лиц, обрабатываемых "
 "шардом. Значение ``1.2*1024*1024*1024`` соответствует ``1 000 000`` лиц::"
 
-#: ../source/tntapi_cluster.rst:47 ../source/tntapi_standalone.rst:31
+#: ../source/tntapi_cluster.rst:49 ../source/tntapi_standalone.rst:31
 msgid "Specify the NTLS IP address if NTLS is remote::"
 msgstr "Укажите IP-адрес сервера NTLS, если он удаленный::"
 
@@ -492,13 +499,13 @@ msgid ""
 " Tarantool from any IP address. In the case-study below, you allow access"
 " only from ``192.168.113.10``::"
 msgstr ""
-"Если Сервер FindFace развертывается на одиночном физическом сервере, база "
-"данных Tarantool по умолчанию будет доступна только локально (``127.0.0.1``)"
-". Если необходимо открыть доступ к базе данных Tarantool с удаленного "
-"сервера, в разделе ``FindFace.start`` укажите IP-адрес определенного "
-"сервера, либо измените ``127.0.0.1`` на ``0.0.0.0``, чтобы разрешить доступ "
-"к базе данных Tarantool со всех IP-адресов. В примере ниже доступ возможен "
-"только с IP-адреса ``192.168.113.10``::"
+"Если Сервер FindFace развертывается на одиночном физическом сервере, база"
+" данных Tarantool по умолчанию будет доступна только локально "
+"(``127.0.0.1``). Если необходимо открыть доступ к базе данных Tarantool с"
+" удаленного сервера, в разделе ``FindFace.start`` укажите IP-адрес "
+"определенного сервера, либо измените ``127.0.0.1`` на ``0.0.0.0``, чтобы "
+"разрешить доступ к базе данных Tarantool со всех IP-адресов. В примере "
+"ниже доступ возможен только с IP-адреса ``192.168.113.10``::"
 
 #: ../source/tntapi_standalone.rst:40
 msgid "Now you allow access from any IP address::"
@@ -513,13 +520,14 @@ msgid ""
 "Retrieve the shard status. The command will return a service description,"
 " a status (should be Active), path and running time."
 msgstr ""
-"Убедитесь, что шард активен. Команда вернет описание сервиса, его статус ("
-"должен быть Активен), путь и длительность текущей сессии."
+"Убедитесь, что шард активен. Команда вернет описание сервиса, его статус "
+"(должен быть Активен), путь и длительность текущей сессии."
 
-#: ../source/tntapi_cluster.rst:122 ../source/tntapi_standalone.rst:58
+#: ../source/tntapi_cluster.rst:124 ../source/tntapi_standalone.rst:58
 msgid "You can view the ``tntapi`` :ref:`logs <logs>` by executing:"
 msgstr ""
-"Для того чтобы отобразить :ref:`логи <logs>` ``tntapi``, выполните команду:"
+"Для того чтобы отобразить :ref:`логи <logs>` ``tntapi``, выполните "
+"команду:"
 
 #: ../source/tntapi_standalone.rst:64
 msgid ""
@@ -534,14 +542,14 @@ msgid ""
 "You will have to uncomment the path to ``tntapi.json`` when "
 ":ref:`configuring network <configure-network>`."
 msgstr ""
-"Вам потребуется раскомментировать путь к данному файлу в :ref:`настройках "
-"сети <configure-network>`."
+"Вам потребуется раскомментировать путь к данному файлу в :ref:`настройках"
+" сети <configure-network>`."
 
-#: ../source/tntapi_cluster.rst:2
+#: ../source/tntapi_cluster.rst:4
 msgid "Install tntapi cluster"
 msgstr "Установка tntapi на кластере серверов"
 
-#: ../source/tntapi_cluster.rst:6
+#: ../source/tntapi_cluster.rst:8
 msgid ""
 "Install ``tntapi`` on designated hosts. Tarantool will be installed "
 "automatically along it."
@@ -549,7 +557,7 @@ msgstr ""
 "Установите компонент ``tntapi`` на выделенных серверах. База данных "
 "Tarantool будет установлена автоматически вместе с ним."
 
-#: ../source/tntapi_cluster.rst:13
+#: ../source/tntapi_cluster.rst:15
 msgid ""
 "Create ``tntapi`` shards on each ``tntapi`` host. To learn how to shard, "
 "let's consider a case-study of a cluster environment containing 4 "
@@ -559,35 +567,35 @@ msgstr ""
 "рассмотрена на примере кластерной среды, содержащей 4 сервера под базу "
 "данных, на каждом из которых нужно создать по 4 шарда."
 
-#: ../source/tntapi_cluster.rst:16
+#: ../source/tntapi_cluster.rst:18
 msgid "When creating shards in large installations, observe the following rules:"
 msgstr "При создании шардов для крупных проектов соблюдайте следующие правила:"
 
-#: ../source/tntapi_cluster.rst:18
+#: ../source/tntapi_cluster.rst:20
 msgid "1 ``tntapi`` shard can handle approximately 10,000,000 faces."
 msgstr "Один шард может обрабатывать приблизительно ``10 000 000`` лиц."
 
-#: ../source/tntapi_cluster.rst:19
+#: ../source/tntapi_cluster.rst:21
 msgid ""
 "The number of shards on a single host should not exceed the number of its"
 " physical processor cores minus 1."
 msgstr ""
-"Количество шардов на одном сервере не должно превышать число физических ядер "
-"процессора минус 1."
+"Количество шардов на одном сервере не должно превышать число физических "
+"ядер процессора минус 1."
 
-#: ../source/tntapi_cluster.rst:21
+#: ../source/tntapi_cluster.rst:23
 msgid ""
 "Disable the Tarantool example service autostart and stop the service. Do "
 "so for all the 4 hosts."
 msgstr ""
-"На каждом из 4-х серверов удалите тестовый сервис Tarantool из автозагрузки "
-"Ubuntu и остановите его."
+"На каждом из 4-х серверов удалите тестовый сервис Tarantool из "
+"автозагрузки Ubuntu и остановите его."
 
-#: ../source/tntapi_cluster.rst:27
+#: ../source/tntapi_cluster.rst:29
 msgid "Disable the shard created by default. Do so for all the 4 hosts."
 msgstr "На каждом из 4-х серверов отключите созданный по умолчанию шард."
 
-#: ../source/tntapi_cluster.rst:33
+#: ../source/tntapi_cluster.rst:35
 msgid ""
 "Write a bash script ``shard.sh`` that will automatically create "
 "configuration files for all shards on a particular host. Do so for the 4 "
@@ -597,11 +605,11 @@ msgid ""
 msgstr ""
 "Напишите bash-скрипт ``shard.sh``, который автоматически создаст шарды и "
 "файлы конфигурации для каждого из них. Скрипт должен быть написан для "
-"каждого из 4-х серверов. Используйте приведенный ниже скрипт как основу для "
-"своего кода. Данный скрипт создает на сервере 4 шарда, использующие порты: "
-"tntapi ``33001..33004`` и http ``8001..8004``."
+"каждого из 4-х серверов. Используйте приведенный ниже скрипт как основу "
+"для своего кода. Данный скрипт создает на сервере 4 шарда, использующие "
+"порты: tntapi ``33001..33004`` и http ``8001..8004``."
 
-#: ../source/tntapi_cluster.rst:36
+#: ../source/tntapi_cluster.rst:38
 msgid ""
 "The script below creates configuration files based on the default "
 "configuration settings stored in the file "
@@ -618,10 +626,11 @@ msgstr ""
 "файле, за исключением максимального использования оперативной памяти "
 "(``memtx_memory``) и IP-адреса локального сервера лицензий NTLS, "
 "необходимого для лицензирования ``tntapi``. Максимальное использование "
-"памяти задается для каждого шарда в байтах в зависимости от количества лиц, "
-"обрабатываемых шардом, исходя из соотношения примерно 1280 байт на 1 лицо."
+"памяти задается для каждого шарда в байтах в зависимости от количества "
+"лиц, обрабатываемых шардом, исходя из соотношения примерно 1280 байт на 1"
+" лицо."
 
-#: ../source/tntapi_cluster.rst:43
+#: ../source/tntapi_cluster.rst:45
 msgid ""
 "Edit the value due the number of faces a shard handles. The value "
 "``1.2*1024*1024*1024`` corresponds to 1,000,000 faces::"
@@ -629,31 +638,31 @@ msgstr ""
 "Отредактируйте значение в зависимости от количества лиц, обрабатываемых "
 "шардом. Значение ``1.2*1024*1024*1024`` соответствует ``1 000 000`` лиц::"
 
-#: ../source/tntapi_cluster.rst:73
+#: ../source/tntapi_cluster.rst:75
 msgid "Download the :download:`exemplary script <_scripts/shard.sh>`."
 msgstr "Загрузите :download:`пример скрипта <_scripts/shard.sh>`."
 
-#: ../source/tntapi_cluster.rst:75
+#: ../source/tntapi_cluster.rst:77
 msgid "Run the script from the home directory."
 msgstr "Запустите скрипт из домашней директории."
 
-#: ../source/tntapi_cluster.rst:81
+#: ../source/tntapi_cluster.rst:83
 msgid "Check the configuration files created."
 msgstr "Проверьте, созданы ли файлы конфигурации."
 
-#: ../source/tntapi_cluster.rst:89
+#: ../source/tntapi_cluster.rst:91
 msgid "Launch all the 4 shards. Do so on each host."
 msgstr "Запустите все 4 шарда. Это нужно сделать на каждом сервере."
 
-#: ../source/tntapi_cluster.rst:96
+#: ../source/tntapi_cluster.rst:98
 msgid "Retrieve the shards status."
 msgstr "Проверьте статус шардов."
 
-#: ../source/tntapi_cluster.rst:102
+#: ../source/tntapi_cluster.rst:104
 msgid "You should get the following output::"
 msgstr "Вы должны получить следующие сообщения::"
 
-#: ../source/tntapi_cluster.rst:128
+#: ../source/tntapi_cluster.rst:130
 msgid ""
 "On the ``findface-facenapi`` host, create a file ``tntapi_cluster.json`` "
 "containing the addresses and ports of all the shards. Distribute "
@@ -663,27 +672,27 @@ msgid ""
 "4 shards on each."
 msgstr ""
 "На сервере с компонентом ``findface-facenapi`` создайте файл "
-"``tntapi_cluster.json``, содержащий адреса и порты всех шардов. Распределите "
-"доступные шарды равномерно по 1024 ячейкам в одной строке. Нажмите `здесь "
-"<https://raw.githubusercontent.com/NTech-Lab/FFSER-file-"
-"examples/master/tntapi_cluster.json>`__, чтобы посмотреть, как выглядит файл "
-"для 4 серверов с 4 шардами на каждом."
+"``tntapi_cluster.json``, содержащий адреса и порты всех шардов. "
+"Распределите доступные шарды равномерно по 1024 ячейкам в одной строке. "
+"Нажмите `здесь <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-"
+"examples/master/tntapi_cluster.json>`__, чтобы посмотреть, как выглядит "
+"файл для 4 серверов с 4 шардами на каждом."
 
-#: ../source/tntapi_cluster.rst:131
+#: ../source/tntapi_cluster.rst:133
 msgid "You can create ``tntapi_cluster.json`` as follows:"
 msgstr "Вы можете создать файл ``tntapi_cluster.json`` следующим образом:"
 
-#: ../source/tntapi_cluster.rst:133
+#: ../source/tntapi_cluster.rst:135
 msgid ""
 "Create a file that lists all the shards, each shard with a new line "
 "(click `here <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-"
 "examples/master/s.txt>`__ to view the example)."
 msgstr ""
-"Создайте файл с линейным списком всех шардов, каждый шард с новой строки ("
-"нажмите `здесь <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-"
+"Создайте файл с линейным списком всех шардов, каждый шард с новой строки "
+"(нажмите `здесь <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-"
 "examples/master/s.txt>`__, чтобы посмотреть пример). "
 
-#: ../source/tntapi_cluster.rst:139
+#: ../source/tntapi_cluster.rst:141
 msgid ""
 "Run the script below (click `here <https://raw.githubusercontent.com"
 "/NTech-Lab/FFSER-file-"
@@ -691,24 +700,24 @@ msgid ""
 "script). As a result, a new file ``tntapi_cluster.json`` will be created "
 "and contain a list of all shards distributed evenly over 1024 cells."
 msgstr ""
-"Выполните приведенный ниже `скрипт <https://raw.githubusercontent.com/NTech-"
-"Lab/FFSER-file-examples/master/creating_tntapi_cluster.json_script.md>`__. В "
-"результате будет создан новый файл ``tntapi_cluster.json``, содержащий "
-"список адресов и портов всех шардов, равномерно распределенных по 1024 "
-"ячейкам."
+"Выполните приведенный ниже `скрипт <https://raw.githubusercontent.com"
+"/NTech-Lab/FFSER-file-"
+"examples/master/creating_tntapi_cluster.json_script.md>`__. В результате "
+"будет создан новый файл ``tntapi_cluster.json``, содержащий список "
+"адресов и портов всех шардов, равномерно распределенных по 1024 ячейкам."
 
-#: ../source/tntapi_cluster.rst:145
+#: ../source/tntapi_cluster.rst:147
 msgid "Move ``tntapi_cluster.json`` to the directory ``/etc/``."
 msgstr "Переместите файл ``tntapi_cluster.json`` в папку ``/etc``."
 
-#: ../source/tntapi_cluster.rst:148
+#: ../source/tntapi_cluster.rst:150
 msgid ""
 "You will have to uncomment and specify the path to "
 "``tntapi_cluster.json`` when :ref:`configuring network <configure-"
 "network>`."
 msgstr ""
-"Вам потребуется раскомментировать и указать путь к данному файлу в :ref:`"
-"настройках сети <configure-network>`."
+"Вам потребуется раскомментировать и указать путь к данному файлу в "
+":ref:`настройках сети <configure-network>`."
 
 #: ../source/network.rst:4
 msgid "Configure Network"
@@ -724,8 +733,7 @@ msgstr ""
 
 #: ../source/network.rst:8
 msgid "Open the ``findface-facenapi.ini`` configuration file::"
-msgstr ""
-"Откройте для редактирования файл конфигурации ``findface-facenapi.ini``::"
+msgstr "Откройте для редактирования файл конфигурации ``findface-facenapi.ini``::"
 
 #: ../source/network.rst:12
 msgid ""
@@ -746,8 +754,8 @@ msgid ""
 "Do not specify ``ffupload_url`` if the ``findface-upload`` component is "
 "not installed."
 msgstr ""
-"Не меняйте значение параметра ``ffupload_url``, если компонент ``findface-"
-"upload`` не установлен."
+"Не меняйте значение параметра ``ffupload_url``, если компонент "
+"``findface-upload`` не установлен."
 
 #: ../source/network.rst:26
 msgid ""
@@ -759,13 +767,13 @@ msgid ""
 "number of available servers vs the total number of servers in the "
 "response::"
 msgstr ""
-"По умолчанию, если один или несколько шардов ``tntapi`` будут недоступны во "
-"время идентификации лица, компонент ``findface-facenapi`` вернет ошибку. При "
-"необходимости раскомментируйте параметр ``tntapi_ignore_search_error`` и "
-"присвойте ему значение ``True``. В этом случае ``findface-facenapi`` будет "
-"использовать для идентификации только доступные шарды ``tntapi`` и укажет в "
-"ответе отношение количества доступных шардов ``tntapi`` к их общему "
-"количеству."
+"По умолчанию, если один или несколько шардов ``tntapi`` будут недоступны "
+"во время идентификации лица, компонент ``findface-facenapi`` вернет "
+"ошибку. При необходимости раскомментируйте параметр "
+"``tntapi_ignore_search_error`` и присвойте ему значение ``True``. В этом "
+"случае ``findface-facenapi`` будет использовать для идентификации только "
+"доступные шарды ``tntapi`` и укажет в ответе отношение количества "
+"доступных шардов ``tntapi`` к их общему количеству."
 
 #: ../source/network.rst:30
 msgid ""
@@ -780,8 +788,8 @@ msgid ""
 "Check the services status. The command will return the services "
 "description, status (should be Active), path and running time."
 msgstr ""
-"Проверьте статус сервисов. Команда вернет описание сервисов, их статус ("
-"должен быть Активен), путь и длительность текущей сессии."
+"Проверьте статус сервисов. Команда вернет описание сервисов, их статус "
+"(должен быть Активен), путь и длительность текущей сессии."
 
 #~ msgid "Enable the NTLS service autostart and lauch the service::"
 #~ msgstr "Добавьте сервис NTLS в автозагрузку и запустите сервис."
@@ -794,3 +802,6 @@ msgstr ""
 
 #~ msgid "Retrieve the shard status."
 #~ msgstr "Проверьте статус шарда."
+
+#~ msgid "Install FindFace Server"
+#~ msgstr "Установка компонентов Сервера"

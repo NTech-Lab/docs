@@ -1,7 +1,7 @@
 .. _licensing:
 
 Licensing
-------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 You receive a license file from your NTechLab manager along with the FindFace Enterprise Server SDK distributable packages. If you opt for on-premise licensing, we will also send you a Guardant USB dongle. The licensing scheme for FindFace Enterprise Server SDK is shown on the diagram below.
 
@@ -53,3 +53,7 @@ To install and configure NTLS, do the following:
 
 .. important::
     If the licensable components (``findface-nnapi``, ``tntapi``, ``fkvideo_detector``, ``extraction-api``) are to be installed on remote hosts, keep in mind that you have to specify the IP address of the NTLS host in their configuration files after installation.
+
+.. seealso::
+    
+    :ref:`ntls`

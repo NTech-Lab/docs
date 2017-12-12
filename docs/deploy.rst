@@ -9,8 +9,7 @@ Deploy FindFace Server
    :caption: In this chapter:
 
    prerequisites
-   install
-   installer
+   ffserver.rst
    token
    test_requests
    
