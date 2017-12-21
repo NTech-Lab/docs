@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-12 15:54+0300\n"
-"PO-Revision-Date: 2017-12-12 16:14+0300\n"
+"POT-Creation-Date: 2017-12-20 17:51+0300\n"
+"PO-Revision-Date: 2017-12-20 17:58+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
 "Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
@@ -42,7 +42,8 @@ msgid ""
 msgstr ""
 "Установка на одиночном физическом сервере также может быть выполнена с "
 "помощью :ref:`консольного инсталлятора <installer>` или в виде полностью "
-"настроенного готового к использованию :ref:`образа виртуальной машины <vm>`."
+"настроенного готового к использованию :ref:`образа виртуальной машины "
+"<vm>`."
 
 #: ../source/install.rst:12
 msgid "In this section:"
@@ -80,6 +81,10 @@ msgstr ""
 "развертывания."
 
 #: ../source/prepare.rst:16
+msgid "Add a signature key on each designated host."
+msgstr "Добавьте ключ подписи на каждом из серверов развертывания."
+
+#: ../source/prepare.rst:22
 msgid ""
 "Unpack the packages with :ref:`models <models>` (face, gender, age, and "
 "emotions). In the cluster environment, models are installed only on the "
@@ -89,10 +94,6 @@ msgstr ""
 "лица, пол, возраст, эмоции). Если FindFace Enterprise Server SDK "
 "развертывается на кластере серверов, модели устанавливаются только на "
 "серверах ``findface-nnapi``."
-
-#: ../source/prepare.rst:22
-msgid "Add a signature key on each designated host."
-msgstr "Добавьте ключ подписи на каждом из серверов развертывания."
 
 #: ../source/licensing.rst:4
 msgid "Licensing"
@@ -218,8 +219,8 @@ msgstr ""
 "конфигурации после установки."
 
 #: ../source/licensing.rst:59
-msgid ":ref:`ntls`"
-msgstr ":ref:`ntls`"
+msgid ":ref:`troubleshoot-ntls`"
+msgstr ":ref:`troubleshoot-ntls`"
 
 #: ../source/components.rst:2
 msgid "Install Components"
@@ -367,7 +368,7 @@ msgstr ""
 msgid ""
 "Skip this procedure if you do not want to store these data on the "
 "FindFace Enterprise Server SDK host. In this case, only face features "
-"vectors (facens) will be stored (in MongoDB and Tarantool databases)."
+"vectors (facens) will be stored (in the MongoDB and Tarantool databases)."
 msgstr ""
 "Пропустите данный шаг, если вы не собираетесь хранить эти данные. В этом "
 "случае на Сервере будут храниться только биометрические образцы (в базах "
@@ -398,6 +399,10 @@ msgid ""
 "You will have to specify it when :ref:`configuring network <configure-"
 "network>`."
 msgstr "Вам потребуется указать его в :ref:`настройках сети <configure-network>`."
+
+#: ../source/ffupload.rst:30
+msgid ":ref:`troubleshoot-uploads`"
+msgstr ":ref:`troubleshoot-uploads`"
 
 #: ../source/tntapi.rst:4
 msgid "Install tntapi"
@@ -729,7 +734,7 @@ msgid ""
 "interaction with each other. Do the following:"
 msgstr ""
 "После установки компонентов Сервера FindFace настройте их взаимодействие "
-"друг с другом.  Выполните следующие действия:"
+"друг с другом. Выполните следующие действия:"
 
 #: ../source/network.rst:8
 msgid "Open the ``findface-facenapi.ini`` configuration file::"

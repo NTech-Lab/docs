@@ -12,7 +12,7 @@ Sometimes you have to migrate your FindFace Enterprise Server SDK instance to an
 .. tip::
    You can find the models summary :ref:`here <models>`. 
 
-If you need to re-detect faces, you should regenerate both normalized face images, thumbnails and facens. If you just want to apply a different model, it usually suffices to regenerate only facens. FindFace Enterprise Server SDK provides tools that can handle most migration use cases. 
+If you need to re-detect faces, you must regenerate both normalized face images, thumbnails and facens. If you just want to apply a different model, it usually suffices to regenerate only facens. FindFace Enterprise Server SDK provides tools that can handle most migration use cases. 
 
 .. warning::
    Different detectors have diverse sensitivity to certain facial features. Be aware that, after re-detecting your database, you may miss out on some previously found faces.

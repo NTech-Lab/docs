@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 15:47+0300\n"
-"PO-Revision-Date: 2017-11-28 15:49+0300\n"
+"POT-Creation-Date: 2017-12-20 17:51+0300\n"
+"PO-Revision-Date: 2017-12-20 18:10+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
 "Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
@@ -47,14 +47,13 @@ msgstr "Сводные сведения по моделям см. :ref:`здес
 
 #: ../source/regenerate_facens.rst:15
 msgid ""
-"If you need to re-detect faces, you should regenerate both normalized "
-"face images, thumbnails and facens. If you just want to apply a different"
-" model, it usually suffices to regenerate only facens. FindFace "
-"Enterprise Server SDK provides tools that can handle most migration use "
-"cases."
+"If you need to re-detect faces, you must regenerate both normalized face "
+"images, thumbnails and facens. If you just want to apply a different "
+"model, it usually suffices to regenerate only facens. FindFace Enterprise"
+" Server SDK provides tools that can handle most migration use cases."
 msgstr ""
-"При смене детектора лиц вам следует повторно сгенерировать "
-"нормализованные изображения и миниатюры лиц, а также векторы признаков."
+"При смене детектора лиц вам следует повторно сгенерировать нормализованные "
+"изображения и миниатюры лиц, а также векторы признаков."
 
 #: ../source/regenerate_facens.rst:18
 msgid ""
@@ -108,8 +107,8 @@ msgstr "``mongo2searchapi``"
 #: ../source/regenerate_facens.rst:40
 msgid "Script that copies newly generated facens from MongoDB to Tarantool."
 msgstr ""
-"Скрипт, который копирует перегенерированные векторы признаков из MongoDB в "
-"Tarantool."
+"Скрипт, который копирует перегенерированные векторы признаков из MongoDB "
+"в Tarantool."
 
 #: ../source/regenerate_facens.rst:42
 msgid ""
@@ -279,7 +278,7 @@ msgstr "``/opt/ntech/var/lib/tarantool/default/index``"
 
 #: ../source/regenerate_facens.rst:238
 msgid "Cluster instance:"
-msgstr "Кластерная инсталляция "
+msgstr "Кластерная инсталляция:"
 
 #: ../source/regenerate_facens.rst:240
 msgid ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/snapshots`"

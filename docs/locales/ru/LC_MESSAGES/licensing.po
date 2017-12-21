@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-11 17:48+0300\n"
+"POT-Creation-Date: 2017-12-20 17:51+0300\n"
 "PO-Revision-Date: 2017-12-11 18:13+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
-"Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Virtaal 0.7.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: ../source/licensing.rst:4
@@ -145,5 +144,7 @@ msgstr ""
 "конфигурации после установки."
 
 #: ../source/licensing.rst:59
-msgid ":ref:`ntls`"
+#, fuzzy
+msgid ":ref:`troubleshoot-ntls`"
 msgstr ":ref:`ntls`"
+

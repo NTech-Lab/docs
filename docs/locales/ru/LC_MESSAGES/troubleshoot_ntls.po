@@ -9,16 +9,41 @@ msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-21 13:18+0300\n"
-"PO-Revision-Date: 2017-11-28 14:56+0300\n"
+"PO-Revision-Date: 2017-12-21 13:24+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
-"Language: ru\n"
 "Language-Team: NtechLab Documentation Team\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
 "Generated-By: Babel 2.5.1\n"
+
+#: ../source/troubleshoot_ntls.rst:4
+msgid "Troubleshoot Licensing and NTLS"
+msgstr "Устранение неполадок с лицензией и NTLS"
+
+#: ../source/troubleshoot_ntls.rst:6
+msgid ""
+"When troubleshooting licensing and :ref:`NTLS <licensing>`, the first "
+"step is to retrieve the licensing information and NTLS status. You can do"
+" so by sending an API request to NTLS. Necessary actions are then to be "
+"undertaken, subject to the response content."
+msgstr ""
+"При устранении неполадок с лицензией и :ref:`сервером NTLS <licensing>` "
+"первым шагом является получение информации о лицензии и статусе сервера. Это "
+"можно сделать, отправив API-запрос в NTLS. Действия по устранению неполадок "
+"предпринимаются в учетом содержания API-ответа."
+
+#: ../source/troubleshoot_ntls.rst:9
+msgid ""
+"Please do not hesitate to contact our experts on troubleshooting by "
+"info@ntechlab.com."
+msgstr ""
+"По вопросам устранения неполадок обращайтесь к нашим специалистам по "
+"адресу info@ntechlab.com."
 
 #: ../source/ntls_status.rst:4
 msgid "Retrieve Licensing Information"
@@ -30,6 +55,9 @@ msgid ""
 "<licensing>` information and NTLS status, execute on the NTLS host "
 "console:"
 msgstr ""
+"Для получения информации о :ref:`лицензии <licensing>` FindFace "
+"Enterprise Server SDK и статусе NTLS, выполните в консоли сервера NTLS "
+"следующую команду:"
 
 #: ../source/ntls_status.rst:13
 msgid ""
@@ -37,10 +65,13 @@ msgid ""
 "parameters is ``last_updated``. It indicates in seconds how long ago the "
 "local license has been checked for the last time."
 msgstr ""
+"Ответ будет возвращен в формате JSON. Одним из наиболее значимых "
+"параметров в ответе является ``last_updated``. Он показывает в секундах, "
+"как давно в последний раз проверялась локальная лицензия."
 
 #: ../source/ntls_status.rst:15
 msgid "Interpret the ``last_updated`` value as follows:"
-msgstr ""
+msgstr "Интерпретируйте значение параметра ``last_updated`` следующим образом:"
 
 #: ../source/ntls_status.rst:17
 msgid "[0, 5] — everything is alright."
@@ -65,39 +96,9 @@ msgstr ""
 "течение длительного времени. Необходимо вмешательство."
 
 #: ../source/ntls_status.rst:21
-#, fuzzy
 msgid ""
 "``\"valid\": false``: connection with the licensing source was never "
 "established."
 msgstr ""
 "``\"valid\": false``: связь с источником лицензирования так и не была "
 "установлена."
-
-#~ msgid ""
-#~ "You can use API to retrieve "
-#~ ":ref:`licensing <licensing>` information in "
-#~ "JSON."
-#~ msgstr ""
-#~ "Вы можете использовать API для получения"
-#~ " информации о :ref:`лицензии <licensing>` в"
-#~ " формате JSON."
-
-#~ msgid "Request"
-#~ msgstr "Запрос"
-
-#~ msgid "Exemplary response"
-#~ msgstr "Пример ответа"
-
-#~ msgid ""
-#~ "The ``last_updated`` parameter in the "
-#~ "response indicates how long ago the "
-#~ "local license has been checked for "
-#~ "the last time. Interpret its value "
-#~ "(in seconds) as follows:"
-#~ msgstr ""
-#~ "Параметр ``last_updated`` в ответе показывает,"
-#~ " как давно в последний раз "
-#~ "проверялась локальная лицензия. Интерпретируйте "
-#~ "его значение (в секундах) следующим "
-#~ "образом:"
-
