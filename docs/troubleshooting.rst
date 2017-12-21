@@ -6,11 +6,12 @@ Maintenance and Troubleshooting
    :maxdepth: 1
    :caption: In this chapter:
 
+   troubleshoot_ntls
    logs
    regenerate_facens
    update
    remove_sdk
-   ntls_status
+   troubleshoot_ffupload
    
  
 

@@ -1,28 +1,24 @@
 .. _ntls:
 
 Retrieve Licensing Information
-========================================
+------------------------------------------
 
-You can use API to retrieve :ref:`licensing <licensing>` information in JSON.
-
-.. rubric:: Request
+To retrieve the FindFace Enterprise Server SDK :ref:`licensing <licensing>` information and NTLS status, execute on the NTLS host console:
 
 .. code::
 
    curl http://localhost:3185/license.json -s | jq
 
 
-.. rubric:: Exemplary response
+The response will be given in JSON. One of the most significant parameters is ``last_updated``. It indicates in seconds how long ago the local license has been checked for the last time.
 
-.. note::
-   The ``last_updated`` parameter in the response indicates how long ago the local license has been checked for the last time.  
-   Interpret its value (in seconds) as follows:
+Interpret the ``last_updated`` value as follows:
 
    * [0, 5] — everything is alright.
    * (5, 30] — there may be some problems with connection, or with the local drive where the license file is stored.
    * (30; 120] — almost certainly something bad happened.
    * (120; ∞) — the licensing source response has been timed out. Take action.
-   * ``"valid": false``: connection with the licensing source has never been established.
+   * ``"valid": false``: connection with the licensing source was never established.
 
 
 .. code::

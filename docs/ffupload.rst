@@ -6,7 +6,7 @@ Install findface-upload
 To store all original images which have been processed by Server, as well as such Server artifacts as face thumbnails and normalized images, install and configure the ``findface-upload`` component.
 
 .. tip::
-    Skip this procedure if you do not want to store these data on the FindFace Enterprise Server SDK host. In this case, only face features vectors (facens) will be stored (in MongoDB and Tarantool databases).
+    Skip this procedure if you do not want to store these data on the FindFace Enterprise Server SDK host. In this case, only face features vectors (facens) will be stored (in the MongoDB and Tarantool databases).
 
 Do the following:
 
@@ -24,6 +24,10 @@ Do the following:
 
    .. important::
       You will have to specify it when :ref:`configuring network <configure-network>`.
+
+.. seealso::
+
+   :ref:`troubleshoot-uploads`
 
 
 

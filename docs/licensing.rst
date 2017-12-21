@@ -56,4 +56,4 @@ To install and configure NTLS, do the following:
 
 .. seealso::
     
-    :ref:`ntls`
+    :ref:`troubleshoot-ntls`
