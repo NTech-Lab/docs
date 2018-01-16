@@ -3,21 +3,22 @@
 # This file is distributed under the same license as the FindFace Enterprise
 # Server SDK package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
-# Sasha Carlos <info@ntechlab.com>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-16 13:09+0300\n"
-"PO-Revision-Date: 2017-11-14 16:55+0300\n"
+"PO-Revision-Date: 2018-01-16 12:19+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
-"Language: ru\n"
 "Language-Team: NtechLab Documentation Team\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: ../source/network.rst:4
@@ -51,13 +52,12 @@ msgstr ""
 "синтаксически верный код Python."
 
 #: ../source/network.rst:24
-#, fuzzy
 msgid ""
 "Do not specify ``ffupload_url`` if the ``findface-upload`` component is "
 "not installed."
 msgstr ""
-"Не меняйте значение параметра ``ffupload_url``, если компонент findface-"
-"upload не установлен."
+"Не меняйте значение параметра ``ffupload_url``, если компонент ``findface-"
+"upload`` не установлен."
 
 #: ../source/network.rst:26
 msgid ""
@@ -69,16 +69,15 @@ msgid ""
 "number of available servers vs the total number of servers in the "
 "response::"
 msgstr ""
-"По умолчанию, если один или несколько шардов ``tntapi`` будут недоступны "
-"во время идентификации лица, компонент ``findface-facenapi`` вернет "
-"ошибку. При необходимости раскомментируйте параметр "
-"``tntapi_ignore_search_error`` и присвойте ему значение ``True``. В этом "
-"случае ``findface-facenapi`` будет использовать для идентификации только "
-"доступные шарды ``tntapi`` и укажет в ответе отношение количества "
-"доступных шардов ``tntapi`` к их общему количеству. ::"
+"По умолчанию, если один или несколько шардов ``tntapi`` будут недоступны во "
+"время идентификации лица, компонент ``findface-facenapi`` вернет ошибку. При "
+"необходимости раскомментируйте параметр ``tntapi_ignore_search_error`` и "
+"присвойте ему значение ``True``. В этом случае ``findface-facenapi`` будет "
+"использовать для идентификации только доступные шарды ``tntapi`` и укажет в "
+"ответе отношение количества доступных шардов ``tntapi`` к их общему "
+"количеству. ::"
 
 #: ../source/network.rst:30
-#, fuzzy
 msgid ""
 "Restart all the FindFace Enterprise Server SDK services and nginx (for "
 "``findface-upload``) on the relevant host(s)."
@@ -91,6 +90,5 @@ msgid ""
 "Check the services status. The command will return the services "
 "description, status (should be Active), path and running time."
 msgstr ""
-"Проверьте статус сервисов. Команда вернет описание сервисов, их статус "
-"(должен быть Активен), путь и длительность текущей сессии."
-
+"Проверьте статус сервисов. Команда вернет описание сервисов, их статус ("
+"должен быть Активен), путь и длительность текущей сессии."

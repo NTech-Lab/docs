@@ -3,24 +3,27 @@
 # This file is distributed under the same license as the FindFace Enterprise
 # Server SDK package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
-#
-#, fuzzy
+# Sasha Carlos <info@ntechlab.com>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-20 17:51+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-01-16 12:13+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: ../source/ffupload_ip.rst:4
 msgid "Uploads in FindFace Web UI"
-msgstr ""
+msgstr "Отображение содержимого папки Uploads в веб-интерфейсе FindFace"
 
 #: ../source/ffupload_ip.rst:7
 msgid ""
@@ -28,22 +31,29 @@ msgid ""
 "not displayed in the FindFace web interface after the ``findface-upload``"
 " host IP address has been changed."
 msgstr ""
+"Проблема: Исходные изображения, миниатюры лиц и нормализованные изображения "
+"лиц не отображаются в веб-интерфейсе FindFace после изменения IP-адреса "
+"сервера ``findface-upload``."
 
 #: ../source/ffupload_ip.rst:8
 msgid ""
 "Each face object in the :ref:`MongoDB <start>` database is provided with "
 "the following links to the ``Uploads`` folder:"
 msgstr ""
+"Каждый объект типа ``лицо`` в базе данных :ref:`MongoDB <start>` содержит "
+"следующие ссылки на папку ``Uploads``:"
 
 #: ../source/ffupload_ip.rst:10
 msgid "Link to the relevant original image"
-msgstr ""
+msgstr "Ссылка на соответствующее исходное изображение"
 
 #: ../source/ffupload_ip.rst:11
 msgid ""
 "Links to the relevant FindFace Server artifacts: the face thumbnail and "
 "normalized image"
 msgstr ""
+"Ссылки на соответствующие артефакты Сервера FindFace: миниатюру лица и "
+"нормализованное изображение лица"
 
 #: ../source/ffupload_ip.rst:14
 msgid ""
@@ -51,18 +61,23 @@ msgid ""
 "to the ``Uploads`` folder get broken, and the original images and "
 "artifacts can no longer be displayed in the :ref:`web interface <ffui>`."
 msgstr ""
+"При изменении IP-адреса сервера ``findface-upload`` ссылки на папку "
+"``Uploads`` теряют актуальность и исходные изображения и артефакты больше не "
+"отображаются в :ref:`веб-интерфейсе <ffui>`."
 
 #: ../source/ffupload_ip.rst:16
 msgid ""
 "To fix the problem, bulk-edit the links in the ``photo``, ``thumbnail`` "
 "and ``normalized`` fields of the face objects in MongoDB as follows:"
 msgstr ""
+"Для решения проблемы отредактируйте ссылки в полях ``photo``, ``thumbnail`` "
+"и ``normalized`` всех объектов типа ``лицо`` в MongoDB следующим образом:"
 
 #: ../source/ffupload_ip.rst:18
 msgid ""
 "On the console, navigate into MongoDB and then into the ``facenapi`` "
 "database."
-msgstr ""
+msgstr "В консоли перейдите в MongoDB и затем в базу данных ``facenapi``."
 
 #: ../source/ffupload_ip.rst:25
 msgid ""
@@ -70,6 +85,9 @@ msgid ""
 " in use in its ``photo``, ``normalized``, and ``thumbnail`` fields  "
 "(``127.0.0.1`` in the case study)."
 msgstr ""
+"Вызовите случайный объект типа ``лицо``, чтобы убедиться, что прежний IP-"
+"адрес все еще указан в полях ``photo``, ``normalized`` и ``thumbnail`` "
+"(``127.0.0.1`` в примере)."
 
 #: ../source/ffupload_ip.rst:59
 msgid ""
@@ -77,10 +95,14 @@ msgid ""
 " and ``thumbnail`` fields of the face objects. In the case study, the IP "
 "address ``127.0.0.1`` is being replaced with ``192.168.2.158``."
 msgstr ""
+"Примените скрипт замены IP-адреса к полям ``photo``, ``normalized`` и "
+"``thumbnail`` объектов типа ``лицо``. В примере IP-адрес ``127.0.0.1`` "
+"заменяется на ``192.168.2.158``."
 
 #: ../source/ffupload_ip.rst:65
 msgid ""
 "Invoke a random face object once more to make sure that the IP address "
 "has been successfully changed."
 msgstr ""
-
+"Вызовите случайный объект типа ``лицо`` еще раз, чтобы убедиться, что IP-"
+"адрес был успешно изменен."
