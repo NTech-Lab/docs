@@ -3,21 +3,22 @@
 # This file is distributed under the same license as the FindFace Enterprise
 # Server SDK package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
-# Sasha Carlos <info@ntechlab.com>, 2017.
+# Sasha Carlos <info@ntechlab.com>, 2017, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-21 13:18+0300\n"
-"PO-Revision-Date: 2017-11-28 14:56+0300\n"
+"PO-Revision-Date: 2018-01-16 12:22+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
-"Language: ru\n"
 "Language-Team: NtechLab Documentation Team\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: ../source/ntls_status.rst:4
@@ -30,6 +31,9 @@ msgid ""
 "<licensing>` information and NTLS status, execute on the NTLS host "
 "console:"
 msgstr ""
+"Для получения информации о :ref:`лицензии <licensing>` FindFace Enterprise "
+"Server SDK и статусе NTLS, выполните в консоли сервера NTLS следующую "
+"команду:"
 
 #: ../source/ntls_status.rst:13
 msgid ""
@@ -37,10 +41,13 @@ msgid ""
 "parameters is ``last_updated``. It indicates in seconds how long ago the "
 "local license has been checked for the last time."
 msgstr ""
+"Ответ будет возвращен в формате JSON. Одним из наиболее значимых параметров "
+"в ответе является ``last_updated``. Он показывает в секундах, как давно в "
+"последний раз проверялась локальная лицензия."
 
 #: ../source/ntls_status.rst:15
 msgid "Interpret the ``last_updated`` value as follows:"
-msgstr ""
+msgstr "Интерпретируйте значение параметра ``last_updated`` следующим образом:"
 
 #: ../source/ntls_status.rst:17
 msgid "[0, 5] — everything is alright."
@@ -61,11 +68,10 @@ msgstr "(30; 120] — почти наверняка случилось что-т
 #: ../source/ntls_status.rst:20
 msgid "(120; ∞) — the licensing source response has been timed out. Take action."
 msgstr ""
-"(120; ∞) — не удается получить ответ от источника лицензирования в "
-"течение длительного времени. Необходимо вмешательство."
+"(120; ∞) — не удается получить ответ от источника лицензирования в течение "
+"длительного времени. Необходимо вмешательство."
 
 #: ../source/ntls_status.rst:21
-#, fuzzy
 msgid ""
 "``\"valid\": false``: connection with the licensing source was never "
 "established."
@@ -100,4 +106,3 @@ msgstr ""
 #~ "проверялась локальная лицензия. Интерпретируйте "
 #~ "его значение (в секундах) следующим "
 #~ "образом:"
-

@@ -3,34 +3,39 @@
 # This file is distributed under the same license as the FindFace Enterprise
 # Server SDK package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
-#
-#, fuzzy
+# Sasha Carlos <info@ntechlab.com>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-16 13:09+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-01-16 12:28+0300\n"
+"Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: ../source/tntapi_cluster.rst:2
 msgid "Install tntapi cluster"
-msgstr ""
+msgstr "Установка ``tntapi`` в кластерной среде "
 
 #: ../source/tntapi_cluster.rst:4
 msgid "Install and configure the ``tntapi`` component as follows:"
-msgstr ""
+msgstr "Установите и настройте компонент ``tntapi`` следующим образом:"
 
 #: ../source/tntapi_cluster.rst:6
 msgid ""
 "Install ``tntapi`` on designated hosts. Tarantool will be installed "
 "automatically along it."
 msgstr ""
+"Установите компонент ``tntapi`` на выделенных серверах. База данных "
+"Tarantool будет установлена автоматически вместе с ним."
 
 #: ../source/tntapi_cluster.rst:13
 msgid ""
@@ -38,30 +43,37 @@ msgid ""
 "let's consider a case-study of a cluster environment containing 4 "
 "database hosts. We'll create 4 shards on each."
 msgstr ""
+"Создайте шарды ``tntapi`` на каждом сервере. Процедура шардинга будет "
+"рассмотрена на примере кластерной среды, содержащей 4 сервера под базу "
+"данных, на каждом из которых нужно создать по 4 шарда."
 
 #: ../source/tntapi_cluster.rst:16
 msgid "When creating shards in large installations, observe the following rules:"
-msgstr ""
+msgstr "При создании шардов для крупных проектов соблюдайте следующие правила:"
 
 #: ../source/tntapi_cluster.rst:18
 msgid "1 ``tntapi`` shard can handle approximately 10,000,000 faces."
-msgstr ""
+msgstr "Один шард может обрабатывать приблизительно ``10 000 000`` лиц."
 
 #: ../source/tntapi_cluster.rst:19
 msgid ""
 "The number of shards on a single host should not exceed the number of its"
 " physical processor cores minus 1."
 msgstr ""
+"Количество шардов на одном сервере не должно превышать число физических ядер "
+"процессора минус 1."
 
 #: ../source/tntapi_cluster.rst:21
 msgid ""
 "Disable the Tarantool example service autostart and stop the service. Do "
 "so for all the 4 hosts."
 msgstr ""
+"На каждом из 4-х серверов удалите тестовый сервис Tarantool из автозагрузки "
+"Ubuntu и остановите его."
 
 #: ../source/tntapi_cluster.rst:27
 msgid "Disable the shard created by default. Do so for all the 4 hosts."
-msgstr ""
+msgstr "На каждом из 4-х серверов отключите созданный по умолчанию шард."
 
 #: ../source/tntapi_cluster.rst:33
 msgid ""
@@ -71,6 +83,11 @@ msgid ""
 "exemplary script creates 4 shards listening to the ports: tntapi "
 "``33001..33004`` and http ``8001..8004``."
 msgstr ""
+"Напишите bash-скрипт ``shard.sh``, который автоматически создаст шарды и "
+"файлы конфигурации для каждого из них. Скрипт должен быть написан для "
+"каждого из 4-х серверов. Используйте приведенный ниже скрипт как основу для "
+"своего кода. Данный скрипт создает на сервере 4 шарда, использующие порты: "
+"tntapi ``33001..33004`` и http ``8001..8004``."
 
 #: ../source/tntapi_cluster.rst:36
 msgid ""
@@ -83,48 +100,59 @@ msgid ""
 " each shard, depending on the number of faces a shard handles, at the "
 "rate roughly 1280 byte per face."
 msgstr ""
+"Скрипт создает файлы конфигурации на основе настроек по умолчанию, "
+"хранящихся в файле ``/etc/tarantool/instances.enabled/FindFace.lua``. "
+"Настоятельно рекомендуется ничего не добавлять и не редактировать в этом "
+"файле, за исключением максимального использования оперативной памяти "
+"(``memtx_memory``) и IP-адреса локального сервера лицензий NTLS, "
+"необходимого для лицензирования ``tntapi``. Максимальное использование "
+"памяти задается для каждого шарда в байтах в зависимости от количества лиц, "
+"обрабатываемых шардом, исходя из соотношения примерно 1280 байт на 1 лицо."
 
 #: ../source/tntapi_cluster.rst:39
 msgid "Open the configuration file::"
-msgstr ""
+msgstr "Откройте файл конфигурации::"
 
 #: ../source/tntapi_cluster.rst:43
 msgid ""
 "Edit the value due the number of faces a shard handles. The value "
 "``1.2*1024*1024*1024`` corresponds to 1,000,000 faces::"
 msgstr ""
+"Отредактируйте значение в зависимости от количества лиц, обрабатываемых "
+"шардом. Значение ``1.2*1024*1024*1024`` соответствует ``1 000 000`` лиц::"
 
 #: ../source/tntapi_cluster.rst:47
 msgid "Specify the NTLS IP address if NTLS is remote::"
-msgstr ""
+msgstr "Укажите IP-адрес сервера NTLS, если он удаленный::"
 
 #: ../source/tntapi_cluster.rst:73
 msgid "Download the :download:`exemplary script <_scripts/shard.sh>`."
-msgstr ""
+msgstr "Загрузите :download:`пример скрипта <_scripts/shard.sh>`."
 
 #: ../source/tntapi_cluster.rst:75
 msgid "Run the script from the home directory."
-msgstr ""
+msgstr "Запустите скрипт из домашней директории."
 
 #: ../source/tntapi_cluster.rst:81
 msgid "Check the configuration files created."
-msgstr ""
+msgstr "Проверьте, созданы ли файлы конфигурации."
 
 #: ../source/tntapi_cluster.rst:89
 msgid "Launch all the 4 shards. Do so on each host."
-msgstr ""
+msgstr "Запустите все 4 шарда. Это нужно сделать на каждом сервере."
 
 #: ../source/tntapi_cluster.rst:96
 msgid "Retrieve the shards status."
-msgstr ""
+msgstr "Проверьте статус шардов."
 
 #: ../source/tntapi_cluster.rst:102
 msgid "You should get the following output::"
-msgstr ""
+msgstr "Вы должны получить следующие сообщения::"
 
 #: ../source/tntapi_cluster.rst:122
 msgid "You can view the ``tntapi`` :ref:`logs <logs>` by executing:"
 msgstr ""
+"Для того чтобы отобразить :ref:`логи <logs>` ``tntapi``, выполните команду:"
 
 #: ../source/tntapi_cluster.rst:128
 msgid ""
@@ -135,10 +163,16 @@ msgid ""
 "examples/master/tntapi_cluster.json>`__ to see the file for 4 hosts with "
 "4 shards on each."
 msgstr ""
+"На сервере с компонентом ``findface-facenapi`` создайте файл "
+"``tntapi_cluster.json``, содержащий адреса и порты всех шардов. Распределите "
+"доступные шарды равномерно по 1024 ячейкам в одной строке. Нажмите `здесь "
+"<https://raw.githubusercontent.com/NTech-Lab/FFSER-file-"
+"examples/master/tntapi_cluster.json>`__, чтобы посмотреть, как выглядит файл "
+"для 4 серверов с 4 шардами на каждом."
 
 #: ../source/tntapi_cluster.rst:131
 msgid "You can create ``tntapi_cluster.json`` as follows:"
-msgstr ""
+msgstr "Вы можете создать файл ``tntapi_cluster.json`` следующим образом:"
 
 #: ../source/tntapi_cluster.rst:133
 msgid ""
@@ -146,6 +180,9 @@ msgid ""
 "(click `here <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-"
 "examples/master/s.txt>`__ to view the example)."
 msgstr ""
+"Создайте файл с линейным списком всех шардов, каждый шард с новой строки ("
+"нажмите `здесь <https://raw.githubusercontent.com/NTech-Lab/FFSER-file-"
+"examples/master/s.txt>`__, чтобы посмотреть пример). "
 
 #: ../source/tntapi_cluster.rst:139
 msgid ""
@@ -155,10 +192,15 @@ msgid ""
 "script). As a result, a new file ``tntapi_cluster.json`` will be created "
 "and contain a list of all shards distributed evenly over 1024 cells."
 msgstr ""
+"Выполните приведенный ниже `скрипт <https://raw.githubusercontent.com/NTech-"
+"Lab/FFSER-file-examples/master/creating_tntapi_cluster.json_script.md>`__. В "
+"результате будет создан новый файл ``tntapi_cluster.json``, содержащий "
+"список адресов и портов всех шардов, равномерно распределенных по 1024 "
+"ячейкам."
 
 #: ../source/tntapi_cluster.rst:145
 msgid "Move ``tntapi_cluster.json`` to the directory ``/etc/``."
-msgstr ""
+msgstr "Переместите файл ``tntapi_cluster.json`` в папку ``/etc``."
 
 #: ../source/tntapi_cluster.rst:148
 msgid ""
@@ -166,6 +208,8 @@ msgid ""
 "``tntapi_cluster.json`` when :ref:`configuring network <configure-"
 "network>`."
 msgstr ""
+"Вам потребуется раскомментировать и указать путь к данному файлу в :ref:`"
+"настройках сети <configure-network>`."
 
 #~ msgid ""
 #~ "Install ``tntapi`` on designated hosts. "
@@ -218,4 +262,3 @@ msgstr ""
 #~ "``tntapi_cluster.json`` when :ref:`configuring "
 #~ "network <configure-network>`."
 #~ msgstr ""
-
