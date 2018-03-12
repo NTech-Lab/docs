@@ -11,9 +11,11 @@ Advanced Features
    gae
    persons
    friend
-   extraction_api
    bulk_face
+   extraction_api
+   plugins
    stats
    tarantool_api
    tntapi_additional
+   
 

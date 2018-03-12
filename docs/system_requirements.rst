@@ -61,6 +61,9 @@ Here you can see the FindFace Enterprise Server SDK memory usage benchmark resul
 .. note::
    Depending on your needs, :ref:`adjust <tntapi>` the Tarantool maximum memory usage at ``/etc/tarantool/instances.enabled/FindFace.lua``. 
 
+.. note::
+   Starting with version 2.6, the ``nnapi`` component is deprecated, and ``extraction-api`` is used as a default facen extractor.   
+
 The testing setup is the following:
 
 * Facen :ref:`model <models>`: ``apricot_320``
