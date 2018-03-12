@@ -33,10 +33,6 @@ The virtual machine image has the following software pre-installed:
    | findface-facenapi        | Installed and started with enabled and configured :ref:`dynamic person creation <persons>` and       |
    |                          | :ref:`“friend or foe” identification <friend>`.                                                      |
    +--------------------------+------------------------------------------------------------------------------------------------------+
-   | findface-nnapi           | Installed and started (1 instance) with enabled and configured                                       |
-   |                          | :ref:`gender, age and emotions recognition <gae>`. :ref:`Load balancing <load-balancing>` may be     |
-   |                          | required.                                                                                            |
-   +--------------------------+------------------------------------------------------------------------------------------------------+
    | findface-server-tarantool| Installed and started (1 shard).                                                                     |
    | (tntapi)                 | :ref:`Sharding <tntapi-sharding>` may be required.                                                   |
    +--------------------------+------------------------------------------------------------------------------------------------------+
@@ -48,8 +44,8 @@ The virtual machine image has the following software pre-installed:
    | fkvideo_detector 	      | Only installed. Use the command line or FindFace Web UI to manually start it. Before use,            |
    |                          | consult the :ref:`component documentation <video>`.                                                  |
    +--------------------------+------------------------------------------------------------------------------------------------------+
-   | Extraction API 	      | Only installed. Exclusively for experienced users. Before use, be sure to consult                    |
-   |                          | the :ref:`component documentation <extraction-api>`.                                                 |
+   | findface-extraction-api  | Installed and started as a facen extractor. Consult                                                  |
+   |                          | the :ref:`component documentation <extraction-api>` for advanced features.                           |
    +--------------------------+------------------------------------------------------------------------------------------------------+
    | NTLS 	              | Installed and started.                                                                               |
    +--------------------------+------------------------------------------------------------------------------------------------------+

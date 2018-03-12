@@ -5,7 +5,7 @@ Now that you have prepared the FindFace Enterprise Server SDK packages and provi
 
 .. include:: facenapi.rst
 
-.. include:: nnapi.rst
+.. include:: extapi.rst
 
 .. include:: ffupload.rst
 

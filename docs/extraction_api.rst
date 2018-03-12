@@ -3,15 +3,10 @@
 Extraction API
 ================================
 
-With the ``Extraction API`` component, you can flexibly configure the format of API responses to extract various face data, including the
-bounding box coordinates, normalized face, gender, age, and emotions, as well as the face feature vector (facen). Implementing this feature to
-your system can remarkably broaden the scope of analytic tasks it is capable of fulfilling. 
+By default, the :ref:`extraction-api <architecture>` component is used only as a facen extractor. This section explains how to harness its advanced feature such as flexible configuration of the API response format. Use this feature to extract various face data, including the bounding box coordinates, normalized face, gender, age, and emotions, and facen without ``findface-facenapi`` as a mediator. Implementing this feature to your system can remarkably broaden the scope of analytic tasks it is capable of fulfilling.
 
 .. note::
    Being a ``findface-facenapi`` counterpart when it comes to data extraction via API, ``Extraction API`` is more resource-demanding. The component cannot fully substitute ``findface-facenapi`` as it doesn't allow adding faces and working with the database.
-
-.. note::
-   You can also :ref:`use <extract-facens>` ``Extraction API`` as a facen extractor, i. e. as an alternative to ``findface-nnapi``.
 
 .. tip::
    Normalized images received from ``Extraction API`` in ``base64`` are qualified for posting to ``findface-facenapi``.
@@ -344,57 +339,4 @@ Examples
       }
     ]
    }
-
-
-.. _extract-facens:
-
-Extract Facens
----------------------------------------------------
-
-By default, ``findface-facenapi`` detects faces in images and sends them to ``findface-nnapi`` for a facen extraction. Then ``findface-facenapi`` saves the obtained facen to MongoDB and Tarantool databases. You can use ``Extraction API`` as a better alternative to ``findface-nnapi`` in this pipeline. 
-
-The main advantage of ``Extraction API`` in contrast with ``findface-nnapi`` is its built-in ability to clone into multiple instances and automatically balance the traffic across them, while for ``findface-nnapi``, load balancing has to be manually :ref:`set up <load-balancing>` via NginX. 
-
-To extract facens via ``Extraction API``, do the following:
-
-#. Open the ``findface-facenapi.ini`` configuration file:: 
-
-      sudo vi /etc/findface-facenapi.ini
-   
-#. Uncomment and edit the ``extractor`` parameter in the following way::
-
-     extractor = 'extraction-api'
-
-   .. warning::
-       The ``findface-facenapi.ini`` content must be correct Python code.
-
-#. Uncomment and/or edit ``extraction_api_url`` to align with your network specification::
-  
-     extraction_api_url = 'http://localhost:18666'     
-    
-
-#. Start ``Extraction API`` and enable its autostart.
-
-   .. code::
-
-      sudo service findface-extraction-api start && sudo systemctl enable findface-extraction-api
-
-#. Restart ``findface-facenapi``.
-
-   .. code::
-
-      sudo service findface-facenapi restart
-
-#. Stop ``findface-nnapi`` and disable its autostart. 
-
-   .. code::
-
-      sudo service findface-nnapi stop && sudo systemctl disable findface-nnapi
-
-#. Check the services status. The command will return the services description, status (should be Active), path and running time.
-
-   .. code:: 
-
-      sudo service 'findface*' status
-
 

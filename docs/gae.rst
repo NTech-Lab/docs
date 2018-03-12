@@ -10,16 +10,14 @@ Gender, Age and Emotions Recognition
 
 
 
-Configure Gender, Age and Emotions Recognition
+Enable Gender, Age and Emotions Recognition
 ---------------------------------------------------
 
 .. note:: 
      Gender, age and emotions recognition uses around 2 GB of RAM in addition to the FindFace Server :ref:`general requirements <requirements>`.
 
 
-To configure gender, age and emotions recognition, do the following:
-
-#. Enable gender, age and emotions recognition by uncommenting and editing the line ``gae = False`` in the ``findface-facenapi`` configuration file. Restart ``findface-facenapi``.
+To enable gender, age and emotions recognition, uncomment and edit the line ``gae = False`` in the ``findface-facenapi`` configuration file. Restart ``findface-facenapi``.
 
    .. warning::
          The ``findface-facenapi.ini`` content must be correct Python code.
@@ -32,17 +30,6 @@ To configure gender, age and emotions recognition, do the following:
 
        sudo service findface-facenapi restart
 
-#. Enable relevant recognition :ref:`models <models>` by uncommenting the ``model_*`` lines in the ``findface-nnapi`` configuration file. Restart ``findface-nnapi``.
-
-   .. code::
-
-       sudo vi /etc/findface-nnapi.ini
-
-             → model_emotions = emotion_1
-             → model_age = fr_1_age0
-             → model_gender = fr_1_gender0
-
-       sudo service findface-nnapi restart
 
 
 API Requests for Gender, Age and Emotions Recognition

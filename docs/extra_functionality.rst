@@ -12,13 +12,13 @@ In addition to FindFace Server (installed on a :ref:`single <standalone>` or :re
 |                                 | a RTSP camera stream or a video file on-the-fly and sends them via REST API to              |
 |                                 | findface-facenapi for further processing. Licensable.                                       |
 +---------------------------------+---------------------------------------------------------------------------------------------+
-| findface-extraction-api         | With the :ref:`findface-extraction-api <extraction-api>` component, you can flexibly        |
-|                                 | configure the format of API responses to extract various face data, including the bounding  |
-|                                 | box coordinates, normalized face, gender, age, and emotions, as well as the face feature    |
-|                                 | vector (facen). Implementing this feature to your system can remarkably broaden the scope   |
-|                                 | of analytic tasks it is capable of fulfilling.                                              |
-|                                 | You can also use the component as an extractor of the face feature vector, i. e. as         |
-|                                 | a :ref:`findface-nnapi <start>` alternative. Licensable.                                    |
+| findface-extraction-api         | By default, the :ref:`findface-extraction-api <architecture>` component is used as an       |
+|                                 | extractor of the face feature vector.                                                       |
+|                                 | The component also provides several :ref:`advanced features <extraction-api>`, for example, |
+|                                 | flexible configuration of the API response format. Use this feature to extract various      |
+|                                 | face data, including the bounding box coordinates, normalized face, gender, age, and        |
+|                                 | emotions. Implementing this feature to your system can remarkably broaden the scope         |
+|                                 | of analytic tasks it is capable of fulfilling. Licensable.                                  |
 +---------------------------------+---------------------------------------------------------------------------------------------+
 | findface-mass-enroll            | The :ref:`findface-mass-enroll <bulk-face>` component allows for enrolling faces to         |
 |                                 | findface-facenapi from images in bulk.                                                      |          

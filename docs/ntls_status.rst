@@ -23,35 +23,42 @@ Interpret the ``last_updated`` value as follows:
 
 .. code::
 
+   curl http://localhost:3185/license.json -s | jq
    {
      "name": "NTLS",
-     "time": 1504794255,
-     "type": "online",
-     "license_id": "2e46fed81cc843539f0cf8bd4c1df254",
-     "generated": 1503571034,
-     "last_updated": 3,
+     "time": 1520844897,
+     "type": "offline (extended)",
+     "license_id": "001278983",
+     "generated": 487568400,
+     "last_updated": 4,
      "valid": {
        "value": true,
        "description": ""
      },
-     "source": "/ntech/license/import_803e10f14948d5e8a7583de99b0411635743a01cd7afd8589c475f5b60e202cb.lic",
+     "source": "/ntech/license/001278983.lic",
      "limits": [
        {
          "type": "time",
          "name": "end",
-         "value": 4753938994
+         "value": 25343
        },
        {
          "type": "number",
          "name": "faces",
-         "value": 1000000000000,
-         "current": 80037
+         "value": 90071,
+         "current": 230258
        },
        {
          "type": "number",
          "name": "cameras",
-         "value": 4294967295,
-         "current": 2
+         "value": 9007,
+         "current": 3
+       },
+       {
+         "type": "number",
+         "name": "extraction_api",
+         "value": 900,
+         "current": 8
        },
        {
          "type": "boolean",
@@ -74,24 +81,25 @@ Interpret the ``last_updated`` value as follows:
          "value": true
        }
      ],
-        "services": [
+     "services": [
        {
-         "name": "FindFace-tarantool",
-         "ip": "127.0.0.1:37058"
+         "name": "fkvideo-detector",
+         "ip": "127.0.0.1:58970"
        },
        {
-         "name": "findface-nnapi",
-         "ip": "127.0.0.1:37057"
+         "name": "FindFace-tarantool",
+         "ip": "127.0.0.1:58978"
        },
        {
          "name": "findface-extraction-api",
-         "ip": "127.0.0.1:37056"
-       },
-       {
-         "name": "fkvideo-detector",
-         "ip": "127.0.0.1:37059"
-       } 
+         "ip": "127.0.0.1:52376"
+       }
      ]
    }
+
+
+
+
+
 
 
