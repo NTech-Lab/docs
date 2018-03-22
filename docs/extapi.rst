@@ -30,7 +30,10 @@ Install and configure the ``findface-extraction-api`` component as follows:
 
        license_ntls_server: 192.168.113.2:3133
 
-#. The ``model_instances`` parameter indicates how many ``extraction-api`` instances are used. Specify the number of instances that you bought. The default value (0) means that this number is equal to the number of CPU cores. If it severely affects RAM consumption (for example, extraction-api fails), adjust the parameter value. 
+#. The ``model_instances`` parameter indicates how many ``extraction-api`` instances are used. Specify the number of instances that you purchased. The default value (0) means that this number is equal to the number of CPU cores. 
+
+   .. note::
+      This parameter severely affects RAM consumption. 
 
    .. code::
 

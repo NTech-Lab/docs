@@ -9,7 +9,7 @@ FindFace Enterprise Server SDK is equipped with a web user interface which gener
 To install the web interface, execute on the ``findface-facenapi`` host:
 
 .. note:: 
-   First install nginx if you do not already have it. You can do this as such::
+   First, install nginx if you do not already have it. You can do this as such::
 
      sudo apt-get install nginx
 
@@ -74,6 +74,11 @@ The web interface has a highly intuitive and handy design and provides the follo
 
      .. image:: /_static/persons.png
 
+* :guilabel:`Camera management`. Add cameras to the system. When adding a camera, you can specify ``ROT`` to enable detecting and tracking faces only inside a clipping rectangle (region of tracking), and/or ``ROI`` to enable posting faces detected only inside a region of interest. 
+
+  .. tip::
+     The ``ROT`` option is used to reduce the video face detector load.
+ 
 * :guilabel:`Photo processing`. Select this section to detect faces in static images, recognize gender, age and emotions, search a face in the database (identification), and compare two faces (verification). 
 
   
