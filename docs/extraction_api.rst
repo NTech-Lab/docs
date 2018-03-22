@@ -65,7 +65,10 @@ To install and configure the ``Extraction API`` component, do the following:
         min_face_size: 30
         max_face_size: .inf
 
-#. The ``model_instances`` parameter indicates how many instances of each enabled face detector (``nnd``, ``legacy`` or ``prenormalized``) and each enabled model (``facen``, ``gender``, ``age``, ``emotions``) run concurrently. The default value (0) means that this number is equal to the number of CPU cores. If it severely affects RAM consumption (for example, extraction-api fails), adjust the parameter value. 
+#. The ``model_instances`` parameter indicates how many ``extraction-api`` instances are used. Specify the number of instances that you purchased. The default value (0) means that this number is equal to the number of CPU cores. 
+
+   .. note::
+      This parameter severely affects RAM consumption. 
 
    .. code::
 

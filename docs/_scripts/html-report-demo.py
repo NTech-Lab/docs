@@ -1,19 +1,20 @@
 # coding: utf-8
 #
-# This plugin identifies faces from fkvideo_detector (configured by default) and saves the identification results to a static HTML file.
+# This plugin identifies faces from fkvideo_detector and saves the identification results to a static HTML file.
 #
 import base64
 import io
 from facenapi.server.base_video_handler import BaseVideoHandler
 
 def activate(app, ctx, options):
-    output = open('/home/stiletto/public_html/found.html', 'w')
+    output = open('/home/%username%/public_html/found.html', 'w')
     print('<style> img { max-width: 100px; max-height: 100px; } </style><table><tr><td>Needle</td><td>Found</td></tr>', file=output)
     output.flush()
 
     class DemoHandler(BaseVideoHandler):
         async def process_frame(self, *args, image, faces, timestamp, detector_info, **kwargs):
-            with self.timeit('nnapi'):
+            with self.timeit('nnapi'): 
+            ## 'nnapi' is a log key which indicates the default facen extractor response time
                 await self.ctx.extractor.enrich(faces, facen=True)
 
             for face in faces:
