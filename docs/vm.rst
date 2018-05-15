@@ -77,7 +77,7 @@ To deploy FindFace Enterprise Server SDK as a virtual machine, do the following:
    * By default, the virtual machine hardware is already configured in the way that ensures optimal performance in most medium-load systems. Make sure it meets your project requirements as well. If you are going to simultaneously process several video streams, or maintain a large dataset, you may need to allocate additional resources to the virtual machine RAM and increase the number of CPU cores. Be sure to save the settings.
 
      .. important::
-        You may also need to set up ``tntapi`` :ref:`sharding <tntapi-sharding>` and ``findface-nnapi`` :ref:`load balancing <load-balancing>` later on the virtual machine console.
+        You may also need to set up ``tntapi`` :ref:`sharding <tntapi-sharding>` later on the virtual machine console.
 
 #. Power on the virtual machine. Wait until Ubuntu is finished starting.
 #. To log in, enter the following credentials: login ``user``, password ``ntechlab``.

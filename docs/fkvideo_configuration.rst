@@ -81,10 +81,10 @@ Usage:
      - Simultaneously use the real-time and off-line modes of fkvideo_detector. In this case, fkvideo-detector will be sending bounding boxes to FindFace Server under 2 different labels.
      - Boolean: 1 = use both modes of fkvideo_detector, 0 = use the mode defined by the ``-r`` parameter. ‑‑realtime1844 and ‑‑realtime1844 1 are equal.
      - ‑‑realtime1844 or ‑‑realtime1844 1, ‑‑realtime1844 0
-   * - ‑‑start-ts arg
-     - Add a frame timestamp into a face posting request.
-     - Boolean: 1 = timestamps are added, 0 = timestamps are disabled.
-     - ‑‑start-ts 1
+   * - ‑‑start-ts=arg
+     - By default, faces are posted to FindFace Server with a current time stamp. To change the time stamp, specify a different start time of a video stream processing. In the case of a video file processing, you have to specify the start date and time of a video file. 
+     - Start date and time of a video file, or a video stream processing.
+     - ‑‑start-ts='2016-01-20 12:34:56'
    * - ‑‑max-persons arg
      - Define the maximum number of faces simultaneously tracked by the face tracker. This parameter severely affects performance.
      - Maximum number of simultaneously tracked faces.
@@ -246,6 +246,8 @@ Configuration File Format
     | license-ntls-server=192.168.10.1:3133
     | source-params=rtsp_transport=tcp,rtsp_flags=prefer,timeout=-1
     | body=galleries=testgal1\,testgal2,gender=true,age=true,emotions=true,meta=video.mp4
+    | start-ts = 2013-01-22 12:34:56
+
 
 .. note::
    You can specify several values for an additional body field (``body``), separated by a comma. In the configuration file, a comma between values of the same field must be preceded by a backslash (``\,``) to avoid a parsing error. 

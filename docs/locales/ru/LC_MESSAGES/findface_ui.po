@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-16 13:09+0300\n"
+"POT-Creation-Date: 2018-04-19 17:06+0700\n"
 "PO-Revision-Date: 2017-12-29 14:44+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
-"Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Virtaal 0.7.1\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../source/findface_ui.rst:5
 msgid "FindFace Web User Interface"
@@ -30,8 +29,8 @@ msgid ""
 "FindFace Enterprise Server SDK is equipped with a web user interface "
 "which generally duplicates the functionality available via REST API."
 msgstr ""
-"Веб-интерфейс FindFace Enterprise Server SDK обеспечивает удобный доступ к "
-"большинству функций REST API без необходимости написания кода."
+"Веб-интерфейс FindFace Enterprise Server SDK обеспечивает удобный доступ "
+"к большинству функций REST API без необходимости написания кода."
 
 #: ../source/findface_ui.rst:9
 msgid "To install the web interface, execute on the ``findface-facenapi`` host:"
@@ -40,12 +39,13 @@ msgstr ""
 "facenapi`` следующие команды:"
 
 #: ../source/findface_ui.rst:12
+#, fuzzy
 msgid ""
-"First install nginx if you do not already have it. You can do this as "
+"First, install nginx if you do not already have it. You can do this as "
 "such::"
 msgstr ""
-"Для работы веб-интерфейса вам понадобится nginx. Если он не установлен, это "
-"можно сделать следующим образом::"
+"Для работы веб-интерфейса вам понадобится nginx. Если он не установлен, "
+"это можно сделать следующим образом::"
 
 #: ../source/findface_ui.rst:20
 msgid "To open the web interface, do the following:"
@@ -80,8 +80,8 @@ msgid ""
 "To work with gender, age and emotions recognition (GAE) in the web "
 "interface, you need to :ref:`configure <gae>` it in the settings."
 msgstr ""
-"Для работы с распознаванием пола, возраста и эмоций (GAE) в веб-интерфейсе "
-"данную функцию нужно :ref:`настроить <gae>`."
+"Для работы с распознаванием пола, возраста и эмоций (GAE) в "
+"веб-интерфейсе данную функцию нужно :ref:`настроить <gae>`."
 
 #: ../source/findface_ui.rst:35
 msgid ""
@@ -96,8 +96,8 @@ msgid ""
 "Working with persons requires configured :ref:`dynamic person creation "
 "<persons>`."
 msgstr ""
-"Для работы с персонами необходимо настроить :ref:`группировку лиц персоны "
-"<persons>`."
+"Для работы с персонами необходимо настроить :ref:`группировку лиц персоны"
+" <persons>`."
 
 #: ../source/findface_ui.rst:41
 msgid ""
@@ -115,21 +115,20 @@ msgstr ""
 #: ../source/findface_ui.rst:43
 msgid ":guilabel:`Galleries`.  Create and delete galleries here."
 msgstr ""
-":guilabel:`Galleries` (Галереи). В данном разделе можно добавлять и удалять "
-"галереи."
+":guilabel:`Galleries` (Галереи). В данном разделе можно добавлять и "
+"удалять галереи."
 
 #: ../source/findface_ui.rst:50
 msgid ""
 ":guilabel:`Faces`. In this section, you can view, add and delete faces "
 "from the galleries."
 msgstr ""
-":guilabel:`Faces` (Лица). В данном разделе можно просматривать, добавлять и "
-"удалять лица из галерей."
+":guilabel:`Faces` (Лица). В данном разделе можно просматривать, добавлять"
+" и удалять лица из галерей."
 
 #: ../source/findface_ui.rst:54
 msgid "Use the :guilabel:`Batch upload` option to upload image files in bulk."
-msgstr ""
-"Используйте опцию :guilabel:`Batch upload`, чтобы добавить лица пакетно."
+msgstr "Используйте опцию :guilabel:`Batch upload`, чтобы добавить лица пакетно."
 
 #: ../source/findface_ui.rst:59
 msgid "You may also want to use its :ref:`console alternative <bulk-face>`."
@@ -146,9 +145,9 @@ msgid ""
 msgstr ""
 "Выберите несколько изображений по отдельности или укажите папку с "
 "изображениями. Затем настройте правило формирования метаданных для "
-"загружаемых лиц. Используйте опцию :guilabel:`&MF selector`, чтобы задать "
-"поведение системы на случай обнаружения нескольких лиц на фото: добавить все "
-"лица, самое большое, вернуть ошибку."
+"загружаемых лиц. Используйте опцию :guilabel:`&MF selector`, чтобы задать"
+" поведение системы на случай обнаружения нескольких лиц на фото: добавить"
+" все лица, самое большое, вернуть ошибку."
 
 #: ../source/findface_ui.rst:68
 msgid ""
@@ -166,8 +165,8 @@ msgid ""
 "To select photos in the :guilabel:`icons` mode, click on them as you hold"
 " down the :kbd:`CTRL` key."
 msgstr ""
-"Для того чтобы выбрать фотографии в режиме :guilabel:`icons`, щелкайте по "
-"ним при нажатой клавише :kbd:`CTRL`."
+"Для того чтобы выбрать фотографии в режиме :guilabel:`icons`, щелкайте по"
+" ним при нажатой клавише :kbd:`CTRL`."
 
 #: ../source/findface_ui.rst:73
 msgid ":guilabel:`Persons`. View and filter persons here."
@@ -177,16 +176,28 @@ msgstr ""
 
 #: ../source/findface_ui.rst:77
 msgid ""
+":guilabel:`Camera management`. Add cameras to the system. When adding a "
+"camera, you can specify ``ROT`` to enable detecting and tracking faces "
+"only inside a clipping rectangle (region of tracking), and/or ``ROI`` to "
+"enable posting faces detected only inside a region of interest."
+msgstr ""
+
+#: ../source/findface_ui.rst:80
+msgid "The ``ROT`` option is used to reduce the video face detector load."
+msgstr ""
+
+#: ../source/findface_ui.rst:82
+msgid ""
 ":guilabel:`Photo processing`. Select this section to detect faces in "
 "static images, recognize gender, age and emotions, search a face in the "
 "database (identification), and compare two faces (verification)."
 msgstr ""
-":guilabel:`Photo processing` (Обработка фото). Выберите данный раздел для "
-"обнаружения лиц на статических изображениях, распознавания пола, возраста и "
-"эмоций, поиска лица в базе данных (идентификации) и сравнения двух лиц "
-"(верификации)."
+":guilabel:`Photo processing` (Обработка фото). Выберите данный раздел для"
+" обнаружения лиц на статических изображениях, распознавания пола, "
+"возраста и эмоций, поиска лица в базе данных (идентификации) и сравнения "
+"двух лиц (верификации)."
 
-#: ../source/findface_ui.rst:83
+#: ../source/findface_ui.rst:88
 msgid ""
 ":guilabel:`Video processing`. Here you can work with video streams from "
 "rtsp and web cameras, and video files. Detect, enroll (add to a gallery) "
@@ -194,14 +205,14 @@ msgid ""
 "Generate enrollment and face identification reports in HTML by clicking "
 "on the :guilabel:`Save demo report` button."
 msgstr ""
-":guilabel:`Video processing` (Обработка видео). В данном разделе вы можете "
-"обработать видеопотоки с rtsp- и web-камер, а также видеофайлы. Возможности: "
-"обнаружение лиц на видео и добавление их в базу данных, идентификация и "
-"распознавание пола, возраста и эмоций. Для генерации отчета о добавленных "
-"или идентифицированных лицах в формате HTML нажмите кнопку :guilabel:`Save "
-"demo report`."
+":guilabel:`Video processing` (Обработка видео). В данном разделе вы "
+"можете обработать видеопотоки с rtsp- и web-камер, а также видеофайлы. "
+"Возможности: обнаружение лиц на видео и добавление их в базу данных, "
+"идентификация и распознавание пола, возраста и эмоций. Для генерации "
+"отчета о добавленных или идентифицированных лицах в формате HTML нажмите "
+"кнопку :guilabel:`Save demo report`."
 
-#: ../source/findface_ui.rst:90
+#: ../source/findface_ui.rst:95
 msgid ""
 "The video processing functionality in the web interface is great for "
 "tests. In production mode, use :ref:`fkvideo_detector <video>`."
@@ -209,3 +220,4 @@ msgstr ""
 "Раздел обработки видео в веб-интерфейсе предназначен для тестирования "
 "Сервера. В рабочем режиме используйте компонент :ref:`fkvideo_detector "
 "<video>`."
+

@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-20 17:51+0300\n"
+"POT-Creation-Date: 2018-04-19 17:06+0700\n"
 "PO-Revision-Date: 2017-12-20 18:10+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
-"Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Virtaal 0.7.1\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../source/regenerate_facens.rst:4
 msgid "Migrate to Different Detector or Model"
@@ -52,8 +51,8 @@ msgid ""
 "model, it usually suffices to regenerate only facens. FindFace Enterprise"
 " Server SDK provides tools that can handle most migration use cases."
 msgstr ""
-"При смене детектора лиц вам следует повторно сгенерировать нормализованные "
-"изображения и миниатюры лиц, а также векторы признаков."
+"При смене детектора лиц вам следует повторно сгенерировать "
+"нормализованные изображения и миниатюры лиц, а также векторы признаков."
 
 #: ../source/regenerate_facens.rst:18
 msgid ""
@@ -153,11 +152,12 @@ msgid "Different detector settings"
 msgstr "Смена настроек детектора"
 
 #: ../source/regenerate_facens.rst:58
+#, fuzzy
 msgid ""
 "The ``findface-regenerate`` tool runs original images through the "
-"``facenapi``-``nnapi`` pipeline with different detector [and model] "
-"settings, and returns regenerated normalized images, thumbnails and "
-"facens."
+"``facenapi``-``extraction-api`` pipeline with different detector [and "
+"model] settings, and returns regenerated normalized images, thumbnails "
+"and facens."
 msgstr ""
 "Утилита ``findface-regenerate`` прогоняет исходные изображения через "
 "компоненты ``facenapi`` и ``nnapi`` с новыми настройками детектора [и "
@@ -169,9 +169,11 @@ msgid "Different model"
 msgstr "Смена модели"
 
 #: ../source/regenerate_facens.rst:60
+#, fuzzy
 msgid ""
 "The ``findface-regenerate`` tool runs normalized face images through "
-"``nnapi`` with different model settings, and returns regenerated facens."
+"``extraction-api`` with different model settings, and returns regenerated"
+" facens."
 msgstr ""
 "Утилита ``findface-regenerate`` прогоняет нормализованные изображения лиц"
 " через компонент ``nnapi`` с новыми настройками модели и возвращает "
@@ -201,7 +203,7 @@ msgstr ""
 "Перейдите в папку ``/usr/bin/``. Отобразите и внимательно изучите справку"
 " по утилите ``findface-regenerate``:"
 
-#: ../source/regenerate_facens.rst:187
+#: ../source/regenerate_facens.rst:178
 msgid ""
 "To change detector settings, uncomment and edit the detector-related "
 "parameters in the ``findface-facenapi`` configuration file."
@@ -210,15 +212,17 @@ msgstr ""
 "относящиеся к детектору параметры в файле конфигурации ``findface-"
 "facenapi``."
 
-#: ../source/regenerate_facens.rst:196
+#: ../source/regenerate_facens.rst:187
+#, fuzzy
 msgid ""
-"To switch the face biometric :ref:`model <models>`, edit the "
-"``model_facen`` parameter in the ``findface-nnapi`` configuration file:"
+"To switch the face biometric :ref:`model <models>`, edit the ``models`` "
+"-> ``facen`` parameter in the ``findface-extraction-api`` configuration "
+"file:"
 msgstr ""
 "Для смены :ref:`биометрической модели <models>` лица, отредактируйте "
 "параметр ``model_facen`` в файле конфигурации ``findface-nnapi``:"
 
-#: ../source/regenerate_facens.rst:204
+#: ../source/regenerate_facens.rst:196
 msgid ""
 "Configure ``findface-regenerate`` by using command line arguments as "
 "described in the help message. For example, to switch the face detector, "
@@ -228,27 +232,27 @@ msgstr ""
 "как описано в справке по утилите. Например, для того чтобы сменить "
 "детектор лиц, выполните из папки ``/usr/bin`` следующую команду:"
 
-#: ../source/regenerate_facens.rst:210
+#: ../source/regenerate_facens.rst:202
 msgid "To switch the model, execute::"
 msgstr "Для смены модели выполните команду::"
 
-#: ../source/regenerate_facens.rst:216
+#: ../source/regenerate_facens.rst:208
 msgid "Copy Facens from MongoDB to Tarantool"
 msgstr "Копирование векторов признаков из MongoDB в Tarantool"
 
-#: ../source/regenerate_facens.rst:218
+#: ../source/regenerate_facens.rst:210
 msgid "Apply ``mongo2searchapi`` as follows:"
 msgstr "Примените утилиту ``mongo2searchapi`` следующим образом:"
 
-#: ../source/regenerate_facens.rst:220
+#: ../source/regenerate_facens.rst:212
 msgid "Create a backup for Tarantool."
 msgstr "Создайте резервную копию БД Tarantool."
 
-#: ../source/regenerate_facens.rst:221
+#: ../source/regenerate_facens.rst:213
 msgid "Stop Tarantool."
 msgstr "Остановите Tarantool."
 
-#: ../source/regenerate_facens.rst:227
+#: ../source/regenerate_facens.rst:219
 msgid ""
 "Delete snapshot ``.snap``, xlog ``.xlog`` and :ref:`fast index <fast-"
 "index>` ``.idx`` files for all tntapi shards."
@@ -256,43 +260,43 @@ msgstr ""
 "Удалите файлы снапшотов ``.snap``, логов ``.xlog`` и :ref:`быстрого "
 "индеса <fast-index>` ``.idx`` для всех шардов ``tntapi``."
 
-#: ../source/regenerate_facens.rst:230
+#: ../source/regenerate_facens.rst:222
 msgid "By default, these files are stored in the following folders:"
 msgstr "По умолчанию, данные файлы хранятся в следующих папках:"
 
-#: ../source/regenerate_facens.rst:232
+#: ../source/regenerate_facens.rst:224
 msgid "Standalone instance:"
 msgstr "Одиночная инсталляция:"
 
-#: ../source/regenerate_facens.rst:234
+#: ../source/regenerate_facens.rst:226
 msgid "``/opt/ntech/var/lib/tarantool/default/snapshots``"
 msgstr "``/opt/ntech/var/lib/tarantool/default/snapshots``"
 
-#: ../source/regenerate_facens.rst:235
+#: ../source/regenerate_facens.rst:227
 msgid "``/opt/ntech/var/lib/tarantool/default/xlogs``"
 msgstr "``/opt/ntech/var/lib/tarantool/default/xlogs``"
 
-#: ../source/regenerate_facens.rst:236
+#: ../source/regenerate_facens.rst:228
 msgid "``/opt/ntech/var/lib/tarantool/default/index``"
 msgstr "``/opt/ntech/var/lib/tarantool/default/index``"
 
-#: ../source/regenerate_facens.rst:238
+#: ../source/regenerate_facens.rst:230
 msgid "Cluster instance:"
 msgstr "Кластерная инсталляция:"
 
-#: ../source/regenerate_facens.rst:240
+#: ../source/regenerate_facens.rst:232
 msgid ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/snapshots`"
 msgstr ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/snapshots`"
 
-#: ../source/regenerate_facens.rst:241
+#: ../source/regenerate_facens.rst:233
 msgid ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/xlogs`"
 msgstr ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/xlogs`"
 
-#: ../source/regenerate_facens.rst:242
+#: ../source/regenerate_facens.rst:234
 msgid ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/index`"
 msgstr ":samp:`/opt/ntech/var/lib/tarantool/shard_{N}/index`"
 
-#: ../source/regenerate_facens.rst:244
+#: ../source/regenerate_facens.rst:236
 msgid ""
 "If facens :ref:`differ in size <models>` for the old and new models, "
 "update the facen size in the ``FindFace.start`` section of the Tarantool "
@@ -306,11 +310,11 @@ msgstr ""
 ":samp:`/etc/tarantool/instances.enabled/FindFace_{shard_N}.lua`. "
 "Повторите для каждого шарда."
 
-#: ../source/regenerate_facens.rst:252
+#: ../source/regenerate_facens.rst:244
 msgid "Run ``mongo2searchapi`` on the ``findface-facenapi`` host:"
 msgstr "Запустите ``mongo2searchapi`` на сервере с ``findface-facenapi``:"
 
-#: ../source/regenerate_facens.rst:258
+#: ../source/regenerate_facens.rst:250
 msgid "Start Tarantool"
 msgstr "Запустите Tarantool."
 
@@ -327,3 +331,4 @@ msgstr "Запустите Tarantool."
 #~ " the help message. To run the "
 #~ "script, execute from ``/usr/bin``:"
 #~ msgstr ""
+

@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-08 12:33+0300\n"
+"POT-Creation-Date: 2018-04-19 17:06+0700\n"
 "PO-Revision-Date: 2017-11-19 18:37+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
-"Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Virtaal 0.7.1\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../source/logs.rst:4
 msgid "Analyze Log Files"
@@ -30,8 +29,8 @@ msgid ""
 "Log files provide a complete record of each FindFace Enterprise Server "
 "SDK component activity."
 msgstr ""
-"Активность каждого компонента FindFace Enterprise Server SDK записывается в "
-"лог-файл."
+"Активность каждого компонента FindFace Enterprise Server SDK записывается"
+" в лог-файл."
 
 #: ../source/logs.rst:9
 msgid "findface-facenapi"
@@ -46,37 +45,38 @@ msgid ""
 "``1114`` — total response time (FindFace Enterprise Server SDK components"
 " + MongoDB + Python),"
 msgstr ""
-"``1114`` — общее время ответа (компоненты FindFace Enterprise Server SDK + "
-"MongoDB + Python),"
+"``1114`` — общее время ответа (компоненты FindFace Enterprise Server SDK "
+"+ MongoDB + Python),"
 
 #: ../source/logs.rst:17
 msgid "``487`` — face detection time,"
 msgstr "``487`` — время обнаружения лица,"
 
 #: ../source/logs.rst:18
-msgid "``241`` — findface-nnapi response time,"
+#, fuzzy
+msgid "``241`` — ``findface-extraction-api`` response time,"
 msgstr "``241`` — время ответа ``findface-nnapi``,"
 
 #: ../source/logs.rst:19
-msgid "``12`` — tntapi response time."
+#, fuzzy
+msgid "``12`` — ``tntapi`` response time."
 msgstr "``12`` — время ответа ``tntapi``."
 
 #: ../source/logs.rst:24
-msgid "findface-nnapi"
-msgstr "findface-nnapi"
-
-#: ../source/logs.rst:32
-msgid "fkvideo_detector"
-msgstr "fkvideo_detector"
-
-#: ../source/logs.rst:38
 msgid "extraction-api"
 msgstr "extraction-api"
 
-#: ../source/logs.rst:45
-msgid "Load-balanced service"
-msgstr "Сервис, сбалансированный по нагрузке"
+#: ../source/logs.rst:31
+msgid "fkvideo_detector"
+msgstr "fkvideo_detector"
 
-#: ../source/logs.rst:53
+#: ../source/logs.rst:39
 msgid "Tarantool"
 msgstr "Tarantool"
+
+#~ msgid "findface-nnapi"
+#~ msgstr "findface-nnapi"
+
+#~ msgid "Load-balanced service"
+#~ msgstr "Сервис, сбалансированный по нагрузке"
+

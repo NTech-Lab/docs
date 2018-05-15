@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-20 17:51+0300\n"
+"POT-Creation-Date: 2018-04-19 17:06+0700\n"
 "PO-Revision-Date: 2017-12-20 18:12+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
-"Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Virtaal 0.7.1\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../source/standalone_architecture.rst:4
 msgid "Standalone Architecture"
@@ -101,19 +100,21 @@ msgstr ""
 "производительности (в 70-100 раз)."
 
 #: ../source/_tables/components.csv:1
-msgid "``findface-nnapi``"
-msgstr "``findface-nnapi``"
+#, fuzzy
+msgid "``findface-extraction-api``"
+msgstr "``findface-facenapi``"
 
 #: ../source/_tables/components.csv:1
+#, fuzzy
 msgid ""
 "Daemon which extracts a feature vector (based on neural networks). "
 "Requires the packages with :ref:`models <models>` :program:`<findface-"
-"data>.deb`."
+"data>.deb`. Can also provide :ref:`advanced functions <extraction-api>`."
 msgstr ""
-"Сервис, выполняющий посредством нейронных сетей извлечение вектора признаков "
-"(биометрического образца) из обнаруженных лиц, а также распознавание пола, "
-"возраста и эмоций. Требует установки пакетов с :ref:`моделями нейронных "
-"сетей <models>` :program:`<findface-data>.deb`."
+"Сервис, выполняющий посредством нейронных сетей извлечение вектора "
+"признаков (биометрического образца) из обнаруженных лиц, а также "
+"распознавание пола, возраста и эмоций. Требует установки пакетов с "
+":ref:`моделями нейронных сетей <models>` :program:`<findface-data>.deb`."
 
 #: ../source/_tables/components.csv:1
 msgid "MongoDB"
@@ -156,3 +157,7 @@ msgstr ""
 
 #~ msgid "Service"
 #~ msgstr "Сервис"
+
+#~ msgid "``findface-nnapi``"
+#~ msgstr "``findface-nnapi``"
+

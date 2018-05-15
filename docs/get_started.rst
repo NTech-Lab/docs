@@ -32,6 +32,6 @@ Follow the **9 steps** below to start delivering face recognition services to yo
 #. :ref:`Install FindFace Server <install-server>`
 #. :ref:`Create a token <token>` and :ref:`test the system work <test>`
 #. :ref:`Configure video face detection <video>`
-#. Increase performance by setting up :ref:`nginx load balancing <load-balancing>` and :ref:`fast index <fast-index>`
+#. Increase performance by setting up :ref:`fast index <fast-index>`
 #. :ref:`Add advanced features <advanced>`
 #. :ref:`Finalize the system with coding <api>`
