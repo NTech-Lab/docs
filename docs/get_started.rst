@@ -34,4 +34,4 @@ Follow the **9 steps** below to start delivering face recognition services to yo
 #. :ref:`Configure video face detection <video>`
 #. Increase performance by setting up :ref:`fast index <fast-index>`
 #. :ref:`Add advanced features <advanced>`
-#. :ref:`Finalize the system with coding <api>`
+#. :ref:`Finalize the system with coding <integrate>`

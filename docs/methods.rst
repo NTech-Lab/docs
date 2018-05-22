@@ -1,7 +1,7 @@
 .. _methods:
 
 General Methods
-=======================
+--------------------------
 
 .. rubric:: In this section:
 
@@ -12,7 +12,7 @@ General Methods
 .. _detect-post:
 
 Method /detect POST
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This method detects faces in the provided image and recognize gender, age, and emotions, given the request parameters. You can either upload the image as multipart/form-data or provide the image URL.
 
@@ -79,7 +79,7 @@ This method detects faces in the provided image and recognize gender, age, and e
 .. _verify-post:
 
 Method /verify POST
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This method is used to verify that two faces belong to the same person, or, alternatively, measures the similarity between the two faces. You
 can choose between these two modes by setting the ``threshold`` parameter. 
@@ -167,7 +167,7 @@ In the case, when you need to calculate similarity of different persons or find 
 .. _identify-post:
 
 Method /identify POST
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This method is used to search through the face database. The method returns at most n faces (one by default), which are the most similar to the specified face, and the similarity is above the specified :ref:`threshold <thresholds>`. You can optionally specify a gallery id to check a photo only against photos in this gallery.
 
@@ -259,7 +259,7 @@ This method is used to search through the face database. The method returns at m
 .. _face-post:
 
 Method /face POST
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Processes the uploaded image or provided URL, detects faces and adds the
 detected faces to the searchable database. If there are multiple faces
@@ -400,7 +400,7 @@ gallery.
 .. _face-id-get:
 
 Method /face/id/<id> GET
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Returns detailed information about the face with id = FaceID.
 
@@ -447,7 +447,7 @@ Returns detailed information about the face with id = FaceID.
 .. _face-id-put:
 
 Method /face/id/<id> PUT
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This method can be used to modify certain fields of the face object with ``id = FaceID``. Currently only changes to the meta attribute are supported.
 
@@ -501,7 +501,7 @@ This method can be used to modify certain fields of the face object with ``id = 
 .. _face-id-delete:
 
 Method /face/id/<id> DELETE
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Deletes a face with the id = FaceId.
 
@@ -533,7 +533,7 @@ Deletes a face with the id = FaceId.
 .. _face-meta-get:
 
 Method /face/meta/<meta> GET
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Returns the list of faces with a given meta string. Note that the method
 is case-sensitive, so the given meta has to fully match the one from the
@@ -600,7 +600,7 @@ the URL.
 .. _faces-get:
 
 Method /faces GET
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. rubric:: Parameters
 
@@ -661,14 +661,14 @@ Method /faces GET
 .. _faces-gallery-get:
 
 Method /faces/gallery/<gallery> GET
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Returns the list of all faces stored in a specified gallery.
 
 .. _meta-get:
 
 Method /meta GET
--------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This method retrieves all the meta string stored in the database along with one of the associated faces. To get more faces call ``GET /v0/face/meta/[Meta]``.
 
@@ -739,7 +739,7 @@ This method retrieves all the meta string stored in the database along with one 
 .. _galleries-get:
 
 Method /galleries GET
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 List all your galleries.
 
@@ -778,7 +778,7 @@ List all your galleries.
 .. _gallery-post:
 
 Method /galleries/<gallery> POST
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Creates a new gallery under a given name. The gallery name can contain
 English letters, numbers, underscore and minus sign
@@ -809,7 +809,7 @@ This method doesn't accept any additional parameters.
 .. _gallery-delete:
 
 Method /galleries/<gallery> DELETE
-------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Deletes the gallery and all faces in it.
 
@@ -837,22 +837,22 @@ Deletes the gallery and all faces in it.
 .. _docs-get:
 
 Method /docs GET
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Lists documented API versions. Available without authorization.
 
 .. _ doc-version-get:
 
 Method /docs/<version> GET
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Get documentation for specified API version. Available without
+Gets documentation for specified API version. Available without
 authorization.
 
 .. _person-id-get:
 
 Method /person/id/<id> GET
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. rubric:: Parameters:
 
@@ -915,7 +915,7 @@ Method /person/id/<id> GET
 .. _history-search-post:
 
 Method /history/search POST
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This method retrieves all events from camera history of the given
 parameters.

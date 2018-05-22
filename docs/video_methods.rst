@@ -1,7 +1,7 @@
 .. _video-methods:
 
 Methods for Video Face Detection
-====================================
+------------------------------------------
 
 These methods extend :ref:`general API methods <methods>` of FindFace Enterprise Server SDK. 
 
@@ -16,7 +16,7 @@ These methods extend :ref:`general API methods <methods>` of FindFace Enterprise
 .. _camera-first:
 
 Method /camera POST
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. rubric:: Description
 
@@ -69,7 +69,7 @@ A JSON representation of the added camera or a failure reason.
 .. _camera-get:
 
 Method /camera GET
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. rubric:: Description
 
@@ -118,7 +118,7 @@ The list of all cameras.
 .. _camera-id-get:
 
 Method /camera/<camera\_id> GET
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. rubric:: Description
 
@@ -158,7 +158,7 @@ Info about the camera or a failure reason.
 .. _camera-id-put:
 
 Method /camera/<camera_id> PUT
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. rubric:: Description
 
@@ -256,7 +256,7 @@ A JSON representation of the updated camera with id = <camera\_id>.
 .. _camera-id-delete:
 
 Method /camera/<camera_id> DELETE
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. rubric:: Description
 

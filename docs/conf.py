@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'FindFace Enterprise Server SDK'
-copyright = u'2017, NtechLab'
+copyright = u'2018, NtechLab'
 author = u'NtechLab'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -158,7 +158,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'FindFaceEnterpriseServerSDK.tex', u'FindFace Enterprise Server SDK Documentation',
+    (master_doc, 'FindFaceEnterpriseServerSDK.tex', u'FindFace Enterprise Server SDK',
      u'NtechLab', 'manual'),
 ]
 
@@ -168,7 +168,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'findfaceenterpriseserversdk', u'FindFace Enterprise Server SDK Documentation',
+    (master_doc, 'findfaceenterpriseserversdk', u'FindFace Enterprise Server SDK',
      [author], 1)
 ]
 
@@ -179,7 +179,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'FindFaceEnterpriseServerSDK', u'FindFace Enterprise Server SDK Documentation',
+    (master_doc, 'FindFaceEnterpriseServerSDK', u'FindFace Enterprise Server SDK',
      author, 'FindFaceEnterpriseServerSDK', 'One line description of project.',
      'Miscellaneous'),
 ]

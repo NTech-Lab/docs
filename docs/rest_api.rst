@@ -1,12 +1,14 @@
 .. _api:
 
-********************
 REST API
-********************
+================
+
+REST API provides cross-platform multidimensional integration between FindFace Enterprise Server SDK and your own application. It allows for maximum flexibility, though it is more time- and knowledge-intensive, as you have to get the application ready.   
+
 
 .. toctree::
    :maxdepth: 1
-   :caption: In this chapter:
+   :caption: In this section:
 
    rest_about
    methods
