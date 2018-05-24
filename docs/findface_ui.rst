@@ -50,6 +50,7 @@ The web interface has a highly intuitive and handy design and provides the follo
 * :guilabel:`Faces`. In this section, you can view, add and delete faces from the galleries.
 
      .. image:: /_static/add_photo.png
+        :scale: 60%
 
   Use the :guilabel:`Batch upload` option to upload image files in bulk. 
    
@@ -73,16 +74,22 @@ The web interface has a highly intuitive and handy design and provides the follo
 * :guilabel:`Persons`. View and filter persons here.
 
      .. image:: /_static/persons.png
+        :scale: 60 %
 
 * :guilabel:`Camera management`. Add cameras to the system. When adding a camera, you can specify ``ROT`` to enable detecting and tracking faces only inside a clipping rectangle (region of tracking), and/or ``ROI`` to enable posting faces detected only inside a region of interest. 
 
+     .. image:: /_static/cameras.png
+        :scale: 60%
+
   .. tip::
      The ``ROT`` option is used to reduce the video face detector load.
+
  
 * :guilabel:`Photo processing`. Select this section to detect faces in static images, recognize gender, age and emotions, search a face in the database (identification), and compare two faces (verification). 
 
   
-    .. image:: /_static/compare.png
+    .. image:: /_static/gae.png
+       :scale: 60%
 
  
 * :guilabel:`Video processing`. Here you can work with video streams from rtsp and web cameras, and video files. Detect, enroll (add to a gallery) and identify faces in video with gender, age and emotions recognition. Generate enrollment and face identification reports in HTML by clicking on the :guilabel:`Save demo report` button.   

@@ -168,8 +168,8 @@ This method can be used to modify certain fields of the camera object with ``id 
 
 * ``meta`` [optional]: new meta string
 * ``url`` [optional]: url address of the camera's stream
-* ``rot`` [W,H,X,Y] [optional]: enable detecting and tracking faces only inside a clipping rectangle (ROT, region of tracking). If you use ROT, be sure to pass this parameter to the camera each time you send a PUT request because if this parameter is missing or empty in the request, ROT on the camera will be deleted. 
-* ``roi`` [W,H,X,Y] [optional]: enable posting faces detected only inside a region of interest (ROI). If you use ROI, be sure to pass this parameter to the camera each time you send a PUT request because if this parameter is missing or empty in the request, ROI on the camera will be deleted. 
+* ``rot`` [W,H,X,Y] [optional]: enable detecting and tracking faces only inside a clipping rectangle (ROT, region of tracking).  
+* ``roi`` [W,H,X,Y] [optional]: enable posting faces detected only inside a region of interest (ROI).  
 
 .. rubric:: Returns:
 

@@ -58,11 +58,15 @@ The best face can be found in one of the following modes:
 Real-Time Mode
 """"""""""""""""""""""""
 
-The real-time mode allows posting a face immediately after it appears in a camera field of view. In this mode, the face tracker searches for the best face snapshot dynamically:
+The real-time mode allows posting a face immediately after it appears in a camera field of view. 
 
-#. First, the face tracker estimates whether the quality of a face snapshot exceeds a pre-defined threshold value. If so, the snapshot is posted to FindFace Server. 
-#. The threshold value increases after each post. Each time the face tracker gets a higher quality snapshot of the same face, it is posted. 
-#. When the face disappears from the camera field of view, the threshold value resets to default.
+* If ``rt-perm=True``, the face tracker searches for the best face snapshot within each time period equal to ``rt-delay`` and posts it to FindFace Server.
+* If ``rt-perm=False``, the face tracker searches for the best face snapshot dynamically:
+
+  #. First, the face tracker estimates whether the quality of a face snapshot exceeds a pre-defined threshold value. If so, the snapshot is posted to FindFace Server.
+  #. The threshold value increases after each post. Each time the face tracker gets a higher quality snapshot of the same face, it is posted.
+  #. When the face disappears from the camera field of view, the threshold value resets to default.
+
 
 
 Offline Mode

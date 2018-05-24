@@ -13,8 +13,10 @@ When writing a plugin for these use cases, you can inherit from the following re
 
       .. note::
          ``BaseVideoHandler`` allows for parsing the ``fkvideo_detector`` requests by using the ``process_frame`` method. 
+
+
 .. note::
-   To refer to the ``findface-facenapi`` context in a class that inherits from a HTTP API handler, use ``self.ctx``, e.g. ``face = self.ctx.faces.Model.from_extraction_face(eface)``.
+   To refer to the ``findface-facenapi`` context in a class that inherits from a HTTP API handler, use ``self.ctx``, e.g. ``self.ctx.faces.Model.from_extraction_face(eface)``.
 
 The following examples will help you use these handlers in your plugin:
 

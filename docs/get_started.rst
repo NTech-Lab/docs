@@ -13,7 +13,7 @@ Here you can see a typical biometric system based on FindFace Enterprise Server 
 .. |system_ru| image:: https://gcc-elb-public-prod.gliffy.net/embed/image/f1b08549cded1c086b2e1af7aacf0e5b.png
 
 
-FindFace Enterprise Server SDK consists of the :program:`Biometric Data Analysis and Recognition Server` (:program:`FindFace Server` or :program:`Server` hereinafter) and, optionally, the video face detector and other :ref:`additional components <extra-functionality>`. 
+FindFace Enterprise Server SDK consists of the :program:`Biometric Data Analysis and Recognition Server` (:program:`FindFace Server` or :program:`Server` hereinafter) and, optionally, the video face detector and other :ref:`additional components <architecture>`. 
 
 The FindFace Server functioning is provided by interaction of the following components: 
 

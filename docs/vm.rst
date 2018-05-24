@@ -6,7 +6,7 @@ Install as Pre-Configured Virtual Machine
 You can deploy FindFace Enterprise Server SDK as a fully pre-configured ready-to-use virtual machine image that you can run inside a virtualization environment in any operating system. This type of installation is the simplest and requires minimum skills.
 
 .. important::
-   This type of installation is suitable only for the :ref:`standalone deployment <standalone>`.
+   This type of installation is suitable only for the :ref:`standalone deployment <architecture>`.
 
 .. warning::
    For highload projects, installation as a virtual machine is not recommended even in test mode.

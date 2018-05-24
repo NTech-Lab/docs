@@ -4,10 +4,10 @@
 Classes and Methods
 --------------------------
 
-This section provides a full reference for the ``findface-facenapi`` context you can use in your plugin.
+This section provides a full reference to the ``findface-facenapi`` context you can use in your plugin.
 
 .. tip::
-   Use ``ctx`` from the  ``activate`` parameters to access classes and methods directly from a plugin, e.g. use ``face = ctx.faces.Model.from_extraction_face(eface)`` to invoke :py:meth:`Faces.Model.from_extraction_face`. To refer to classes and methods in a class that inherits from a HTTP API handler, use ``self.ctx``, e.g. ``face = self.ctx.faces.Model.from_extraction_face(eface)``.
+   Use ``ctx`` from the  ``activate`` parameters to access classes and methods directly from a plugin, e.g. use ``ctx.faces.Model.from_extraction_face(eface)`` to invoke :py:meth:`Faces.Model.from_extraction_face`. To refer to classes and methods in a class that inherits from a HTTP API handler, use ``self.ctx``: ``self.ctx.faces.Model.from_extraction_face(eface)``.
 
 .. rubric:: In this section:
 

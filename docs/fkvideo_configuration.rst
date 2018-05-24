@@ -141,18 +141,14 @@ Usage:
      - Define the maximum deviation of a face from its frontal position. A face is posted if its deviation is less than this value. The deviation is to be fitted empirically.
      - Maximum deviation of a face from its frontal position in empirical units (negative rational numbers to zero). Milestones: -3.5 = large face angles, face recognition may be inefficient, -2.5 = satisfactory deviation, -0.05 = close to the frontal position, 0 = frontal face. The default value is -1000.
      - ‑‑min-dir-score -1
-   * - ‑‑rt-refresh arg
-     - Only for the real-time mode. Define the time interval for the best face score auto-refresh during the better snapshot dynamic search.
-     - Time period in milliseconds. The default value is 0 (disabled).
-     - ‑‑rt-refresh 10
-   * - ‑‑rt-score-step arg
-     - Only for the real-time mode. Define the threshold increase step for the better snapshot dynamic search.
-     - Threshold increase step (positive rational numbers).
-     - ‑‑rt-score-step 3.4
    * - ‑‑rt-delay arg
-     - Only for the real-time mode. Define the minimum time period between 2 posts of the same face with increased quality.
-     - Time period in milliseconds between 2 posts of the same face with increased quality.
+     - Only for the real-time mode. If ``rt-perm=True``, defines the time period within which the face tracker picks up the best snapshot and posts it to FindFace Server. If ``rt-perm=False``, defines the minimum time period between 2 posts of the same face with increased quality.
+     - Time period in milliseconds.
      - ‑‑rt-delay 100
+   * - ‑‑rt-perm arg
+     - Only for the realtime mode. Post best snapshots obtained within each ``rt-delay`` time period.
+     - Boolean: 1 = post best snapshots obtained within each ``rt-delay`` time period, 0 = search for the best snapshot dynamically and send snapshots in order of increasing quality.
+     - ‑‑rt-perm 1
    * - ‑‑rot arg
      - Enable detecting and tracking faces only inside a clipping rectangle. You can use this option to reduce fkvideo_detector load.
      - Clipping rectangle: WxH+X+Y (see the specification of X geometry).

@@ -1,3 +1,5 @@
+.. _fkvideo-render:
+
 Render Detection Results
 ======================================================
 
