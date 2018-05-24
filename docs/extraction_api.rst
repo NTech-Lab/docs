@@ -3,7 +3,7 @@
 Extraction API
 ================================
 
-By default, the :ref:`extraction-api <architecture>` component is used only as a facen extractor. This section explains how to harness its advanced feature such as flexible configuration of the API response format. Use this feature to extract various face data, including the bounding box coordinates, normalized face, gender, age, and emotions, and facen without ``findface-facenapi`` as a mediator. Implementing this feature to your system can remarkably broaden the scope of analytic tasks it is capable of fulfilling.
+By default, the :ref:`extraction-api <architecture>` component is used as a face detector and facen extractor. This section explains how to harness its advanced feature such as flexible configuration of the API response format. Use this feature to extract various face data, including the bounding box coordinates, normalized face, gender, age, and emotions, and facen without ``findface-facenapi`` as a mediator. Implementing this feature to your system can remarkably broaden the scope of analytic tasks it is capable of fulfilling.
 
 .. note::
    Being a ``findface-facenapi`` counterpart when it comes to data extraction via API, ``Extraction API`` is more resource-demanding. The component cannot fully substitute ``findface-facenapi`` as it doesn't allow adding faces and working with the database.

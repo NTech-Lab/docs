@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-20 17:51+0300\n"
+"POT-Creation-Date: 2018-04-19 17:06+0700\n"
 "PO-Revision-Date: 2017-12-20 17:58+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
-"Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Virtaal 0.7.1\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../source/install.rst:4
 msgid "Install Step-By-Step"
@@ -84,11 +83,12 @@ msgstr ""
 msgid "Add a signature key on each designated host."
 msgstr "Добавьте ключ подписи на каждом из серверов развертывания."
 
-#: ../source/prepare.rst:22
+#: ../source/prepare.rst:23
+#, fuzzy
 msgid ""
 "Unpack the packages with :ref:`models <models>` (face, gender, age, and "
 "emotions). In the cluster environment, models are installed only on the "
-"``findface-nnapi`` hosts."
+"``extraction-api`` hosts."
 msgstr ""
 "Распакуйте пакеты с :ref:`моделями нейронных сетей <models>` (биометрия "
 "лица, пол, возраст, эмоции). Если FindFace Enterprise Server SDK "
@@ -128,10 +128,11 @@ msgid "Install and configure the local license server :program:`NTLS`."
 msgstr "Установите и настройте локальный сервер лицензий :program:`NTLS`."
 
 #: ../source/licensing.rst:18
+#, fuzzy
 msgid ""
-"If the licensable components (``findface-nnapi``, ``tntapi``, "
-"``fkvideo_detector``, ``extraction-api``) are installed on remote hosts, "
-"specify the NTLS host IP address in their configuration files."
+"If the licensable components (``extraction-api``, ``tntapi``, "
+"``fkvideo_detector``) are installed on remote hosts, specify the NTLS "
+"host IP address in their configuration files."
 msgstr ""
 "Если лицензируемые компоненты (``findface-nnapi``, ``tntapi``, "
 "``fkvideo_detector`` и ``extraction-api``) установлены на удаленных "
@@ -207,11 +208,12 @@ msgid "For on-premise licensing, insert the Guardant dongle into a USB port."
 msgstr "Для лицензирования в закрытой сети вставьте ключ Guardant в USB-порт."
 
 #: ../source/licensing.rst:55
+#, fuzzy
 msgid ""
-"If the licensable components (``findface-nnapi``, ``tntapi``, "
-"``fkvideo_detector``, ``extraction-api``) are to be installed on remote "
-"hosts, keep in mind that you have to specify the IP address of the NTLS "
-"host in their configuration files after installation."
+"If the licensable components (``extraction-api``, ``tntapi``, "
+"``fkvideo_detector``) are to be installed on remote hosts, keep in mind "
+"that you have to specify the IP address of the NTLS host in their "
+"configuration files after installation."
 msgstr ""
 "Если лицензируемые компоненты (``findface-nnapi``, ``tntapi``, "
 "``fkvideo_detector`` и ``extraction-api``) будут установлены на удаленных"
@@ -244,7 +246,7 @@ msgstr "Установка findface-facenapi"
 msgid "Install and configure the ``findface-facenapi`` component as follows:"
 msgstr "Установите и настройте компонент ``findface-facenapi`` следующим образом:"
 
-#: ../source/facenapi.rst:9 ../source/nnapi.rst:9
+#: ../source/extapi.rst:14 ../source/facenapi.rst:9
 msgid "Install the component."
 msgstr "Установите компонент."
 
@@ -285,11 +287,11 @@ msgstr ""
 "Проверьте, не добавлен ли сервис ``findface-facenapi`` в автозагрузку "
 "Ubuntu."
 
-#: ../source/facenapi.rst:42 ../source/nnapi.rst:36
+#: ../source/facenapi.rst:42
 msgid "Enable the service autostart and launch the service."
 msgstr "Добавьте сервис в автозагрузку и запустите его."
 
-#: ../source/facenapi.rst:48 ../source/nnapi.rst:42
+#: ../source/extapi.rst:48 ../source/facenapi.rst:48
 msgid ""
 "Make sure that the service is up and running. The command will return a "
 "service description, a status (should be Active), path and running time."
@@ -303,52 +305,57 @@ msgstr ""
 "Для того чтобы отобразить :ref:`логи <logs>` ``findface-facenapi``, "
 "выполните команду:"
 
-#: ../source/nnapi.rst:2
-msgid "Install nnapi"
-msgstr "Установка findface-nnapi"
+#: ../source/extapi.rst:4
+#, fuzzy
+msgid "Install extraction-api"
+msgstr "Установка findface-facenapi"
 
-#: ../source/nnapi.rst:4
-msgid "Install and configure the ``findface-nnapi`` component as follows:"
-msgstr "Установите и настройте компонент ``findface-nnapi`` следующим образом:"
-
-#: ../source/nnapi.rst:7
+#: ../source/extapi.rst:6
+#, fuzzy
 msgid ""
-"You may also want to learn about :ref:`gender, age and emotions "
-"recognition <gae>`."
-msgstr ""
-"Возможно, вам также захочется узнать больше о :ref:`распознавании пола, "
-"возраста и эмоций <gae>`."
+"Install and configure the ``findface-extraction-api`` component as "
+"follows:"
+msgstr "Установите и настройте компонент ``findface-facenapi`` следующим образом:"
 
-#: ../source/nnapi.rst:16
+#: ../source/extapi.rst:10
 msgid ""
-"If :ref:`NTLS <licensing>` is installed on a remote host, specify its IP "
-"address in the ``findface-nnapi`` configuration file."
+"The ``extraction-api`` component requires the packages with :ref:`models "
+"<models>` :program:`<findface-data>.deb`. Make sure they have been "
+"installed."
 msgstr ""
-"Если :ref:`NTLS <licensing>` установлен на удаленном сервере, укажите его"
-" IP адрес в файле конфигурации ``findface-nnapi``."
 
-#: ../source/nnapi.rst:24
+#: ../source/extapi.rst:21
+#, fuzzy
+msgid "Open the ``findface-extraction-api.ini`` configuration file."
+msgstr "Откройте для редактирования файл конфигурации ``findface-facenapi.ini``::"
+
+#: ../source/extapi.rst:27
+msgid "If :ref:`NTLS <licensing>` is remote, specify its IP address."
+msgstr ""
+
+#: ../source/extapi.rst:33
 msgid ""
-"Check if the component is runnable. To do so, invoke the ``findface-"
-"nnapi`` application by executing the command below. As the application is"
-" invoked, hold 1 minute, and if no errors display, hit :kbd:`Ctrl+C`."
+"The ``model_instances`` parameter indicates how many ``extraction-api`` "
+"instances are used. Specify the number of instances that you purchased. "
+"The default value (0) means that this number is equal to the number of "
+"CPU cores."
 msgstr ""
-"Проверьте работоспособность компонента. Для этого вызовите приложение "
-"``findface-nnapi``, выполнив приведенную ниже команду. После вызова "
-"подождите минуту. Если ошибок не обнаружено, верните контроль над "
-"командной строкой, нажав сочетание клавиш :kbd:`Ctrl+C`."
 
-#: ../source/nnapi.rst:30
-msgid ""
-"Check if the ``findface-nnapi`` service autostart at system startup is "
-"disabled."
-msgstr "Проверьте, не добавлен ли сервис ``findface-nnapi`` в автозагрузку Ubuntu."
-
-#: ../source/nnapi.rst:50
-msgid "You can view the ``findface-nnapi`` :ref:`logs <logs>` by executing:"
+#: ../source/extapi.rst:36
+msgid "This parameter severely affects RAM consumption."
 msgstr ""
-"Для того чтобы отобразить :ref:`логи <logs>` ``findface-nnapi``, "
-"выполните команду:"
+
+#: ../source/extapi.rst:42
+#, fuzzy
+msgid "Enable the ``Extraction API`` service autostart and launch the service."
+msgstr "Добавьте сервис в автозагрузку и запустите его."
+
+#: ../source/extapi.rst:56
+#, fuzzy
+msgid "You can view the ``extraction-api`` :ref:`logs <logs>` by executing:"
+msgstr ""
+"Для того чтобы отобразить :ref:`логи <logs>` ``tntapi``, выполните "
+"команду:"
 
 #: ../source/ffupload.rst:4
 msgid "Install findface-upload"
@@ -763,12 +770,13 @@ msgstr ""
 "``findface-upload`` не установлен."
 
 #: ../source/network.rst:26
+#, fuzzy
 msgid ""
 "By default, if one or several tntapi shards are out of service during "
 "face identification, :program:`findface-facenapi` returns an error. If "
 "necessary, uncomment the ``tntapi_ignore_search_error`` parameter and "
-"assign it ``True``. In this case findface-facenapi will use available "
-"tntapi shards to obtain face identification results, indicating the "
+"assign it ``True``. In this case ``findface-facenapi`` will use available"
+" ``tntapi`` shards to obtain face identification results, indicating the "
 "number of available servers vs the total number of servers in the "
 "response::"
 msgstr ""
@@ -810,3 +818,57 @@ msgstr ""
 
 #~ msgid "Install FindFace Server"
 #~ msgstr "Установка компонентов Сервера"
+
+#~ msgid "Install nnapi"
+#~ msgstr "Установка findface-nnapi"
+
+#~ msgid "Install and configure the ``findface-nnapi`` component as follows:"
+#~ msgstr "Установите и настройте компонент ``findface-nnapi`` следующим образом:"
+
+#~ msgid ""
+#~ "You may also want to learn about"
+#~ " :ref:`gender, age and emotions recognition"
+#~ " <gae>`."
+#~ msgstr ""
+#~ "Возможно, вам также захочется узнать "
+#~ "больше о :ref:`распознавании пола, возраста"
+#~ " и эмоций <gae>`."
+
+#~ msgid ""
+#~ "If :ref:`NTLS <licensing>` is installed "
+#~ "on a remote host, specify its IP"
+#~ " address in the ``findface-nnapi`` "
+#~ "configuration file."
+#~ msgstr ""
+#~ "Если :ref:`NTLS <licensing>` установлен на "
+#~ "удаленном сервере, укажите его IP адрес"
+#~ " в файле конфигурации ``findface-nnapi``."
+
+#~ msgid ""
+#~ "Check if the component is runnable. "
+#~ "To do so, invoke the ``findface-"
+#~ "nnapi`` application by executing the "
+#~ "command below. As the application is "
+#~ "invoked, hold 1 minute, and if no"
+#~ " errors display, hit :kbd:`Ctrl+C`."
+#~ msgstr ""
+#~ "Проверьте работоспособность компонента. Для "
+#~ "этого вызовите приложение ``findface-nnapi``,"
+#~ " выполнив приведенную ниже команду. После"
+#~ " вызова подождите минуту. Если ошибок "
+#~ "не обнаружено, верните контроль над "
+#~ "командной строкой, нажав сочетание клавиш "
+#~ ":kbd:`Ctrl+C`."
+
+#~ msgid ""
+#~ "Check if the ``findface-nnapi`` service "
+#~ "autostart at system startup is disabled."
+#~ msgstr ""
+#~ "Проверьте, не добавлен ли сервис "
+#~ "``findface-nnapi`` в автозагрузку Ubuntu."
+
+#~ msgid "You can view the ``findface-nnapi`` :ref:`logs <logs>` by executing:"
+#~ msgstr ""
+#~ "Для того чтобы отобразить :ref:`логи "
+#~ "<logs>` ``findface-nnapi``, выполните команду:"
+

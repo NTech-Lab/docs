@@ -13,6 +13,7 @@ FindFace Enterprise Server SDK provides professional face recognition services b
 * Dynamic person creation and 'friend or foe' identification.
 * Almost infinite scalability due to integration with Tarantool.
 * Truly RESTful API available in an embedded user friendly framework.
+* Plugin support.
 * Possibility of formatting API-responses.
 * Highly intuitive web user interface.
 * Network or on-premise licensing.
@@ -49,7 +50,7 @@ Let's get started!
    increase_performance
    findface_ui
    advanced_features
-   rest_api
+   integrate
    troubleshooting
    appendix
 

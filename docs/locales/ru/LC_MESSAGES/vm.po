@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-13 12:05+0300\n"
+"POT-Creation-Date: 2018-04-19 17:06+0700\n"
 "PO-Revision-Date: 2017-12-13 12:24+0300\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
-"Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Virtaal 0.7.1\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../source/vm.rst:4
 msgid "Install as Pre-Configured Virtual Machine"
@@ -116,24 +115,10 @@ msgstr ""
 ":ref:`распознаванием «свой-чужой» <friend>`."
 
 #: ../source/vm.rst:36
-msgid "findface-nnapi"
-msgstr "findface-nnapi"
-
-#: ../source/vm.rst:36
-msgid ""
-"Installed and started (1 instance) with enabled and configured "
-":ref:`gender, age and emotions recognition <gae>`. :ref:`Load balancing "
-"<load-balancing>` may be required."
-msgstr ""
-"Устанавливается и запускается (в 1 экземпляре) с включенным и настроенным"
-" :ref:`распознаванием пола, возраста и эмоций <gae>`. Может потребоваться"
-" :ref:`балансировка нагрузки <load-balancing>`."
-
-#: ../source/vm.rst:40
 msgid "findface-server-tarantool (tntapi)"
 msgstr "findface-server-tarantool (tntapi)"
 
-#: ../source/vm.rst:40
+#: ../source/vm.rst:36
 msgid ""
 "Installed and started (1 shard). :ref:`Sharding <tntapi-sharding>` may be"
 " required."
@@ -141,11 +126,11 @@ msgstr ""
 "Устанавливается и запускается (1 шард). Может потребоваться :ref:`шардинг"
 " <tntapi-sharding>`."
 
-#: ../source/vm.rst:43
+#: ../source/vm.rst:39
 msgid "findface-tarantool-build- index"
 msgstr "findface-tarantool-build- index"
 
-#: ../source/vm.rst:43
+#: ../source/vm.rst:39
 msgid ""
 "Installed. Before use, consult the :ref:`component documentation <fast-"
 "index>`."
@@ -153,20 +138,20 @@ msgstr ""
 "Устанавливается. Перед использованием ознакомьтесь c :ref:`документацией "
 "по компоненту <fast-index>`."
 
-#: ../source/vm.rst:46
+#: ../source/vm.rst:42
 msgid "ffupload"
 msgstr "ffupload"
 
-#: ../source/vm.rst:46 ../source/vm.rst:54 ../source/vm.rst:56
-#: ../source/vm.rst:61 ../source/vm.rst:63 ../source/vm.rst:65
+#: ../source/vm.rst:42 ../source/vm.rst:50 ../source/vm.rst:52
+#: ../source/vm.rst:57 ../source/vm.rst:59 ../source/vm.rst:61
 msgid "Installed and started."
 msgstr "Устанавливается и запускается."
 
-#: ../source/vm.rst:48
+#: ../source/vm.rst:44
 msgid "fkvideo_detector"
 msgstr "fkvideo_detector"
 
-#: ../source/vm.rst:48
+#: ../source/vm.rst:44
 msgid ""
 "Only installed. Use the command line or FindFace Web UI to manually start"
 " it. Before use, consult the :ref:`component documentation <video>`."
@@ -175,32 +160,34 @@ msgstr ""
 "веб-интерфейс FindFace Web UI. Перед использованием ознакомьтесь с "
 ":ref:`документацией по компоненту <video>`."
 
-#: ../source/vm.rst:51
-msgid "Extraction API"
-msgstr "Extraction API"
+#: ../source/vm.rst:47
+#, fuzzy
+msgid "findface-extraction-api"
+msgstr "findface-facenapi"
 
-#: ../source/vm.rst:51
+#: ../source/vm.rst:47
+#, fuzzy
 msgid ""
-"Only installed. Exclusively for experienced users. Before use, be sure to"
-" consult the :ref:`component documentation <extraction-api>`."
+"Installed and started as a facen extractor. Consult the :ref:`component "
+"documentation <extraction-api>` for advanced features."
 msgstr ""
 "Устанавливается. Только для опытных пользователей. Перед использованием "
 "обязательно ознакомьтесь с :ref:`документацией по компоненту <extraction-"
 "api>`."
 
-#: ../source/vm.rst:54
+#: ../source/vm.rst:50
 msgid "NTLS"
 msgstr "NTLS"
 
-#: ../source/vm.rst:56
+#: ../source/vm.rst:52
 msgid "FindFace Web UI"
 msgstr "Веб-интерфейс FindFace"
 
-#: ../source/vm.rst:58
+#: ../source/vm.rst:54
 msgid "findface-mass-enroll"
 msgstr "findface-mass-enroll"
 
-#: ../source/vm.rst:58
+#: ../source/vm.rst:54
 msgid ""
 "Only installed. Use the command line to work with it. Before use, consult"
 " the :ref:`component documentation <bulk-face>`."
@@ -209,29 +196,29 @@ msgstr ""
 "Перед использованием ознакомьтесь с :ref:`документацией по компоненту "
 "<bulk-face>`."
 
-#: ../source/vm.rst:61
+#: ../source/vm.rst:57
 msgid "nginx"
 msgstr "nginx"
 
-#: ../source/vm.rst:63
+#: ../source/vm.rst:59
 msgid "MongoDB"
 msgstr "MongoDB"
 
-#: ../source/vm.rst:65
+#: ../source/vm.rst:61
 msgid "Tarantool Database"
 msgstr "Tarantool Database"
 
-#: ../source/vm.rst:67
+#: ../source/vm.rst:63
 msgid "jq"
 msgstr "jq"
 
-#: ../source/vm.rst:67
+#: ../source/vm.rst:63
 msgid "Installed. Used to pretty-print API responses from FindFace Server."
 msgstr ""
 "Устанавливается. Используется для структурирования API-ответов от "
 "FindFace Enterprise Server SDK в формате JSON."
 
-#: ../source/vm.rst:71
+#: ../source/vm.rst:67
 msgid ""
 "To deploy FindFace Enterprise Server SDK as a virtual machine, do the "
 "following:"
@@ -239,7 +226,7 @@ msgstr ""
 "Для развертывания FindFace Enteprise Server SDK в виде виртуальной машины"
 " выполните следующие действия:"
 
-#: ../source/vm.rst:73
+#: ../source/vm.rst:69
 msgid ""
 "Put the ``ffserver-*.ovf`` and ``disk-*.vmdk`` virtual machine files into"
 " the same directory."
@@ -247,7 +234,7 @@ msgstr ""
 "Поместите файлы виртуальной машины ``ffserver-*.ovf`` и ``disk-*.vmdk`` в"
 " общий каталог."
 
-#: ../source/vm.rst:74
+#: ../source/vm.rst:70
 msgid ""
 "Start the virtualization environment. Click :guilabel:`Open a Virtual "
 "Machine` and select the ``ffserver-*.ovf`` file. If prompted, convert the"
@@ -257,27 +244,27 @@ msgstr ""
 " и выберите файл ``ffserver-*.ovf``. По запросу конвертируйте файл в "
 "формат VMware. Это может занять некоторое время."
 
-#: ../source/vm.rst:75
+#: ../source/vm.rst:71
 msgid ""
 "After the virtual machine is imported into the virtualization "
 "environment, navigate to the virtual machine hardware settings: "
 ":menuselection:`Edit virtual machine settings --> Hardware`."
 msgstr ""
 "По завершении импорта виртуальной машины в среду виртуализации откройте "
-"настройки ее аппаратного обеспечения: :menuselection:`Edit virtual machine "
-"settings --> Hardware`."
+"настройки ее аппаратного обеспечения: :menuselection:`Edit virtual "
+"machine settings --> Hardware`."
 
-#: ../source/vm.rst:78
+#: ../source/vm.rst:74
 msgid ""
 "Refer to the VMware `official documentation <https://docs.vmware.com/en"
 "/VMware-Workstation-Pro/14.0/com.vmware.ws.using.doc/GUID-E2668921-F40D-"
 "4CED-BA1B-FE4DC497D910.html>`__."
 msgstr ""
-"Ознакомьтесь с `официальной документацией <https://docs.vmware.com/en/VMware-"
-"Workstation-Pro/14.0/com.vmware.ws.using.doc/GUID-E2668921-F40D-4CED-BA1B-"
-"FE4DC497D910.html>`__ VMware."
+"Ознакомьтесь с `официальной документацией <https://docs.vmware.com/en"
+"/VMware-Workstation-Pro/14.0/com.vmware.ws.using.doc/GUID-E2668921-F40D-"
+"4CED-BA1B-FE4DC497D910.html>`__ VMware."
 
-#: ../source/vm.rst:80
+#: ../source/vm.rst:76
 msgid ""
 "Choose the `network connection type <https://docs.vmware.com/en/VMware-"
 "Workstation-Pro/14.0/com.vmware.ws.using.doc/GUID-0CE1AE01-7E79-41BB-"
@@ -287,7 +274,7 @@ msgstr ""
 "Workstation-Pro/14.0/com.vmware.ws.using.doc/GUID-0CE1AE01-7E79-41BB-"
 "9EA8-4F839BE40E1A.html>`__ с учетом сетевой конфигурации хоста."
 
-#: ../source/vm.rst:81
+#: ../source/vm.rst:77
 msgid ""
 "By default, the virtual machine hardware is already configured in the way"
 " that ensures optimal performance in most medium-load systems. Make sure "
@@ -297,37 +284,38 @@ msgid ""
 "machine RAM and increase the number of CPU cores. Be sure to save the "
 "settings."
 msgstr ""
-"По умолчанию аппаратное обеспечение виртуальной машины уже настроено таким "
-"образом, чтобы обеспечить оптимальную производительность в большинстве "
-"систем со средней нагрузкой. Убедитесь, что оно удовлетворяет требованиям и "
-"вашего проекта. Если вы собираетесь одновременно обрабатывать несколько "
-"видеопотоков или работать с большим объемом данных, увеличьте RAM "
-"виртуальной машины и количество ядер процессора. Сохраните настройки."
+"По умолчанию аппаратное обеспечение виртуальной машины уже настроено "
+"таким образом, чтобы обеспечить оптимальную производительность в "
+"большинстве систем со средней нагрузкой. Убедитесь, что оно удовлетворяет"
+" требованиям и вашего проекта. Если вы собираетесь одновременно "
+"обрабатывать несколько видеопотоков или работать с большим объемом "
+"данных, увеличьте RAM виртуальной машины и количество ядер процессора. "
+"Сохраните настройки."
 
-#: ../source/vm.rst:84
+#: ../source/vm.rst:80
 msgid ""
 "You may also need to set up ``tntapi`` :ref:`sharding <tntapi-sharding>` "
 "and ``findface-nnapi`` :ref:`load balancing <load-balancing>` later on "
 "the virtual machine console."
 msgstr ""
-"Для еще большего увеличения производительности создайте :ref:`дополнительные "
-"шарды <tntapi-sharding>` ``tntapi`` и настройте :ref:`балансировку нагрузки "
-"<load-balancing>` ``findface-nnapi`` после выполнения данной инструкции ("
-"через консоль виртуальной машины)."
+"Для еще большего увеличения производительности создайте "
+":ref:`дополнительные шарды <tntapi-sharding>` ``tntapi`` и настройте "
+":ref:`балансировку нагрузки <load-balancing>` ``findface-nnapi`` после "
+"выполнения данной инструкции (через консоль виртуальной машины)."
 
-#: ../source/vm.rst:86
+#: ../source/vm.rst:82
 msgid "Power on the virtual machine. Wait until Ubuntu is finished starting."
 msgstr ""
-"Включите виртуальную машину, нажав :guilabel:`Power On`. Дождитесь окончания "
-"загрузки Ubuntu."
+"Включите виртуальную машину, нажав :guilabel:`Power On`. Дождитесь "
+"окончания загрузки Ubuntu."
 
-#: ../source/vm.rst:87
+#: ../source/vm.rst:83
 msgid ""
 "To log in, enter the following credentials: login ``user``, password "
 "``ntechlab``."
 msgstr "Для входа в систему введите логин ``user`` и пароль ``ntechlab``."
 
-#: ../source/vm.rst:88
+#: ../source/vm.rst:84
 msgid ""
 "Find out the primary network interface IP address of the virtual machine "
 "(``192.168.112.144`` in the case study)."
@@ -335,7 +323,7 @@ msgstr ""
 "Определите IP-адрес основного сетевого интерфейса виртуальной машины "
 "(``192.168.112.144`` в примере)."
 
-#: ../source/vm.rst:112
+#: ../source/vm.rst:108
 msgid ""
 "Assign the primary network interface IP address to the ``ffupload_url`` "
 "parameter in the ``findface-facenapi`` configuration file."
@@ -343,17 +331,17 @@ msgstr ""
 "Присвойте IP-адрес основного сетевого интерфейса параметру "
 "``ffupload_url`` в файле конфигурации ``findface-facenapi``."
 
-#: ../source/vm.rst:121
+#: ../source/vm.rst:117
 msgid "The ``findface-facenapi.ini`` content must be correct Python code."
 msgstr ""
 "Содержимое файла ``findface-facenapi.ini`` должно представлять собой "
 "синтаксически верный код Python."
 
-#: ../source/vm.rst:123
+#: ../source/vm.rst:119
 msgid "Restart all the FindFace Enterprise Server SDK services."
 msgstr "Перезапустите сервисы FindFace Enterprise Server SDK."
 
-#: ../source/vm.rst:129
+#: ../source/vm.rst:125
 msgid ""
 "Make the virtual machine IP address static. To do so, open the "
 "``etc/network/interfaces`` file and modify the current primary network "
@@ -366,7 +354,7 @@ msgstr ""
 "сетевого интерфейса так, как показано в примере ниже. Замените адреса в "
 "примере на актуальные с учетом настроек сети."
 
-#: ../source/vm.rst:132
+#: ../source/vm.rst:128
 msgid ""
 "Be sure to edit the ``etc/network/interfaces`` file with extreme care. "
 "Please refer to the Ubuntu `guide on networking "
@@ -378,11 +366,11 @@ msgstr ""
 " сетей <https://help.ubuntu.com/lts/serverguide/network-"
 "configuration.html#ip-addressing>`__ Ubuntu."
 
-#: ../source/vm.rst:145
+#: ../source/vm.rst:141
 msgid "Restart networking."
 msgstr "Перезапустите сетевые интерфейсы."
 
-#: ../source/vm.rst:151
+#: ../source/vm.rst:147
 msgid ""
 "Upload the FindFace Enterprise Server SDK license file via the local "
 "license server web interface at ``http://<IP_address>:3185/#/`` "
@@ -392,7 +380,7 @@ msgstr ""
 "веб-интерфейс NTLS ``http://<IP_адрес>:3185/#/`` "
 "(``http://192.168.112.144:3185/#/`` в примере). "
 
-#: ../source/vm.rst:152
+#: ../source/vm.rst:148
 msgid ""
 "Create an :ref:`authentication token <token>`. Use it to access the "
 ":ref:`FindFace Web Interface <ffui>` at ``http://<IP_address>:8000/``."
@@ -446,3 +434,23 @@ msgstr ""
 #~ " `правильно <https://docs.vmware.com/en/VMware-"
 #~ "Workstation-Pro/14.0/com.vmware.ws.using.doc/GUID-"
 #~ "0CE1AE01-7E79-41BB-9EA8-4F839BE40E1A.html>`__."
+
+#~ msgid "findface-nnapi"
+#~ msgstr "findface-nnapi"
+
+#~ msgid ""
+#~ "Installed and started (1 instance) with"
+#~ " enabled and configured :ref:`gender, age"
+#~ " and emotions recognition <gae>`. "
+#~ ":ref:`Load balancing <load-balancing>` may "
+#~ "be required."
+#~ msgstr ""
+#~ "Устанавливается и запускается (в 1 "
+#~ "экземпляре) с включенным и настроенным "
+#~ ":ref:`распознаванием пола, возраста и эмоций"
+#~ " <gae>`. Может потребоваться :ref:`балансировка"
+#~ " нагрузки <load-balancing>`."
+
+#~ msgid "Extraction API"
+#~ msgstr "Extraction API"
+

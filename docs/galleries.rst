@@ -1,7 +1,7 @@
 .. _galleries:
 
 Galleries
-=======================
+-------------------------
 
 There is always a gallery titled default. Faces are always added to the default gallery and cannot be removed from it. The default gallery cannot be stopped. 
 

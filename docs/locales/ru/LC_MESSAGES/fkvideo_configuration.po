@@ -8,18 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FindFace Enterprise Server SDK 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-11 17:48+0300\n"
-"PO-Revision-Date: 2017-12-11 18:11+0300\n"
+"POT-Creation-Date: 2018-04-19 17:06+0700\n"
+"PO-Revision-Date: 2018-04-28 15:20+0630\n"
 "Last-Translator: Sasha Carlos <info@ntechlab.com>\n"
-"Language-Team: NtechLab Documentation Team\n"
 "Language: ru\n"
+"Language-Team: NtechLab Documentation Team\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 "
+"&& (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Virtaal 0.7.1\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: ../source/fkvideo_configuration.rst:4
 msgid "Configuration Parameters"
@@ -30,8 +30,7 @@ msgid ""
 "To configure fkvideo_detector, you can specify its options in any of the "
 "following ways:"
 msgstr ""
-"Параметры конфигурации видеодетектора задаются одним из следующих "
-"способов:"
+"Параметры конфигурации видеодетектора задаются одним из следующих способов:"
 
 #: ../source/_inclusions/fkvideo_config_warning.rst:3
 msgid "As command line arguments upon starting fkvideo_detector."
@@ -45,19 +44,18 @@ msgstr "в файле конфигурации."
 
 #: ../source/_inclusions/fkvideo_config_warning.rst:12
 msgid ""
-"The default fkvideo_detector configuration file is ``/etc/fkvideo.ini``. "
-"Avoid editing ``/etc/fkvideo.ini``, especially if fkvideo_detector "
-"and :ref:`FindFace Web UI <ffui>` are running on the same host, as "
-"FindFace Web UI also uses this configuration file. Instead, make a copy "
-"of this file, edit the copy and specify it in the option ``-c`` when "
-"starting fkvideo_detector."
+"The default fkvideo_detector configuration file is ``/etc/fkvideo.ini``. Avoid "
+"editing ``/etc/fkvideo.ini``, especially if fkvideo_detector and :ref:`FindFace "
+"Web UI <ffui>` are running on the same host, as FindFace Web UI also uses this "
+"configuration file. Instead, make a copy of this file, edit the copy and "
+"specify it in the option ``-c`` when starting fkvideo_detector."
 msgstr ""
-"По умолчанию в качестве файла конфигурации fkvideo_detector используется "
-"файл ``/etc/fkvideo.ini``. Не редактируйте файл ``/etc/fkvideo.ini``, "
-"особенно если fkvideo_detector и :ref:`веб-интерфейс FindFace <ffui>` "
-"установлены на одном физическом сервере, т. к. веб-интерфейс тоже "
-"использует данный файл. Вместо этого скопируйте файл, отредактируйте "
-"копию и укажите ее в опции ``-c`` при запуске fkvideo_detector."
+"По умолчанию в качестве файла конфигурации fkvideo_detector используется файл "
+"``/etc/fkvideo.ini``. Не редактируйте файл ``/etc/fkvideo.ini``, особенно если "
+"fkvideo_detector и :ref:`веб-интерфейс FindFace <ffui>` установлены на одном "
+"физическом сервере, т. к. веб-интерфейс тоже использует данный файл. Вместо "
+"этого скопируйте файл, отредактируйте копию и укажите ее в опции ``-c`` при "
+"запуске fkvideo_detector."
 
 #: ../source/fkvideo_configuration.rst:9
 msgid "In this section:"
@@ -77,11 +75,11 @@ msgstr "Опции:"
 
 #: ../source/fkvideo_configuration.rst:26
 msgid ""
-"The following parameters are mandatory: ``api-host``, ``api-port``, "
-"``api-token``, ``--license-ntls-server``."
+"The following parameters are mandatory: ``api-url``, ``api-token``, ``--license-"
+"ntls-server``."
 msgstr ""
-"Опции ``api-host``, ``api-port``, ``api-token``, ``--license-ntls-"
-"server`` являются обязательными."
+"Опции ``api-url``, ``api-token``, ``--license-ntls-server`` являются "
+"обязательными."
 
 #: ../source/fkvideo_configuration.rst:32
 msgid "Option"
@@ -105,585 +103,601 @@ msgstr "-c [ ‑‑config ] arg"
 
 #: ../source/fkvideo_configuration.rst:37
 msgid ""
-"Invokes fkvideo_detector with a given configuration file (``.ini``). The "
-"command line parameters and those in the configuration file have the same"
-" names and meaning, but if a parameter is set either way, the command "
-"line value has priority."
+"Invoke fkvideo_detector with a given configuration file (``.ini``). The command "
+"line parameters and those in the configuration file have the same names and "
+"meaning, but if a parameter is set either way, the command line value has "
+"priority."
 msgstr ""
-"Запускает видеодетектор лиц с заданным файлом конфигурации ``.ini``. Если"
-" параметр задан как в командной строке, так и в файле конфигурации, "
-"значение в командной строке будет иметь приоритет."
+"Запускает видеодетектор лиц с заданным файлом конфигурации ``.ini``. Если "
+"параметр задан как в командной строке, так и в файле конфигурации, значение в "
+"командной строке будет иметь приоритет."
 
 #: ../source/fkvideo_configuration.rst:38
 msgid ""
 "Path to the .ini configuration file. If you specify the file name alone "
-"(without the full path), fkvideo_detector will search for the file in the"
-" fkvideo_detector working directory. The default fkvideo_detector "
-"configuration file is ``/etc/fkvideo.ini``. If fkvideo_detector and "
-":ref:`FindFace Web UI <ffui>` are running on the same host, avoid editing"
-" ``/etc/fkvideo.ini`` as it is also used by FindFace Web UI. Instead, "
-"make a copy of this file, edit the copy and specify it in the option "
-"``-c`` when starting fkvideo_detector."
+"(without the full path), fkvideo_detector will search for the file in the "
+"fkvideo_detector working directory. The default fkvideo_detector configuration "
+"file is ``/etc/fkvideo.ini``. If fkvideo_detector and :ref:`FindFace Web UI "
+"<ffui>` are running on the same host, avoid editing ``/etc/fkvideo.ini`` as it "
+"is also used by FindFace Web UI. Instead, make a copy of this file, edit the "
+"copy and specify it in the option ``-c`` when starting fkvideo_detector."
 msgstr ""
-"Путь к файлу конфигурации ``.ini``. Если имя файла указывается без "
-"полного пути, видеодетектор лиц ищет файл в папке своей установки. По "
-"умолчанию файл конфигурации fkvideo_detector ``/etc/fkvideo.ini``. Если "
-"fkvideo_detector и :ref:`веб-интерфейс FindFace <ffui>` установлены на "
-"одном физическом сервере, не редактируйте файл ``/etc/fkvideo.ini``, "
-"поскольку он также используется веб-интерфейсом FindFace. Вместо этого "
-"скопируйте данный файл, отредактируйте копию и укажите ее в опции ``-c`` "
-"при запуске fkvideo_detector."
+"Путь к файлу конфигурации ``.ini``. Если имя файла указывается без полного "
+"пути, видеодетектор лиц ищет файл в папке своей установки. По умолчанию файл "
+"конфигурации fkvideo_detector ``/etc/fkvideo.ini``. Если fkvideo_detector и :"
+"ref:`веб-интерфейс FindFace <ffui>` установлены на одном физическом сервере, не "
+"редактируйте файл ``/etc/fkvideo.ini``, поскольку он также используется веб-"
+"интерфейсом FindFace. Вместо этого скопируйте данный файл, отредактируйте копию "
+"и укажите ее в опции ``-c`` при запуске fkvideo_detector."
 
 #: ../source/fkvideo_configuration.rst:39
 msgid "$ fkvideo_detector -c /etc/fkvideo_example.ini"
 msgstr "$ fkvideo_detector -c /etc/fkvideo_example.ini"
 
 #: ../source/fkvideo_configuration.rst:40
-msgid "‑‑license-ntls-server arg"
-msgstr "‑‑license-ntls-server arg"
-
-#: ../source/fkvideo_configuration.rst:41
-msgid ""
-"Mandatory. Defines the IP address and port of :ref:`NTLS <licensing>`. "
-"Edit only if NTLS is remote."
-msgstr ""
-"Обязательная опция. Определяет IP-адрес и порт локального сервера "
-"лицензий :ref:`NTLS <licensing>`. Редактируется только в случае "
-"удаленного NTLS."
-
-#: ../source/fkvideo_configuration.rst:42
-msgid "NTLS IP address:port"
-msgstr "IP-адрес:порт"
-
-#: ../source/fkvideo_configuration.rst:43
-msgid "‑‑license-ntls-server 192.168.10.1:3133"
-msgstr "‑‑license-ntls-server 192.168.10.1:3133"
-
-#: ../source/fkvideo_configuration.rst:44
-msgid "-n [ ‑‑detector-name ] arg"
-msgstr "-n [ ‑‑detector-name ] arg"
-
-#: ../source/fkvideo_configuration.rst:45
-msgid "Applies fkvideo_detector to a given list of cameras."
-msgstr "Применяет видеодетектор к заданному списку видеокамер."
-
-#: ../source/fkvideo_configuration.rst:46
-msgid ""
-"Unique video detector identifier (hostname by default) which corresponds "
-"to a particular list of cameras stored on FindFace Server."
-msgstr ""
-"Уникальный идентификатор виртуального детектора (по умолчанию имя "
-"локального сервера), соответствующего определенному списку видеокамер на "
-"Сервере FindFace."
-
-#: ../source/fkvideo_configuration.rst:47
-msgid "‑‑detector-name detec1"
-msgstr "‑‑detector-name detec1"
-
-#: ../source/fkvideo_configuration.rst:48
-msgid "-d [ ‑‑detectors-max ] arg"
-msgstr "-d [ ‑‑detectors-max ] arg"
-
-#: ../source/fkvideo_configuration.rst:49
-msgid ""
-"Defines the maximum number of video streams to be processed by "
-"fkvideo_detector."
-msgstr ""
-"Определяет максимальное количество видеопотоков, обрабатываемых "
-"видеодетектором лиц."
-
-#: ../source/fkvideo_configuration.rst:50
-msgid ""
-"Maximum number of video streams simultaneously processed "
-"by fkvideo_detector (5 by default)."
-msgstr ""
-"Максимальное количество видеопотоков, одновременно обрабатываемых "
-"видеодетектором лиц (по умолчанию 5)."
-
-#: ../source/fkvideo_configuration.rst:51
-msgid "‑‑detectors-max 7"
-msgstr "‑‑detectors-max 7"
-
-#: ../source/fkvideo_configuration.rst:52
-msgid "-t [ ‑‑reload-timeout ] arg"
-msgstr "-t [ ‑‑reload-timeout ] arg"
-
-#: ../source/fkvideo_configuration.rst:53
-msgid ""
-"Defines the interval between 2 consecutive requests fkvideo_detector "
-"sends to FindFace Server to update the list of cameras."
-msgstr ""
-"Определяет интервал в секундах между 2-мя последовательными запросами, "
-"отправляемыми видеодетектором лиц на Сервер для обновления списка "
-"видеокамер."
-
-#: ../source/fkvideo_configuration.rst:54
-msgid ""
-"Interval in seconds between 2 consecutive camera list updates (15 s by "
-"default)."
-msgstr ""
-"Интервал в секундах между 2-мя последовательными обновлениями списка "
-"видеокамер (по умолчанию 15 с)."
-
-#: ../source/fkvideo_configuration.rst:55
-msgid "-t 20"
-msgstr "-t 20"
-
-#: ../source/fkvideo_configuration.rst:56
-msgid "‑‑camid arg"
-msgstr "‑‑camid arg"
-
-#: ../source/fkvideo_configuration.rst:57
-msgid ""
-"Defines a video stream to be processed by fkvideo_detector, as the "
-"relevant camera id (see also ``--source``). If a video stream is not "
-"specified, fkvideo_detector requests the :ref:`list of cameras <video-"
-"methods>` from FindFace Server with a polling interval defined by the"
-" ``reload-timeout`` parameter."
-msgstr ""
-"Задает видеопоток для отслеживания как ID видеокамеры (см. также "
-"``--source``). Если видеопоток не задан, видеодетектор лиц запрашивает "
-":ref:`список видеокамер <video-methods>` у Сервера FindFace с интервалом "
-"``reload-timeout``."
-
-#: ../source/fkvideo_configuration.rst:58
-msgid "Camera id."
-msgstr "ID видеокамеры."
-
-#: ../source/fkvideo_configuration.rst:59
-msgid "‑‑camid b28a898b-6334"
-msgstr "‑‑camid b28a898b-6334"
-
-#: ../source/fkvideo_configuration.rst:60
-msgid "‑‑api-host arg"
-msgstr "‑‑api-host arg"
-
-#: ../source/fkvideo_configuration.rst:61
-msgid ""
-"Mandatory. Defines the FindFace Server host fkvideo_detector will be "
-"sending API requests to."
-msgstr ""
-"Обязательная опция. Определяет физический сервер ``findface-facenapi`` в "
-"составе Сервера FindFace, на который видеодетектор лиц отправляет "
-"API-запросы."
-
-#: ../source/fkvideo_configuration.rst:62
-msgid "FindFace Server host IP address."
-msgstr "IP-адрес сервера FindFace."
-
-#: ../source/fkvideo_configuration.rst:63
-msgid "‑‑api-host 127.0.0.1"
-msgstr "‑‑api-host 127.0.0.1"
-
-#: ../source/fkvideo_configuration.rst:64
-msgid "‑‑api-port arg"
-msgstr "‑‑api-port arg"
-
-#: ../source/fkvideo_configuration.rst:65
-msgid "Mandatory. Defines the FindFace Server host port for API requests."
-msgstr ""
-"Обязательная опция. Определяет порт физического сервера ``findface-"
-"facenapi`` для API-запросов. "
-
-#: ../source/fkvideo_configuration.rst:66
-msgid "Port number."
-msgstr "Номер порта."
-
-#: ../source/fkvideo_configuration.rst:67
-msgid "‑‑api-port 8000"
-msgstr "‑‑api-port 8000"
-
-#: ../source/fkvideo_configuration.rst:68
-msgid "‑‑api-token arg"
-msgstr "‑‑api-token arg"
-
-#: ../source/fkvideo_configuration.rst:69
-msgid "Mandatory. Defines the authentication token for FindFace Server."
-msgstr "Обязательная опция. Определяет токен авторизации для Сервера FindFace."
-
-#: ../source/fkvideo_configuration.rst:70
-msgid ":ref:`Authentication token <token>`."
-msgstr ":ref:`Токен авторизация <token>`."
-
-#: ../source/fkvideo_configuration.rst:71
-msgid "‑‑api-token c9FsRNDAt"
-msgstr "‑‑api-token c9FsRNDAt"
-
-#: ../source/fkvideo_configuration.rst:72
 msgid "-S [ ‑‑source ] arg"
 msgstr "-S [ ‑‑source ] arg"
 
-#: ../source/fkvideo_configuration.rst:73
+#: ../source/fkvideo_configuration.rst:41
 msgid ""
-"Defines a video stream to be processed by fkvideo_detector, as the "
-"relevant camera address (see also ``--camid``). If a video stream is not "
-"specified, fkvideo_detector requests the :ref:`list of cameras <video-"
-"methods>` from FindFace Server with a polling interval defined by the "
-"``reload-timeout`` parameter."
+"Define a video stream as the relevant camera address (see also ``--camid``). If "
+"a video stream is not specified, fkvideo_detector requests the :ref:`list of "
+"cameras <video-methods>` from FindFace Server with a polling interval defined "
+"by the ``reload-timeout`` parameter."
 msgstr ""
-"Задает видеопоток для отслеживания как адрес видеокамеры (см. также "
-"``--camid``). Если видеопоток не задан, видеодетектор лиц запрашивает "
-":ref:`список видеокамер <video-methods>` у Сервера FindFace с интервалом "
-"``reload-timeout``."
+"Задает видеопоток для отслеживания как адрес видеокамеры (см. также ``--"
+"camid``). Если видеопоток не задан, видеодетектор лиц запрашивает :ref:`список "
+"камер <video-methods>` у Сервера FindFace с интервалом ``reload-timeout``."
 
-#: ../source/fkvideo_configuration.rst:74
+#: ../source/fkvideo_configuration.rst:42
 msgid ""
-"Camera address: ``rtsp://...`` - network stream, ``/dev/video0`` – "
-"webcam, ``file@FPS:PATH`` - file with configurable FPS."
+"Camera address: ``rtsp://...`` - network stream, ``/dev/video0`` – webcam, "
+"``file@FPS:PATH`` - file with configurable FPS."
 msgstr ""
-"Адрес видеокамеры: rtsp://... — сетевой видеопоток; /dev/video0 — "
-"веб-камера; file@FPS:PATH - видеофайл с настраиваемой частотой кадров в "
-"секунду (FPS)."
+"Адрес видеокамеры: rtsp://... — сетевой видеопоток; /dev/video0 — веб-камера; "
+"file@FPS:PATH - видеофайл с настраиваемой частотой кадров в секунду (FPS)."
 
-#: ../source/fkvideo_configuration.rst:75
+#: ../source/fkvideo_configuration.rst:43
 msgid "‑‑source rtsp://192.168.120.55:500"
 msgstr "‑‑source rtsp://192.168.120.55:500"
 
-#: ../source/fkvideo_configuration.rst:76
+#: ../source/fkvideo_configuration.rst:44
+msgid "‑‑camid arg"
+msgstr "‑‑camid arg"
+
+#: ../source/fkvideo_configuration.rst:45
+msgid ""
+"Define a video stream as the relevant camera id (see also ``--source``). If a "
+"video stream is not specified, fkvideo_detector requests the :ref:`list of "
+"cameras <video-methods>` from FindFace Server with a polling interval defined "
+"by the ``reload-timeout`` parameter."
+msgstr ""
+"Задает видеопоток для отслеживания как ID видеокамеры (см. также ``--source``). "
+"Если видеопоток не задан, видеодетектор лиц запрашивает :ref:`список видеокамер "
+"<video-methods>` у Сервера FindFace с интервалом ``reload-timeout``."
+
+#: ../source/fkvideo_configuration.rst:46
+msgid "Camera id."
+msgstr "ID видеокамеры."
+
+#: ../source/fkvideo_configuration.rst:47
+msgid "‑‑camid b28a898b-6334"
+msgstr "‑‑camid b28a898b-6334"
+
+#: ../source/fkvideo_configuration.rst:48
 msgid "‑‑source-params arg"
 msgstr "‑‑source-params arg"
 
-#: ../source/fkvideo_configuration.rst:77
-msgid "Defines ffmpeg options for a video stream."
+#: ../source/fkvideo_configuration.rst:49
+msgid "Define ffmpeg options for a video stream."
 msgstr "Задает опции ffmeg для видеопотока."
 
-#: ../source/fkvideo_configuration.rst:78
+#: ../source/fkvideo_configuration.rst:50
 msgid "List of ffmpeg options with their values."
 msgstr "Список опций ffmeg с присвоенными значениями."
 
-#: ../source/fkvideo_configuration.rst:79
+#: ../source/fkvideo_configuration.rst:51
 msgid "‑‑source-params rtsp_transport=tcp, rtsp_flags=prefer, timeout=-1"
 msgstr "‑‑source-params rtsp_transport=tcp, rtsp_flags=prefer, timeout=-1"
 
-#: ../source/fkvideo_configuration.rst:80
+#: ../source/fkvideo_configuration.rst:52
 msgid "‑‑md-threshold arg"
 msgstr "‑‑md-threshold arg"
 
-#: ../source/fkvideo_configuration.rst:81
+#: ../source/fkvideo_configuration.rst:53
 msgid ""
-"Defines the minimum motion intensity to be detected by the motion "
-"detector. The threshold value is to be fitted empirically."
+"Define the minimum motion intensity to be detected by the motion detector. The "
+"threshold value is to be fitted empirically."
 msgstr ""
-"Определяет минимальную интенсивность движения, которая будет "
-"регистрироваться детектором движения. Пороговое значение определяется "
-"эмпирически."
+"Определяет минимальную интенсивность движения, которая будет регистрироваться "
+"детектором движения. Пороговое значение определяется эмпирически."
 
-#: ../source/fkvideo_configuration.rst:82
+#: ../source/fkvideo_configuration.rst:54
 msgid ""
-"Motion intensity in empirical units (zero and positive rational numbers)."
-" Milestones: 0 = detector disabled, 0.002 = default value, 0.05 = minimum"
-" intensity is too high to detect motion."
+"Motion intensity in empirical units (zero and positive rational numbers). "
+"Milestones: 0 = detector disabled, 0.002 = default value, 0.05 = minimum "
+"intensity is too high to detect motion."
 msgstr ""
 "Интенсивность движения в эмпирических единицах (ноль и положительные "
-"рациональные числа). Реперные точки: 0 = детектор выключен, 0.002 = "
-"значение по умолчанию, 0.05 = минимальная интенсивность слишком высока, "
-"чтобы зарегистрировать движение."
+"рациональные числа). Реперные точки: 0 = детектор выключен, 0.002 = значение по "
+"умолчанию, 0.05 = минимальная интенсивность слишком высока, чтобы "
+"зарегистрировать движение."
 
-#: ../source/fkvideo_configuration.rst:83
+#: ../source/fkvideo_configuration.rst:55
 msgid "‑‑md-threshold 0.003"
 msgstr "‑‑md-threshold 0.003"
 
-#: ../source/fkvideo_configuration.rst:84
+#: ../source/fkvideo_configuration.rst:56
 msgid "‑‑scale arg"
 msgstr "‑‑scale arg"
 
-#: ../source/fkvideo_configuration.rst:85
+#: ../source/fkvideo_configuration.rst:57
 msgid ""
-"Defines a video frame scaling coefficient for the motion detector. Scale "
-"down in the case of high resoultion cameras, or close up faces, or if the"
-" CPU load is too high, to reduce the system resources consumption. Make "
-"sure that the scaled face size exceeds the ``min-face-size`` value."
+"Define a video frame scaling coefficient for the motion detector. Scale down in "
+"the case of high resolution cameras, or close up faces, or if the CPU load is "
+"too high, to reduce the system resources consumption. Make sure that the scaled "
+"face size exceeds the ``min-face-size`` value."
 msgstr ""
-"Изменяет размер кадра для детектора движения. Кадр должен быть уменьшен "
-"при больших разрешениях камеры, отображении лиц крупным планом, а также "
-"при чрезмерной загрузке процессора — для снижения потребления системных "
-"ресурсов. Убедитесь, что размер лиц после уменьшения превышает значение "
-"параметра ``min-face-size``."
+"Задает коэффициент масштабирования кадра для детектора движения. Кадр должен "
+"быть уменьшен (значение коэффициента меньше 1) при больших разрешениях камеры, "
+"отображении лиц крупным планом, а также при чрезмерной загрузке процессора — "
+"для снижения потребления системных ресурсов. Убедитесь, что размер лиц после "
+"уменьшения превышает значение параметра ``min-face-size``."
 
-#: ../source/fkvideo_configuration.rst:86
+#: ../source/fkvideo_configuration.rst:58
 msgid "Video frame scaling coefficient."
-msgstr "Коэффициент изменения размера видеокадра."
+msgstr "Коэффициент масштабирования видеокадра."
 
-#: ../source/fkvideo_configuration.rst:87
+#: ../source/fkvideo_configuration.rst:59
 msgid "‑‑scale 0.3"
 msgstr "‑‑scale 0.3"
 
-#: ../source/fkvideo_configuration.rst:88
-msgid "‑‑request-url arg"
-msgstr "‑‑request-url arg"
+#: ../source/fkvideo_configuration.rst:60
+msgid "‑‑rescale-height arg"
+msgstr "‑‑rescale-height arg"
 
-#: ../source/fkvideo_configuration.rst:89
+#: ../source/fkvideo_configuration.rst:61
 msgid ""
-"Defines the request fkvideo_detector sends to FindFace Server when "
-"posting a face."
+"Define a video frame height for the face tracker. Scale down in the case of "
+"high resolution cameras, or close up faces, or if the CPU load is too high, to "
+"reduce the system resources consumption. Make sure that the scaled face size "
+"exceeds the ``min-face-size`` value."
 msgstr ""
-"Определяет метод API-запросов, которые отправляюся видеодетектором лиц на"
-" Сервер FindFace при обнаружении лица."
+"Задает высоту кадра для трекера лиц после масштабирования. Кадр должен быть "
+"уменьшен (значение параметра меньше 1) при больших разрешениях камеры, "
+"отображении лиц крупным планом, а также при чрезмерной загрузке процессора — "
+"для снижения потребления системных ресурсов. Убедитесь, что размер лиц после "
+"уменьшения превышает значение параметра ``min-face-size``."
 
-#: ../source/fkvideo_configuration.rst:90
-msgid "/v0/face/ or /v0/identify/."
-msgstr "/v0/face/ или /v0/identify/."
+#: ../source/fkvideo_configuration.rst:62
+msgid "Video frame height in pixels."
+msgstr "Высота видеокадра в пикселях."
 
-#: ../source/fkvideo_configuration.rst:91
-msgid "‑‑request-url /v0/identify"
-msgstr "‑‑request-url /v0/identify"
+#: ../source/fkvideo_configuration.rst:63
+msgid "‑‑rescale-height 480"
+msgstr "‑‑rescale-height 480"
 
-#: ../source/fkvideo_configuration.rst:92
-msgid "‑‑camera-url arg"
-msgstr "‑‑camera-url arg"
-
-#: ../source/fkvideo_configuration.rst:93
-msgid ""
-"Defines the request fkvideo_detector sends to FindFace Server to obtain "
-"the list of cameras."
-msgstr ""
-"Определяет метод API-запросов, которые отправляются видеодетектором лиц "
-"на Сервер FindFace для получения списка камер."
-
-#: ../source/fkvideo_configuration.rst:94
-msgid "/v0/camera (default) or /v1/camera."
-msgstr "/v0/camera (по умолчанию) или /v1/camera."
-
-#: ../source/fkvideo_configuration.rst:95
-msgid "‑‑camera-url /v1/camera"
-msgstr "‑‑camera-url /v1/camera"
-
-#: ../source/fkvideo_configuration.rst:96
-msgid "‑‑img-arg arg"
-msgstr "‑‑img-arg arg"
-
-#: ../source/fkvideo_configuration.rst:97
-msgid ""
-"Defines the name of the argument containing a bbox with a face, in an API"
-" request."
-msgstr "Определяет имя аргумента с изображением лица, отправляемым в API-запросе."
-
-#: ../source/fkvideo_configuration.rst:98
-msgid "Argument name (photo by default)."
-msgstr "Имя аргумента (по умолчанию photo)."
-
-#: ../source/fkvideo_configuration.rst:99
-msgid "‑‑img-arg picture"
-msgstr "‑‑img-arg picture"
-
-#: ../source/fkvideo_configuration.rst:100
-msgid "‑‑req-timeout arg"
-msgstr "‑‑req-timeout arg"
-
-#: ../source/fkvideo_configuration.rst:101
-msgid ""
-"Defines a timeout for a FindFace Server response to a fkvideo_detector "
-"API request."
-msgstr ""
-"Определяет время ожидания ответа от Сервера FindFace на API-запрос "
-"видеодетектора лиц."
-
-#: ../source/fkvideo_configuration.rst:102
-msgid "API response timeout in seconds (3 s by default)."
-msgstr "Время ожидания API-ответа в секундах (по умолчанию 3 с)."
-
-#: ../source/fkvideo_configuration.rst:103
-msgid "‑‑req-timeout 2"
-msgstr "‑‑req-timeout 2"
-
-#: ../source/fkvideo_configuration.rst:104
-msgid "‑‑headers arg"
-msgstr "‑‑headers arg"
-
-#: ../source/fkvideo_configuration.rst:105
-msgid "Creates an additional header field in a POST request when posting a face."
-msgstr "Создает дополнительный заголовок в POST-запросе с изображением лица."
-
-#: ../source/fkvideo_configuration.rst:106
-msgid "Additional header field in a POST request."
-msgstr "Дополнительный заголовок (заголовки) в POST-запросе."
-
-#: ../source/fkvideo_configuration.rst:107
-msgid "‑‑headers xxx = yyy ‑‑headers kkk = ppp"
-msgstr "‑‑headers xxx = yyy ‑‑headers kkk = ppp"
-
-#: ../source/fkvideo_configuration.rst:108
-msgid "‑‑body arg"
-msgstr "‑‑body arg"
-
-#: ../source/fkvideo_configuration.rst:109
-msgid "Creates additional body fields in the request body when posting a face."
-msgstr "Создает дополнительное поле в POST-запросе с изображением лица."
-
-#: ../source/fkvideo_configuration.rst:110
-msgid "Additional body field(s)."
-msgstr "Дополнительное поле (поля)."
-
-#: ../source/fkvideo_configuration.rst:111
-msgid ""
-"‑‑body galleries=testgal ‑‑body gender=true ‑‑body age=true ‑‑body "
-"emotions=true ‑‑body meta=video.mp4"
-msgstr ""
-"‑‑body galleries=testgal ‑‑body gender=true ‑‑body age=true ‑‑body "
-"emotions=true ‑‑body meta=video.mp4"
-
-#: ../source/fkvideo_configuration.rst:112
-msgid "‑‑bbox-scale"
-msgstr "‑‑bbox-scale"
-
-#: ../source/fkvideo_configuration.rst:113
-msgid "Defines a bbox scaling coefficient."
-msgstr "Изменяет размер изображения лица."
-
-#: ../source/fkvideo_configuration.rst:114
-msgid "Bbox scaling coefficient (1 by default)."
-msgstr "Коэффициент изменения размера лица (по умолчанию 1)."
-
-#: ../source/fkvideo_configuration.rst:115
-msgid "‑‑bbox-scale 1.3"
-msgstr "‑‑bbox-scale 1.3"
-
-#: ../source/fkvideo_configuration.rst:116
-msgid "‑‑post-uniq arg"
-msgstr "‑‑post-uniq arg"
-
-#: ../source/fkvideo_configuration.rst:117
-msgid ""
-"Enables posting only a certain number of faces belonging to one person, "
-"during a certain period of time. In this case, if fkvideo_detector posts "
-"a face to FindFace Server and then tracks another one within the time "
-"period ``uc-max-time-diff``, and the distance between the two faces "
-"doesn't exceed ``uc-max-avg-shift``, fkvideo_detector estimates their "
-"similarity. If the faces are similar and the total number of similar "
-"faces during the ``uc-max-time-diff`` period does not exceed the number "
-"``uc-max-dup``, fkvideo_detector posts the other face. Otherwise, the "
-"other face is not posted."
-msgstr ""
-"Включает отправку на Сервер только нескольких лиц, принадлежащих одному "
-"человеку, из множества захваченных в течение определенного промежутка "
-"времени. В этом случае, если видеодетектор лиц отправляет лицо на Сервер "
-"и затем захватывает еще одно в течение периода времени ``uc-max-time-"
-"diff``, и если расстояние между лицами не превышает значение ``uc-max-"
-"avg-shift``, видеодетектор лиц оценивает их схожесть. Если лица схожи и "
-"общее количество схожих лиц в течение периода времени ``uc-max-time-"
-"diff`` не превышает число ``uc-max-dup``, видеодетектор отправляет на "
-"Сервер второе лицо. Иначе, второе лицо не отправляется."
-
-#: ../source/fkvideo_configuration.rst:118
-msgid ""
-"Boolean: 1 = only a certain number of faces belonging to one person are "
-"posted, 0 = all captured faces are posted."
-msgstr ""
-"Логический: 1 = только определенное количество лиц из множества "
-"принадлежащих одному человеку отправляется на Сервер, 0 = все захваченные"
-" лица отправляются на Сервер."
-
-#: ../source/fkvideo_configuration.rst:119
-msgid "‑‑post-uniq 1"
-msgstr "‑‑post-uniq 1"
-
-#: ../source/fkvideo_configuration.rst:120
+#: ../source/fkvideo_configuration.rst:64
 msgid "‑‑uc-max-time-diff arg"
 msgstr "‑‑uc-max-time-diff arg"
 
-#: ../source/fkvideo_configuration.rst:121
+#: ../source/fkvideo_configuration.rst:65
 msgid ""
-"Defines the maximum time period during which a number of similar faces "
-"are considered as belonging to one person."
+"Define the maximum time period during which a number of similar faces are "
+"considered as belonging to one person."
 msgstr ""
-"Только для ``--post-uniq=1``. Определяет максимальный период времени, в "
-"течение которого схожие лица рассматриваются как лица одного человека."
+"Только для ``--post-uniq=1``. Определяет максимальный период времени, в течение "
+"которого схожие лица рассматриваются как лица одного человека."
 
-#: ../source/fkvideo_configuration.rst:122
+#: ../source/fkvideo_configuration.rst:66
 msgid "Maximum time period in seconds."
 msgstr "Максимальный период времени в секундах."
 
-#: ../source/fkvideo_configuration.rst:123
+#: ../source/fkvideo_configuration.rst:67
 msgid "‑‑uc-max-time-diff 1"
 msgstr "‑‑uc-max-time-diff 1"
 
-#: ../source/fkvideo_configuration.rst:124
+#: ../source/fkvideo_configuration.rst:68
 msgid "‑‑uc-max-dup arg"
 msgstr "‑‑uc-max-dup arg"
 
-#: ../source/fkvideo_configuration.rst:125
+#: ../source/fkvideo_configuration.rst:69
 msgid ""
-"Defines the maximum number of faces during the ``uc-max-time-diff`` "
-"period that is posted for a person."
+"Define the maximum number of faces during the ``uc-max-time-diff`` period that "
+"is posted for a person."
 msgstr ""
-"Только для ``--post-uniq=1``. Определяет максимальное количество лиц в "
-"течение периода времени ``uc-max-time-diff``, которое отправляется на "
-"Сервер для одного человека."
+"Только для ``--post-uniq=1``. Определяет максимальное количество лиц в течение "
+"периода времени ``uc-max-time-diff``, которое отправляется на Сервер для одного "
+"человека."
 
-#: ../source/fkvideo_configuration.rst:126
+#: ../source/fkvideo_configuration.rst:70
 msgid "Maximum number of faces."
 msgstr "Максимальное количество лиц."
 
-#: ../source/fkvideo_configuration.rst:127
+#: ../source/fkvideo_configuration.rst:71
 msgid "‑‑uc-max-dup 3"
 msgstr "‑‑uc-max-dup 3"
 
-#: ../source/fkvideo_configuration.rst:128
+#: ../source/fkvideo_configuration.rst:72
 msgid "‑‑uc-max-avg-shift arg"
 msgstr "‑‑uc-max-avg-shift arg"
 
-#: ../source/fkvideo_configuration.rst:129
+#: ../source/fkvideo_configuration.rst:73
 msgid ""
-"Defines the distance within which a number of similar faces are "
-"considered as belonging to one person."
+"Define the distance within which a number of similar faces are considered as "
+"belonging to one person."
 msgstr ""
-"Только для ``--post-uniq=1``. Определяет максимальное расстояние, на "
-"котором схожие лица еще рассматриваются как лица одного человека."
+"Только для ``--post-uniq=1``. Определяет максимальное расстояние, на котором "
+"схожие лица еще рассматриваются как лица одного человека."
 
-#: ../source/fkvideo_configuration.rst:130
+#: ../source/fkvideo_configuration.rst:74
 msgid "Distance in pixels."
 msgstr "Расстояние в пикселях."
 
-#: ../source/fkvideo_configuration.rst:131
+#: ../source/fkvideo_configuration.rst:75
 msgid "‑‑uc-max-avg-shift 10"
 msgstr "‑‑uc-max-avg-shift 10"
 
-#: ../source/fkvideo_configuration.rst:132
+#: ../source/fkvideo_configuration.rst:76
 msgid "-r [ ‑‑realtime ] [=arg(=1)]"
 msgstr "-r [ ‑‑realtime ] [=arg(=1)]"
 
-#: ../source/fkvideo_configuration.rst:133
-msgid "Enables the :ref:`real-time <fkvideo-about>` mode of fkvideo_detector."
+#: ../source/fkvideo_configuration.rst:77
+msgid "Enable the :ref:`real-time <fkvideo-about>` mode of fkvideo_detector."
 msgstr "Включает режим :ref:`реального времени <fkvideo-about>` видеодетектора."
+
+#: ../source/fkvideo_configuration.rst:78
+msgid ""
+"Mode of fkvideo_detector: 1 = real-time, 0 = off-line. -r and -r 1 are equal."
+msgstr ""
+"Режим работы fkvideo_detector: 1 = реального времени, 0 = буферный режим. "
+"Записи -r и -r 1 идентичны."
+
+#: ../source/fkvideo_configuration.rst:79
+msgid "-r or -r 1, -r 0"
+msgstr "-r или -r 1, -r 0"
+
+#: ../source/fkvideo_configuration.rst:80
+msgid "‑‑realtime1844 [=arg(=1)]"
+msgstr "‑‑realtime1844 [=arg(=1)]"
+
+#: ../source/fkvideo_configuration.rst:81
+msgid ""
+"Simultaneously use the real-time and off-line modes of fkvideo_detector. In "
+"this case, fkvideo-detector will be sending bounding boxes to FindFace Server "
+"under 2 different labels."
+msgstr ""
+"Включает одновременное использование режима реального времени и буферного "
+"режима. В этом случае fkvideo-detector будет отправлять на Сервер FindFace "
+"изображения лица под 2-мя различными, соответствующими режиму метками."
+
+#: ../source/fkvideo_configuration.rst:82
+msgid ""
+"Boolean: 1 = use both modes of fkvideo_detector, 0 = use the mode defined by "
+"the ``-r`` parameter. ‑‑realtime1844 and ‑‑realtime1844 1 are equal."
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:83
+msgid "‑‑realtime1844 or ‑‑realtime1844 1, ‑‑realtime1844 0"
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:84
+msgid "‑‑start-ts=arg"
+msgstr "‑‑start-ts arg"
+
+#: ../source/fkvideo_configuration.rst:85
+msgid ""
+"By default, faces are posted to FindFace Server with a current time stamp. To "
+"change the time stamp, specify a different start time of a video stream "
+"processing. In the case of a video file processing, you have to specify the "
+"start date and time of a video file."
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:86
+msgid "Start date and time of a video file, or a video stream processing."
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:87
+msgid "‑‑start-ts='2016-01-20 12:34:56'"
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:88
+msgid "‑‑max-persons arg"
+msgstr "‑‑max-persons arg"
+
+#: ../source/fkvideo_configuration.rst:89
+msgid ""
+"Define the maximum number of faces simultaneously tracked by the face tracker. "
+"This parameter severely affects performance."
+msgstr ""
+"Определяет максимальное количество лиц, одновременно отслеживаемых трекером "
+"лиц. Данный параметр существенно влияет на производительность."
+
+#: ../source/fkvideo_configuration.rst:90
+msgid "Maximum number of simultaneously tracked faces."
+msgstr "Максимальное количество одновременно отслеживаемых лиц."
+
+#: ../source/fkvideo_configuration.rst:91
+msgid "‑‑max-persons 4"
+msgstr "‑‑max-persons 4"
+
+#: ../source/fkvideo_configuration.rst:92
+msgid "‑‑disable-drops [=arg(=1)]"
+msgstr "‑‑disable-drops [=arg(=1)]"
+
+#: ../source/fkvideo_configuration.rst:93
+#, fuzzy
+msgid ""
+"Enable posting all appropriate faces without drops. By default, if "
+"fkvideo_detector does not have enough resources to process all frames with "
+"faces, it drops some of them. If this option is active, fkvideo_detector puts "
+"odd frames on the waiting list to process them later."
+msgstr ""
+"Включает отправку на Сервер FindFace всех подходящих лиц без пропусков. По "
+"умолчанию, если fkvideo_detector не обладает достаточными ресурсами для "
+"обработки всех кадров с лицами, он отбрасывает некоторые из них. Если данная "
+"опция активна, fkvideo_detector помещает лишние кадры в очередь, чтобы "
+"обработать их впоследствии."
+
+#: ../source/fkvideo_configuration.rst:94
+msgid ""
+"Boolean: 1 = drops are disabled, 0 = drops are enabled. ‑‑disable-drops and "
+"‑‑disable-drops 1 are equal."
+msgstr ""
+"Логический: 1 = лишние кадры не отбрасываются, 0 = лишние кадры отбрасываются. "
+"Записи --disable-drops и --disable-drops 1 тождественны."
+
+#: ../source/fkvideo_configuration.rst:95
+msgid "‑‑disable-drops"
+msgstr "‑‑disable-drops"
+
+#: ../source/fkvideo_configuration.rst:96
+msgid "‑‑tracker-threads arg"
+msgstr "‑‑tracker-threads arg"
+
+#: ../source/fkvideo_configuration.rst:97
+#, fuzzy
+msgid ""
+"Define the number of tracking threads for the face tracker. This value should "
+"be less or equal to the ``max-persons`` value. We recommend you to set them "
+"equal. If the number of tracking threads is less than the maximum number of "
+"tracked faces, resource consumption is reduced but so is the tracking speed."
+msgstr ""
+"Определяет количество тредов отслеживания для трекера лиц. Данное значение "
+"должно быть меньше или равно значению параметра ``max-persons``. Оптимально, "
+"когда они равны. Если количество тредов отслеживания меньше, чем максимальное "
+"количество отслеживаемых лиц, потребление ресурсов уменьшается, однако также "
+"уменьшается и скорость отслеживания."
+
+#: ../source/fkvideo_configuration.rst:98
+msgid "Number of tracking threads"
+msgstr "Количество тредов отслеживания."
+
+#: ../source/fkvideo_configuration.rst:99
+msgid "‑‑tracker-threads 4"
+msgstr "‑‑tracker-threads 4"
+
+#: ../source/fkvideo_configuration.rst:100
+msgid "‑‑sink-url arg"
+msgstr "‑‑sink-url arg"
+
+#: ../source/fkvideo_configuration.rst:101
+msgid ""
+"Only if fkvideo_detector processes 1 camera defined in the configuration file "
+"or in command line arguments. Defines the nginx video server IP address for the "
+"output video stream (it is there further redirected to :ref:`FindFace Web UI "
+"<ffui>`)."
+msgstr ""
+"Только в случае если fkvideo_detector обрабатывает одну видеокамеру (указанную "
+"в файле конфигурации или в командной строке). Определяет IP-адрес видео-сервера "
+"nginx для выходного видеопотока из fkvideo_detector (видео-сервер далее "
+"перенаправляет поток в :ref:`веб-интерфейс FindFace <ffui>`)."
+
+#: ../source/fkvideo_configuration.rst:102
+msgid "Nginx video server IP address."
+msgstr "IP-адрес и порт видео-сервера nginx."
+
+#: ../source/fkvideo_configuration.rst:103
+msgid "‑‑sink-url 192.168.15.1:3222"
+msgstr "‑‑sink-url 192.168.15.1:3222"
+
+#: ../source/fkvideo_configuration.rst:104
+msgid "‑‑sink-res arg"
+msgstr "‑‑sink-res arg"
+
+#: ../source/fkvideo_configuration.rst:105
+#, fuzzy
+msgid "Define the output video stream resolution."
+msgstr "Определяет разрешение выходного видеопотока."
+
+#: ../source/fkvideo_configuration.rst:106
+msgid "Resolution WхH"
+msgstr "Разрешение WхH"
+
+#: ../source/fkvideo_configuration.rst:107
+msgid "‑‑sink-res 1280x720"
+msgstr "‑‑sink-res 1280x720"
+
+#: ../source/fkvideo_configuration.rst:108
+#, fuzzy
+msgid "‑‑rotate arg"
+msgstr "‑‑rot arg"
+
+#: ../source/fkvideo_configuration.rst:109
+msgid "Rotate input video in a clockwise direction."
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:110
+msgid "Rotation angle in degrees from 0° to 360°."
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:111
+#, fuzzy
+msgid "‑‑rotate 90"
+msgstr "‑‑rot arg"
+
+#: ../source/fkvideo_configuration.rst:112
+msgid "‑‑request-url arg"
+msgstr "‑‑request-url arg"
+
+#: ../source/fkvideo_configuration.rst:113
+#, fuzzy
+msgid ""
+"Define the request fkvideo_detector sends to FindFace Server when posting a "
+"face."
+msgstr ""
+"Определяет метод API-запросов, которые отправляюся видеодетектором лиц на "
+"Сервер FindFace при обнаружении лица."
+
+#: ../source/fkvideo_configuration.rst:114
+msgid "/v0/face/ or /v0/identify/."
+msgstr "/v0/face/ или /v0/identify/."
+
+#: ../source/fkvideo_configuration.rst:115
+msgid "‑‑request-url /v0/identify"
+msgstr "‑‑request-url /v0/identify"
+
+#: ../source/fkvideo_configuration.rst:116
+msgid "‑‑img-arg arg"
+msgstr "‑‑img-arg arg"
+
+#: ../source/fkvideo_configuration.rst:117
+#, fuzzy
+msgid ""
+"Define the name of the argument containing a bbox with a face, in an API "
+"request."
+msgstr "Определяет имя аргумента с изображением лица, отправляемым в API-запросе."
+
+#: ../source/fkvideo_configuration.rst:118
+msgid "Argument name (photo by default)."
+msgstr "Имя аргумента (по умолчанию photo)."
+
+#: ../source/fkvideo_configuration.rst:119
+msgid "‑‑img-arg picture"
+msgstr "‑‑img-arg picture"
+
+#: ../source/fkvideo_configuration.rst:120
+msgid "‑‑headers arg"
+msgstr "‑‑headers arg"
+
+#: ../source/fkvideo_configuration.rst:121
+#, fuzzy
+msgid "Create an additional header field in a POST request when posting a face."
+msgstr "Создает дополнительный заголовок в POST-запросе с изображением лица."
+
+#: ../source/fkvideo_configuration.rst:122
+msgid "Additional header field in a POST request."
+msgstr "Дополнительный заголовок (заголовки) в POST-запросе."
+
+#: ../source/fkvideo_configuration.rst:123
+msgid "‑‑headers xxx = yyy ‑‑headers kkk = ppp"
+msgstr "‑‑headers xxx = yyy ‑‑headers kkk = ppp"
+
+#: ../source/fkvideo_configuration.rst:124
+msgid "‑‑body arg"
+msgstr "‑‑body arg"
+
+#: ../source/fkvideo_configuration.rst:125
+#, fuzzy
+msgid "Create additional body fields in the request body when posting a face."
+msgstr "Создает дополнительное поле в POST-запросе с изображением лица."
+
+#: ../source/fkvideo_configuration.rst:126
+msgid ""
+"Additional body field(s). You can specify several values for each field, "
+"separated by a comma."
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:127
+#, fuzzy
+msgid ""
+"‑‑body galleries='testgal1,testgal2' ‑‑body gender=true ‑‑body age=true ‑‑body "
+"emotions=true ‑‑body meta=video.mp4"
+msgstr ""
+"‑‑body galleries=testgal ‑‑body gender=true ‑‑body age=true ‑‑body "
+"emotions=true ‑‑body meta=video.mp4"
+
+#: ../source/fkvideo_configuration.rst:128
+msgid "‑‑bbox-scale"
+msgstr "‑‑bbox-scale"
+
+#: ../source/fkvideo_configuration.rst:129
+#, fuzzy
+msgid "Define a bbox scaling coefficient."
+msgstr "Изменяет размер изображения лица."
+
+#: ../source/fkvideo_configuration.rst:130
+msgid "Bbox scaling coefficient (1 by default)."
+msgstr "Коэффициент изменения размера лица (по умолчанию 1)."
+
+#: ../source/fkvideo_configuration.rst:131
+msgid "‑‑bbox-scale 1.3"
+msgstr "‑‑bbox-scale 1.3"
+
+#: ../source/fkvideo_configuration.rst:132
+msgid "‑‑post-uniq arg"
+msgstr "‑‑post-uniq arg"
+
+#: ../source/fkvideo_configuration.rst:133
+#, fuzzy
+msgid ""
+"Enable posting only a certain number of faces belonging to one person, during a "
+"certain period of time. In this case, if fkvideo_detector posts a face to "
+"FindFace Server and then tracks another one within the time period ``uc-max-"
+"time-diff``, and the distance between the two faces doesn't exceed ``uc-max-avg-"
+"shift``, fkvideo_detector estimates their similarity. If the faces are similar "
+"and the total number of similar faces during the ``uc-max-time-diff`` period "
+"does not exceed the number ``uc-max-dup``, fkvideo_detector posts the other "
+"face. Otherwise, the other face is not posted."
+msgstr ""
+"Включает отправку на Сервер только нескольких лиц, принадлежащих одному "
+"человеку, из множества захваченных в течение определенного промежутка времени. "
+"В этом случае, если видеодетектор лиц отправляет лицо на Сервер и затем "
+"захватывает еще одно в течение периода времени ``uc-max-time-diff``, и если "
+"расстояние между лицами не превышает значение ``uc-max-avg-shift``, "
+"видеодетектор лиц оценивает их схожесть. Если лица схожи и общее количество "
+"схожих лиц в течение периода времени ``uc-max-time-diff`` не превышает число "
+"``uc-max-dup``, видеодетектор отправляет на Сервер второе лицо. Иначе, второе "
+"лицо не отправляется."
 
 #: ../source/fkvideo_configuration.rst:134
 msgid ""
-"Mode of fkvideo_detector: 1 = real-time, 0 = off-line. -r and -r 1 are "
-"equal."
+"Boolean: 1 = only a certain number of faces belonging to one person are posted, "
+"0 = all captured faces are posted."
 msgstr ""
-"Режим работы fkvideo_detector: 1 = реального времени, 0 = буферный режим."
-" Записи -r и -r 1 идентичны."
+"Логический: 1 = только определенное количество лиц из множества принадлежащих "
+"одному человеку отправляется на Сервер, 0 = все захваченные лица отправляются "
+"на Сервер."
 
 #: ../source/fkvideo_configuration.rst:135
-msgid "-r or -r 1, -r 0"
-msgstr "-r или -r 1, -r 0"
+msgid "‑‑post-uniq 1"
+msgstr "‑‑post-uniq 1"
 
 #: ../source/fkvideo_configuration.rst:136
 msgid "‑‑min-score arg"
 msgstr "‑‑min-score arg"
 
 #: ../source/fkvideo_configuration.rst:137
+#, fuzzy
 msgid ""
-"Defines the minimum threshold value for a face image quality. A face is "
-"posted if it has better quality. The threshold value is to be fitted "
-"empirically."
+"Define the minimum threshold value for a face image quality. A face is posted "
+"if it has better quality. The threshold value is to be fitted empirically."
 msgstr ""
-"Определяет пороговое значение качества изображения лица. Лицо "
-"отправляется на Сервер, если его изображение лучшего качества. Пороговое "
-"значение определяется эмпирически."
+"Определяет пороговое значение качества изображения лица. Лицо отправляется на "
+"Сервер, если его изображение лучшего качества. Пороговое значение определяется "
+"эмпирически."
 
 #: ../source/fkvideo_configuration.rst:138
 msgid ""
-"Minimum threshold value for the face quality in empirical units (negative"
-" rational numbers to zero). Milestones: 0 = high quality faces, -1 = good"
-" quality, -2 = satisfactory quality, -5 = face recognition maybe "
-"inefficient. The default value is -7."
+"Minimum threshold value for the face quality in empirical units (negative "
+"rational numbers to zero). Milestones: 0 = high quality faces, -1 = good "
+"quality, -2 = satisfactory quality, -5 = face recognition maybe inefficient. "
+"The default value is -7."
 msgstr ""
 "Пороговое значение качества изображения лица в эмпирических единицах "
 "(отрицательные рациональные числа до нуля). Реперные точки: 0 = высокое "
-"качество изображения, -1 = хорошее качество, -2 = удовлетворительное "
-"качество, -5 = распознавание лица может быть неэффективным. Значение по "
-"умолчанию -7."
+"качество изображения, -1 = хорошее качество, -2 = удовлетворительное качество, "
+"-5 = распознавание лица может быть неэффективным. Значение по умолчанию -7."
 
 #: ../source/fkvideo_configuration.rst:139
 msgid "‑‑min-score -1.5"
@@ -694,28 +708,28 @@ msgid "‑‑min-dir-score arg"
 msgstr "‑‑min-dir-score arg"
 
 #: ../source/fkvideo_configuration.rst:141
+#, fuzzy
 msgid ""
-"Defines the maximum deviation of a face from its frontal position. A face"
-" is posted if its deviation is less than this value. The deviation is to "
-"be fitted empirically."
+"Define the maximum deviation of a face from its frontal position. A face is "
+"posted if its deviation is less than this value. The deviation is to be fitted "
+"empirically."
 msgstr ""
-"Определяет максимальное отклонение лица от положения анфас. Лицо "
-"отправляется на Сервер FindFace, если отклонение не превышает заданного "
-"значения (определяется эмпирически)."
+"Определяет максимальное отклонение лица от положения анфас. Лицо отправляется "
+"на Сервер FindFace, если отклонение не превышает заданного значения "
+"(определяется эмпирически)."
 
 #: ../source/fkvideo_configuration.rst:142
 msgid ""
 "Maximum deviation of a face from its frontal position in empirical units "
-"(negative rational numbers to zero). Milestones: -3.5 = large face "
-"angles, face recognition may be inefficient, -2.5 = satisfactory "
-"deviation, -0.05 = close to the frontal position, 0 = frontal face. The "
-"default value is -1000."
+"(negative rational numbers to zero). Milestones: -3.5 = large face angles, face "
+"recognition may be inefficient, -2.5 = satisfactory deviation, -0.05 = close to "
+"the frontal position, 0 = frontal face. The default value is -1000."
 msgstr ""
 "Максимальное отклонение лица от положения анфас в эмпирических единицах "
-"(отрицательные рациональные числа до нуля). Реперные точки: -3.5 = "
-"допускаются лица, повернутые под большим углом, распознавание может быть "
-"неэффективно, -2.5 = удовлетворительное качество, -0.05 = близко к "
-"фронтальной позиции, 0 = анфас. Значение по умолчанию -1000."
+"(отрицательные рациональные числа до нуля). Реперные точки: -3.5 = допускаются "
+"лица, повернутые под большим углом, распознавание может быть неэффективно, -2.5 "
+"= удовлетворительное качество, -0.05 = близко к фронтальной позиции, 0 = анфас. "
+"Значение по умолчанию -1000."
 
 #: ../source/fkvideo_configuration.rst:143
 msgid "‑‑min-dir-score -1"
@@ -726,13 +740,14 @@ msgid "‑‑rt-refresh arg"
 msgstr "‑‑rt-refresh arg"
 
 #: ../source/fkvideo_configuration.rst:145
+#, fuzzy
 msgid ""
-"Only for the real-time mode. Defines the time interval for the best face "
-"score auto-refresh during the better snapshot dynamic search."
+"Only for the real-time mode. Define the time interval for the best face score "
+"auto-refresh during the better snapshot dynamic search."
 msgstr ""
-"Только для режима реального времени. Определяет временной интервал между "
-"2-мя последовательными обнулениями счетчика при динамическом поиске "
-"лучшего изображения лица."
+"Только для режима реального времени. Определяет временной интервал между 2-мя "
+"последовательными обнулениями счетчика при динамическом поиске лучшего "
+"изображения лица."
 
 #: ../source/fkvideo_configuration.rst:146
 msgid "Time period in milliseconds. The default value is 0 (disabled)."
@@ -749,12 +764,13 @@ msgid "‑‑rt-score-step arg"
 msgstr "‑‑rt-score-step arg"
 
 #: ../source/fkvideo_configuration.rst:149
+#, fuzzy
 msgid ""
-"Only for the real-time mode. Defines the threshold increase step for the "
-"better snapshot dynamic search."
+"Only for the real-time mode. Define the threshold increase step for the better "
+"snapshot dynamic search."
 msgstr ""
-"Только для режима реального времени. Определяет шаг увеличения порогового"
-" значения качества при динамическом поиске лучшего изображения лица."
+"Только для режима реального времени. Определяет шаг увеличения порогового "
+"значения качества при динамическом поиске лучшего изображения лица."
 
 #: ../source/fkvideo_configuration.rst:150
 msgid "Threshold increase step (positive rational numbers)."
@@ -769,18 +785,19 @@ msgid "‑‑rt-delay arg"
 msgstr "‑‑rt-delay arg"
 
 #: ../source/fkvideo_configuration.rst:153
+#, fuzzy
 msgid ""
-"Only for the real-time mode. Defines the minimum time period between 2 "
-"posts of the same face with increased quality."
+"Only for the real-time mode. Define the minimum time period between 2 posts of "
+"the same face with increased quality."
 msgstr ""
-"Только для режима реального времени. Определяет максимальный период "
-"времени между двумя последовательными отправками одного и того же лица, "
-"но в улучшенном качестве."
+"Только для режима реального времени. Определяет максимальный период времени "
+"между двумя последовательными отправками одного и того же лица, но в улучшенном "
+"качестве."
 
 #: ../source/fkvideo_configuration.rst:154
 msgid ""
-"Time period in milliseconds between 2 posts of the same face with "
-"increased quality."
+"Time period in milliseconds between 2 posts of the same face with increased "
+"quality."
 msgstr "Период времени в миллисекундах между отправками одного и того же лица."
 
 #: ../source/fkvideo_configuration.rst:155
@@ -793,12 +810,11 @@ msgstr "‑‑rot arg"
 
 #: ../source/fkvideo_configuration.rst:157
 msgid ""
-"Enable detecting and tracking faces only inside a clipping rectangle. You"
-" can use this option to reduce fkvideo_detector load."
+"Enable detecting and tracking faces only inside a clipping rectangle. You can "
+"use this option to reduce fkvideo_detector load."
 msgstr ""
-"Включает детектирование и отслеживание лиц только внутри заданной "
-"прямоугольной области. Используйте данную опцию, чтобы уменьшить нагрузку"
-" на fkvideo_detector."
+"Включает детектирование и отслеживание лиц только внутри заданной прямоугольной "
+"области. Используйте данную опцию, чтобы уменьшить нагрузку на fkvideo_detector."
 
 #: ../source/fkvideo_configuration.rst:158
 msgid "Clipping rectangle: WxH+X+Y (see the specification of X geometry)."
@@ -835,244 +851,433 @@ msgid "Enable drawing a face motion track in a bbox."
 msgstr "Включает рисование в bbox следа от движения лица."
 
 #: ../source/fkvideo_configuration.rst:166
+#, fuzzy
 msgid ""
-"Boolean: 1 = tracks are enabled, 0 = tracks are disabled. ‑‑draw-track "
+"Boolean: 1 = enable drawing a track, 0 = disable drawing a track. ‑‑draw-track "
 "and ‑‑draw-track 1 are equal."
 msgstr ""
-"Логический: 1 = след рисуется, 0 = рисование следа отключено. Записи "
-"--draw-track и --draw-track 1 тождественны."
+"Логический: 1 = след рисуется, 0 = рисование следа отключено. Записи --draw-"
+"track и --draw-track 1 тождественны."
 
 #: ../source/fkvideo_configuration.rst:167
 msgid "‑‑draw-track"
 msgstr "‑‑draw-track"
 
 #: ../source/fkvideo_configuration.rst:168
+#, fuzzy
+msgid "‑‑send-track [=arg(=1)]"
+msgstr "‑‑draw-track [=arg(=1)]"
+
+#: ../source/fkvideo_configuration.rst:169
+#, fuzzy
+msgid ""
+"Enable posting coordinates of a face motion track along with a bbox in a "
+"request."
+msgstr "Включает рисование в bbox следа от движения лица."
+
+#: ../source/fkvideo_configuration.rst:170
+#, fuzzy
+msgid ""
+"Boolean: 1 = enable posting a track coordinates, 0 = disable posting a track "
+"coordinates. ‑‑send-track and ‑‑send-track 1 are equal."
+msgstr ""
+"Логический: 1 = след рисуется, 0 = рисование следа отключено. Записи --draw-"
+"track и --draw-track 1 тождественны."
+
+#: ../source/fkvideo_configuration.rst:171
+#, fuzzy
+msgid "‑‑send-track"
+msgstr "‑‑draw-track"
+
+#: ../source/fkvideo_configuration.rst:172
 msgid "‑‑min-face-size arg"
 msgstr "‑‑min-face-size arg"
 
-#: ../source/fkvideo_configuration.rst:169
-msgid "Defines the minimum size of a face. Undersized faces are not posted."
+#: ../source/fkvideo_configuration.rst:173
+#, fuzzy
+msgid "Define the minimum size of a face. Undersized faces are not posted."
 msgstr ""
 "Определяет минимальный размер лица. Лица меньшего размера на Сервер не "
 "отправляются."
 
-#: ../source/fkvideo_configuration.rst:170
+#: ../source/fkvideo_configuration.rst:174
 msgid "Minimum size of a bbox minor side in pixels."
 msgstr "Минимальный размер меньшей стороны прямоугольника с лицом, в пикселях."
 
-#: ../source/fkvideo_configuration.rst:171
+#: ../source/fkvideo_configuration.rst:175
 msgid "‑‑min-face-size 50"
 msgstr "‑‑min-face-size 50"
 
-#: ../source/fkvideo_configuration.rst:172
+#: ../source/fkvideo_configuration.rst:176
 msgid "‑‑max-face-size arg"
 msgstr "‑‑max-face-size arg"
 
-#: ../source/fkvideo_configuration.rst:173
-msgid "Defines the maximum size of a face. Oversized faces are not posted."
+#: ../source/fkvideo_configuration.rst:177
+#, fuzzy
+msgid "Define the maximum size of a face. Oversized faces are not posted."
 msgstr ""
 "Определяет максимальный размер лица. Лица большего размера на Сервер не "
 "отправляются."
 
-#: ../source/fkvideo_configuration.rst:174
+#: ../source/fkvideo_configuration.rst:178
 msgid "Maximum size of a bbox major side in pixels."
 msgstr "Максимальный размер большей стороны прямоугольника с лицом, в пикселях."
 
-#: ../source/fkvideo_configuration.rst:175
+#: ../source/fkvideo_configuration.rst:179
 msgid "‑‑max-face-size 120"
 msgstr "‑‑max-face-size 120"
 
-#: ../source/fkvideo_configuration.rst:176
-msgid "‑‑max-persons arg"
-msgstr "‑‑max-persons arg"
-
-#: ../source/fkvideo_configuration.rst:177
-msgid ""
-"Defines the maximum number of faces simultaneously tracked by the face "
-"tracker. This parameter severely affects performance."
-msgstr ""
-"Определяет максимальное количество лиц, одновременно отслеживаемых "
-"трекером лиц. Данный параметр существенно влияет на производительность."
-
-#: ../source/fkvideo_configuration.rst:178
-msgid "Maximum number of simultaneously tracked faces."
-msgstr "Максимальное количество одновременно отслеживаемых лиц."
-
-#: ../source/fkvideo_configuration.rst:179
-msgid "‑‑max-persons 4"
-msgstr "‑‑max-persons 4"
-
 #: ../source/fkvideo_configuration.rst:180
-msgid "‑‑single-pass [=arg(=1)]"
-msgstr "‑‑single-pass [=arg(=1)]"
+#, fuzzy
+msgid "‑‑only-norm arg"
+msgstr "‑‑min-score arg"
 
 #: ../source/fkvideo_configuration.rst:181
-msgid ""
-"Disables periodical updates of the list of cameras. Use this option if "
-"fkvideo_detector should process a video file. In this case, "
-"fkvideo_detector will request the list of cameras only once."
+msgid "Enable posting only normalized face images without full frames."
 msgstr ""
-"Отключает периодические обновления списка видеокамер. Используйте эту "
-"опцию, если нужно обработать видеофайл. В этом случае видеодетектор лиц "
-"запросит список камер только один раз."
 
 #: ../source/fkvideo_configuration.rst:182
 msgid ""
-"Boolean: 1 = updates are disabled, 0 = updates are enabled. ‑‑ single-"
-"pass and ‑‑single-pass 1 are equal."
+"Boolean: 1 = only normalized faces are posted to FindFace Server, 0 = full "
+"frames and normalized faces are posted."
 msgstr ""
-"Логический: 1 = обновления отключены, 0 = обновления включены. Записи -- "
-"single-pass и --single-pass 1 тождественны."
 
 #: ../source/fkvideo_configuration.rst:183
+msgid "‑‑only-norm 1"
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:184
+msgid "‑‑license-ntls-server arg"
+msgstr "‑‑license-ntls-server arg"
+
+#: ../source/fkvideo_configuration.rst:185
+#, fuzzy
+msgid ""
+"Mandatory. Define the IP address and port of :ref:`NTLS <licensing>`. Edit only "
+"if NTLS is remote."
+msgstr ""
+"Обязательная опция. Определяет IP-адрес и порт локального сервера лицензий :ref:"
+"`NTLS <licensing>`. Редактируется только в случае удаленного NTLS."
+
+#: ../source/fkvideo_configuration.rst:186
+msgid "NTLS IP address:port"
+msgstr "IP-адрес:порт"
+
+#: ../source/fkvideo_configuration.rst:187
+msgid "‑‑license-ntls-server 192.168.10.1:3133"
+msgstr "‑‑license-ntls-server 192.168.10.1:3133"
+
+#: ../source/fkvideo_configuration.rst:188
+#, fuzzy
+msgid "‑‑api-url arg"
+msgstr "‑‑api-port arg"
+
+#: ../source/fkvideo_configuration.rst:189
+#, fuzzy
+msgid ""
+"Mandatory. Define the host fkvideo_detector sends requests to (FindFace Server "
+"in particular)."
+msgstr ""
+"Определяет метод API-запросов, которые отправляюся видеодетектором лиц на "
+"Сервер FindFace при обнаружении лица."
+
+#: ../source/fkvideo_configuration.rst:190
+msgid "IP address:port."
+msgstr "IP-адрес:порт"
+
+#: ../source/fkvideo_configuration.rst:191
+#, fuzzy
+msgid "‑‑api-host 127.0.0.1:8000"
+msgstr "‑‑api-host 127.0.0.1"
+
+#: ../source/fkvideo_configuration.rst:192
+msgid "‑‑api-token arg"
+msgstr "‑‑api-token arg"
+
+#: ../source/fkvideo_configuration.rst:193
+#, fuzzy
+msgid "Mandatory. Define the authentication token for FindFace Server."
+msgstr "Обязательная опция. Определяет токен авторизации для Сервера FindFace."
+
+#: ../source/fkvideo_configuration.rst:194
+msgid ":ref:`Authentication token <token>`."
+msgstr ":ref:`Токен авторизация <token>`."
+
+#: ../source/fkvideo_configuration.rst:195
+msgid "‑‑api-token c9FsRNDAt"
+msgstr "‑‑api-token c9FsRNDAt"
+
+#: ../source/fkvideo_configuration.rst:196
+msgid "‑‑to-verify-cert arg"
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:197
+msgid "Need to verify a https certificate."
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:198
+msgid ""
+"Boolean: 1 = a https certificate verification is necessary, 0 = a self-signed "
+"certificate can be accepted."
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:199
+msgid "‑‑to-verify-cert 1"
+msgstr ""
+
+#: ../source/fkvideo_configuration.rst:200
+msgid "-n [ ‑‑detector-name ] arg"
+msgstr "-n [ ‑‑detector-name ] arg"
+
+#: ../source/fkvideo_configuration.rst:201
+#, fuzzy
+msgid "Applie fkvideo_detector to a given list of cameras."
+msgstr "Применяет видеодетектор к заданному списку видеокамер."
+
+#: ../source/fkvideo_configuration.rst:202
+msgid ""
+"Unique video detector identifier (hostname by default) which corresponds to a "
+"particular list of cameras stored on FindFace Server."
+msgstr ""
+"Уникальный идентификатор виртуального детектора (по умолчанию имя локального "
+"сервера), соответствующего определенному списку видеокамер на Сервере FindFace."
+
+#: ../source/fkvideo_configuration.rst:203
+msgid "‑‑detector-name detec1"
+msgstr "‑‑detector-name detec1"
+
+#: ../source/fkvideo_configuration.rst:204
+msgid "-d [ ‑‑detectors-max ] arg"
+msgstr "-d [ ‑‑detectors-max ] arg"
+
+#: ../source/fkvideo_configuration.rst:205
+#, fuzzy
+msgid ""
+"Define the maximum number of video streams to be processed by fkvideo_detector."
+msgstr ""
+"Определяет максимальное количество видеопотоков, обрабатываемых видеодетектором "
+"лиц."
+
+#: ../source/fkvideo_configuration.rst:206
+msgid ""
+"Maximum number of video streams simultaneously processed by fkvideo_detector (5 "
+"by default)."
+msgstr ""
+"Максимальное количество видеопотоков, одновременно обрабатываемых "
+"видеодетектором лиц (по умолчанию 5)."
+
+#: ../source/fkvideo_configuration.rst:207
+msgid "‑‑detectors-max 7"
+msgstr "‑‑detectors-max 7"
+
+#: ../source/fkvideo_configuration.rst:208
+msgid "-t [ ‑‑reload-timeout ] arg"
+msgstr "-t [ ‑‑reload-timeout ] arg"
+
+#: ../source/fkvideo_configuration.rst:209
+#, fuzzy
+msgid ""
+"Define the interval between 2 consecutive requests fkvideo_detector sends to "
+"FindFace Server to update the list of cameras."
+msgstr ""
+"Определяет интервал в секундах между 2-мя последовательными запросами, "
+"отправляемыми видеодетектором лиц на Сервер для обновления списка видеокамер."
+
+#: ../source/fkvideo_configuration.rst:210
+msgid ""
+"Interval in seconds between 2 consecutive camera list updates (15 s by default)."
+msgstr ""
+"Интервал в секундах между 2-мя последовательными обновлениями списка видеокамер "
+"(по умолчанию 15 с)."
+
+#: ../source/fkvideo_configuration.rst:211
+msgid "-t 20"
+msgstr "-t 20"
+
+#: ../source/fkvideo_configuration.rst:212
+msgid "‑‑camera-url arg"
+msgstr "‑‑camera-url arg"
+
+#: ../source/fkvideo_configuration.rst:213
+#, fuzzy
+msgid ""
+"Define the request fkvideo_detector sends to FindFace Server to obtain the list "
+"of cameras."
+msgstr ""
+"Определяет метод API-запросов, которые отправляются видеодетектором лиц на "
+"Сервер FindFace для получения списка камер."
+
+#: ../source/fkvideo_configuration.rst:214
+msgid "/v0/camera (default) or /v1/camera."
+msgstr "/v0/camera (по умолчанию) или /v1/camera."
+
+#: ../source/fkvideo_configuration.rst:215
+msgid "‑‑camera-url /v1/camera"
+msgstr "‑‑camera-url /v1/camera"
+
+#: ../source/fkvideo_configuration.rst:216
+msgid "‑‑req-timeout arg"
+msgstr "‑‑req-timeout arg"
+
+#: ../source/fkvideo_configuration.rst:217
+#, fuzzy
+msgid ""
+"Define a timeout for a FindFace Server response to a fkvideo_detector API "
+"request."
+msgstr ""
+"Определяет время ожидания ответа от Сервера FindFace на API-запрос "
+"видеодетектора лиц."
+
+#: ../source/fkvideo_configuration.rst:218
+msgid "API response timeout in seconds (3 s by default)."
+msgstr "Время ожидания API-ответа в секундах (по умолчанию 3 с)."
+
+#: ../source/fkvideo_configuration.rst:219
+msgid "‑‑req-timeout 2"
+msgstr "‑‑req-timeout 2"
+
+#: ../source/fkvideo_configuration.rst:220
+msgid "‑‑single-pass [=arg(=1)]"
+msgstr "‑‑single-pass [=arg(=1)]"
+
+#: ../source/fkvideo_configuration.rst:221
+#, fuzzy
+msgid ""
+"Disable periodical updates of the list of cameras. Use this option if "
+"fkvideo_detector should process a video file. In this case, fkvideo_detector "
+"will request the list of cameras only once."
+msgstr ""
+"Отключает периодические обновления списка видеокамер. Используйте эту опцию, "
+"если нужно обработать видеофайл. В этом случае видеодетектор лиц запросит "
+"список камер только один раз."
+
+#: ../source/fkvideo_configuration.rst:222
+msgid ""
+"Boolean: 1 = updates are disabled, 0 = updates are enabled. ‑‑ single-pass and "
+"‑‑single-pass 1 are equal."
+msgstr ""
+"Логический: 1 = обновления отключены, 0 = обновления включены. Записи -- single-"
+"pass и --single-pass 1 тождественны."
+
+#: ../source/fkvideo_configuration.rst:223
 msgid "‑‑single-pass 0"
 msgstr "‑‑single-pass 0"
 
-#: ../source/fkvideo_configuration.rst:184
-msgid "‑‑start-ts arg"
-msgstr "‑‑start-ts arg"
+#: ../source/fkvideo_configuration.rst:224
+#, fuzzy
+msgid "‑‑remote-config [=arg(=1)]"
+msgstr "‑‑draw-track [=arg(=1)]"
 
-#: ../source/fkvideo_configuration.rst:185
-msgid "Adds a frame timestamp into a face posting request."
-msgstr "Добавляет время обнаружения лица в API-запрос к Серверу FindFace."
-
-#: ../source/fkvideo_configuration.rst:186
-msgid "Boolean: 1 = timestamps are added, 0 = timestamps are disabled."
+#: ../source/fkvideo_configuration.rst:225
+msgid "Get the list of cameras from FindFace Server."
 msgstr ""
-"Логический: 1 = метка времени добавляется, 0 = добавление метки времени "
-"отключено."
 
-#: ../source/fkvideo_configuration.rst:187
-msgid "‑‑start-ts 1"
-msgstr "‑‑start-ts 1"
-
-#: ../source/fkvideo_configuration.rst:188
-msgid "‑‑disable-drops [=arg(=1)]"
-msgstr "‑‑disable-drops [=arg(=1)]"
-
-#: ../source/fkvideo_configuration.rst:189
+#: ../source/fkvideo_configuration.rst:226
 msgid ""
-"Enables posting all appropriate faces without drops. By default, if "
-"fkvideo_detector does not have enough resources to process all frames "
-"with faces, it drops some of them. If this option is active, "
-"fkvideo_detector puts odd frames on the waiting list to process them "
-"later."
+"Boolean: 1 = the list of cameras is obtained from FindFace Server (default), 0 "
+"= fkvideo_detector processes a video stream defined in the ``‑‑source`` and "
+"``‑‑camid`` parameters. The ``‑‑source`` and ``‑‑camid`` parameters have "
+"priority: if a video stream is specified, the ``‑‑remote-config`` option is "
+"automatically set to 0. ‑‑remote-config and ‑‑remote-config 1 are equal."
 msgstr ""
-"Включает отправку на Сервер FindFace всех подходящих лиц без пропусков. "
-"По умолчанию, если fkvideo_detector не обладает достаточными ресурсами "
-"для обработки всех кадров с лицами, он отбрасывает некоторые из них. Если"
-" данная опция активна, fkvideo_detector помещает лишние кадры в очередь, "
-"чтобы обработать их впоследствии."
 
-#: ../source/fkvideo_configuration.rst:190
-msgid ""
-"Boolean: 1 = drops are disabled, 0 = drops are enabled. ‑‑disable-drops "
-"and ‑‑disable-drops 1 are equal."
+#: ../source/fkvideo_configuration.rst:227
+msgid "‑‑remote-config"
 msgstr ""
-"Логический: 1 = лишние кадры не отбрасываются, 0 = лишние кадры "
-"отбрасываются. Записи --disable-drops и --disable-drops 1 тождественны."
 
-#: ../source/fkvideo_configuration.rst:191
-msgid "‑‑disable-drops"
-msgstr "‑‑disable-drops"
-
-#: ../source/fkvideo_configuration.rst:192
-msgid "‑‑sink-url arg"
-msgstr "‑‑sink-url arg"
-
-#: ../source/fkvideo_configuration.rst:193
-msgid ""
-"Only if fkvideo_detector processes 1 camera defined in the configuration "
-"file or in command line arguments. Defines the nginx video server IP "
-"address for the output video stream (it is there further redirected to "
-":ref:`FindFace Web UI <ffui>`)."
-msgstr ""
-"Только в случае если fkvideo_detector обрабатывает одну видеокамеру "
-"(указанную в файле конфигурации или в командной строке). Определяет "
-"IP-адрес видео-сервера nginx для выходного видеопотока из "
-"fkvideo_detector (видео-сервер далее перенаправляет поток в "
-":ref:`веб-интерфейс FindFace <ffui>`)."
-
-#: ../source/fkvideo_configuration.rst:194
-msgid "Nginx video server IP address."
-msgstr "IP-адрес и порт видео-сервера nginx."
-
-#: ../source/fkvideo_configuration.rst:195
-msgid "‑‑sink-url 192.168.15.1:3222"
-msgstr "‑‑sink-url 192.168.15.1:3222"
-
-#: ../source/fkvideo_configuration.rst:196
-msgid "‑‑sink-res arg"
-msgstr "‑‑sink-res arg"
-
-#: ../source/fkvideo_configuration.rst:197
-msgid "Defines the output video stream resolution."
-msgstr "Определяет разрешение выходного видеопотока."
-
-#: ../source/fkvideo_configuration.rst:198
-msgid "Resolution WхH"
-msgstr "Разрешение WхH"
-
-#: ../source/fkvideo_configuration.rst:199
-msgid "‑‑sink-res 1280x720"
-msgstr "‑‑sink-res 1280x720"
-
-#: ../source/fkvideo_configuration.rst:200
-msgid "‑‑tracker-threads arg"
-msgstr "‑‑tracker-threads arg"
-
-#: ../source/fkvideo_configuration.rst:201
-msgid ""
-"Defines the number of tracking threads for the face tracker. This value "
-"should be less or equal to the ``max-persons`` value. We recommend you to"
-" set them equal. If the number of tracking threads is less than the "
-"maximum number of tracked faces, resource consumption is reduced but so "
-"is the tracking speed."
-msgstr ""
-"Определяет количество тредов отслеживания для трекера лиц. Данное "
-"значение должно быть меньше или равно значению параметра ``max-persons``."
-" Оптимально, когда они равны. Если количество тредов отслеживания меньше,"
-" чем максимальное количество отслеживаемых лиц, потребление ресурсов "
-"уменьшается, однако также уменьшается и скорость отслеживания."
-
-#: ../source/fkvideo_configuration.rst:202
-msgid "Number of tracking threads"
-msgstr "Количество тредов отслеживания."
-
-#: ../source/fkvideo_configuration.rst:203
-msgid "‑‑tracker-threads 4"
-msgstr "‑‑tracker-threads 4"
-
-#: ../source/fkvideo_configuration.rst:204
+#: ../source/fkvideo_configuration.rst:228
 msgid "-h [ ‑‑help ]"
 msgstr "-h [ ‑‑help ]"
 
-#: ../source/fkvideo_configuration.rst:205
+#: ../source/fkvideo_configuration.rst:229
 msgid "Produce the fkvideo_detector help message."
 msgstr "Выводит справку по опциям видеодетектора лиц."
 
-#: ../source/fkvideo_configuration.rst:206
-#: ../source/fkvideo_configuration.rst:207
+#: ../source/fkvideo_configuration.rst:230 ../source/fkvideo_configuration.rst:231
 msgid "─"
 msgstr "─"
 
-#: ../source/fkvideo_configuration.rst:212
+#: ../source/fkvideo_configuration.rst:236
 msgid "Configuration File Format"
 msgstr "Формат файла конфигурации"
 
+#: ../source/fkvideo_configuration.rst:253
+msgid ""
+"You can specify several values for an additional body field (``body``), "
+"separated by a comma. In the configuration file, a comma between values of the "
+"same field must be preceded by a backslash (``\\,``) to avoid a parsing error."
+msgstr ""
+
 #~ msgid ""
-#~ "Maximum deviation of a face from "
-#~ "its frontal position in empirical units"
-#~ " (negative rational numbers to zero). "
-#~ "Milestones: -20 = satisfactory deviation, "
-#~ "-10 = close to the frontal "
-#~ "position, 0 = frontal face. The "
+#~ "Maximum deviation of a face from its frontal position in empirical units "
+#~ "(negative rational numbers to zero). Milestones: -20 = satisfactory "
+#~ "deviation, -10 = close to the frontal position, 0 = frontal face. The "
 #~ "default value is -1000."
 #~ msgstr ""
-#~ "Максимальное отклонение лица от положения "
-#~ "анфас в эмпирических единицах (отрицательные"
-#~ " рациональные числа до нуля). Реперные "
-#~ "точки: -20 = удовлетворительное отклонение,"
-#~ " -10 = близко к фронтальной позиции,"
-#~ " 0 = анфас. Значение по умолчанию "
-#~ "-1000."
+#~ "Максимальное отклонение лица от положения анфас в эмпирических единицах "
+#~ "(отрицательные рациональные числа до нуля). Реперные точки: -20 = "
+#~ "удовлетворительное отклонение, -10 = близко к фронтальной позиции, 0 = "
+#~ "анфас. Значение по умолчанию -1000."
+
+#~ msgid ""
+#~ "Defines a video stream to be processed by fkvideo_detector, as the relevant "
+#~ "camera id (see also ``--source``). If a video stream is not specified, "
+#~ "fkvideo_detector requests the :ref:`list of cameras <video-methods>` from "
+#~ "FindFace Server with a polling interval defined by the ``reload-timeout`` "
+#~ "parameter."
+#~ msgstr ""
+#~ "Задает видеопоток для отслеживания как ID видеокамеры (см. также ``--"
+#~ "source``). Если видеопоток не задан, видеодетектор лиц запрашивает :ref:"
+#~ "`список видеокамер <video-methods>` у Сервера FindFace с интервалом ``reload-"
+#~ "timeout``."
+
+#~ msgid "‑‑api-host arg"
+#~ msgstr "‑‑api-host arg"
+
+#~ msgid ""
+#~ "Mandatory. Defines the FindFace Server host fkvideo_detector will be sending "
+#~ "API requests to."
+#~ msgstr ""
+#~ "Обязательная опция. Определяет физический сервер ``findface-facenapi`` в "
+#~ "составе Сервера FindFace, на который видеодетектор лиц отправляет API-"
+#~ "запросы."
+
+#~ msgid "FindFace Server host IP address."
+#~ msgstr "IP-адрес сервера FindFace."
+
+#~ msgid "Mandatory. Defines the FindFace Server host port for API requests."
+#~ msgstr ""
+#~ "Обязательная опция. Определяет порт физического сервера ``findface-"
+#~ "facenapi`` для API-запросов. "
+
+#~ msgid "Port number."
+#~ msgstr "Номер порта."
+
+#~ msgid "‑‑api-port 8000"
+#~ msgstr "‑‑api-port 8000"
+
+#~ msgid ""
+#~ "Defines a video stream to be processed by fkvideo_detector, as the relevant "
+#~ "camera address (see also ``--camid``). If a video stream is not specified, "
+#~ "fkvideo_detector requests the :ref:`list of cameras <video-methods>` from "
+#~ "FindFace Server with a polling interval defined by the ``reload-timeout`` "
+#~ "parameter."
+#~ msgstr ""
+#~ "Задает видеопоток для отслеживания как адрес видеокамеры (см. также ``--"
+#~ "camid``). Если видеопоток не задан, видеодетектор лиц запрашивает :ref:"
+#~ "`список видеокамер <video-methods>` у Сервера FindFace с интервалом ``reload-"
+#~ "timeout``."
+
+#~ msgid "Additional body field(s)."
+#~ msgstr "Дополнительное поле (поля)."
+
+#~ msgid "Adds a frame timestamp into a face posting request."
+#~ msgstr "Добавляет время обнаружения лица в API-запрос к Серверу FindFace."
+
+#~ msgid "Boolean: 1 = timestamps are added, 0 = timestamps are disabled."
+#~ msgstr ""
+#~ "Логический: 1 = метка времени добавляется, 0 = добавление метки времени "
+#~ "отключено."
+
+#~ msgid "‑‑start-ts 1"
+#~ msgstr "‑‑start-ts 1"

@@ -81,10 +81,10 @@ Usage:
      - Simultaneously use the real-time and off-line modes of fkvideo_detector. In this case, fkvideo-detector will be sending bounding boxes to FindFace Server under 2 different labels.
      - Boolean: 1 = use both modes of fkvideo_detector, 0 = use the mode defined by the ``-r`` parameter. ‑‑realtime1844 and ‑‑realtime1844 1 are equal.
      - ‑‑realtime1844 or ‑‑realtime1844 1, ‑‑realtime1844 0
-   * - ‑‑start-ts arg
-     - Add a frame timestamp into a face posting request.
-     - Boolean: 1 = timestamps are added, 0 = timestamps are disabled.
-     - ‑‑start-ts 1
+   * - ‑‑start-ts=arg
+     - By default, faces are posted to FindFace Server with a current time stamp. To change the time stamp, specify a different start time of a video stream processing. In the case of a video file processing, you have to specify the start date and time of a video file. 
+     - Start date and time of a video file, or a video stream processing.
+     - ‑‑start-ts='2016-01-20 12:34:56'
    * - ‑‑max-persons arg
      - Define the maximum number of faces simultaneously tracked by the face tracker. This parameter severely affects performance.
      - Maximum number of simultaneously tracked faces.
@@ -141,18 +141,14 @@ Usage:
      - Define the maximum deviation of a face from its frontal position. A face is posted if its deviation is less than this value. The deviation is to be fitted empirically.
      - Maximum deviation of a face from its frontal position in empirical units (negative rational numbers to zero). Milestones: -3.5 = large face angles, face recognition may be inefficient, -2.5 = satisfactory deviation, -0.05 = close to the frontal position, 0 = frontal face. The default value is -1000.
      - ‑‑min-dir-score -1
-   * - ‑‑rt-refresh arg
-     - Only for the real-time mode. Define the time interval for the best face score auto-refresh during the better snapshot dynamic search.
-     - Time period in milliseconds. The default value is 0 (disabled).
-     - ‑‑rt-refresh 10
-   * - ‑‑rt-score-step arg
-     - Only for the real-time mode. Define the threshold increase step for the better snapshot dynamic search.
-     - Threshold increase step (positive rational numbers).
-     - ‑‑rt-score-step 3.4
    * - ‑‑rt-delay arg
-     - Only for the real-time mode. Define the minimum time period between 2 posts of the same face with increased quality.
-     - Time period in milliseconds between 2 posts of the same face with increased quality.
+     - Only for the real-time mode. If ``rt-perm=True``, defines the time period within which the face tracker picks up the best snapshot and posts it to FindFace Server. If ``rt-perm=False``, defines the minimum time period between 2 posts of the same face with increased quality.
+     - Time period in milliseconds.
      - ‑‑rt-delay 100
+   * - ‑‑rt-perm arg
+     - Only for the realtime mode. Post best snapshots obtained within each ``rt-delay`` time period.
+     - Boolean: 1 = post best snapshots obtained within each ``rt-delay`` time period, 0 = search for the best snapshot dynamically and send snapshots in order of increasing quality.
+     - ‑‑rt-perm 1
    * - ‑‑rot arg
      - Enable detecting and tracking faces only inside a clipping rectangle. You can use this option to reduce fkvideo_detector load.
      - Clipping rectangle: WxH+X+Y (see the specification of X geometry).
@@ -246,6 +242,8 @@ Configuration File Format
     | license-ntls-server=192.168.10.1:3133
     | source-params=rtsp_transport=tcp,rtsp_flags=prefer,timeout=-1
     | body=galleries=testgal1\,testgal2,gender=true,age=true,emotions=true,meta=video.mp4
+    | start-ts = 2013-01-22 12:34:56
+
 
 .. note::
    You can specify several values for an additional body field (``body``), separated by a comma. In the configuration file, a comma between values of the same field must be preceded by a backslash (``\,``) to avoid a parsing error. 

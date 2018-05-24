@@ -13,7 +13,6 @@ Advanced Features
    friend
    bulk_face
    extraction_api
-   plugins
    stats
    tarantool_api
    tntapi_additional

@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-19 17:06+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../source/extapi.rst:4
+msgid "Install extraction-api"
+msgstr ""
+
+#: ../source/extapi.rst:6
+msgid ""
+"Install and configure the ``findface-extraction-api`` component as "
+"follows:"
+msgstr ""
+
+#: ../source/extapi.rst:10
+msgid ""
+"The ``extraction-api`` component requires the packages with :ref:`models "
+"<models>` :program:`<findface-data>.deb`. Make sure they have been "
+"installed."
+msgstr ""
+
+#: ../source/extapi.rst:14
+msgid "Install the component."
+msgstr ""
+
+#: ../source/extapi.rst:21
+msgid "Open the ``findface-extraction-api.ini`` configuration file."
+msgstr ""
+
+#: ../source/extapi.rst:27
+msgid "If :ref:`NTLS <licensing>` is remote, specify its IP address."
+msgstr ""
+
+#: ../source/extapi.rst:33
+msgid ""
+"The ``model_instances`` parameter indicates how many ``extraction-api`` "
+"instances are used. Specify the number of instances that you purchased. "
+"The default value (0) means that this number is equal to the number of "
+"CPU cores."
+msgstr ""
+
+#: ../source/extapi.rst:36
+msgid "This parameter severely affects RAM consumption."
+msgstr ""
+
+#: ../source/extapi.rst:42
+msgid "Enable the ``Extraction API`` service autostart and launch the service."
+msgstr ""
+
+#: ../source/extapi.rst:48
+msgid ""
+"Make sure that the service is up and running. The command will return a "
+"service description, a status (should be Active), path and running time."
+msgstr ""
+
+#: ../source/extapi.rst:56
+msgid "You can view the ``extraction-api`` :ref:`logs <logs>` by executing:"
+msgstr ""
+

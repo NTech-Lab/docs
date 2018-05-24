@@ -21,7 +21,7 @@ Hosts
 Prior to installing FindFace Enterprise Server SDK, ensure that the host(s) meet the following minimum requirements:
 
 .. note::
-    :ref:`Standalone installation <standalone>` of FindFace Enterprise Server SDK is recommended when the number of faces in the database **does not** exceed some ``1,000,000``. Otherwise you should install Findface Enterprise Server SDK in a :ref:`cluster environment <cluster>` and configure :ref:`fast index <fast-index>` search.
+    Standalone installation of FindFace Enterprise Server SDK is recommended when the number of faces in the database **does not** exceed some ``1,000,000``. Otherwise you should install Findface Enterprise Server SDK in a cluster environment and configure :ref:`fast index <fast-index>` search. See :ref:`architecture` for details.
 
 
 +--------------------+-----------------------------------------------------------------------------+

@@ -1,7 +1,7 @@
 .. _rest-about:
 
 How to Use REST API
-=============================
+---------------------------
 
 .. rubric:: In this section:
 
@@ -10,12 +10,12 @@ How to Use REST API
 
 
 Endpoint
---------------------
+^^^^^^^^^^^^^^^^^^^
 
 All REST API requests should be sent to ``http://<facenapi_ip>:8000/v1/``.
 
 API Version
--------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 The API version is increased every time a major change is made and allows us to avoid breaking backwards compatibility. The API version should be specified in the request path (for example, v1 in ``/v1/detect/``).
 
@@ -26,7 +26,7 @@ The most recent version is v1 which provides such advanced functions as gender, 
 
 
 Authentication
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 All API methods require a simple token-based HTTP Authentication. In order to authenticate, you should put the word "Token" and your token key into the Authorization HTTP header, separated by a whitespace:
 
@@ -40,10 +40,10 @@ All API methods require a simple token-based HTTP Authentication. In order to au
 All requests that fail to provide a valid authentication token will result in a ``HTTP 401 Unauthorized`` response.
 
 Common Object Types
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Face
-^^^^^^^^^^^^
+"""""""""""
 
 Represents a human face. Note that it might be several faces on a single
 photo. Different photos of the same person as also considered to be
@@ -64,7 +64,7 @@ different faces.
 .. _bbox:
 
 Bounding Box (bbox)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""
 
 Represents a rectangle on a photo. Usually used as a face's bounding box. May be specified in two ways:
 
@@ -81,7 +81,7 @@ Note that in some case the coordinates might be outside photo dimensions, includ
 
 
 Parameters Format
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are three ways to pass parameters to the API methods:
 
@@ -98,7 +98,7 @@ There are two ways of specifying a photo image file:
 All responses are in JSON format and UTF-8 encoding.
 
 How to Use Examples
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Examples in methods descriptions illustrate possible method requests and responses. To check the examples without writing code, use the
 embedded API framework. To access the framework, enter in the address bar of your browser: ``http://<facenapi_ip>:8000/v1/docs/v1/overview.html`` for the API version /v1.
@@ -106,7 +106,7 @@ embedded API framework. To access the framework, enter in the address bar of you
 .. _thresholds:
 
 Confidence Thresholds
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For some methods you need to specify a threshold for verification or identification confidence. The higher is the threshold, the less are
 chances that a wrong person will be positively verified or identified, however, some valid photos may also fail verification.
@@ -125,7 +125,7 @@ You can also specify your own threshold level from 0 to 1, depending on your env
 
 
 Pagination
--------------------
+^^^^^^^^^^^^^^^^^^^^
 
 Some methods (such as ``GET /faces/`` and ``GET /meta/``) may
 potentially return thouthands and hundreds of thouthands results. To
@@ -144,7 +144,7 @@ request ``GET http://<facenapi_ip:8000/v0/faces/?max_id=12345`` to get
 the next portion of the results.
 
 Limits
----------------
+^^^^^^^^^^^^^^^
 
 FindFace Enterprise Server SDK imposes the following limits.
 
@@ -164,7 +164,7 @@ Additionally, the URL provided to the API to fetch an image should be
 public (without authentication) and direct (without any redirects).
 
 Error Reporting
----------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If a method fails, it always returns a response with a HTTP code other
 than 200 and a JSON body containing the error description. The error

@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, NtechLab
+# This file is distributed under the same license as the FindFace Enterprise
+# Server SDK package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FindFace Enterprise Server SDK 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-19 17:06+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../source/plugins.rst:4
+msgid "Extend Functionality with Plugins"
+msgstr ""
+
+#: ../source/plugins.rst:6
+msgid ""
+"By default, the ``findface-facenapi`` component follows a predefined set "
+"of behaviour traits. That implies certain limitations on its "
+"functionality. Using plugins can significantly extend the scope of tasks "
+"that ``findface-facenapi`` is capable of fulfilling."
+msgstr ""
+
+#: ../source/plugins.rst:8
+msgid ""
+"Here are just few examples of how you can implement the plugins to your "
+"system:"
+msgstr ""
+
+#: ../source/plugins.rst:11
+msgid ""
+"To write a plugin, you require good command of the Python programming "
+"language."
+msgstr ""
+
+#: ../source/plugins.rst:13
+msgid ""
+"By default, the ``fkvideo_detector`` component does not process the "
+"``findface-facenapi`` responses to face identification and camera "
+"operation API requests. You can use a plugin as a proxy script that will "
+"manage communication between ``fkvideo_detector`` and ``findface-"
+"facenapi`` and redirect API responses to an application that can process "
+"and render them."
+msgstr ""
+
+#: ../source/plugins.rst:14
+msgid ""
+"Use plugins to send the facial recognition results to a websocket or save"
+" them to a file."
+msgstr ""
+
+#: ../source/plugins.rst:17
+msgid "In this section:"
+msgstr ""
+
+#: ../source/plugins.rst:23
+msgid "Methods To Be Used in Plugin"
+msgstr ""
+
+#: ../source/plugins.rst:25
+msgid ""
+"The ``facenapi`` code includes so called the ``core`` and ``server`` "
+"parts, with the ``server`` being an extension of the ``core``. This "
+"section will introduce you to all the ``facenapi.core.models`` and "
+"``facenapi.server.models`` methods to be used in plugins."
+msgstr ""
+
+#: ../source/plugins.rst:28
+msgid ""
+"First and foremost, you will have to work with the ``face`` and "
+"``person`` objects."
+msgstr ""
+
+#: ../source/plugins.rst:32
+msgid "Methods for ``facenapi.core.models``"
+msgstr ""
+
+#: ../source/plugins.rst:35
+msgid "``face``"
+msgstr ""
+
+#: ../source/plugins.rst:38
+msgid "``gallery``"
+msgstr ""
+
+#: ../source/plugins.rst:43
+msgid "Methods for ``facenapi.server.models``"
+msgstr ""
+
+#: ../source/plugins.rst:51
+msgid "Case Studies"
+msgstr ""
+
+#: ../source/plugins.rst:53
+msgid ""
+"The following case studies will help you write your first ``findface-"
+"facenapi`` plugin:"
+msgstr ""
+
+#: ../source/plugins.rst:55
+msgid ""
+"The :download:`html-demo-report.py <_scripts/html-report-demo.py>` plugin"
+" identifies faces detected in video by the ``fkvideo_detector`` component"
+" and saves the identification results to a static HTML file."
+msgstr ""
+
+#: ../source/plugins.rst:58
+msgid ""
+"By default, faces detected in video are added to a database without "
+"identification. In order to identify them, :ref:`assign <fkvideo-config>`"
+" ``v1/identify`` to the ``request-url`` parameter of "
+"``fkvideo_detector``."
+msgstr ""
+
+#: ../source/plugins.rst:60
+msgid ""
+"The :download:`websocket-demo-plugin <_scripts/websocket-demo-plugin.py>`"
+" plugin identifies faces and sends the identification results to a "
+"websocket."
+msgstr ""
+
+#: ../source/plugins.rst:65
+msgid "Implement Plugin to ``findface-facenapi``"
+msgstr ""
+
+#: ../source/plugins.rst:67
+msgid "To implement a plugin to ``findface-facenapi``, do the following:"
+msgstr ""
+
+#: ../source/plugins.rst:69
+msgid ""
+"Put a plugin into a directory of your choice. You can use several "
+"directories to store plugins."
+msgstr ""
+
+#: ../source/plugins.rst:70
+msgid "Open the ``findface-facenapi`` configuration file."
+msgstr ""
+
+#: ../source/plugins.rst:77
+msgid "The ``findface-facenapi.ini`` content must be correct Python code."
+msgstr ""
+
+#: ../source/plugins.rst:80
+msgid ""
+"Uncomment the ``plugins_dirs`` parameter and specify the comma-separated "
+"list of plugin directories."
+msgstr ""
+
+#: ../source/plugins.rst:86
+msgid ""
+"Uncomment the ``plugins_enabled`` parameter and specify the comma-"
+"separated list of plugins to load, or an asterisk (*) to load all "
+"plugins."
+msgstr ""
+
