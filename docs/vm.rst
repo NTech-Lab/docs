@@ -44,7 +44,7 @@ The virtual machine image has the following software pre-installed:
    | fkvideo_detector 	      | Only installed. Use the command line or FindFace Web UI to manually start it. Before use,            |
    |                          | consult the :ref:`component documentation <video>`.                                                  |
    +--------------------------+------------------------------------------------------------------------------------------------------+
-   | findface-extraction-api  | Installed and started as a facen extractor. Consult                                                  |
+   | findface-extraction-api  | Installed and started as a face detector and facen extractor. Consult                                |
    |                          | the :ref:`component documentation <extraction-api>` for advanced features.                           |
    +--------------------------+------------------------------------------------------------------------------------------------------+
    | NTLS 	              | Installed and started.                                                                               |
