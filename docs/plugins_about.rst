@@ -33,12 +33,12 @@ Common Object Types
 Rectangle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Stores coordinates of a face bounding box in the original image as ``Rectangle('x1', 'y1', 'x2', 'y2')``, where:
+Stores coordinates of a face bounding box in the original image as ``Rectangle('left', 'top', 'right', 'bottom')``, where:
 
-* ``left``: x coordinate of the top-left corner of the bounding box, *float*.
-* ``top``: y coordinate of the top-left corner of the bounding box, *float*.
-* ``right``: x coordinate of the bottom-right corner of the bounding box, *float*. 
-* ``bottom``: y coordinate of the bottom-right corner of the bounding box, *float*.
+* ``'left'``: x coordinate of the top-left corner of the bounding box, *float*.
+* ``'top'``: y coordinate of the top-left corner of the bounding box, *float*.
+* ``'right'``: x coordinate of the bottom-right corner of the bounding box, *float*. 
+* ``'bottom'``: y coordinate of the bottom-right corner of the bounding box, *float*.
 
 .. note::
    A bbox's coordinates can lie outside image boundaries and be negative.
