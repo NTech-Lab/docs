@@ -15,12 +15,12 @@ Do the following:
      sudo apt-get update
      sudo apt-get install findface-upload
 
-#. By default the original images, thumbnails and normalized images are stored at ``/var/lib/ffupload/uploads/``. You can view this folder content at ``http://127.0.0.1:3333/uploads/`` in your browser. Make sure that this address is available.
+#. By default the original images, thumbnails and normalized images are stored at ``/var/lib/ffupload/uploads/``. You can view this folder content at ``http://127.0.0.1:3333/uploads/`` in your browser. Make sure that this address is available with restricted direct access.
 
    .. code::
 
       curl -I http://127.0.0.1:3333/uploads/
-      ##HTTP/1.1 200 OK
+      ##HTTP/1.1 403 Forbidden
 
    .. important::
       You will have to specify it when :ref:`configuring network <configure-network>`.

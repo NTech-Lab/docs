@@ -22,3 +22,7 @@ If MongoDB is installed on a remote host, you have to indicate the path to the `
 ::
 
  sudo findface-facenapi.token --config=/etc/findface-facenapi.ini
+
+.. note::
+   Use the authentication token to access the FindFace Web User Interface at ``http://<facenapi_ip>:8000/#/``. See :ref:`ffui` for details.
+
