@@ -9,10 +9,10 @@ Plugins are great as proxy scripts that manage communication between ``fkvideo_d
 When writing a plugin for these use cases, you can inherit from the following ready-to-use HTTP handlers:
 
    * ``facenapi.core.http.base_handler.BaseHandler`` implements the FindFace Web Interface (without Video Processing)
-   * ``facenapi.core.http.base_handler.BaseVideoHandler`` implements Video Processing. 
+   * ``facenapi.server.base_video_handler.BaseVideoHandler`` implements Video Processing. 
 
       .. note::
-         ``BaseVideoHandler`` allows for parsing the ``fkvideo_detector`` requests by using the ``process_frame`` method. 
+         ``BaseVideoHandler`` parses the ``fkvideo_detector`` requests and passes the parsed data to the ``process_frame`` method. 
 
 
 .. note::
