@@ -76,13 +76,19 @@ The web interface has a highly intuitive and handy design and provides the follo
      .. image:: /_static/persons.png
         :scale: 60 %
 
-* :guilabel:`Camera management`. Add cameras to the system. When adding a camera, you can specify ``ROT`` to enable detecting and tracking faces only inside a clipping rectangle (region of tracking), and/or ``ROI`` to enable posting faces detected only inside a region of interest. 
+* :guilabel:`Camera management`. Add cameras to your system. When adding a camera, you can specify ``ROT`` to enable detecting and tracking faces only inside a clipping rectangle (region of tracking), and/or ``ROI`` to enable posting faces detected only inside a region of interest. 
 
      .. image:: /_static/cameras.png
         :scale: 60%
 
   .. tip::
      The ``ROT`` option is used to reduce the video face detector load.
+
+  .. tip::
+     To specify ``ROT`` and ``ROI``, use the visual wizard. First, create a camera without ROT and ROI, then open it for editing and click :guilabel:`Change ROI/ROT with image`.
+
+     .. image:: /_static/visual.png
+        :scale: 60%
 
  
 * :guilabel:`Photo processing`. Select this section to detect faces in static images, recognize gender, age and emotions, search a face in the database (identification), and compare two faces (verification). 

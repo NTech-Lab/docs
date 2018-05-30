@@ -13,11 +13,17 @@ This section will guide you through the FindFace Server step-by-step installatio
 .. contents::
    :local:
 
+.. _prepare:
+
 .. include:: prepare.rst
+
+.. _licensing:
 
 .. include:: licensing.rst
 
 .. include:: components.rst
+
+.. _configure-network:
 
 .. include:: network.rst
 

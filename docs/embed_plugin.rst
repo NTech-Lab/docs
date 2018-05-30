@@ -1,10 +1,10 @@
 .. _embed:
 
 
-Configure ``findface-facenapi`` to Use Plugins
+Implement Plugin to ``findface-facenapi``
 ================================================
 
-To configure ``findface-facenapi`` to use plugins, do the following:
+To implement a plugin to ``findface-facenapi``, do the following:
 
 #. Put a plugin into a directory of your choice. You can use several directories to store plugins.
 #. Open the ``findface-facenapi`` configuration file.

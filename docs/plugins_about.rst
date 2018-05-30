@@ -33,25 +33,25 @@ Common Object Types
 Rectangle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Stores coordinates of a face bounding box in the original image as ``Rectangle('left', 'top', 'right', 'bottom')``, where:
+Stores coordinates of a face bounding box in the original image as ``Rectangle(self['x1'], self['y1'], self['x2'], self['y2'])``, where:
 
-* ``'left'``: x coordinate of the top-left corner of the bounding box, *float*.
-* ``'top'``: y coordinate of the top-left corner of the bounding box, *float*.
-* ``'right'``: x coordinate of the bottom-right corner of the bounding box, *float*. 
-* ``'bottom'``: y coordinate of the bottom-right corner of the bounding box, *float*.
+* ``x1``: x coordinate of the top-left corner of the bounding box, *float*.
+* ``y1``: y coordinate of the top-left corner of the bounding box, *float*.
+* ``x2``: x coordinate of the bottom-right corner of the bounding box, *float*. 
+* ``y2``: y coordinate of the bottom-right corner of the bounding box, *float*.
 
 .. note::
    A bbox's coordinates can lie outside image boundaries and be negative.
  
 
-``facenapi.core.extractors.ExtractionFace``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``eface``
+^^^^^^^^^^^^^^^^^^
 
-The ``facenapi.core.extractors.ExtractionFace`` object represents a dictionary of face data returned from ``ctx.extractor.extract()``. It can be converted into a ``Faces.Model`` instance by using :py:meth:`Faces.Model.from_extraction_face`.
+The ``eface`` object represents a dictionary of face data returned from ``ctx.extractor.extract()``. It can be converted into a ``Faces.Model`` instance by using :py:meth:`Faces.Model.from_extraction_face`.
 
-The ``facenapi.core.extractors.ExtractionFace`` dictionary have the following keys:
+The ``eface`` dictionary have the following keys:
 
-* ``bbox``: coordinates of the face region in the original image (bbox)
+* ``bbox``: coordinates of the face region in the original image (bbox), ``Rectangle(self['x1'], self['y1'], self['x2'], self['y2'])``
 * ``normalized``: normalized face image, bytes of the ``.png`` file
 * ``facen``: (optional) face feature vector, *base64* 
 * ``gender``: (optional) 'male' or 'female', *str* 
@@ -68,7 +68,7 @@ Face object
 Being wrapped into the ``Faces.Model`` class, a face object represents a dictionary ``face`` with the following keys:
 
 * ``"id" (number)``: unique identifier of the face
-* ``'bbox'``: coordinates of the face region in the original image (bbox)  
+* ``'bbox'``: coordinates of the face region in the original image (bbox), ``Rectangle(self['x1'], self['y1'], self['x2'], self['y2'])``  
 * ``'facen'``: (optional) face feature vector, *base64*
 * ``'gender'``: (optional) 'male' or 'female', *str*
 * ``'age'``: (optional) estimated age, *float*
