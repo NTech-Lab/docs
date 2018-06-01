@@ -25,6 +25,7 @@ Creates a new camera.
 .. rubric:: Parameters:
 
 * ``meta`` [optional]: some user-defined string identifier
+* ``enabled`` [boolean]: enable video processing in FindFace web interface
 * ``url`` [optional]: url address of the camera's stream
 * ``detector`` [optional]: some user-defined string identifier
 * ``rot`` [W,H,X,Y] [optional]: enable detecting and tracking faces only inside a clipping rectangle (ROT, region of tracking).
@@ -40,14 +41,15 @@ A JSON representation of the added camera or a failure reason.
 
 .. code::
 
-    POST /v0/camera/ HTTP/1.1
+    POST /v1/camera/ HTTP/1.1
     Host: 127.0.0.1
     Authorization: Token 1234567890qwertyuiop
     Content-Type:   application/json
     Content-Length: [length]
 
     {
-        "meta": "test",
+        "meta": "meta",
+        "enabled": true,
         "url": "http://test.com:1234/stream.flv",
         "detector": "detec1"
     }
@@ -61,10 +63,12 @@ A JSON representation of the added camera or a failure reason.
     Content-Type: application/json; charset=UTF-8
     {
         "meta": "meta",
+        "enabled": true,
         "url": "http://test.com:1234/stream.flv",
         "detector": "detec1",
         "id": "7bb35e9d-9f4f-4e5b-8811-e1dded6de811"
     }
+
 
 .. _camera-get:
 
@@ -89,7 +93,7 @@ The list of all cameras.
 
 .. code::
 
-    GET /v0/camera HTTP/1.1
+    GET /v1/camera HTTP/1.1
     Host: 127.0.0.1
     Authorization: Token 1234567890qwertyuiop
 
@@ -102,17 +106,30 @@ The list of all cameras.
     Date: Thu, 13 Oct 2016 12:14:22 GMT
     Content-Type: application/json; charset=UTF-8
     [
-        {
-            "meta": "firstcam", 
-            "url": "http://192.168.133.37:1234/stream.flv" 
-            "id": "34ba07c4-0677-4d5c-9946-62c625cd7127"
-        },
-        {
-            "meta": "newinfo",
-            "url": "http://5.6.7.8:1234/stream.flv",
-            "id": "b28a898b-6334-4d37-8888-c9dd858ddc47"
-        },
-        ...
+      {
+        "enabled": true,
+        "id": "32bc21fb-0aa2-4d17-88bb-1a2bf76d88ea",
+        "meta": "Camera 1",
+        "url": "rtsp://127.0.0.1/Streaming/Channels/1"
+      },
+      {
+        "enabled": true,
+        "id": "32bc21fb-0aa2-4d17-88bb-1a2bf76d88ea",
+        "meta": "Camera 1",
+        "roi": [
+          200,
+          300,
+          400,
+          500
+        ],
+        "rot": [
+          100,
+          100,
+          800,
+          800
+        ],
+        "url": "rtsp://127.0.0.1/Streaming/Channels/1"
+      }
     ]
 
 .. _camera-id-get:
@@ -138,7 +155,7 @@ Info about the camera or a failure reason.
 
 .. code::
 
-    GET /v0/camera/b28a898b-6334-4d37-8888-c9dd858ddc47 HTTP/1.1
+    GET /v1/camera/32bc21fb-0aa2-4d17-88bb-1a2bf76d88ea HTTP/1.1
     Host: 127.0.0.1
     Authorization: Token 1234567890qwertyuiop
 
@@ -150,10 +167,24 @@ Info about the camera or a failure reason.
     Content-Length: [length]
     Content-Type: application/json; charset=UTF-8
     {
-        "meta": "test info",
-        "url": "http://5.6.7.8:1234/stream.flv",
-        "id": "b28a898b-6334-4d37-8888-c9dd858ddc47"
+      "enabled": true,
+      "id": "32bc21fb-0aa2-4d17-88bb-1a2bf76d88ea",
+      "meta": "Camera 1",
+      "roi": [
+        200,
+        300,
+        400,
+        500
+      ],
+      "rot": [
+        100,
+        100,
+        800,
+        800
+      ],
+      "url": "rtsp://127.0.0.1/Streaming/Channels/1"
     }
+
 
 .. _camera-id-put:
 
@@ -181,7 +212,7 @@ A JSON representation of the updated camera with id = <camera\_id>.
 
 .. code::
 
-    PUT /v0/camera/b28a898b-6334-4d37-8888-c9dd858ddc47 HTTP/1.1
+    PUT /v1/camera/b28a898b-6334-4d37-8888-c9dd858ddc47 HTTP/1.1
     Host: 127.0.0.1
     Authorization: Token 1234567890qwertyuiop
     Content-Type: application/json
@@ -210,7 +241,7 @@ A JSON representation of the updated camera with id = <camera\_id>.
 
 .. code::
 
-    PUT /v0/camera/b28a898b-6334-4d37-8888-c9dd858ddc47 HTTP/1.1
+    PUT /v1/camera/b28a898b-6334-4d37-8888-c9dd858ddc47 HTTP/1.1
     Host: 127.0.0.1
     Authorization: Token 1234567890qwertyuiop
     Content-Type: application/json
@@ -276,7 +307,7 @@ HTTP 204 No Content in the case of success, or the reason of failure.
 
 .. code::
 
-    DELETE /v0/camera/b28a898b-6334-4d37-8888-c9dd858ddc47 HTTP/1.1
+    DELETE /v1/camera/b28a898b-6334-4d37-8888-c9dd858ddc47 HTTP/1.1
     Host: 127.0.0.1
     Authorization: Token 1234567890qwertyuiop
     Content-Length: 0

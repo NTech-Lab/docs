@@ -1,5 +1,3 @@
-.. _extapi:
-
 Install extraction-api
 """""""""""""""""""""""""
 

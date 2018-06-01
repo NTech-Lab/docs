@@ -162,7 +162,7 @@ Usage:
      - Boolean: 1 = enable drawing a track, 0 = disable drawing a track. ‑‑draw-track and ‑‑draw-track 1 are equal.
      - ‑‑draw-track
    * - ‑‑send-track [=arg(=1)]
-     - Enable posting coordinates of a face motion track along with a bbox in a request.
+     - Enable posting a face motion track as array of the bbox center coordinates, in a request.
      - Boolean: 1 = enable posting a track coordinates, 0 = disable posting a track coordinates. ‑‑send-track and ‑‑send-track 1 are equal.
      - ‑‑send-track
    * - ‑‑min-face-size arg

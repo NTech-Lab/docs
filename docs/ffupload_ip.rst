@@ -1,7 +1,7 @@
 .. _ffupload-ip:
 
 Uploads in FindFace Web UI
-------------------------------------------------
+--------------------------------
 
 .. rubric:: Issue: Original images, face thumbnails, and face normalized images are not displayed in the FindFace web interface after the ``findface-upload`` host IP address has been changed.
 

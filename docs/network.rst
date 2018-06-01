@@ -1,5 +1,3 @@
-.. _configure-network:
-
 Configure Network
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

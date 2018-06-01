@@ -1,5 +1,3 @@
-.. _findface-upload:
-
 Install findface-upload
 """"""""""""""""""""""""""""""
 
