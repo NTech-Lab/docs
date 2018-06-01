@@ -1,18 +1,49 @@
 #!/bin/bash
 
+
 FF_PACKAGES="ntls findface-nnapi fkvideo-detector python3-facenapi.core python3-facenapi findface-tarantool-server findface-tarantool-build-index findface-ui findface-mass-enroll findface-extraction-api findface-repo findface-rtmp-server findface-upload python3-nnd"
 SIDE_PACKAGES="mongod* tarantool*"
-ALL_PACKAGES="$FF_PACKAGES $SIDE_PACKAGES findface-data"
+ALL_PACKAGES="$FF_PACKAGES $SIDE_PACKAGES findface-data*"
 
 now=$(date +"%m_%d_%Y.%H:%M")
 
 echo "############################
 !!!This script will remove FindFace Server, MongoDB and Tarantool by command prompt.
 It can ERASE face data!!!
-Config files will be backed up."
+Config files will be backed up to ~/ffserver_bak/."
 
 backupCfg() {
+    mkdir $HOME/ffserver_bak/
+    mkdir $HOME/ffserver_bak/etc/
     for cfg in /etc/{{findface-{nnapi,searchapi,facenapi,extraction-api},fkvideo*}.ini,ntls.cfg,tntapi*.json}; 
+    do
+        if [ -f "$cfg" ]; then
+            mv "$cfg" "$HOME/ffserver_bak/${cfg}_$now.bak"
+            echo "File $cfg found and deleted. Backup created."
+        else
+            echo "NO such file or directory $cfg"
+        fi
+    done
+}
+
+backupTntCfg() {
+    mkdir $HOME/ffserver_bak/tnt/
+    cp /etc/tarantool/instances.enabled/* $HOME/ffserver_bak/tnt/
+    for cfg in $HOME/ffserver_bak/tnt/*.lua; 
+    do
+        if [ -f "$cfg" ]; then
+            mv "$cfg" "${cfg}_$now.bak"
+            echo "File $cfg found and deleted. Backup created."
+        else
+            echo "NO such file or directory $cfg"
+        fi
+    done
+}
+
+backupNginxCfg() {
+    mkdir $HOME/ffserver_bak/nginx/
+    cp /etc/nginx/sites-enabled/* $HOME/ffserver_bak/nginx/
+    for cfg in $HOME/ffserver_bak/nginx/*; 
     do
         if [ -f "$cfg" ]; then
             mv "$cfg" "${cfg}_$now.bak"
@@ -32,7 +63,9 @@ uninstallServer() {
     service 'mongod*' stop
 
     backupCfg
-    
+    backupTntCfg
+    backupNginxCfg
+
     apt-get -y purge $FF_PACKAGES
 
     # rm -rf /opt/ntech
@@ -70,6 +103,8 @@ uninstallAll() {
     service 'mongod*' stop
 
     backupCfg
+    backupTntCfg
+    backupNginxCfg
 
     apt-get -y purge $ALL_PACKAGES
 
@@ -94,6 +129,7 @@ uninstallAll() {
 
     systemctl daemon-reload
     apt-get update
+
 }
 
 while true; do
