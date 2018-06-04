@@ -12,6 +12,9 @@ Maintenance and Troubleshooting
    update
    remove_sdk
    troubleshoot_ffupload
+   tarantool_recovery
+
+
    
  
 

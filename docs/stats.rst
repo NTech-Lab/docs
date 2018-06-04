@@ -14,6 +14,8 @@ You can get a shard galleries statistics and other data right in your browser. T
    :local:
 
 
+.. _stat-list:
+
 List Galleries
 ----------------------------
 

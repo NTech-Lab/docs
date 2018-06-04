@@ -33,6 +33,28 @@ Each API request to Tarantool contains the following parameters:
 
 * ``:ver``: the API version (v1 at the moment).
 * ``:name``: the gallery name.
+
+  .. tip::
+     To list gallery names on a shard, type in the following command in the address bar of your browser (see :ref:`stat-list` for details): 
+
+     .. code::
+
+        http://<tarantool_host_ip:shard_port>/stat/list/1/99
+
+     The same command on the console is as such:
+
+     .. code::
+
+        curl <tarantool_host_ip:shard_port>/stat/list/1/99 \| jq
+
+     You can also list gallery names by using a direct request to Tarantool:
+
+     .. code::
+
+        echo 'box.space.galleries:select()' | tarantoolctl connect <tarantool_host_ip:shard_port>
+
+     Note that if there is a large number of shards in the system, chances are that a randomly taken shard does not contain all the existing galleries. In this case, just list galleries on several shards.
+
 * ``:id``: the face id.
 
 Add Face

@@ -25,7 +25,10 @@ Use :program:`jq` to parse JSON data in responses. To install :program:`jq`, exe
 
  sudo apt-get install jq
 
+.. note::
+   Since :program:`jq` approximates integers larger than 2^53 (e.g., for ``"id":12107867323949968228``, the output is ``"id": 12107867323949967000``, etc.), you may want to use :program:`json_pp` instead.
 
+  
 List Galleries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
