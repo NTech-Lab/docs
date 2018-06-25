@@ -15,7 +15,7 @@ Config files will be backed up to ~/ffserver_bak/."
 backupCfg() {
     mkdir $HOME/ffserver_bak/
     mkdir $HOME/ffserver_bak/etc/
-    for cfg in /etc/{{findface-{nnapi,searchapi,facenapi,extraction-api},fkvideo*}.ini,ntls.cfg,tntapi*.json}; 
+    for cfg in /etc/{{findface-{nnapi,searchapi,facenapi,extraction-api},fkvideo*}.ini,ntls.cfg,tntapi*.json};
     do
         if [ -f "$cfg" ]; then
             mv "$cfg" "$HOME/ffserver_bak/${cfg}_$now.bak"
@@ -29,7 +29,7 @@ backupCfg() {
 backupTntCfg() {
     mkdir $HOME/ffserver_bak/tnt/
     cp /etc/tarantool/instances.enabled/* $HOME/ffserver_bak/tnt/
-    for cfg in $HOME/ffserver_bak/tnt/*.lua; 
+    for cfg in $HOME/ffserver_bak/tnt/*.lua;
     do
         if [ -f "$cfg" ]; then
             mv "$cfg" "${cfg}_$now.bak"
@@ -43,7 +43,7 @@ backupTntCfg() {
 backupNginxCfg() {
     mkdir $HOME/ffserver_bak/nginx/
     cp /etc/nginx/sites-enabled/* $HOME/ffserver_bak/nginx/
-    for cfg in $HOME/ffserver_bak/nginx/*; 
+    for cfg in $HOME/ffserver_bak/nginx/*;
     do
         if [ -f "$cfg" ]; then
             mv "$cfg" "${cfg}_$now.bak"
